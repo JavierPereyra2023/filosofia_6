@@ -1,0 +1,1066 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Unidad 1 - Filosofía 6to Grado">
+
+  <title>Unidad 1 | Filosofía 6to</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="../assets/images/favicon.png">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="../assets/css/reset.css">
+  <link rel="stylesheet" href="../assets/css/variables.css">
+  <link rel="stylesheet" href="../assets/css/typography.css">
+  <link rel="stylesheet" href="../assets/css/layout.css">
+  <link rel="stylesheet" href="../assets/css/components.css">
+  <link rel="stylesheet" href="../assets/css/navigation.css">
+  <link rel="stylesheet" href="../assets/css/responsive.css">
+
+  <!-- Unit page specific styles -->
+  <style>
+    .unit-hero {
+      position: relative;
+      width: 100%;
+      height: 30vh;
+      min-height: 250px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+      text-align: center;
+    }
+
+    .unit-hero::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.3);
+      z-index: 1;
+    }
+
+    .unit-hero-content {
+      position: relative;
+      z-index: 2;
+      padding: 0 var(--space-md);
+      max-width: 800px;
+    }
+
+    .unit-hero-title {
+      font-family: var(--font-serif);
+      font-size: var(--font-size-h1);
+      margin-bottom: var(--space-sm);
+      text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    }
+
+    .unit-hero-description {
+      font-size: var(--font-size-large);
+      opacity: 0.95;
+      text-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
+    }
+
+    .unit-section {
+      padding: var(--space-2xl) 0;
+      border-bottom: 1px solid var(--color-border);
+    }
+
+    .unit-section:nth-child(even) {
+      background: var(--color-bg-secondary);
+    }
+
+    .unit-section:nth-child(odd) {
+      background: var(--color-bg-primary);
+    }
+
+    .section-container {
+      max-width: var(--content-max-width);
+      margin: 0 auto;
+      padding: 0 var(--space-md);
+    }
+
+    .section-content {
+      margin-top: var(--space-xl);
+    }
+
+    .section-content p {
+      margin-bottom: 1.5em;
+    }
+
+    .section-content img {
+      margin: var(--space-xl) auto;
+      border-radius: var(--radius-md);
+      max-width: 100%;
+    }
+
+    .section-content figcaption {
+      text-align: center;
+      font-size: var(--font-size-small);
+      color: var(--color-text-tertiary);
+      margin-top: var(--space-sm);
+    }
+  </style>
+</head>
+<body>
+  <!-- Main Header -->
+  <header class="main-header">
+    <div class="container">
+      <a href="../index.html" class="site-logo">Filosofía 6to</a>
+
+      <nav class="main-nav">
+        <a href="../index.html" class="nav-link">Inicio</a>
+        <button
+          id="dark-mode-toggle"
+          class="dark-mode-toggle"
+          aria-label="Cambiar tema"
+          tabindex="0"
+        >
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Unit Hero -->
+  <section class="unit-hero">
+    <div class="unit-hero-content">
+      <h1 class="unit-hero-title">Unidad 1: Las Teorías Científicas</h1>
+      <p class="unit-hero-description">
+        Descubre cómo se construyen las teorías científicas a través de la revolución copernicana
+      </p>
+    </div>
+  </section>
+
+  <!-- Section Navigation -->
+  <nav class="section-nav">
+    <div class="container">
+      <a href="#section-1" class="section-nav-link active">
+        <span class="section-nav-number">1</span>
+        <span>Problema</span>
+      </a>
+      <a href="#section-2" class="section-nav-link">
+        <span class="section-nav-number">2</span>
+        <span>Contexto</span>
+      </a>
+      <a href="#section-3" class="section-nav-link">
+        <span class="section-nav-number">3</span>
+        <span>Conceptos</span>
+      </a>
+      <a href="#section-4" class="section-nav-link">
+        <span class="section-nav-number">4</span>
+        <span>Mapa</span>
+      </a>
+      <a href="#section-5" class="section-nav-link">
+        <span class="section-nav-number">5</span>
+        <span>Comparación</span>
+      </a>
+      <a href="#section-6" class="section-nav-link">
+        <span class="section-nav-number">6</span>
+        <span>Aplicación</span>
+      </a>
+      <a href="#section-7" class="section-nav-link">
+        <span class="section-nav-number">7</span>
+        <span>Actividad</span>
+      </a>
+      <a href="#section-8" class="section-nav-link">
+        <span class="section-nav-number">8</span>
+        <span>Síntesis</span>
+      </a>
+    </div>
+  </nav>
+
+  <!-- Section 1: Problema Inicial -->
+  <section id="section-1" class="unit-section" data-section="problema">
+    <div class="section-container">
+      <header class="section-header">
+        <div class="section-badge">
+          <svg class="section-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+          </svg>
+          <span class="section-number">1</span>
+        </div>
+        <h2 class="section-title">Problema Inicial</h2>
+      </header>
+
+      <div class="section-content">
+        <p>
+          Imagina que cada noche miras el cielo y ves las estrellas, la Luna y los planetas moverse de manera predecible. Durante siglos, los astrónomos observaron que los planetas a veces parecían moverse hacia atrás en el cielo, un fenómeno llamado "movimiento retrógrado". Para explicar esto, el astrónomo Ptolomeo propuso un complejo sistema donde la Tierra estaba en el centro del universo y los planetas se movían en círculos dentro de otros círculos (epiciclos).
+        </p>
+
+        <p>
+          Este modelo funcionaba bastante bien para predecir las posiciones de los planetas, pero tenía un problema: era extremadamente complicado y requería ajustes constantes. Cuando las observaciones no coincidían con las predicciones, los astrónomos simplemente agregaban más círculos al modelo. Estas situaciones donde la teoría no explica bien lo observado se llaman <strong>anomalías</strong>.
+        </p>
+
+        <p>
+          En el siglo XVI, Nicolás Copérnico propuso una idea revolucionaria: ¿y si la Tierra no estuviera en el centro? ¿Y si fuera el Sol el que ocupara ese lugar? Esta propuesta no solo era más simple, sino que explicaba el movimiento retrógrado de manera natural: los planetas parecen retroceder porque la Tierra los está adelantando en su órbita alrededor del Sol.
+        </p>
+
+        <div class="concept-highlight">
+          <h4>Pregunta Central</h4>
+          <p>
+            ¿Cómo decidimos entre dos teorías científicas cuando ambas pueden explicar los mismos fenómenos? ¿Qué hace que una teoría sea mejor que otra? ¿Es suficiente que una teoría "funcione" o debe también ser simple y elegante?
+          </p>
+        </div>
+
+        <p>
+          Esta unidad explorará cómo se construyen, se contrastan y se eligen las teorías científicas, usando como ejemplo uno de los cambios más importantes en la historia de la ciencia: el paso del geocentrismo al heliocentrismo.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 2: Contexto Histórico -->
+  <section id="section-2" class="unit-section" data-section="contexto">
+    <div class="section-container">
+      <header class="section-header">
+        <div class="section-badge">
+          <svg class="section-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+          </svg>
+          <span class="section-number">2</span>
+        </div>
+        <h2 class="section-title">Contexto Histórico</h2>
+      </header>
+
+      <div class="section-content">
+        <p>
+          La pregunta sobre la estructura del universo ha fascinado a la humanidad desde la antigüedad. Los griegos antiguos desarrollaron modelos sofisticados para explicar los movimientos celestes. Aristóteles (384-322 a.C.) propuso que la Tierra estaba inmóvil en el centro del universo, rodeada por esferas cristalinas que transportaban los planetas y las estrellas. Esta visión geocéntrica se mantuvo durante casi 2000 años.
+        </p>
+
+        <h3>Astrónomos y Pensadores Clave</h3>
+
+        <div class="concept-highlight">
+          <h4>Claudio Ptolomeo (100-170 d.C.)</h4>
+          <p>
+            Astrónomo, matemático y geógrafo greco-egipcio que vivió en Alejandría. En su obra <em>Almagesto</em>, perfeccionó el modelo geocéntrico creando un sistema matemático complejo que podía predecir con precisión las posiciones de los planetas. Su modelo utilizaba epiciclos (círculos sobre círculos) y ecuantes (puntos desde donde el movimiento parece uniforme) para explicar las irregularidades observadas. El sistema ptolemaico fue la autoridad astronómica durante 14 siglos.
+          </p>
+        </div>
+
+        <div class="concept-highlight">
+          <h4>Nicolás Copérnico (1473-1543)</h4>
+          <p>
+            Astrónomo y matemático polaco que revolucionó nuestra comprensión del cosmos. En su obra <em>De revolutionibus orbium coelestium</em> (Sobre las revoluciones de las esferas celestes), publicada en 1543, propuso que el Sol, y no la Tierra, estaba en el centro del universo. Copérnico mostró que al colocar el Sol en el centro, los movimientos planetarios se volvían más simples y naturales. Aunque su modelo aún utilizaba círculos perfectos (lo que requería algunos ajustes), eliminó la necesidad de muchos de los complejos epiciclos del sistema ptolemaico.
+          </p>
+        </div>
+
+        <div class="concept-highlight">
+          <h4>Otros contribuyentes importantes</h4>
+          <p>
+            <strong>Tycho Brahe (1546-1601):</strong> Realizó las observaciones astronómicas más precisas de su época sin telescopio, proporcionando datos cruciales que posteriormente usaría Kepler.
+          </p>
+          <p>
+            <strong>Johannes Kepler (1571-1630):</strong> Usando los datos de Tycho, descubrió que las órbitas planetarias son elípticas, no circulares, perfeccionando el modelo heliocéntrico.
+          </p>
+          <p>
+            <strong>Galileo Galilei (1564-1642):</strong> Con su telescopio, observó las fases de Venus y las lunas de Júpiter, proporcionando evidencia observacional directa del heliocentrismo.
+          </p>
+        </div>
+
+        <p>
+          Este debate no fue solo astronómico, sino también filosófico y religioso. Implicaba repensar el lugar de la humanidad en el cosmos y desafiar autoridades intelectuales milenarias.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 3: Conceptos Fundamentales -->
+  <section id="section-3" class="unit-section" data-section="conceptos">
+    <div class="section-container">
+      <header class="section-header">
+        <div class="section-badge">
+          <svg class="section-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+          </svg>
+          <span class="section-number">3</span>
+        </div>
+        <h2 class="section-title">Conceptos Fundamentales</h2>
+      </header>
+
+      <div class="section-content">
+        <p>
+          Para comprender cómo funcionan las teorías científicas y cómo cambian a lo largo del tiempo, necesitamos familiarizarnos con algunos conceptos fundamentales que los científicos y filósofos utilizan para analizar el conocimiento científico.
+        </p>
+
+        <div class="concept-highlight">
+          <h4>Concepto 1: Observación y Datos</h4>
+          <p>
+            <strong>Definición:</strong> La observación es el acto de examinar cuidadosamente fenómenos naturales usando nuestros sentidos o instrumentos. Los datos son los registros sistemáticos de estas observaciones.
+          </p>
+          <p>
+            <strong>Ejemplo:</strong> Tycho Brahe pasó años observando y registrando con precisión las posiciones de los planetas en el cielo nocturno. Estos datos fueron fundamentales para que Kepler descubriera las leyes del movimiento planetario. Sin observaciones cuidadosas, no hay ciencia.
+          </p>
+        </div>
+
+        <div class="concept-highlight">
+          <h4>Concepto 2: Hipótesis y Teoría</h4>
+          <p>
+            <strong>Definición:</strong> Una <strong>hipótesis</strong> es una explicación tentativa de un fenómeno que puede ser probada. Una <strong>teoría</strong> es un sistema organizado de hipótesis, conceptos y leyes que explica un amplio rango de fenómenos y ha sido extensamente probada.
+          </p>
+          <p>
+            <strong>Ejemplo:</strong> Copérnico propuso la hipótesis de que "la Tierra gira alrededor del Sol". Esta hipótesis, junto con otras sobre los movimientos planetarios, formó la teoría heliocéntrica. Una teoría no es solo una "idea" o "suposición", sino un marco explicativo bien fundamentado.
+          </p>
+        </div>
+
+        <div class="concept-highlight">
+          <h4>Concepto 3: Anomalía</h4>
+          <p>
+            <strong>Definición:</strong> Una anomalía es una observación que no puede ser explicada adecuadamente por la teoría vigente. Es un dato que "no encaja" con lo que la teoría predice.
+          </p>
+          <p>
+            <strong>Ejemplo:</strong> En el modelo geocéntrico de Ptolomeo, el movimiento retrógrado de Marte era una anomalía que requería explicaciones cada vez más complicadas (más epiciclos). En el modelo heliocéntrico de Copérnico, este mismo fenómeno se explicaba naturalmente como un efecto de perspectiva cuando la Tierra adelanta a Marte en su órbita.
+          </p>
+        </div>
+
+        <div class="concept-highlight">
+          <h4>Concepto 4: Enigma</h4>
+          <p>
+            <strong>Definición:</strong> Un enigma es un problema o pregunta dentro de una teoría científica que los investigadores intentan resolver. A diferencia de una anomalía (que desafía la teoría), un enigma es un rompecabezas que se espera poder resolver usando las herramientas de la teoría existente.
+          </p>
+          <p>
+            <strong>Ejemplo:</strong> Dentro del modelo ptolemaico, calcular la posición exacta de un planeta en una fecha futura era un enigma: un desafío técnico que requería cálculos complejos, pero que se creía solucionable con más trabajo. Los astrónomos dedicaban años a resolver estos enigmas sin cuestionar el modelo geocéntrico en sí.
+          </p>
+        </div>
+
+        <div class="concept-highlight">
+          <h4>Concepto 5: El Método Científico</h4>
+          <p>
+            <strong>Definición:</strong> El método científico es el procedimiento sistemático que usan los científicos para investigar fenómenos, adquirir nuevo conocimiento o corregir conocimiento previo. Incluye: observación, formulación de hipótesis, experimentación/observación adicional, análisis de resultados y conclusión.
+          </p>
+          <p>
+            <strong>Ejemplo en la revolución copernicana:</strong>
+          </p>
+          <ul>
+            <li><strong>1. Observación:</strong> Los planetas muestran movimiento retrógrado</li>
+            <li><strong>2. Problema:</strong> El modelo geocéntrico requiere explicaciones muy complicadas</li>
+            <li><strong>3. Hipótesis:</strong> Si el Sol está en el centro, los movimientos serán más simples</li>
+            <li><strong>4. Predicción:</strong> El modelo heliocéntrico debe predecir las posiciones planetarias</li>
+            <li><strong>5. Contrastación:</strong> Comparar predicciones con observaciones</li>
+            <li><strong>6. Conclusión:</strong> El modelo heliocéntrico explica mejor los datos</li>
+          </ul>
+        </div>
+
+        <div class="concept-highlight">
+          <h4>Concepto 6: Contrastación y Refutación</h4>
+          <p>
+            <strong>Definición:</strong> La <strong>contrastación</strong> es el proceso de comparar las predicciones de una teoría con observaciones o experimentos. La <strong>refutación</strong> ocurre cuando las observaciones contradicen consistentemente las predicciones de la teoría.
+          </p>
+          <p>
+            <strong>Ejemplo:</strong> Cuando Galileo observó las fases de Venus (como las fases de la Luna), esto refutó directamente el modelo ptolemaico puro, que predecía que Venus siempre debería aparecer como una media luna. El modelo copernicano predecía correctamente que Venus mostraría fases completas, lo que fue confirmado por las observaciones.
+          </p>
+        </div>
+
+        <p>
+          Estos conceptos no son solo herramientas históricas. Los científicos actuales los usan constantemente al desarrollar nuevas teorías en física, biología, química y otras disciplinas.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 4: Mapa Argumental -->
+  <section id="section-4" class="unit-section" data-section="mapa">
+    <div class="section-container">
+      <header class="section-header">
+        <div class="section-badge">
+          <svg class="section-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7" />
+          </svg>
+          <span class="section-number">4</span>
+        </div>
+        <h2 class="section-title">Mapa Argumental</h2>
+      </header>
+
+      <div class="section-content">
+        <p>
+          El argumento de Copérnico para adoptar el heliocentrismo no se basó únicamente en nuevas observaciones, sino en una reorganización lógica de cómo interpretar las observaciones existentes. Analicemos la estructura de su razonamiento:
+        </p>
+
+        <h3>El Argumento Heliocéntrico de Copérnico</h3>
+
+        <div class="concept-highlight">
+          <h4>Observación Inicial</h4>
+          <p>
+            Los planetas muestran movimientos aparentemente irregulares en el cielo, incluyendo el movimiento retrógrado (parecen retroceder periódicamente).
+          </p>
+        </div>
+
+        <div class="concept-highlight">
+          <h4>Premisa 1: El Principio de Simplicidad</h4>
+          <p>
+            Entre dos teorías que explican los mismos fenómenos, la teoría más simple es preferible. Este principio, conocido como "Navaja de Ockham", sugiere que no debemos multiplicar entidades (explicaciones, mecanismos) sin necesidad.
+          </p>
+          <p>
+            <em>Aplicación:</em> El modelo ptolemaico requería aproximadamente 80 círculos (epiciclos y deferentes) para explicar los movimientos planetarios. El modelo copernicano inicial requería solo alrededor de 34 círculos.
+          </p>
+        </div>
+
+        <div class="concept-highlight">
+          <h4>Premisa 2: La Armonía Matemática</h4>
+          <p>
+            Si el Sol está en el centro, existe una relación matemática armoniosa entre el período orbital de un planeta y su distancia al Sol. Además, el movimiento retrógrado se explica naturalmente como un efecto de perspectiva.
+          </p>
+          <p>
+            <em>Aplicación:</em> Cuando la Tierra (que se mueve más rápido en su órbita interior) adelanta a Marte, este último parece moverse hacia atrás desde nuestra perspectiva. No se necesitan epiciclos adicionales.
+          </p>
+        </div>
+
+        <div class="concept-highlight">
+          <h4>Premisa 3: Coherencia Explicativa</h4>
+          <p>
+            En el modelo heliocéntrico, el orden de los planetas (Mercurio, Venus, Tierra, Marte, Júpiter, Saturno) se determina de manera única por sus períodos orbitales. En el modelo geocéntrico, este orden era arbitrario.
+          </p>
+        </div>
+
+        <div class="concept-highlight">
+          <h4>Conclusión</h4>
+          <p>
+            Por lo tanto, el modelo heliocéntrico debe ser preferido sobre el geocéntrico, no porque sea necesariamente "verdadero" en sentido absoluto, sino porque es más simple, más coherente y tiene mayor poder explicativo con menos suposiciones.
+          </p>
+        </div>
+
+        <h3>Análisis del Argumento</h3>
+
+        <p>
+          Es importante notar que este argumento es <strong>abductivo</strong>, no deductivo. Copérnico no "demostró" matemáticamente que la Tierra se mueve; propuso que el heliocentrismo es la "mejor explicación" de los datos disponibles. Este tipo de razonamiento es común en ciencia: elegimos la teoría que mejor explica los fenómenos con las suposiciones más simples.
+        </p>
+
+        <p>
+          Sin embargo, el argumento tenía debilidades. Si la Tierra se moviera, ¿por qué no sentimos ese movimiento? ¿Por qué los objetos lanzados al aire caen en el mismo lugar? Estas objeciones basadas en la experiencia cotidiana fueron respondidas completamente solo con el desarrollo de la física de Galileo y Newton.
+        </p>
+
+        <blockquote class="philosophical-quote">
+          <p>
+            "La astronomía se escribe para astrónomos. A aquellos que no entienden la matemática les parecerá absurdo que yo coloque la Tierra en movimiento... Pero las matemáticas se escriben para matemáticos."
+          </p>
+          <cite>— Nicolás Copérnico, De revolutionibus orbium coelestium (1543)</cite>
+        </blockquote>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 5: Comparación de Posturas -->
+  <section id="section-5" class="unit-section" data-section="comparacion">
+    <div class="section-container">
+      <header class="section-header">
+        <div class="section-badge">
+          <svg class="section-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M8 7h12M8 12h12m-12 5h12M3 7h.01M3 12h.01M3 17h.01" />
+          </svg>
+          <span class="section-number">5</span>
+        </div>
+        <h2 class="section-title">Comparación de Posturas</h2>
+      </header>
+
+      <div class="section-content">
+        <p>
+          El debate entre geocentrismo y heliocentrismo no fue solo una discusión técnica entre astrónomos, sino un choque entre visiones del mundo completas. Analicemos las tres posturas principales que surgieron durante este período:
+        </p>
+
+        <div class="concept-highlight">
+          <h4>Postura 1: Geocentrismo Ptolemaico (Modelo Tradicional)</h4>
+          <p>
+            <strong>Argumento principal:</strong> La Tierra está inmóvil en el centro del universo. Los planetas, el Sol y las estrellas giran alrededor de ella en órbitas circulares. Las irregularidades observadas se explican mediante sistemas de epiciclos (círculos sobre círculos).
+          </p>
+          <p>
+            <strong>Representantes:</strong> Claudio Ptolomeo, Aristóteles (filosofía subyacente), la mayoría de los astrónomos medievales, la Iglesia Católica.
+          </p>
+          <p>
+            <strong>Fortalezas:</strong>
+          </p>
+          <ul>
+            <li>Concordaba con la experiencia cotidiana (no sentimos que la Tierra se mueve)</li>
+            <li>Respaldado por la autoridad de Aristóteles y la interpretación bíblica</li>
+            <li>Hacía predicciones astronómicas precisas con suficientes ajustes</li>
+            <li>Colocaba a la humanidad en el centro del cosmos, lo que parecía acorde con su importancia</li>
+          </ul>
+          <p>
+            <strong>Debilidades:</strong>
+          </p>
+          <ul>
+            <li>Requería un sistema extremadamente complejo de epiciclos</li>
+            <li>Necesitaba constantes ajustes para mantener su precisión</li>
+            <li>No explicaba por qué los planetas interiores (Mercurio y Venus) siempre permanecen cerca del Sol</li>
+          </ul>
+        </div>
+
+        <div class="concept-highlight">
+          <h4>Postura 2: Heliocentrismo Copernicano (Modelo Revolucionario)</h4>
+          <p>
+            <strong>Argumento principal:</strong> El Sol está en el centro del universo (o cerca de él). La Tierra es un planeta más que gira alrededor del Sol y también rota sobre su eje. Los movimientos aparentes del cielo son en realidad efectos del movimiento terrestre.
+          </p>
+          <p>
+            <strong>Representantes:</strong> Nicolás Copérnico, Galileo Galilei, Johannes Kepler (quien lo perfeccionó con órbitas elípticas).
+          </p>
+          <p>
+            <strong>Fortalezas:</strong>
+          </p>
+          <ul>
+            <li>Mayor simplicidad: menos círculos necesarios para explicar los movimientos</li>
+            <li>Explicación natural del movimiento retrógrado como efecto de perspectiva</li>
+            <li>Explicaba por qué Mercurio y Venus nunca se alejan mucho del Sol visualmente</li>
+            <li>Proporcionaba un orden único y determinado de los planetas basado en sus períodos</li>
+            <li>Mayor elegancia y armonía matemática</li>
+          </ul>
+          <p>
+            <strong>Debilidades:</strong>
+          </p>
+          <ul>
+            <li>Contradecía la experiencia cotidiana (no sentimos el movimiento de la Tierra)</li>
+            <li>Planteaba problemas físicos: ¿por qué los objetos no salen volando de una Tierra en movimiento?</li>
+            <li>No había observaciones directas del movimiento terrestre (la paralaje estelar no se detectó hasta el siglo XIX)</li>
+            <li>Desafiaba autoridades filosóficas y religiosas establecidas</li>
+          </ul>
+        </div>
+
+        <div class="concept-highlight">
+          <h4>Postura 3: Sistema Tychónico (Modelo Híbrido)</h4>
+          <p>
+            <strong>Argumento principal:</strong> La Tierra permanece inmóvil en el centro, la Luna y el Sol giran alrededor de la Tierra, pero los demás planetas giran alrededor del Sol. Este es un compromiso entre los dos modelos anteriores.
+          </p>
+          <p>
+            <strong>Representante:</strong> Tycho Brahe (astrónomo danés del siglo XVI)
+          </p>
+          <p>
+            <strong>Fortalezas:</strong>
+          </p>
+          <ul>
+            <li>Matemáticamente equivalente al modelo copernicano en predicciones</li>
+            <li>Mantenía la Tierra inmóvil, evitando problemas físicos y religiosos</li>
+            <li>Explicaba algunas de las simplificaciones del modelo heliocéntrico</li>
+            <li>Compatible con las observaciones de Tycho, el mejor observador de su época</li>
+          </ul>
+          <p>
+            <strong>Debilidades:</strong>
+          </p>
+          <ul>
+            <li>Aún era más complejo que un heliocentrismo puro</li>
+            <li>No ofrecía las mismas ventajas filosóficas y estéticas del copernicanismo</li>
+            <li>Era esencialmente un "parche" para salvar el geocentrismo</li>
+          </ul>
+        </div>
+
+        <h3>¿Por qué ganó el heliocentrismo?</h3>
+
+        <p>
+          El triunfo del heliocentrismo no fue inmediato ni se debió a una sola razón. Fue una combinación de factores:
+        </p>
+
+        <ul>
+          <li><strong>Evidencia observacional:</strong> Las observaciones telescópicas de Galileo (fases de Venus, lunas de Júpiter) favorecieron el modelo heliocéntrico.</li>
+          <li><strong>Mejoras teóricas:</strong> Kepler descubrió que las órbitas son elípticas, no circulares, eliminando la necesidad de epiciclos.</li>
+          <li><strong>Nueva física:</strong> Newton desarrolló una teoría de la gravitación que explicaba por qué los planetas orbitan el Sol y por qué no sentimos el movimiento de la Tierra.</li>
+          <li><strong>Simplicidad y poder explicativo:</strong> El heliocentrismo explicaba más con menos suposiciones.</li>
+        </ul>
+
+        <p>
+          Este caso histórico muestra que el cambio científico no es solo cuestión de "verdad absoluta", sino de evaluar qué teoría explica mejor los fenómenos con los criterios disponibles: simplicidad, coherencia, poder explicativo y compatibilidad con otras teorías exitosas.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 6: Aplicación Contemporánea -->
+  <section id="section-6" class="unit-section" data-section="aplicacion">
+    <div class="section-container">
+      <header class="section-header">
+        <div class="section-badge">
+          <svg class="section-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+          </svg>
+          <span class="section-number">6</span>
+        </div>
+        <h2 class="section-title">Aplicación Contemporánea</h2>
+      </header>
+
+      <div class="section-content">
+        <p>
+          Los principios que aprendemos del debate geocentrismo-heliocentrismo no son solo historia antigua. Los mismos criterios para evaluar teorías científicas se aplican hoy en debates científicos contemporáneos. Veamos algunos ejemplos:
+        </p>
+
+        <h3>Ejemplos Modernos</h3>
+
+        <div class="concept-highlight">
+          <h4>Ejemplo 1: Cambio Climático</h4>
+          <p>
+            Al igual que en el siglo XVI había quienes negaban que la Tierra se movía (porque no lo "sentían"), hoy hay quienes cuestionan el cambio climático antropogénico porque "siempre ha habido cambios de temperatura". Sin embargo, la ciencia del clima, como el heliocentrismo en su momento, se basa en:
+          </p>
+          <ul>
+            <li><strong>Observaciones sistemáticas:</strong> Mediciones de temperatura, niveles de CO₂, retroceso de glaciares</li>
+            <li><strong>Teorías bien fundamentadas:</strong> Física de los gases de efecto invernadero</li>
+            <li><strong>Poder predictivo:</strong> Los modelos predicen correctamente tendencias observadas</li>
+            <li><strong>Consenso científico:</strong> La mayoría de los científicos climáticos respaldan esta teoría</li>
+          </ul>
+          <p>
+            La analogía: así como las anomalías en el geocentrismo llevaron al heliocentrismo, las anomalías en modelos climáticos previos llevan a mejores modelos que incorporan factores humanos.
+          </p>
+        </div>
+
+        <div class="concept-highlight">
+          <h4>Ejemplo 2: Teorías de la Evolución vs. Diseño Inteligente</h4>
+          <p>
+            Similar al debate Copérnico-Ptolomeo, existe un debate entre la teoría evolutiva (respaldada por evidencia científica) y el diseño inteligente (respaldado por argumentos filosóficos/religiosos). Los científicos prefieren la evolución porque:
+          </p>
+          <ul>
+            <li>Explica la diversidad biológica sin apelar a causas sobrenaturales</li>
+            <li>Es más simple (no requiere un diseñador cuya existencia debe también explicarse)</li>
+            <li>Hace predicciones verificables (fósiles transicionales, similitudes genéticas)</li>
+            <li>Ha sido corroborada por múltiples líneas de evidencia independientes</li>
+          </ul>
+        </div>
+
+        <div class="concept-highlight">
+          <h4>Ejemplo 3: Teorías sobre el Universo</h4>
+          <p>
+            Hoy sabemos que ni la Tierra ni el Sol están en el "centro" del universo. De hecho, la pregunta "¿dónde está el centro?" no tiene sentido en cosmología moderna. El universo se expande desde todos los puntos simultáneamente (como la superficie de un globo que se infla). Este es otro ejemplo de cómo las teorías científicas a veces requieren abandonar nociones intuitivas.
+          </p>
+        </div>
+
+        <div class="concept-highlight">
+          <h4>Ejemplo 4: Información en Internet y Fake News</h4>
+          <p>
+            Así como en el siglo XVI había que evaluar qué teoría astronómica era más confiable, hoy debemos evaluar qué fuentes de información son confiables. Los mismos criterios aplican:
+          </p>
+          <ul>
+            <li><strong>Evidencia:</strong> ¿Hay datos que respalden la afirmación?</li>
+            <li><strong>Coherencia:</strong> ¿Es consistente con otro conocimiento establecido?</li>
+            <li><strong>Simplicidad:</strong> ¿Requiere teorías conspirativas complejas?</li>
+            <li><strong>Verificabilidad:</strong> ¿Puede ser comprobada independientemente?</li>
+          </ul>
+        </div>
+
+        <h3>Preguntas para Reflexión</h3>
+        <ul>
+          <li>¿Cómo decidimos qué creer cuando hay opiniones contradictorias sobre temas científicos actuales?</li>
+          <li>¿Es suficiente que una teoría "funcione" para considerarla verdadera, o hay otros criterios importantes?</li>
+          <li>¿Por qué es difícil para las personas aceptar teorías científicas que contradicen su sentido común o creencias previas?</li>
+          <li>En la era de las redes sociales, ¿cómo podemos aplicar el "método científico" para evaluar información?</li>
+          <li>¿Deberían los científicos tener la última palabra en asuntos que afectan a toda la sociedad, o la opinión pública también cuenta?</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 7: Actividad Interactiva -->
+  <section id="section-7" class="unit-section" data-section="actividad">
+    <div class="section-container">
+      <header class="section-header">
+        <div class="section-badge">
+          <svg class="section-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+          </svg>
+          <span class="section-number">7</span>
+        </div>
+        <h2 class="section-title">Actividad Interactiva</h2>
+      </header>
+
+      <div class="section-content">
+        <p>
+          Ahora es tu turno de poner en práctica lo aprendido. Lee atentamente los textos y responde las preguntas de comprensión.
+        </p>
+
+        <!-- Quiz container -->
+        <div id="comprehension-quiz"></div>
+
+        <hr style="margin: var(--space-2xl) 0; border: none; border-top: 2px solid var(--color-border);">
+
+        <h3 style="margin-top: var(--space-2xl);">Cuestionario de Desarrollo</h3>
+        <p>
+          Ahora responde estas preguntas de desarrollo que pondrán a prueba tu comprensión del vocabulario científico, tu alfabetización científica y tu capacidad de razonamiento. Lee cada pregunta cuidadosamente y desarrolla tu respuesta con tus propias palabras.
+        </p>
+
+        <div class="activity-container" style="margin-top: var(--space-xl);">
+          <div style="margin-bottom: var(--space-lg);">
+            <h4 style="color: var(--color-accent); margin-bottom: var(--space-sm);">Pregunta 1: Vocabulario Específico</h4>
+            <p><strong>Define con tus propias palabras el concepto de "anomalía" en el contexto científico. Proporciona un ejemplo del geocentrismo que ilustre este concepto.</strong></p>
+            <div class="concept-highlight" style="margin-top: var(--space-md); background: var(--color-bg-tertiary);">
+              <p style="font-size: var(--font-size-small); color: var(--color-text-tertiary);">
+                <em>Espacio para tu respuesta: Debes explicar que una anomalía es una observación que contradice las predicciones de una teoría vigente, y dar como ejemplo el movimiento retrógrado de los planetas o las fases de Venus.</em>
+              </p>
+            </div>
+          </div>
+
+          <div style="margin-bottom: var(--space-lg);">
+            <h4 style="color: var(--color-accent); margin-bottom: var(--space-sm);">Pregunta 2: Diferenciación Conceptual</h4>
+            <p><strong>¿Cuál es la diferencia entre una "hipótesis" y una "teoría" científica? Explica por qué el heliocentrismo de Copérnico pasó de ser una hipótesis a ser considerado una teoría.</strong></p>
+            <div class="concept-highlight" style="margin-top: var(--space-md); background: var(--color-bg-tertiary);">
+              <p style="font-size: var(--font-size-small); color: var(--color-text-tertiary);">
+                <em>Espacio para tu respuesta: Una hipótesis es una explicación tentativa que debe ser probada; una teoría es un sistema bien fundamentado que ha sido confirmado por múltiples líneas de evidencia.</em>
+              </p>
+            </div>
+          </div>
+
+          <div style="margin-bottom: var(--space-lg);">
+            <h4 style="color: var(--color-accent); margin-bottom: var(--space-sm);">Pregunta 3: Aplicación del Método Científico</h4>
+            <p><strong>Describe los pasos del método científico que Kepler siguió para descubrir que las órbitas planetarias son elípticas, no circulares. Identifica cada etapa: observación, hipótesis, predicción, contrastación y conclusión.</strong></p>
+            <div class="concept-highlight" style="margin-top: var(--space-md); background: var(--color-bg-tertiary);">
+              <p style="font-size: var(--font-size-small); color: var(--color-text-tertiary);">
+                <em>Espacio para tu respuesta: Observó datos de Tycho Brahe (observación), propuso que las órbitas podrían no ser circulares (hipótesis), calculó posiciones predichas (predicción), comparó con datos observacionales (contrastación), concluyó que las órbitas son elípticas.</em>
+              </p>
+            </div>
+          </div>
+
+          <div style="margin-bottom: var(--space-lg);">
+            <h4 style="color: var(--color-accent); margin-bottom: var(--space-sm);">Pregunta 4: Razonamiento sobre Evidencia</h4>
+            <p><strong>Galileo observó con su telescopio que Venus tiene fases completas (como la Luna llena). Explica por qué esta observación favorecía al modelo heliocéntrico sobre el modelo geocéntrico ptolemaico. ¿Qué nos dice esto sobre la relación entre observación y teoría?</strong></p>
+            <div class="concept-highlight" style="margin-top: var(--space-md); background: var(--color-bg-tertiary);">
+              <p style="font-size: var(--font-size-small); color: var(--color-text-tertiary);">
+                <em>Espacio para tu respuesta: En el modelo ptolemaico, Venus siempre estaría entre la Tierra y el Sol, mostrando solo fases crecientes. Las fases completas indican que Venus orbita el Sol. Esto muestra que las observaciones pueden refutar teorías específicas.</em>
+              </p>
+            </div>
+          </div>
+
+          <div style="margin-bottom: var(--space-lg);">
+            <h4 style="color: var(--color-accent); margin-bottom: var(--space-sm);">Pregunta 5: Comprensión de Paradigmas</h4>
+            <p><strong>¿Por qué los astrónomos ptolemaicos agregaban más epiciclos a su modelo en lugar de abandonarlo cuando aparecían anomalías? ¿Qué nos enseña esto sobre cómo funcionan realmente las comunidades científicas?</strong></p>
+            <div class="concept-highlight" style="margin-top: var(--space-md); background: var(--color-bg-tertiary);">
+              <p style="font-size: var(--font-size-small); color: var(--color-text-tertiary);">
+                <em>Espacio para tu respuesta: Los científicos tienden a ajustar y mejorar teorías existentes antes de abandonarlas (concepto de paradigma de Kuhn). El cambio de paradigma solo ocurre cuando la teoría se vuelve demasiado compleja o surgen alternativas mejores.</em>
+              </p>
+            </div>
+          </div>
+
+          <div style="margin-bottom: var(--space-lg);">
+            <h4 style="color: var(--color-accent); margin-bottom: var(--space-sm);">Pregunta 6: Análisis Crítico</h4>
+            <p><strong>El modelo de Tycho Brahe (geocéntrico con planetas orbitando el Sol) explicaba las mismas observaciones que el modelo de Copérnico. ¿Por qué entonces la comunidad científica eventualmente prefirió el modelo heliocéntrico? Menciona al menos tres criterios de evaluación de teorías.</strong></p>
+            <div class="concept-highlight" style="margin-top: var(--space-md); background: var(--color-bg-tertiary);">
+              <p style="font-size: var(--font-size-small); color: var(--color-text-tertiary);">
+                <em>Espacio para tu respuesta: Criterios como simplicidad (menos entidades), coherencia con la física newtoniana, poder explicativo más amplio, y elegancia matemática favorecieron el heliocentrismo.</em>
+              </p>
+            </div>
+          </div>
+
+          <div style="margin-bottom: var(--space-lg);">
+            <h4 style="color: var(--color-accent); margin-bottom: var(--space-sm);">Pregunta 7: Alfabetización Científica - Contrastación</h4>
+            <p><strong>Explica qué significa "contrastar" una teoría científica. ¿Por qué una teoría que no puede ser contrastada (como "Dios mueve los planetas de manera misteriosa") no se considera científica?</strong></p>
+            <div class="concept-highlight" style="margin-top: var(--space-md); background: var(--color-bg-tertiary);">
+              <p style="font-size: var(--font-size-small); color: var(--color-text-tertiary);">
+                <em>Espacio para tu respuesta: Contrastar significa comparar las predicciones de una teoría con observaciones. Una teoría científica debe hacer predicciones verificables. Las explicaciones que no pueden ser probadas o refutadas no son científicas (criterio de falsabilidad).</em>
+              </p>
+            </div>
+          </div>
+
+          <div style="margin-bottom: var(--space-lg);">
+            <h4 style="color: var(--color-accent); margin-bottom: var(--space-sm);">Pregunta 8: Razonamiento Analógico</h4>
+            <p><strong>Compara la resistencia al heliocentrismo en el siglo XVI con la resistencia actual a la teoría del cambio climático antropogénico. ¿Qué similitudes encuentras en los argumentos utilizados por los escépticos en ambos casos?</strong></p>
+            <div class="concept-highlight" style="margin-top: var(--space-md); background: var(--color-bg-tertiary);">
+              <p style="font-size: var(--font-size-small); color: var(--color-text-tertiary);">
+                <em>Espacio para tu respuesta: Similitudes incluyen: apelar a la experiencia cotidiana ("no lo siento"), conflicto con intereses establecidos, desconfianza en modelos complejos, preferencia por explicaciones tradicionales, y cuestionamiento de consenso científico.</em>
+              </p>
+            </div>
+          </div>
+
+          <div style="margin-bottom: var(--space-lg);">
+            <h4 style="color: var(--color-accent); margin-bottom: var(--space-sm);">Pregunta 9: Implicaciones Filosóficas</h4>
+            <p><strong>La revolución copernicana no solo cambió la astronomía, sino también la visión que la humanidad tiene de sí misma. Explica cómo el cambio de una cosmología geocéntrica a una heliocéntrica afectó la autocomprensión humana. ¿Qué significa que la Tierra no esté en el "centro"?</strong></p>
+            <div class="concept-highlight" style="margin-top: var(--space-md); background: var(--color-bg-tertiary);">
+              <p style="font-size: var(--font-size-small); color: var(--color-text-tertiary);">
+                <em>Espacio para tu respuesta: El geocentrismo reforzaba la idea de que la humanidad era especial y central en la creación. El heliocentrismo sugería que la Tierra es solo un planeta más, cuestionando el antropocentrismo y abriendo la posibilidad de vida en otros mundos.</em>
+              </p>
+            </div>
+          </div>
+
+          <div style="margin-bottom: var(--space-lg);">
+            <h4 style="color: var(--color-accent); margin-bottom: var(--space-sm);">Pregunta 10: Síntesis y Evaluación</h4>
+            <p><strong>Si un estudiante te dijera: "La ciencia siempre cambia de opinión, por lo tanto no podemos confiar en ella", ¿cómo responderías usando lo aprendido sobre la revolución copernicana? Argumenta por qué el cambio de teorías es en realidad una fortaleza, no una debilidad, del conocimiento científico.</strong></p>
+            <div class="concept-highlight" style="margin-top: var(--space-md); background: var(--color-bg-tertiary);">
+              <p style="font-size: var(--font-size-small); color: var(--color-text-tertiary);">
+                <em>Espacio para tu respuesta: El cambio de teorías muestra que la ciencia es autocorrectiva y mejora con nueva evidencia. No "cambia de opinión" arbitrariamente, sino que refina sus explicaciones usando criterios racionales. El heliocentrismo reemplazó al geocentrismo porque explicaba mejor las observaciones, no por capricho.</em>
+              </p>
+            </div>
+          </div>
+
+          <div class="philosophical-quote" style="margin-top: var(--space-xl);">
+            <p>
+              Estas preguntas están diseñadas para que desarrolles respuestas completas, usando el vocabulario aprendido y demostrando tu comprensión profunda de los conceptos. Recuerda justificar tus respuestas con ejemplos concretos de la unidad.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 8: Síntesis y Reflexión -->
+  <section id="section-8" class="unit-section" data-section="sintesis">
+    <div class="section-container">
+      <header class="section-header">
+        <div class="section-badge">
+          <svg class="section-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+          </svg>
+          <span class="section-number">8</span>
+        </div>
+        <h2 class="section-title">Síntesis y Reflexión</h2>
+      </header>
+
+      <div class="section-content">
+        <h3>Resumen de Puntos Clave</h3>
+
+        <ul>
+          <li><strong>Las teorías científicas son sistemas organizados</strong> de hipótesis, conceptos y leyes que explican fenómenos naturales. No son solo "ideas" sino marcos explicativos bien fundamentados.</li>
+
+          <li><strong>El método científico</strong> incluye observación, formulación de hipótesis, predicción, contrastación y conclusión. Este proceso es cíclico y autocorrectivo.</li>
+
+          <li><strong>Anomalías vs. Enigmas:</strong> Las anomalías son observaciones que desafían una teoría vigente, mientras que los enigmas son problemas que se espera resolver dentro de la teoría existente.</li>
+
+          <li><strong>La revolución copernicana</strong> no fue solo un cambio astronómico, sino un cambio en cómo pensamos sobre el lugar de la humanidad en el cosmos. Copérnico propuso que el Sol, no la Tierra, está en el centro del sistema planetario.</li>
+
+          <li><strong>Criterios para elegir teorías:</strong> Simplicidad (Navaja de Ockham), coherencia interna, poder explicativo, compatibilidad con otras teorías exitosas, y capacidad de hacer predicciones verificables.</li>
+
+          <li><strong>El cambio científico es complejo:</strong> No ocurre solo por "descubrir la verdad", sino por evaluar qué teoría explica mejor los fenómenos con los recursos conceptuales y observacionales disponibles.</li>
+        </ul>
+
+        <h3>Reflexiones Finales</h3>
+
+        <p>
+          La historia de la revolución copernicana nos enseña que el conocimiento científico no es estático ni absoluto. Las teorías que hoy consideramos verdaderas podrían ser reemplazadas mañana por teorías mejores que expliquen más con menos suposiciones. Esto no significa que "todo vale" o que la ciencia es solo opinión. Significa que la ciencia es un proceso de refinamiento continuo donde las teorías son evaluadas según criterios racionales y evidencia empírica.
+        </p>
+
+        <p>
+          También aprendemos que aceptar nuevas teorías puede ser difícil, no solo por razones intelectuales, sino también por razones culturales, religiosas y psicológicas. El geocentrismo no era solo una teoría astronómica; era parte de una visión del mundo completa que colocaba a la humanidad en el centro de la creación. Abandonar esa idea requirió no solo nuevos datos, sino una nueva manera de pensar sobre nuestro lugar en el universo.
+        </p>
+
+        <p>
+          Finalmente, esta unidad nos muestra que los mismos principios filosóficos que guiaron el debate entre Copérnico y Ptolomeo siguen siendo relevantes hoy. Cada vez que evaluamos información contradictoria, cada vez que decidimos en qué creer, estamos aplicando (consciente o inconscientemente) criterios filosóficos sobre qué hace que una explicación sea mejor que otra.
+        </p>
+
+        <blockquote class="philosophical-quote">
+          <p>
+            "El universo no está obligado a tener sentido para nosotros, pero podemos buscar entenderlo lo mejor que podamos."
+          </p>
+          <cite>— Paráfrasis de Neil deGrasse Tyson</cite>
+        </blockquote>
+
+        <div class="concept-highlight">
+          <h4>Para Profundizar</h4>
+          <p>
+            Si quieres explorar más sobre estos temas, considera estas preguntas para discusión o investigación personal:
+          </p>
+          <ul>
+            <li>¿Podemos estar seguros de que nuestras teorías científicas actuales son "correctas", o solo son las mejores explicaciones disponibles por ahora?</li>
+
+            <li>Si dos teorías explican exactamente los mismos fenómenos pero de maneras diferentes (como el sistema tychónico y el copernicano), ¿cómo decidimos cuál es "verdadera"?</li>
+
+            <li>¿Qué rol juegan factores no científicos (religión, política, preferencias estéticas) en la aceptación o rechazo de teorías científicas?</li>
+
+            <li>Investiga: ¿Cómo respondieron las autoridades religiosas de la época a la propuesta de Copérnico? ¿Por qué Galileo tuvo problemas pero Copérnico no?</li>
+
+            <li>Piensa en un área de tu vida donde has cambiado de opinión sobre algo importante. ¿Qué te hizo cambiar? ¿Se parece al proceso de cambio de teorías científicas?</li>
+          </ul>
+        </div>
+
+        <!-- Unit Navigation -->
+        <nav class="unit-navigation">
+          <a href="../index.html" class="unit-nav-link prev">
+            Volver al inicio
+          </a>
+          <a href="unit-2.html" class="unit-nav-link next">
+            Siguiente Unidad
+          </a>
+        </nav>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="main-footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h4>Sobre este proyecto</h4>
+          <p>
+            Plataforma educativa de filosofía diseñada para estudiantes de 6to grado.
+          </p>
+        </div>
+
+        <div class="footer-section">
+          <h4>Navegación</h4>
+          <p>
+            <a href="../index.html">Inicio</a><br>
+            <a href="#section-1">Volver arriba</a>
+          </p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2025 Filosofía 6to. Material educativo.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JavaScript -->
+  <script src="../assets/js/dark-mode.js"></script>
+  <script src="../assets/js/navigation.js"></script>
+  <script src="../assets/js/interactions.js"></script>
+  <script src="../assets/js/activities/comprehension-quiz.js"></script>
+
+  <!-- Quiz data -->
+  <script>
+    const quizQuestions = [
+      {
+        text: 'Nicolás Copérnico escribió en 1543: "En el centro de todo reside el Sol. ¿Quién podría colocar esta lámpara en otro o mejor lugar de este bellísimo templo, desde donde pudiera iluminar todas las cosas a la vez? Por tanto, no es inapropiado llamar al Sol la lámpara del universo, su mente, su gobernador." Sin embargo, Copérnico también reconocía que su teoría contradecía la experiencia cotidiana y las enseñanzas de Aristóteles. A pesar de estas dificultades, argumentó que la simplicidad matemática de su modelo justificaba su adopción.',
+        question: 'Según el texto, ¿cuál fue la razón PRINCIPAL por la que Copérnico defendió su modelo heliocéntrico a pesar de sus problemas?',
+        options: [
+          {
+            text: 'Porque tenía observaciones astronómicas que probaban definitivamente que el Sol estaba en el centro',
+            correct: false,
+            feedback: 'Incorrecto. El texto no menciona que Copérnico tuviera pruebas observacionales definitivas. De hecho, reconoce que su teoría contradecía la experiencia cotidiana.'
+          },
+          {
+            text: 'Porque la simplicidad y elegancia matemática del modelo lo hacían preferible',
+            correct: true,
+            feedback: '¡Correcto! El texto indica que Copérnico argumentó que "la simplicidad matemática de su modelo justificaba su adopción", a pesar de contradecir la experiencia y las autoridades.'
+          },
+          {
+            text: 'Porque quería desafiar las enseñanzas de la Iglesia y de Aristóteles',
+            correct: false,
+            feedback: 'Incorrecto. Aunque su teoría contradecía a Aristóteles, el texto no sugiere que su motivación fuera desafiar autoridades, sino razones matemáticas y estéticas.'
+          },
+          {
+            text: 'Porque el modelo geocéntrico no podía predecir las posiciones de los planetas',
+            correct: false,
+            feedback: 'Incorrecto. El modelo geocéntrico sí podía hacer predicciones. El argumento de Copérnico se basó en la simplicidad, no en que el modelo anterior fuera completamente inútil.'
+          }
+        ]
+      },
+      {
+        text: 'Un historiador de la ciencia escribió: "La diferencia entre una anomalía y un enigma es crucial. Un enigma es un problema que los científicos esperan resolver usando las herramientas de su teoría actual. Una anomalía, en cambio, es una observación que desafía los fundamentos mismos de la teoría. Durante décadas, los astrónomos ptolemaicos trataron el movimiento retrógrado como un enigma que podía resolverse agregando más epiciclos. Copérnico lo reinterpretó como una anomalía que mostraba que el geocentrismo era fundamentalmente erróneo."',
+        question: '¿Cuál de las siguientes situaciones ilustra MEJOR la diferencia entre un enigma y una anomalía?',
+        options: [
+          {
+            text: 'Los biólogos no pueden explicar aún cómo surgió la primera célula viva (enigma), pero encuentran fósiles humanos de 500 millones de años que contradicen toda la teoría evolutiva (anomalía)',
+            correct: true,
+            feedback: '¡Correcto! El origen de la primera célula es un problema difícil pero que se espera resolver dentro de la biología evolutiva (enigma). Fósiles humanos tan antiguos contradecirían fundamentalmente la teoría (anomalía).'
+          },
+          {
+            text: 'Los físicos encuentran una nueva partícula subatómica (anomalía) y luego trabajan para entender sus propiedades (enigma)',
+            correct: false,
+            feedback: 'Incorrecto. Encontrar una nueva partícula puede ser un enigma o una anomalía dependiendo de si la teoría actual predecía su existencia. El texto distingue entre resolver problemas dentro de la teoría (enigma) y desafiar la teoría (anomalía).'
+          },
+          {
+            text: 'Los meteorólogos no pueden predecir el clima con exactitud (enigma) y tampoco pueden explicar por qué llueve (anomalía)',
+            correct: false,
+            feedback: 'Incorrecto. Los meteorólogos sí pueden explicar por qué llueve usando la teoría actual. Ambos ejemplos son enigmas técnicos, no anomalías que desafíen la teoría fundamental.'
+          },
+          {
+            text: 'Los astrónomos observan que los planetas se mueven (enigma) pero no entienden por qué algunos son más brillantes que otros (anomalía)',
+            correct: false,
+            feedback: 'Incorrecto. Ninguno de estos casos desafía los fundamentos de la astronomía. Son simplemente observaciones que requieren explicación dentro de la teoría existente.'
+          }
+        ]
+      },
+      {
+        text: 'El filósofo de la ciencia Thomas Kuhn argumentó que los científicos rara vez abandonan una teoría solo porque enfrenta anomalías. En cambio, suelen trabajar arduamente para resolver esas anomalías dentro del marco de la teoría existente, agregando hipótesis auxiliares o modificando aspectos periféricos. Solo cuando las anomalías se acumulan hasta el punto de hacer la teoría inmanejablemente compleja, y cuando aparece una teoría alternativa más simple y poderosa, ocurre una "revolución científica". La transición del geocentrismo al heliocentrismo es un ejemplo clásico de este patrón.',
+        question: 'Según la perspectiva de Kuhn descrita en el texto, ¿cuál afirmación es CORRECTA sobre por qué los científicos ptolemaicos siguieron agregando epiciclos en lugar de abandonar el geocentrismo?',
+        options: [
+          {
+            text: 'Eran científicos incompetentes que no veían las contradicciones obvias en su teoría',
+            correct: false,
+            feedback: 'Incorrecto. El texto de Kuhn sugiere que este comportamiento es normal en ciencia, no un signo de incompetencia. Los científicos típicamente defienden y refinan teorías existentes antes de abandonarlas.'
+          },
+          {
+            text: 'Era un comportamiento científico normal intentar resolver problemas dentro del marco teórico existente',
+            correct: true,
+            feedback: '¡Correcto! Kuhn argumenta que es típico que los científicos trabajen para resolver anomalías "dentro del marco de la teoría existente" antes de considerar abandonarla. El cambio solo ocurre cuando la teoría se vuelve "inmanejablemente compleja".'
+          },
+          {
+            text: 'La Iglesia los obligaba a mantener el geocentrismo por razones religiosas',
+            correct: false,
+            feedback: 'Incorrecto. Aunque la religión jugó un rol, el texto se enfoca en razones intelectuales: los científicos naturalmente intentan salvar teorías existentes antes de abandonarlas.'
+          },
+          {
+            text: 'No conocían el modelo heliocéntrico, que era más simple',
+            correct: false,
+            feedback: 'Incorrecto. El texto habla de un patrón general en ciencia. Además, después de Copérnico, muchos astrónomos conocían el heliocentrismo pero siguieron con el geocentrismo por un tiempo.'
+          }
+        ]
+      },
+      {
+        text: 'El principio de simplicidad, también conocido como "Navaja de Ockham", establece que entre dos explicaciones que dan cuenta igualmente bien de los fenómenos observados, debemos preferir la más simple. Sin embargo, la "simplicidad" no siempre es obvia. Para Ptolomeo, su sistema era simple en un sentido: mantenía el principio griego de que los movimientos celestes deben ser circulares y uniformes. Para Copérnico, la simplicidad estaba en el número de círculos necesarios. Kepler encontró aún más simplicidad al abandonar los círculos en favor de elipses. Esto muestra que lo que cuenta como "simple" depende de qué aspectos valoramos en una teoría.',
+        question: 'El texto sugiere que el principio de simplicidad en ciencia es problemático porque:',
+        options: [
+          {
+            text: 'La simplicidad no es importante en ciencia; solo importa la precisión de las predicciones',
+            correct: false,
+            feedback: 'Incorrecto. El texto asume que la simplicidad es importante (menciona la Navaja de Ockham como principio), pero señala que su aplicación no es obvia.'
+          },
+          {
+            text: 'Diferentes científicos pueden valorar diferentes aspectos de una teoría al evaluar su simplicidad',
+            correct: true,
+            feedback: '¡Correcto! El texto muestra que Ptolomeo valoraba mantener círculos uniformes, Copérnico valoraba menos círculos totales, y Kepler valoraba la forma matemática. "Lo que cuenta como simple depende de qué aspectos valoramos".'
+          },
+          {
+            text: 'El modelo de Ptolomeo era objetivamente más simple que el de Copérnico',
+            correct: false,
+            feedback: 'Incorrecto. El texto no dice que un modelo fuera objetivamente más simple, sino que diferentes criterios de simplicidad llevaban a conclusiones diferentes.'
+          },
+          {
+            text: 'La simplicidad es un concepto subjetivo que hace que la ciencia no sea objetiva',
+            correct: false,
+            feedback: 'Incorrecto. Aunque el texto señala que hay diferentes criterios de simplicidad, no concluye que la ciencia sea puramente subjetiva. Hay razones para preferir diferentes criterios.'
+          }
+        ]
+      },
+      {
+        text: 'Galileo Galilei defendió el heliocentrismo usando observaciones telescópicas. Cuando observó que Venus mostraba fases completas (como la Luna), argumentó que esto refutaba el modelo ptolemaico tradicional, que predecía que Venus solo debería mostrar fases crecientes. Sin embargo, los críticos de Galileo señalaron que estas observaciones eran compatibles tanto con el modelo copernicano como con el modelo tychónico (donde los planetas orbitan el Sol, pero el Sol orbita la Tierra). Por tanto, las fases de Venus no probaban definitivamente que la Tierra se moviera, aunque sí mostraban que Venus orbitaba el Sol.',
+        question: 'Este caso ilustra un punto importante sobre la contrastación científica. ¿Cuál?',
+        options: [
+          {
+            text: 'Las observaciones nunca pueden probar o refutar teorías científicas de manera definitiva',
+            correct: false,
+            feedback: 'Demasiado fuerte. El texto dice que las observaciones refutaron el modelo ptolemaico tradicional. Lo que muestra es que una observación puede ser compatible con múltiples teorías, no que nunca pruebe nada.'
+          },
+          {
+            text: 'Una observación puede refutar algunas teorías mientras ser compatible con otras teorías rivales',
+            correct: true,
+            feedback: '¡Correcto! Las fases de Venus refutaron el ptolemaísmo tradicional pero eran compatibles tanto con el copernicanismo como con el sistema tychónico. Una observación puede eliminar algunas opciones sin decidir entre todas.'
+          },
+          {
+            text: 'Las observaciones de Galileo eran incorrectas porque no probaban definitivamente el heliocentrismo',
+            correct: false,
+            feedback: 'Incorrecto. Las observaciones eran correctas; el punto es sobre qué podían y no podían probar. Eliminaron algunas opciones pero no todas.'
+          },
+          {
+            text: 'El modelo tychónico era superior al copernicano porque podía explicar las mismas observaciones',
+            correct: false,
+            feedback: 'Incorrecto. Que dos modelos expliquen las mismas observaciones no hace a uno superior. Se necesitan otros criterios (simplicidad, coherencia, etc.) para decidir entre ellos.'
+          }
+        ]
+      },
+      {
+        text: 'Un aspecto interesante de la revolución copernicana es que Copérnico y sus seguidores inicialmente no tenían pruebas observacionales nuevas. Copérnico usaba los mismos datos que Ptolomeo. La diferencia estaba en cómo organizaba e interpretaba esos datos. Esto llevó al filósofo Pierre Duhem a argumentar que la elección entre geocentrismo y heliocentrismo en el siglo XVI no era puramente empírica (basada en observaciones) sino también estética y metafísica: ¿Qué tipo de universo es más "bello" o más acorde con nuestras intuiciones sobre cómo debe ser la naturaleza?',
+        question: 'Si aceptamos el argumento de Duhem, ¿qué implicación tiene para nuestra comprensión del método científico?',
+        options: [
+          {
+            text: 'El método científico es inútil porque las decisiones científicas son puramente estéticas',
+            correct: false,
+            feedback: 'Demasiado extremo. Duhem no dice que las decisiones sean "puramente" estéticas, sino que incluyen factores estéticos y metafísicos además de empíricos.'
+          },
+          {
+            text: 'Los científicos deben basar sus decisiones únicamente en observaciones y excluir toda consideración estética',
+            correct: false,
+            feedback: 'Incorrecto. Este sería el ideal positivista, pero Duhem sugiere que esto es imposible cuando los datos solos no deciden entre teorías. Además, históricamente los juicios estéticos jugaron roles productivos.'
+          },
+          {
+            text: 'La elección entre teorías científicas puede involucrar valores y juicios que van más allá de las observaciones cuando los datos por sí solos no deciden',
+            correct: true,
+            feedback: '¡Correcto! Duhem argumenta que cuando los datos no deciden entre teorías, otros factores (estéticos, metafísicos) inevitablemente juegan un rol. Esto no hace la ciencia arbitraria, pero muestra que es más compleja que solo "seguir los datos".'
+          },
+          {
+            text: 'Copérnico estaba equivocado al elegir el heliocentrismo porque su elección no se basó completamente en nuevas observaciones',
+            correct: false,
+            feedback: 'Incorrecto. El punto de Duhem no es que Copérnico estuviera equivocado, sino que mostrar que la elección involucraba más que datos no la hace incorrecta. De hecho, resultó ser una elección fructífera.'
+          }
+        ]
+      }
+    ];
+
+    // Initialize quiz
+    if (document.getElementById('comprehension-quiz')) {
+      new ComprehensionQuiz('comprehension-quiz', quizQuestions);
+    }
+  </script>
+</body>
+</html>

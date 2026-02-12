@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Unidad 1: Teorías Científicas | Filosofía 6to</title>
+  <link rel="stylesheet" href="../../assets/css/variables.css">
+  <link rel="stylesheet" href="../../assets/css/base.css">
+  <link rel="stylesheet" href="../../assets/css/layout.css">
+  <link rel="stylesheet" href="../../assets/css/components.css">
+  <style>
+    .unit-hero {
+      background: linear-gradient(135deg, #4a5f8f 0%, #667eea 50%, #4a5f8f 100%);
+      color: white;
+      padding: var(--space-2xl) 0;
+      text-align: center;
+    }
+
+    [data-theme="dark"] .unit-hero {
+      background: linear-gradient(135deg, #1e3a5f 0%, #2d4a7c 50%, #1e3a5f 100%);
+    }
+
+    .unit-hero h1 {
+      font-size: 2.5rem;
+      margin-bottom: var(--space-md);
+    }
+
+    .unit-hero p {
+      font-size: 1.2rem;
+      opacity: 0.95;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .class-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: var(--space-lg);
+      padding: var(--space-2xl) var(--space-md);
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .class-card {
+      background: var(--color-bg-secondary);
+      border: 2px solid var(--color-border);
+      border-radius: 12px;
+      padding: var(--space-lg);
+      transition: all 0.3s ease;
+      cursor: pointer;
+      text-decoration: none;
+      color: var(--color-text);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .class-card:hover {
+      transform: translateY(-4px);
+      border-color: var(--color-accent);
+      box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+    }
+
+    [data-theme="dark"] .class-card {
+      border-color: #1e3a8a;
+      box-shadow: 0 0 10px rgba(59, 130, 246, 0.2);
+    }
+
+    [data-theme="dark"] .class-card:hover {
+      border-color: #3b82f6;
+      box-shadow: 0 0 20px rgba(59, 130, 246, 0.4), 0 4px 20px rgba(0, 0, 0, 0.3);
+    }
+
+    .class-number {
+      display: inline-block;
+      background: var(--color-accent);
+      color: white;
+      padding: var(--space-xs) var(--space-sm);
+      border-radius: 6px;
+      font-size: 0.875rem;
+      font-weight: 600;
+      margin-bottom: var(--space-sm);
+    }
+
+    .class-title {
+      font-size: 1.25rem;
+      font-weight: 600;
+      margin-bottom: var(--space-sm);
+      line-height: 1.4;
+    }
+
+    .class-description {
+      font-size: 0.95rem;
+      color: var(--color-text-secondary);
+      line-height: 1.6;
+      flex-grow: 1;
+    }
+
+    .class-status {
+      margin-top: var(--space-md);
+      padding-top: var(--space-sm);
+      border-top: 1px solid var(--color-border);
+      font-size: 0.875rem;
+      color: var(--color-text-secondary);
+    }
+
+    .status-complete {
+      color: #10b981;
+      font-weight: 600;
+    }
+
+    .status-available {
+      color: var(--color-accent);
+      font-weight: 600;
+    }
+
+    .status-upcoming {
+      color: #6b7280;
+      font-style: italic;
+    }
+
+    .back-link {
+      display: inline-block;
+      margin: var(--space-xl) auto;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <nav class="main-nav">
+    <div class="nav-container">
+      <a href="../../index.html" class="nav-brand">Filosofía 6to</a>
+      <div class="nav-controls">
+        <button id="theme-toggle" class="btn btn-icon" aria-label="Cambiar tema">
+          <svg class="theme-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path class="sun" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path>
+            <path class="moon" d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Unit Hero -->
+  <section class="unit-hero">
+    <div class="container">
+      <h1>Unidad 1: Teorías Científicas</h1>
+      <p>
+        La Revolución Copernicana y el cambio de paradigma científico
+      </p>
+    </div>
+  </section>
+
+  <!-- Class Grid -->
+  <main>
+    <div class="class-grid">
+      <!-- Clase 1 -->
+      <a href="clase-01.html" class="class-card">
+        <span class="class-number">Clase 1</span>
+        <h3 class="class-title">Paradigmas: Ptolomeo y el Geocentrismo</h3>
+        <p class="class-description">
+          Introducción al concepto de paradigma científico. Exploramos el modelo geocéntrico de Ptolomeo que dominó durante 1.400 años.
+        </p>
+        <div class="class-status status-available">✓ Disponible</div>
+      </a>
+
+      <!-- Clase 2 -->
+      <a href="clase-02.html" class="class-card">
+        <span class="class-number">Clase 2</span>
+        <h3 class="class-title">La Revolución Copernicana</h3>
+        <p class="class-description">
+          Nicolás Copérnico propone el modelo heliocéntrico. ¿Por qué mover la Tierra del centro? Ventajas y problemas del nuevo paradigma.
+        </p>
+        <div class="class-status status-available">✓ Disponible</div>
+      </a>
+
+      <!-- Clase 3 -->
+      <a href="clase-03.html" class="class-card">
+        <span class="class-number">Clase 3</span>
+        <h3 class="class-title">Galileo: Observación y Telescopio</h3>
+        <p class="class-description">
+          Las revolucionarias observaciones telescópicas de Galileo: lunas de Júpiter, fases de Venus, montañas lunares. La evidencia empírica que faltaba.
+        </p>
+        <div class="class-status status-upcoming">Próximamente</div>
+      </a>
+
+      <!-- Clase 4 -->
+      <a href="clase-04.html" class="class-card">
+        <span class="class-number">Clase 4</span>
+        <h3 class="class-title">Galileo vs Aristóteles: El Problema del Movimiento</h3>
+        <p class="class-description">
+          ¿Por qué caen los objetos? Galileo refuta la física aristotélica mediante experimentación y razonamiento matemático. El nacimiento de la física moderna.
+        </p>
+        <div class="class-status status-upcoming">Próximamente</div>
+      </a>
+
+      <!-- Clase 5 -->
+      <a href="clase-05.html" class="class-card">
+        <span class="class-number">Clase 5</span>
+        <h3 class="class-title">El Método Científico: Hipótesis y Contrastación</h3>
+        <p class="class-description">
+          ¿Cómo se construye conocimiento científico? Observación, hipótesis, predicción, experimentación, contrastación. El método hipotético-deductivo.
+        </p>
+        <div class="class-status status-upcoming">Próximamente</div>
+      </a>
+
+      <!-- Clase 6 -->
+      <a href="clase-06.html" class="class-card">
+        <span class="class-number">Clase 6</span>
+        <h3 class="class-title">Anomalías, Enigmas e Hipótesis Ad Hoc</h3>
+        <p class="class-description">
+          ¿Qué ocurre cuando las observaciones no encajan con la teoría? Diferencia entre enigmas (solucionables) y anomalías (crisis de paradigma).
+        </p>
+        <div class="class-status status-upcoming">Próximamente</div>
+      </a>
+
+      <!-- Clase 7 -->
+      <a href="clase-07.html" class="class-card">
+        <span class="class-number">Clase 7</span>
+        <h3 class="class-title">Newton: La Gran Síntesis</h3>
+        <p class="class-description">
+          Isaac Newton unifica la física terrestre y celeste. Las tres leyes del movimiento y la ley de gravitación universal. El triunfo del nuevo paradigma.
+        </p>
+        <div class="class-status status-upcoming">Próximamente</div>
+      </a>
+
+      <!-- Clase 8 -->
+      <a href="clase-08.html" class="class-card">
+        <span class="class-number">Clase 8</span>
+        <h3 class="class-title">Carga Teórica de la Observación</h3>
+        <p class="class-description">
+          ¿Es posible observar "hechos puros"? Cómo nuestras teorías previas influyen en lo que vemos. Paradigmas como "lentes conceptuales".
+        </p>
+        <div class="class-status status-upcoming">Próximamente</div>
+      </a>
+
+      <!-- Clase 9 -->
+      <a href="clase-09.html" class="class-card">
+        <span class="class-number">Clase 9</span>
+        <h3 class="class-title">Criterios de Evaluación de Teorías</h3>
+        <p class="class-description">
+          ¿Cómo decidimos entre teorías rivales? Simplicidad, coherencia, poder explicativo, fertilidad, aplicaciones prácticas. Casos históricos.
+        </p>
+        <div class="class-status status-upcoming">Próximamente</div>
+      </a>
+
+      <!-- Clase 10 -->
+      <a href="clase-10.html" class="class-card">
+        <span class="class-number">Clase 10</span>
+        <h3 class="class-title">Integración y Evaluación</h3>
+        <p class="class-description">
+          Síntesis de la Unidad 1. Actividad integradora: análisis de un caso contemporáneo de cambio científico. Quiz final de comprensión.
+        </p>
+        <div class="class-status status-upcoming">Próximamente</div>
+      </a>
+    </div>
+
+    <!-- Back to Home -->
+    <div style="text-align: center; padding: var(--space-2xl) 0;">
+      <a href="../../index.html" class="btn btn-outline">← Volver al Inicio</a>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="main-footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h4>Unidad 1: Teorías Científicas</h4>
+          <p>10 clases explorando la revolución copernicana y el cambio de paradigma científico</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Filosofía 6to. Material educativo.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JavaScript -->
+  <script src="../../assets/js/dark-mode.js"></script>
+</body>
+</html>

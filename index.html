@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Plataforma de filosofía para estudiantes de 6to grado. Explora las grandes preguntas de la humanidad de manera interactiva.">
+  <meta name="keywords" content="filosofía, educación, secundaria, pensamiento crítico">
+  <meta name="author" content="Filosofía 6to">
+
+  <title>Filosofía para Pensar | 6to Grado</title>
+
+  <!-- Favicon (to be added) -->
+  <link rel="icon" type="image/png" href="assets/images/favicon.png">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="assets/css/reset.css">
+  <link rel="stylesheet" href="assets/css/variables.css">
+  <link rel="stylesheet" href="assets/css/typography.css">
+  <link rel="stylesheet" href="assets/css/layout.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <link rel="stylesheet" href="assets/css/navigation.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+
+  <!-- Styles specific to home page -->
+  <style>
+    /* Hero Section */
+    .hero {
+      position: relative;
+      width: 100%;
+      height: 60vh;
+      min-height: 500px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      background: linear-gradient(135deg,
+        #4a5f8f 0%,
+        #667eea 25%,
+        #5a72d8 50%,
+        #667eea 75%,
+        #4a5f8f 100%
+      );
+      background-size: 200% 200%;
+      animation: metallicShine 8s ease infinite;
+    }
+
+    [data-theme="dark"] .hero {
+      background: linear-gradient(135deg,
+        #1e3a5f 0%,
+        #2d4a7c 25%,
+        #3b5a99 50%,
+        #2d4a7c 75%,
+        #1e3a5f 100%
+      );
+      background-size: 200% 200%;
+      animation: metallicShine 8s ease infinite;
+    }
+
+    @keyframes metallicShine {
+      0% {
+        background-position: 0% 50%;
+      }
+      50% {
+        background-position: 100% 50%;
+      }
+      100% {
+        background-position: 0% 50%;
+      }
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.4);
+      z-index: 1;
+    }
+
+    .hero-background {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: 0;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      text-align: center;
+      color: white;
+      max-width: 800px;
+      padding: 0 var(--space-md);
+    }
+
+    .hero-title {
+      font-family: var(--font-serif);
+      font-size: 48px;
+      font-weight: var(--font-weight-bold);
+      margin-bottom: var(--space-md);
+      line-height: 1.2;
+      text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    }
+
+    .hero-subtitle {
+      font-size: 20px;
+      font-weight: var(--font-weight-light);
+      margin-bottom: var(--space-xl);
+      opacity: 0.95;
+      text-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Intro Section */
+    .intro-section {
+      padding: var(--space-2xl) 0;
+      background: var(--color-bg-primary);
+    }
+
+    .intro-text {
+      max-width: 700px;
+      margin: 0 auto;
+      text-align: center;
+      font-size: var(--font-size-large);
+      line-height: var(--line-height-relaxed);
+      color: var(--color-text-secondary);
+    }
+
+    /* Units Grid */
+    .units-section {
+      padding: var(--space-2xl) 0;
+      background: var(--color-bg-secondary);
+    }
+
+    .section-title-main {
+      text-align: center;
+      font-family: var(--font-serif);
+      font-size: var(--font-size-h1);
+      margin-bottom: var(--space-xl);
+      color: var(--color-text-primary);
+    }
+
+    .units-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: var(--space-lg);
+    }
+
+    /* Results summary styles for quiz */
+    .results-summary {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: var(--space-md);
+      margin: var(--space-xl) 0;
+    }
+
+    .result-stat {
+      text-align: center;
+      padding: var(--space-md);
+      background: var(--color-bg-tertiary);
+      border-radius: var(--radius-md);
+    }
+
+    .stat-number {
+      display: block;
+      font-size: 42px;
+      font-weight: var(--font-weight-bold);
+      color: var(--color-accent);
+      margin-bottom: var(--space-xs);
+    }
+
+    .stat-label {
+      display: block;
+      font-size: var(--font-size-small);
+      color: var(--color-text-secondary);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .results-message {
+      text-align: center;
+      font-size: var(--font-size-large);
+      color: var(--color-text-primary);
+      margin: var(--space-xl) 0;
+    }
+
+    .activity-progress {
+      text-align: center;
+      color: var(--color-text-tertiary);
+      font-size: var(--font-size-small);
+      margin-bottom: var(--space-md);
+    }
+
+    .quiz-actions {
+      display: flex;
+      justify-content: center;
+      margin-top: var(--space-lg);
+    }
+  </style>
+</head>
+<body>
+  <!-- Main Header -->
+  <header class="main-header">
+    <div class="container">
+      <a href="index.html" class="site-logo">Filosofía 6to</a>
+
+      <nav class="main-nav">
+        <a href="index.html" class="nav-link active">Inicio</a>
+        <button
+          id="dark-mode-toggle"
+          class="dark-mode-toggle"
+          aria-label="Cambiar tema"
+          tabindex="0"
+        >
+          <!-- Icon will be inserted by JavaScript -->
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <!-- Background image will be added here -->
+    <!-- <img src="assets/images/hero/main-hero.jpg" alt="" class="hero-background"> -->
+
+    <div class="hero-content">
+      <h1 class="hero-title">Filosofía para Pensar</h1>
+      <p class="hero-subtitle">Explora las grandes preguntas de la humanidad</p>
+    </div>
+  </section>
+
+  <!-- Intro Section -->
+  <section class="intro-section">
+    <div class="container">
+      <p class="intro-text">
+        Bienvenido a tu espacio de filosofía. Aquí descubrirás cómo los grandes pensadores
+        han abordado las preguntas más importantes de la existencia humana, y aprenderás
+        a desarrollar tu propio pensamiento crítico.
+      </p>
+    </div>
+  </section>
+
+  <!-- Units Grid Section -->
+  <section class="units-section">
+    <div class="container">
+      <h2 class="section-title-main">Unidades Didácticas</h2>
+
+      <div class="units-grid">
+        <!-- Unit 1: Las teorías científicas -->
+        <article class="unit-card">
+          <a href="units/unit-1/index.html" class="unit-card__link">
+            <div class="unit-card__image-wrapper">
+              <img
+                src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800&h=600&fit=crop"
+                alt="La revolución copernicana"
+                class="unit-card__image"
+              >
+            </div>
+            <div class="unit-card__content">
+              <h3 class="unit-card__title">Unidad 1: Las Teorías Científicas</h3>
+              <p class="unit-card__description">
+                Explora cómo se construyen las teorías científicas a través del caso histórico de la revolución copernicana. Comprende la relación entre observación, hipótesis y teoría.
+              </p>
+              <span class="unit-card__cta">Explorar unidad →</span>
+            </div>
+          </a>
+        </article>
+
+        <!-- Unit 2: Controversias científicas -->
+        <article class="unit-card">
+          <a href="units/unit-2.html" class="unit-card__link">
+            <div class="unit-card__image-wrapper">
+              <img
+                src="https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?w=800&h=600&fit=crop"
+                alt="Controversia Pasteur-Pouchet"
+                class="unit-card__image"
+              >
+            </div>
+            <div class="unit-card__content">
+              <h3 class="unit-card__title">Unidad 2: Controversias Científicas</h3>
+              <p class="unit-card__description">
+                Analiza cómo se resuelven los debates entre teorías rivales mediante el estudio de la controversia Pasteur-Pouchet sobre la generación espontánea.
+              </p>
+              <span class="unit-card__cta">Explorar unidad →</span>
+            </div>
+          </a>
+        </article>
+
+        <!-- Unit 3: Teorías y métodos -->
+        <article class="unit-card">
+          <a href="units/unit-3.html" class="unit-card__link">
+            <div class="unit-card__image-wrapper">
+              <img
+                src="https://images.unsplash.com/photo-1530026405186-ed1f139313f8?w=800&h=600&fit=crop"
+                alt="Mendel y la genética"
+                class="unit-card__image"
+              >
+            </div>
+            <div class="unit-card__content">
+              <h3 class="unit-card__title">Unidad 3: Teorías y Métodos</h3>
+              <p class="unit-card__description">
+                Descubre los métodos científicos y cómo las teorías estructuran el conocimiento a través del trabajo de Mendel y el nacimiento de la genética.
+              </p>
+              <span class="unit-card__cta">Explorar unidad →</span>
+            </div>
+          </a>
+        </article>
+
+        <!-- Unit 4: Sucesión de teorías -->
+        <article class="unit-card">
+          <a href="units/unit-4.html" class="unit-card__link">
+            <div class="unit-card__image-wrapper">
+              <img
+                src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&h=600&fit=crop"
+                alt="Evolucionismo en biología"
+                class="unit-card__image"
+              >
+            </div>
+            <div class="unit-card__content">
+              <h3 class="unit-card__title">Unidad 4: Sucesión de Teorías</h3>
+              <p class="unit-card__description">
+                Examina cómo evolucionan las teorías científicas y el concepto de progreso en la ciencia mediante el estudio del evolucionismo en biología.
+              </p>
+              <span class="unit-card__cta">Explorar unidad →</span>
+            </div>
+          </a>
+        </article>
+
+        <!-- Unit 5: Articulación entre teorías -->
+        <article class="unit-card">
+          <a href="units/unit-5.html" class="unit-card__link">
+            <div class="unit-card__image-wrapper">
+              <img
+                src="https://images.unsplash.com/photo-1462331940025-496dfbfc7564?w=800&h=600&fit=crop"
+                alt="Cosmología actual"
+                class="unit-card__image"
+              >
+            </div>
+            <div class="unit-card__content">
+              <h3 class="unit-card__title">Unidad 5: Articulación entre Teorías</h3>
+              <p class="unit-card__description">
+                Investiga cómo diferentes teorías científicas se relacionan y complementan a través del desarrollo de la cosmología y nuestra comprensión del universo.
+              </p>
+              <span class="unit-card__cta">Explorar unidad →</span>
+            </div>
+          </a>
+        </article>
+
+        <!-- Unit 6: Ciencias y Sociedad -->
+        <article class="unit-card">
+          <a href="units/unit-6.html" class="unit-card__link">
+            <div class="unit-card__image-wrapper">
+              <img
+                src="https://images.unsplash.com/photo-1509228468518-180dd4864904?w=800&h=600&fit=crop"
+                alt="Ciencias formales, fácticas y sociales"
+                class="unit-card__image"
+              >
+            </div>
+            <div class="unit-card__content">
+              <h3 class="unit-card__title">Unidad 6: Ciencias y Sociedad</h3>
+              <p class="unit-card__description">
+                Distingue entre ciencias formales, fácticas y sociales. Reflexiona sobre los aspectos éticos de la investigación científica y su impacto social.
+              </p>
+              <span class="unit-card__cta">Explorar unidad →</span>
+            </div>
+          </a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="main-footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h4>Sobre este proyecto</h4>
+          <p>
+            Plataforma educativa de filosofía diseñada para estudiantes de 6to grado.
+            Fomenta el pensamiento crítico y la reflexión sobre las grandes preguntas.
+          </p>
+        </div>
+
+        <div class="footer-section">
+          <h4>Recursos</h4>
+          <p>
+            <a href="index.html">Inicio</a><br>
+            <a href="#unidades">Unidades</a><br>
+            <a href="#contacto">Contacto</a>
+          </p>
+        </div>
+
+        <div class="footer-section">
+          <h4>Contacto</h4>
+          <p>
+            Para más información sobre este proyecto educativo,
+            contacta con tu profesor de filosofía.
+          </p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2025 Filosofía 6to. Material educativo.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JavaScript -->
+  <script src="assets/js/dark-mode.js"></script>
+  <script src="assets/js/navigation.js"></script>
+  <script src="assets/js/interactions.js"></script>
+</body>
+</html>

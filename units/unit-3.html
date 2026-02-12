@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Unidad 1 - Filosofía 6to Grado">
+
+  <title>Unidad 1 | Filosofía 6to</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="../assets/images/favicon.png">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="../assets/css/reset.css">
+  <link rel="stylesheet" href="../assets/css/variables.css">
+  <link rel="stylesheet" href="../assets/css/typography.css">
+  <link rel="stylesheet" href="../assets/css/layout.css">
+  <link rel="stylesheet" href="../assets/css/components.css">
+  <link rel="stylesheet" href="../assets/css/navigation.css">
+  <link rel="stylesheet" href="../assets/css/responsive.css">
+
+  <!-- Unit page specific styles -->
+  <style>
+    .unit-hero {
+      position: relative;
+      width: 100%;
+      height: 30vh;
+      min-height: 250px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+      text-align: center;
+    }
+
+    .unit-hero::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.3);
+      z-index: 1;
+    }
+
+    .unit-hero-content {
+      position: relative;
+      z-index: 2;
+      padding: 0 var(--space-md);
+      max-width: 800px;
+    }
+
+    .unit-hero-title {
+      font-family: var(--font-serif);
+      font-size: var(--font-size-h1);
+      margin-bottom: var(--space-sm);
+      text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    }
+
+    .unit-hero-description {
+      font-size: var(--font-size-large);
+      opacity: 0.95;
+      text-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
+    }
+
+    .unit-section {
+      padding: var(--space-2xl) 0;
+      border-bottom: 1px solid var(--color-border);
+    }
+
+    .unit-section:nth-child(even) {
+      background: var(--color-bg-secondary);
+    }
+
+    .unit-section:nth-child(odd) {
+      background: var(--color-bg-primary);
+    }
+
+    .section-container {
+      max-width: var(--content-max-width);
+      margin: 0 auto;
+      padding: 0 var(--space-md);
+    }
+
+    .section-content {
+      margin-top: var(--space-xl);
+    }
+
+    .section-content p {
+      margin-bottom: 1.5em;
+    }
+
+    .section-content img {
+      margin: var(--space-xl) auto;
+      border-radius: var(--radius-md);
+      max-width: 100%;
+    }
+
+    .section-content figcaption {
+      text-align: center;
+      font-size: var(--font-size-small);
+      color: var(--color-text-tertiary);
+      margin-top: var(--space-sm);
+    }
+  </style>
+</head>
+<body>
+  <!-- Main Header -->
+  <header class="main-header">
+    <div class="container">
+      <a href="../index.html" class="site-logo">Filosofía 6to</a>
+
+      <nav class="main-nav">
+        <a href="../index.html" class="nav-link">Inicio</a>
+        <button
+          id="dark-mode-toggle"
+          class="dark-mode-toggle"
+          aria-label="Cambiar tema"
+          tabindex="0"
+        >
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Unit Hero -->
+  <section class="unit-hero">
+    <div class="unit-hero-content">
+      <h1 class="unit-hero-title">Unidad 1: [Título desde Drive]</h1>
+      <p class="unit-hero-description">
+        [Descripción breve de la unidad desde Google Drive]
+      </p>
+    </div>
+  </section>
+
+  <!-- Section Navigation -->
+  <nav class="section-nav">
+    <div class="container">
+      <a href="#section-1" class="section-nav-link active">
+        <span class="section-nav-number">1</span>
+        <span>Problema</span>
+      </a>
+      <a href="#section-2" class="section-nav-link">
+        <span class="section-nav-number">2</span>
+        <span>Contexto</span>
+      </a>
+      <a href="#section-3" class="section-nav-link">
+        <span class="section-nav-number">3</span>
+        <span>Conceptos</span>
+      </a>
+      <a href="#section-4" class="section-nav-link">
+        <span class="section-nav-number">4</span>
+        <span>Mapa</span>
+      </a>
+      <a href="#section-5" class="section-nav-link">
+        <span class="section-nav-number">5</span>
+        <span>Comparación</span>
+      </a>
+      <a href="#section-6" class="section-nav-link">
+        <span class="section-nav-number">6</span>
+        <span>Aplicación</span>
+      </a>
+      <a href="#section-7" class="section-nav-link">
+        <span class="section-nav-number">7</span>
+        <span>Actividad</span>
+      </a>
+      <a href="#section-8" class="section-nav-link">
+        <span class="section-nav-number">8</span>
+        <span>Síntesis</span>
+      </a>
+    </div>
+  </nav>
+
+  <!-- Section 1: Problema Inicial -->
+  <section id="section-1" class="unit-section" data-section="problema">
+    <div class="section-container">
+      <header class="section-header">
+        <div class="section-badge">
+          <svg class="section-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+          </svg>
+          <span class="section-number">1</span>
+        </div>
+        <h2 class="section-title">Problema Inicial</h2>
+      </header>
+
+      <div class="section-content">
+        <p>
+          [Contenido desde Google Drive - Escenario relatable para estudiantes de 6to grado que introduce el problema filosófico principal]
+        </p>
+
+        <p>
+          [Párrafos adicionales desarrollando el problema desde la perspectiva de los estudiantes]
+        </p>
+
+        <div class="concept-highlight">
+          <h4>Pregunta Central</h4>
+          <p>
+            [La pregunta filosófica principal que guiará esta unidad]
+          </p>
+        </div>
+
+        <!-- Image placeholder -->
+        <!-- <figure>
+          <img src="../assets/images/content/unit-1-problem.jpg" alt="Ilustración del problema">
+          <figcaption>Descripción de la imagen</figcaption>
+        </figure> -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 2: Contexto Histórico -->
+  <section id="section-2" class="unit-section" data-section="contexto">
+    <div class="section-container">
+      <header class="section-header">
+        <div class="section-badge">
+          <svg class="section-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+          </svg>
+          <span class="section-number">2</span>
+        </div>
+        <h2 class="section-title">Contexto Histórico</h2>
+      </header>
+
+      <div class="section-content">
+        <p>
+          [Contenido desde Google Drive - Breve historia del problema filosófico]
+        </p>
+
+        <h3>Filósofos Clave</h3>
+
+        <div class="concept-highlight">
+          <h4>[Nombre del Filósofo 1]</h4>
+          <p>
+            [Mini-biografía y contribución principal]
+          </p>
+        </div>
+
+        <div class="concept-highlight">
+          <h4>[Nombre del Filósofo 2]</h4>
+          <p>
+            [Mini-biografía y contribución principal]
+          </p>
+        </div>
+
+        <!-- Image placeholders for philosopher portraits -->
+        <!-- <figure>
+          <img src="../assets/images/content/unit-1-philosopher-1.jpg" alt="Retrato del filósofo">
+          <figcaption>Nombre del Filósofo (Años de vida)</figcaption>
+        </figure> -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 3: Conceptos Fundamentales -->
+  <section id="section-3" class="unit-section" data-section="conceptos">
+    <div class="section-container">
+      <header class="section-header">
+        <div class="section-badge">
+          <svg class="section-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+          </svg>
+          <span class="section-number">3</span>
+        </div>
+        <h2 class="section-title">Conceptos Fundamentales</h2>
+      </header>
+
+      <div class="section-content">
+        <p>
+          [Introducción a los conceptos clave desde Google Drive]
+        </p>
+
+        <div class="concept-highlight">
+          <h4>Concepto 1: [Nombre]</h4>
+          <p>
+            <strong>Definición:</strong> [Definición clara y accesible]
+          </p>
+          <p>
+            <strong>Ejemplo:</strong> [Ejemplo relatable para estudiantes de 6to]
+          </p>
+        </div>
+
+        <div class="concept-highlight">
+          <h4>Concepto 2: [Nombre]</h4>
+          <p>
+            <strong>Definición:</strong> [Definición clara y accesible]
+          </p>
+          <p>
+            <strong>Ejemplo:</strong> [Ejemplo relatable para estudiantes de 6to]
+          </p>
+        </div>
+
+        <div class="concept-highlight">
+          <h4>Concepto 3: [Nombre]</h4>
+          <p>
+            <strong>Definición:</strong> [Definición clara y accesible]
+          </p>
+          <p>
+            <strong>Ejemplo:</strong> [Ejemplo relatable para estudiantes de 6to]
+          </p>
+        </div>
+
+        <div class="concept-highlight">
+          <h4>Concepto 4: [Nombre]</h4>
+          <p>
+            <strong>Definición:</strong> [Definición clara y accesible]
+          </p>
+          <p>
+            <strong>Ejemplo:</strong> [Ejemplo relatable para estudiantes de 6to]
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 4: Mapa Argumental -->
+  <section id="section-4" class="unit-section" data-section="mapa">
+    <div class="section-container">
+      <header class="section-header">
+        <div class="section-badge">
+          <svg class="section-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7" />
+          </svg>
+          <span class="section-number">4</span>
+        </div>
+        <h2 class="section-title">Mapa Argumental</h2>
+      </header>
+
+      <div class="section-content">
+        <p>
+          [Introducción al mapa argumental desde Google Drive]
+        </p>
+
+        <!-- Diagram image or HTML/CSS diagram -->
+        <!-- <figure>
+          <img src="../assets/images/content/unit-1-argument-map.jpg" alt="Mapa argumental">
+          <figcaption>Estructura lógica del argumento principal</figcaption>
+        </figure> -->
+
+        <h3>Estructura del Argumento</h3>
+
+        <div class="concept-highlight">
+          <h4>Premisa 1</h4>
+          <p>[Contenido de la premisa]</p>
+        </div>
+
+        <div class="concept-highlight">
+          <h4>Premisa 2</h4>
+          <p>[Contenido de la premisa]</p>
+        </div>
+
+        <div class="concept-highlight">
+          <h4>Conclusión</h4>
+          <p>[Contenido de la conclusión]</p>
+        </div>
+
+        <p>
+          [Explicación de las conexiones lógicas entre las premisas y la conclusión]
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 5: Comparación de Posturas -->
+  <section id="section-5" class="unit-section" data-section="comparacion">
+    <div class="section-container">
+      <header class="section-header">
+        <div class="section-badge">
+          <svg class="section-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M8 7h12M8 12h12m-12 5h12M3 7h.01M3 12h.01M3 17h.01" />
+          </svg>
+          <span class="section-number">5</span>
+        </div>
+        <h2 class="section-title">Comparación de Posturas</h2>
+      </header>
+
+      <div class="section-content">
+        <p>
+          [Introducción a las diferentes posturas filosóficas desde Google Drive]
+        </p>
+
+        <div class="concept-highlight">
+          <h4>Postura 1: [Nombre/Escuela]</h4>
+          <p>
+            <strong>Argumento principal:</strong> [Resumen del argumento]
+          </p>
+          <p>
+            <strong>Filósofos representativos:</strong> [Nombres]
+          </p>
+          <p>
+            <strong>Fortalezas:</strong> [Puntos fuertes de esta postura]
+          </p>
+        </div>
+
+        <div class="concept-highlight">
+          <h4>Postura 2: [Nombre/Escuela]</h4>
+          <p>
+            <strong>Argumento principal:</strong> [Resumen del argumento]
+          </p>
+          <p>
+            <strong>Filósofos representativos:</strong> [Nombres]
+          </p>
+          <p>
+            <strong>Fortalezas:</strong> [Puntos fuertes de esta postura]
+          </p>
+        </div>
+
+        <div class="concept-highlight">
+          <h4>Postura 3: [Nombre/Escuela]</h4>
+          <p>
+            <strong>Argumento principal:</strong> [Resumen del argumento]
+          </p>
+          <p>
+            <strong>Filósofos representativos:</strong> [Nombres]
+          </p>
+          <p>
+            <strong>Fortalezas:</strong> [Puntos fuertes de esta postura]
+          </p>
+        </div>
+
+        <p>
+          [Análisis neutral comparando las tres posturas]
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 6: Aplicación Contemporánea -->
+  <section id="section-6" class="unit-section" data-section="aplicacion">
+    <div class="section-container">
+      <header class="section-header">
+        <div class="section-badge">
+          <svg class="section-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+          </svg>
+          <span class="section-number">6</span>
+        </div>
+        <h2 class="section-title">Aplicación Contemporánea</h2>
+      </header>
+
+      <div class="section-content">
+        <p>
+          [Introducción a las aplicaciones modernas del problema filosófico desde Google Drive]
+        </p>
+
+        <h3>Ejemplos Modernos</h3>
+
+        <div class="concept-highlight">
+          <h4>Ejemplo 1: [Situación Actual]</h4>
+          <p>
+            [Descripción de cómo el problema filosófico se manifiesta en la vida moderna, relevante para estudiantes de 6to]
+          </p>
+        </div>
+
+        <div class="concept-highlight">
+          <h4>Ejemplo 2: [Situación Actual]</h4>
+          <p>
+            [Descripción de cómo el problema filosófico se manifiesta en la vida moderna, relevante para estudiantes de 6to]
+          </p>
+        </div>
+
+        <h3>Preguntas para Reflexión</h3>
+        <ul>
+          <li>[Pregunta de discusión 1]</li>
+          <li>[Pregunta de discusión 2]</li>
+          <li>[Pregunta de discusión 3]</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 7: Actividad Interactiva -->
+  <section id="section-7" class="unit-section" data-section="actividad">
+    <div class="section-container">
+      <header class="section-header">
+        <div class="section-badge">
+          <svg class="section-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+          </svg>
+          <span class="section-number">7</span>
+        </div>
+        <h2 class="section-title">Actividad Interactiva</h2>
+      </header>
+
+      <div class="section-content">
+        <p>
+          Ahora es tu turno de poner en práctica lo aprendido. Lee atentamente los textos y responde las preguntas de comprensión.
+        </p>
+
+        <!-- Quiz container -->
+        <div id="comprehension-quiz"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 8: Síntesis y Reflexión -->
+  <section id="section-8" class="unit-section" data-section="sintesis">
+    <div class="section-container">
+      <header class="section-header">
+        <div class="section-badge">
+          <svg class="section-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+          </svg>
+          <span class="section-number">8</span>
+        </div>
+        <h2 class="section-title">Síntesis y Reflexión</h2>
+      </header>
+
+      <div class="section-content">
+        <h3>Resumen de Puntos Clave</h3>
+
+        <ul>
+          <li>[Punto clave 1 - Resumen del problema inicial]</li>
+          <li>[Punto clave 2 - Contexto histórico esencial]</li>
+          <li>[Punto clave 3 - Conceptos fundamentales]</li>
+          <li>[Punto clave 4 - Posturas principales]</li>
+          <li>[Punto clave 5 - Relevancia contemporánea]</li>
+        </ul>
+
+        <h3>Reflexiones Finales</h3>
+
+        <p>
+          [Texto de síntesis desde Google Drive que integra todos los temas de la unidad]
+        </p>
+
+        <div class="concept-highlight">
+          <h4>Para Profundizar</h4>
+          <p>
+            [Preguntas abiertas para reflexión personal o discusión en clase]
+          </p>
+          <ul>
+            <li>[Pregunta reflexiva 1]</li>
+            <li>[Pregunta reflexiva 2]</li>
+            <li>[Pregunta reflexiva 3]</li>
+          </ul>
+        </div>
+
+        <!-- Unit Navigation -->
+        <nav class="unit-navigation">
+          <a href="../index.html" class="unit-nav-link prev">
+            Volver al inicio
+          </a>
+          <a href="unit-2.html" class="unit-nav-link next">
+            Siguiente Unidad
+          </a>
+        </nav>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="main-footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h4>Sobre este proyecto</h4>
+          <p>
+            Plataforma educativa de filosofía diseñada para estudiantes de 6to grado.
+          </p>
+        </div>
+
+        <div class="footer-section">
+          <h4>Navegación</h4>
+          <p>
+            <a href="../index.html">Inicio</a><br>
+            <a href="#section-1">Volver arriba</a>
+          </p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2025 Filosofía 6to. Material educativo.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JavaScript -->
+  <script src="../assets/js/dark-mode.js"></script>
+  <script src="../assets/js/navigation.js"></script>
+  <script src="../assets/js/interactions.js"></script>
+  <script src="../assets/js/activities/comprehension-quiz.js"></script>
+
+  <!-- Quiz data - To be populated with content from Google Drive -->
+  <script>
+    // Example quiz data structure - Replace with actual content from Drive
+    const quizQuestions = [
+      {
+        text: '[Texto filosófico de 100-150 palabras para interpretar]',
+        question: '[Pregunta interpretativa sobre el texto]',
+        options: [
+          {
+            text: '[Opción A]',
+            correct: false,
+            feedback: '[Explicación de por qué esta opción es incorrecta]'
+          },
+          {
+            text: '[Opción B]',
+            correct: true,
+            feedback: '[Explicación de por qué esta es la respuesta correcta]'
+          },
+          {
+            text: '[Opción C]',
+            correct: false,
+            feedback: '[Explicación de por qué esta opción es incorrecta]'
+          },
+          {
+            text: '[Opción D]',
+            correct: false,
+            feedback: '[Explicación de por qué esta opción es incorrecta]'
+          }
+        ]
+      },
+      // Add 4-6 more questions here from Google Drive content
+    ];
+
+    // Initialize quiz
+    if (document.getElementById('comprehension-quiz')) {
+      new ComprehensionQuiz('comprehension-quiz', quizQuestions);
+    }
+  </script>
+</body>
+</html>

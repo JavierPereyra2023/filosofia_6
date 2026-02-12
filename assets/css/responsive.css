@@ -1,0 +1,187 @@
+/* Responsive Design - Media Queries */
+
+/* Tablet and below (768px) */
+@media (max-width: 768px) {
+  :root {
+    --space-lg: 32px;
+    --space-xl: 48px;
+    --space-2xl: 60px;
+  }
+
+  /* Typography adjustments */
+  body {
+    font-size: 16px;
+  }
+
+  h1 {
+    font-size: 32px;
+  }
+
+  h2 {
+    font-size: 24px;
+  }
+
+  h3 {
+    font-size: 20px;
+  }
+
+  /* Hero adjustments */
+  .hero {
+    height: 40vh !important;
+    min-height: 300px;
+  }
+
+  .hero-title {
+    font-size: 32px !important;
+  }
+
+  .hero-subtitle {
+    font-size: 16px !important;
+  }
+
+  /* Grid adjustments */
+  .units-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* Section header */
+  .section-header {
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .section-title {
+    font-size: 24px;
+  }
+
+  /* Quiz options */
+  .quiz-option {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .option-letter {
+    margin-bottom: var(--space-xs);
+  }
+}
+
+/* Small mobile (480px and below) */
+@media (max-width: 480px) {
+  :root {
+    --space-md: 16px;
+    --space-lg: 24px;
+    --space-xl: 32px;
+    --space-2xl: 48px;
+  }
+
+  /* Further typography reduction */
+  body {
+    font-size: 16px;
+  }
+
+  h1 {
+    font-size: 28px;
+  }
+
+  h2 {
+    font-size: 22px;
+  }
+
+  /* Padding adjustments */
+  .container {
+    padding: 0 16px;
+  }
+
+  section {
+    padding: var(--space-lg) 0;
+  }
+
+  /* Hero */
+  .hero {
+    height: 300px !important;
+    min-height: 250px;
+  }
+
+  /* Cards */
+  .unit-card__content {
+    padding: var(--space-sm);
+  }
+
+  .unit-card__title {
+    font-size: 20px;
+  }
+
+  /* Activity container */
+  .activity-container {
+    padding: var(--space-md);
+  }
+
+  /* Blockquote */
+  blockquote {
+    padding-left: var(--space-sm);
+    font-size: 16px;
+  }
+}
+
+/* Tablet landscape and small desktop (600px to 900px) */
+@media (min-width: 600px) and (max-width: 900px) {
+  .units-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
+
+/* Desktop (900px and above) */
+@media (min-width: 900px) {
+  .units-grid {
+    grid-template-columns: repeat(3, 1fr) !important;
+  }
+}
+
+/* Large desktop (1440px and above) */
+@media (min-width: 1440px) {
+  :root {
+    --font-size-base: 19px;
+    --container-max-width: 1400px;
+  }
+}
+
+/* Touch device optimizations */
+@media (hover: none) and (pointer: coarse) {
+  /* Increase tap target sizes */
+  .btn,
+  .nav-link,
+  .quiz-option {
+    min-height: 44px;
+    min-width: 44px;
+  }
+
+  /* Disable hover effects on touch devices */
+  .unit-card:hover {
+    transform: none;
+  }
+
+  .unit-card:active {
+    transform: scale(0.98);
+  }
+}
+
+/* Print styles */
+@media print {
+  .main-header,
+  .section-nav,
+  .dark-mode-toggle,
+  .main-footer,
+  .unit-navigation {
+    display: none;
+  }
+
+  body {
+    background: white;
+    color: black;
+  }
+
+  a {
+    text-decoration: underline;
+  }
+}
