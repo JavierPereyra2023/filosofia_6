@@ -542,6 +542,14 @@
   }
 }
 
+/* Hide graffiti on smaller screens to prevent overlap */
+@media (max-width: 1280px) {
+  .class-container::before,
+  .class-container::after {
+    display: none !important;
+  }
+}
+
 @media (max-width: 480px) {
   .class-container {
     padding: var(--space-md) var(--space-sm);

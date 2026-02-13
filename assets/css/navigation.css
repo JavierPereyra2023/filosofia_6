@@ -45,7 +45,7 @@
   z-index: var(--z-header);
   background: var(--color-bg-primary);
   border-bottom: 2px solid var(--color-border);
-  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
   transition: all var(--transition-normal);
 }
 
@@ -381,5 +381,15 @@
   .unit-nav-link {
     width: 100%;
     justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .nav-back-button span {
+    display: none;
+  }
+
+  .nav-back-button {
+    padding: 8px;
   }
 }
