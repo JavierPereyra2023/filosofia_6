@@ -1,12 +1,16 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Unidad 1: Teorías Científicas | Filosofía 6to</title>
   <link rel="stylesheet" href="../../assets/css/variables.css">
+  <link rel="stylesheet" href="../../assets/css/reset.css">
   <link rel="stylesheet" href="../../assets/css/base.css">
+  <link rel="stylesheet" href="../../assets/css/typography.css">
   <link rel="stylesheet" href="../../assets/css/layout.css">
+  <link rel="stylesheet" href="../../assets/css/navigation.css">
   <link rel="stylesheet" href="../../assets/css/components.css">
   <style>
     .unit-hero {
@@ -57,7 +61,7 @@
     .class-card:hover {
       transform: translateY(-4px);
       border-color: var(--color-accent);
-      box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
     }
 
     [data-theme="dark"] .class-card {
@@ -129,16 +133,27 @@
     }
   </style>
 </head>
+
 <body>
   <!-- Navigation Bar -->
   <nav class="main-nav">
     <div class="nav-container">
-      <a href="../../index.html" class="nav-brand">Filosofía 6to</a>
+      <div class="nav-left">
+        <a href="../../index.html" class="nav-back-button" title="Volver al inicio">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24"
+            stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M15 19l-7-7 7-7" />
+          </svg>
+          <span>Inicio</span>
+        </a>
+        <a href="../../index.html" class="nav-brand">Filosofía 6to</a>
+      </div>
       <div class="nav-controls">
-        <button id="theme-toggle" class="btn btn-icon" aria-label="Cambiar tema">
-          <svg class="theme-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path class="sun" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path>
-            <path class="moon" d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
+        <button id="dark-mode-toggle" class="dark-mode-toggle" aria-label="Cambiar tema">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24"
+            stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
           </svg>
         </button>
       </div>
@@ -163,7 +178,8 @@
         <span class="class-number">Clase 1</span>
         <h3 class="class-title">Paradigmas: Ptolomeo y el Geocentrismo</h3>
         <p class="class-description">
-          Introducción al concepto de paradigma científico. Exploramos el modelo geocéntrico de Ptolomeo que dominó durante 1.400 años.
+          Introducción al concepto de paradigma científico. Exploramos el modelo geocéntrico de Ptolomeo que dominó
+          durante 1.400 años.
         </p>
         <div class="class-status status-available">✓ Disponible</div>
       </a>
@@ -173,7 +189,8 @@
         <span class="class-number">Clase 2</span>
         <h3 class="class-title">La Revolución Copernicana</h3>
         <p class="class-description">
-          Nicolás Copérnico propone el modelo heliocéntrico. ¿Por qué mover la Tierra del centro? Ventajas y problemas del nuevo paradigma.
+          Nicolás Copérnico propone el modelo heliocéntrico. ¿Por qué mover la Tierra del centro? Ventajas y problemas
+          del nuevo paradigma.
         </p>
         <div class="class-status status-available">✓ Disponible</div>
       </a>
@@ -183,7 +200,8 @@
         <span class="class-number">Clase 3</span>
         <h3 class="class-title">Galileo: Observación y Telescopio</h3>
         <p class="class-description">
-          Las revolucionarias observaciones telescópicas de Galileo: lunas de Júpiter, fases de Venus, montañas lunares. La evidencia empírica que faltaba.
+          Las revolucionarias observaciones telescópicas de Galileo: lunas de Júpiter, fases de Venus, montañas lunares.
+          La evidencia empírica que faltaba.
         </p>
         <div class="class-status status-upcoming">Próximamente</div>
       </a>
@@ -193,7 +211,8 @@
         <span class="class-number">Clase 4</span>
         <h3 class="class-title">Galileo vs Aristóteles: El Problema del Movimiento</h3>
         <p class="class-description">
-          ¿Por qué caen los objetos? Galileo refuta la física aristotélica mediante experimentación y razonamiento matemático. El nacimiento de la física moderna.
+          ¿Por qué caen los objetos? Galileo refuta la física aristotélica mediante experimentación y razonamiento
+          matemático. El nacimiento de la física moderna.
         </p>
         <div class="class-status status-upcoming">Próximamente</div>
       </a>
@@ -203,7 +222,8 @@
         <span class="class-number">Clase 5</span>
         <h3 class="class-title">El Método Científico: Hipótesis y Contrastación</h3>
         <p class="class-description">
-          ¿Cómo se construye conocimiento científico? Observación, hipótesis, predicción, experimentación, contrastación. El método hipotético-deductivo.
+          ¿Cómo se construye conocimiento científico? Observación, hipótesis, predicción, experimentación,
+          contrastación. El método hipotético-deductivo.
         </p>
         <div class="class-status status-upcoming">Próximamente</div>
       </a>
@@ -213,7 +233,8 @@
         <span class="class-number">Clase 6</span>
         <h3 class="class-title">Anomalías, Enigmas e Hipótesis Ad Hoc</h3>
         <p class="class-description">
-          ¿Qué ocurre cuando las observaciones no encajan con la teoría? Diferencia entre enigmas (solucionables) y anomalías (crisis de paradigma).
+          ¿Qué ocurre cuando las observaciones no encajan con la teoría? Diferencia entre enigmas (solucionables) y
+          anomalías (crisis de paradigma).
         </p>
         <div class="class-status status-upcoming">Próximamente</div>
       </a>
@@ -223,7 +244,8 @@
         <span class="class-number">Clase 7</span>
         <h3 class="class-title">Newton: La Gran Síntesis</h3>
         <p class="class-description">
-          Isaac Newton unifica la física terrestre y celeste. Las tres leyes del movimiento y la ley de gravitación universal. El triunfo del nuevo paradigma.
+          Isaac Newton unifica la física terrestre y celeste. Las tres leyes del movimiento y la ley de gravitación
+          universal. El triunfo del nuevo paradigma.
         </p>
         <div class="class-status status-upcoming">Próximamente</div>
       </a>
@@ -233,7 +255,8 @@
         <span class="class-number">Clase 8</span>
         <h3 class="class-title">Carga Teórica de la Observación</h3>
         <p class="class-description">
-          ¿Es posible observar "hechos puros"? Cómo nuestras teorías previas influyen en lo que vemos. Paradigmas como "lentes conceptuales".
+          ¿Es posible observar "hechos puros"? Cómo nuestras teorías previas influyen en lo que vemos. Paradigmas como
+          "lentes conceptuales".
         </p>
         <div class="class-status status-upcoming">Próximamente</div>
       </a>
@@ -243,7 +266,8 @@
         <span class="class-number">Clase 9</span>
         <h3 class="class-title">Criterios de Evaluación de Teorías</h3>
         <p class="class-description">
-          ¿Cómo decidimos entre teorías rivales? Simplicidad, coherencia, poder explicativo, fertilidad, aplicaciones prácticas. Casos históricos.
+          ¿Cómo decidimos entre teorías rivales? Simplicidad, coherencia, poder explicativo, fertilidad, aplicaciones
+          prácticas. Casos históricos.
         </p>
         <div class="class-status status-upcoming">Próximamente</div>
       </a>
@@ -253,7 +277,8 @@
         <span class="class-number">Clase 10</span>
         <h3 class="class-title">Integración y Evaluación</h3>
         <p class="class-description">
-          Síntesis de la Unidad 1. Actividad integradora: análisis de un caso contemporáneo de cambio científico. Quiz final de comprensión.
+          Síntesis de la Unidad 1. Actividad integradora: análisis de un caso contemporáneo de cambio científico. Quiz
+          final de comprensión.
         </p>
         <div class="class-status status-upcoming">Próximamente</div>
       </a>
@@ -284,4 +309,5 @@
   <!-- JavaScript -->
   <script src="../../assets/js/dark-mode.js"></script>
 </body>
+
 </html>
