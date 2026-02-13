@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clase 4: Galileo vs Aristóteles - El Problema del Movimiento | Filosofía 6to</title>
+    <link rel="stylesheet" href="../../assets/css/variables.css">
+    <link rel="stylesheet" href="../../assets/css/reset.css">
+    <link rel="stylesheet" href="../../assets/css/base.css">
+    <link rel="stylesheet" href="../../assets/css/typography.css">
+    <link rel="stylesheet" href="../../assets/css/layout.css">
+    <link rel="stylesheet" href="../../assets/css/navigation.css">
+    <link rel="stylesheet" href="../../assets/css/components.css">
+    <link rel="stylesheet" href="../../assets/css/unit-page.css">
+    <link rel="stylesheet" href="../../assets/css/book-layout.css">
+
+    <!-- Custom Graffiti for Class 4 -->
+    <style>
+        .class-container::before {
+            content: 'Aristóteles vs Galileo\A\A  ¿Por qué caen\A  las cosas?\A\A  Lugar Natural\A  (Aristóteles)\A      vs\A  F = m·a\A  (Newton/Galileo)';
+            position: fixed;
+            top: 15%;
+            right: 5%;
+            font-family: 'Caveat', 'Comic Sans MS', cursive;
+            font-size: 24px;
+            font-weight: 700;
+            line-height: 1.6;
+            white-space: pre;
+            color: rgba(255, 255, 255, 0.35);
+            text-shadow:
+                0 2px 4px rgba(65, 105, 225, 0.4),
+                0 4px 8px rgba(0, 0, 0, 0.25),
+                -2px -2px 3px rgba(255, 255, 255, 0.6),
+                2px 2px 4px rgba(65, 105, 225, 0.3);
+            pointer-events: none;
+            z-index: 0;
+            transform: rotate(-6deg);
+            letter-spacing: 1px;
+        }
+
+        .class-container::after {
+            content: 'LEY DE INERCIA\A\A  v = constante\A  (sin rozamiento)\A\A  d = ½ g t²\A\A  Parábola ↷\A  (Proyectiles)';
+            position: fixed;
+            bottom: 15%;
+            left: 5%;
+            font-family: 'Caveat', 'Comic Sans MS', cursive;
+            font-size: 22px;
+            font-weight: 700;
+            line-height: 1.5;
+            white-space: pre;
+            color: rgba(255, 255, 255, 0.32);
+            text-shadow:
+                0 2px 4px rgba(65, 105, 225, 0.4),
+                0 4px 8px rgba(0, 0, 0, 0.25),
+                -2px -2px 3px rgba(255, 255, 255, 0.6),
+                2px 2px 4px rgba(65, 105, 225, 0.3);
+            pointer-events: none;
+            z-index: 0;
+            transform: rotate(4deg);
+            letter-spacing: 1px;
+        }
+
+        [data-theme="dark"] .class-container::before,
+        [data-theme="dark"] .class-container::after {
+            color: rgba(255, 255, 255, 0.22);
+            text-shadow:
+                0 3px 6px rgba(65, 105, 225, 0.6),
+                0 5px 10px rgba(0, 0, 0, 0.6),
+                -2px -2px 4px rgba(255, 255, 255, 0.4),
+                2px 2px 5px rgba(65, 105, 225, 0.5),
+                0 0 30px rgba(65, 105, 225, 0.3);
+        }
+
+        /* Mobile Responsive Graffiti */
+        @media (max-width: 1024px) {
+
+            .class-container::before,
+            .class-container::after {
+                position: relative;
+                display: block;
+                width: 100%;
+                text-align: center;
+                top: auto;
+                bottom: auto;
+                left: auto;
+                right: auto;
+                margin: var(--space-xl) 0;
+                transform: rotate(0deg);
+                font-size: 20px;
+                white-space: pre-wrap;
+            }
+
+            .class-container::before {
+                margin-bottom: var(--space-lg);
+                content: 'Aristóteles vs Galileo | ¿Por qué caen las cosas? | Lugar Natural (Aristóteles) vs Gravedad';
+            }
+
+            .class-container::after {
+                margin-top: var(--space-lg);
+                content: 'LEY DE INERCIA | v = constante (sin rozamiento) | d = ½ g t² | Parábola ↷ (Proyectiles)';
+            }
+        }
+    </style>
+
+<body>
+    <!-- Navigation Bar -->
+    <nav class="main-nav">
+        <div class="nav-container">
+            <div class="nav-left">
+                <a href="index.html" class="nav-back-button" title="Volver al índice de la unidad">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M15 19l-7-7 7-7" />
+                    </svg>
+                    <span>Unidad 1</span>
+                </a>
+                <a href="../../index.html" class="nav-brand">Filosofía 6to</a>
+            </div>
+            <div class="nav-controls">
+                <button id="dark-mode-toggle" class="dark-mode-toggle" aria-label="Cambiar tema">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Progress Bar -->
+    <div class="class-progress">
+        <div class="container">
+            <div class="progress-info">
+                <span class="progress-label">Unidad 1: Teorías Científicas</span>
+                <span class="progress-count">Clase 4 de 10</span>
+            </div>
+            <div class="progress-bar">
+                <div class="progress-fill" style="width: 40%"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <main class="class-container">
+        <article class="class-content">
+            <!-- Header -->
+            <header class="class-header">
+                <div class="class-badge">Clase 4</div>
+                <h1 class="class-title">Galileo vs Aristóteles: El Problema del Movimiento</h1>
+                <p class="class-subtitle">
+                    De la física del "lugar natural" a la ley de inercia
+                </p>
+            </header>
+
+            <!-- Introduction -->
+            <section class="class-section">
+                <h2>El Desafío de Mover la Tierra</h2>
+
+                <p>
+                    Si Copérnico tenía razón y la Tierra se mueve a gran velocidad alrededor del Sol y gira sobre sí
+                    misma, ¿por qué no sentimos ese movimiento? ¿Por qué los objetos no salen volando? ¿Por qué si salto
+                    caigo en el mismo lugar y no más atrás?
+                </p>
+
+                <p>
+                    Estas eran las objeciones más fuertes contra el heliocentrismo. No eran objeciones "tontas"; estaban
+                    basadas en la <strong>física aristotélica</strong>, que era la ciencia aceptada y probada de la
+                    época. Para que el heliocentrismo pudiera ser cierto, Galileo tuvo que hacer algo monumental:
+                    <strong>derribar la física de Aristóteles y construir una nueva física desde cero</strong>.
+                </p>
+
+                <div style="text-align: center; margin: var(--space-xl) 0;">
+                    <img src="https://images.unsplash.com/photo-1541829672624-9b2c5c50293f?w=800&h=600&fit=crop"
+                        alt="Torre de Pisa inclinada"
+                        style="max-width: 100%; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+                    <p style="margin-top: var(--space-sm); font-size: 0.9em; color: var(--color-text-secondary);">
+                        <em>La Torre de Pisa, escenario del famoso (quizás mítico) experimento de Galileo sobre la caída
+                            de los cuerpos</em>
+                    </p>
+                </div>
+
+                <div class="concept-highlight">
+                    <p>
+                        <strong>El Paradigma Aristotélico del Movimiento:</strong>
+                    </p>
+                    <ul>
+                        <li><strong>Lugar Natural:</strong> Cada elemento (tierra, agua, aire, fuego) tiene un lugar
+                            natural. La tierra quiere ir abajo (al centro del universo), el fuego quiere ir arriba.</li>
+                        <li><strong>Movimiento Violento:</strong> Cualquier movimiento que saque a un objeto de su lugar
+                            natural requiere una <strong>fuerza constante</strong>. Si dejas de empujar, el objeto se
+                            detiene.</li>
+                        <li><strong>Caída:</strong> Los objetos más pesados tienen "más gravedad" (más deseo de ir al
+                            centro) y por lo tanto caen <strong>más rápido</strong>.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Free Fall -->
+            <section class="class-section">
+                <h2>La Caída de los Cuerpos</h2>
+
+                <p>
+                    Aristóteles afirmaba que si soltamos una piedra de 10 kg y una de 1 kg desde una torre, la de 10 kg
+                    caerá diez veces más rápido. Parece de sentido común, ¿verdad? Galileo se atrevió a cuestionarlo.
+                </p>
+
+                <h3>El Experimento (Mental y Real)</h3>
+
+                <p>
+                    Galileo razonó: si ato la piedra pequeña a la grande, ¿qué pasará? Según Aristóteles, la pequeña
+                    debería "frenar" a la grande (porque cae más lento), así que el conjunto debería caer más despacio
+                    que la grande sola. PERO, el conjunto pesa 11 kg (más que la grande), así que según Aristóteles
+                    debería caer MÁS rápido. ¡Contradicción!
+                </p>
+
+                <p>
+                    Galileo concluyó que, en ausencia de resistencia del aire, <strong>todos los cuerpos caen con la
+                        misma aceleración, independientemente de su masa</strong>.
+                </p>
+
+                <div class="graffiti-divider">
+                    <span>★ v = d/t ★</span>
+                    <span>¿Y si no hay aire?</span>
+                </div>
+
+                <div class="key-concepts">
+                    <h3>La Ley de Caída Libre</h3>
+                    <ul>
+                        <li>La caída no es un movimiento a velocidad constante, sino con <strong>aceleración
+                                constante</strong>.</li>
+                        <li>La distancia recorrida es proporcional al cuadrado del tiempo: <strong>d = ½ g t²</strong>.
+                        </li>
+                        <li>Esto significaba que la naturaleza seguía leyes matemáticas precisas, no solo tendencias
+                            cualitativas ("quiere ir abajo").</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Inertia -->
+            <section class="class-section">
+                <h2>El Concepto de Inercia</h2>
+
+                <p>
+                    La joya de la corona de la física galileana fue el concepto de inercia. Aristóteles creía que el
+                    estado natural de las cosas es el reposo. Galileo, mediante experimentos con planos inclinados,
+                    dedujo algo radicalmente diferente:
+                </p>
+
+                <p>
+                    Si hago rodar una bola por un plano bajando, acelera. Si la hago rodar subiendo, frena. ¿Qué pasa si
+                    el plano es perfectamente horizontal y no hay fricción? La bola no debería ni acelerar ni frenar.
+                    Debería continuar moviéndose <strong>para siempre</strong> a velocidad constante.
+                </p>
+
+                <div class="concept-highlight">
+                    <h3>Principio de Inercia</h3>
+                    <p>
+                        Un objeto en movimiento tenderá a permanecer en movimiento rectilíneo uniforme a menos que una
+                        fuerza externa actúe sobre él. El movimiento es un estado tan natural como el reposo.
+                    </p>
+                    <p style="margin-top: var(--space-md);">
+                        <strong>Consecuencia para la Tierra:</strong> No necesitamos una fuerza constante o ángeles
+                        empujando la Tierra para que se mueva. Una vez en movimiento, la Tierra (y nosotros con ella)
+                        conserva ese movimiento por inercia. Por eso no "sentimos" la velocidad, solo sentimos los
+                        cambios de velocidad (aceleración).
+                    </p>
+                </div>
+
+                <h3>El Movimiento de Proyectiles</h3>
+
+                <p>
+                    Galileo también demostró que el movimiento de un proyectil (una bala de cañón, una piedra lanzada)
+                    es la suma de dos movimientos independientes:
+                </p>
+                <ol>
+                    <li>Movimiento horizontal constante (por inercia).</li>
+                    <li>Movimiento vertical acelerado (por gravedad).</li>
+                </ol>
+                <p>
+                    La combinación de estos dos movimientos crea una curva geométrica precisa: la
+                    <strong>parábola</strong>. Nuevamente, las matemáticas gobernaban el mundo físico.
+                </p>
+            </section>
+
+            <!-- Quiz Section -->
+            <section class="class-section">
+                <h2>Actividad: Aristóteles vs Galileo</h2>
+                <p style="margin-bottom: var(--space-lg); font-style: italic;">
+                    Desliza para ver las preguntas y reflexiona sobre las diferencias entre ambos paradigmas.
+                </p>
+
+                <!-- Container with Horizontal Carousel for Mobile -->
+                <div class="activity-container">
+                    <div class="question-card">
+                        <h3>Pregunta 1: La Caída</h3>
+                        <p>
+                            Según Aristóteles, una bola de hierro de 100kg cae mucho más rápido que una de 1kg. Según
+                            Galileo caen igual. <strong>¿Por qué en la vida real una pluma cae más lento que un
+                                martillo?</strong> ¿Refuta esto a Galileo? (Pista: Resistencia del aire).
+                        </p>
+                    </div>
+
+                    <div class="question-card">
+                        <h3>Pregunta 2: Inercia</h3>
+                        <p>
+                            Si vas en un colectivo a velocidad constante y saltas verticalmente, ¿caes en el mismo lugar
+                            o te vas hacia atrás golpeándote contra el fondo del colectivo? Explique usando el concepto
+                            de <strong>inercia</strong> y relaciónelo con por qué no salimos volando de la Tierra.
+                        </p>
+                    </div>
+
+                    <div class="question-card">
+                        <h3>Pregunta 3: Matemáticas</h3>
+                        <p>
+                            ¿Cuál es la diferencia fundamental entre decir "los objetos pesados tienen una tendencia
+                            natural a ir abajo" (Aristóteles) y decir "la distancia de caída es d = ½ g t²" (Galileo)?
+                            ¿Cómo cambia esto nuestra forma de entender la ciencia?
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Next Class Preview -->
+            <section class="class-section"
+                style="background: var(--color-bg-tertiary); padding: var(--space-lg); border-radius: 8px;">
+                <h2>Próxima Clase</h2>
+                <h3 style="color: var(--color-accent);">Clase 5: El Método Científico</h3>
+                <p>
+                    Con Galileo nace una nueva forma de interrogar a la naturaleza. Ya no basta con observar pasivamente
+                    o leer a los antiguos. Hay que formular hipótesis y ponerlas a prueba mediante experimentos
+                    controlados.
+                </p>
+                <p>
+                    Analizaremos la estructura lógica del método hipotético-deductivo: Observación → Hipótesis →
+                    Deducción → Contrastación.
+                </p>
+            </section>
+
+            <!-- Navigation -->
+            <nav class="class-navigation">
+                <a href="clase-03.html" class="nav-button">← Clase Anterior</a>
+                <a href="index.html" class="nav-button nav-button-index">📚 Índice de Unidad</a>
+                <a href="clase-05.html" class="nav-button">Siguiente Clase →</a>
+            </nav>
+        </article>
+    </main>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Filosofía 6to</h4>
+                    <p>Unidad 1: Teorías Científicas - Clase 4 de 10</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Filosofía 6to. Material educativo.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="../../assets/js/dark-mode.js"></script>
+</body>
+
+</html>

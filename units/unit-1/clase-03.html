@@ -13,6 +13,7 @@
   <link rel="stylesheet" href="../../assets/css/navigation.css">
   <link rel="stylesheet" href="../../assets/css/components.css">
   <link rel="stylesheet" href="../../assets/css/unit-page.css">
+  <link rel="stylesheet" href="../../assets/css/book-layout.css">
 
   <!-- Custom Graffiti for Class 3 -->
   <style>
@@ -69,6 +70,36 @@
         -2px -2px 4px rgba(255, 255, 255, 0.4),
         2px 2px 5px rgba(65, 105, 225, 0.5),
         0 0 30px rgba(65, 105, 225, 0.3);
+    }
+
+    /* Mobile Responsive Graffiti */
+    @media (max-width: 1024px) {
+
+      .class-container::before,
+      .class-container::after {
+        position: relative;
+        display: block;
+        width: 100%;
+        text-align: center;
+        top: auto;
+        bottom: auto;
+        left: auto;
+        right: auto;
+        margin: var(--space-xl) 0;
+        transform: rotate(0deg);
+        font-size: 20px;
+        white-space: pre-wrap;
+      }
+
+      .class-container::before {
+        margin-bottom: var(--space-lg);
+        content: 'Telescopio 🔭 x30 aumentos | Lunas de Júpiter ● ● ♃ ● | d = 1/2 g t² (Caída Libre) | Fases de Venus';
+      }
+
+      .class-container::after {
+        margin-top: var(--space-lg);
+        content: 'EMPIRISMO | Galileo Galilei 1610 | Sidereus Nuncius | "Y sin embargo, se mueve"';
+      }
     }
   </style>
 

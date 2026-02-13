@@ -454,9 +454,22 @@
 }
 
 /* Mobile Responsiveness for Quiz Grid */
-@media (max-width: 768px) {
+/* Mobile Responsiveness for Quiz Grid */
+/* Mobile Responsiveness for Quiz Grid */
+/* Mobile Responsiveness for Quiz Grid */
+@media (max-width: 1024px) {
   .activity-container {
-    grid-template-columns: 1fr;
+    display: block;
+    /* Stack vertically like a book */
+    margin: 0;
+    padding: 0;
+  }
+
+  .question-card {
+    width: 100%;
+    margin-bottom: var(--space-md);
+    /* Drastically reduce padding to give text space */
+    padding: var(--space-md) var(--space-sm);
   }
 }
 
@@ -546,23 +559,56 @@
 
 @media (max-width: 768px) {
   .class-container {
-    padding: var(--space-lg) var(--space-md);
+    padding: 0;
+    /* Full bleed, no outer padding */
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+  }
+
+  .class-content {
+    border-radius: 0;
+    border: none;
+    box-shadow: none;
+    /* Mimic "book page" feeling: minimal side margins as requested (approx 2px-5px effectively) */
+    padding: var(--space-lg) 5px;
+    width: 100%;
+  }
+
+  /* Adjust headers and paragraphs to have slightly more breathing room inwardly if needed, 
+     but keeping the text close to edge as requested ("2px") */
+  .class-section p,
+  .class-section h2,
+  .class-section h3,
+  .class-section ul {
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+
+  /* Ensure images span full width */
+  .class-content img {
+    border-radius: 0;
+    width: 100%;
+    max-width: 100%;
+    margin-left: 0;
+    margin-right: 0;
   }
 
   .class-header {
-    margin-bottom: var(--space-xl);
+    margin-bottom: var(--space-lg);
+    padding: 0 5px;
   }
 
-  .class-title {
-    font-size: var(--font-size-h1);
+  .class-navigation {
+    grid-template-columns: 1fr;
+    gap: var(--space-md);
+    padding: var(--space-lg) 5px;
   }
 
-  .class-subtitle {
-    font-size: var(--font-size-large);
-  }
+
 
   .class-section {
-    margin-bottom: 40px;
+    margin-bottom: 30px;
   }
 
   .class-section>p:first-of-type::first-letter {
@@ -593,20 +639,52 @@
   .class-content img {
     max-width: 100%;
   }
+
+  /* Remove conflicting padding rules that were overriding the book layout */
+  .class-content {
+    background: transparent;
+    /* Remove white box background to kill the "frame" */
+    padding: 0;
+    /* Let text flow freely */
+  }
+
+  .class-content>* {
+    /* Apply the minimal margin directly to children */
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+
+  .question-card {
+    padding: var(--space-md) 5px;
+    border-radius: 0;
+    border-left: 2px solid var(--color-accent);
+    /* Keep a subtle indicator */
+    border-right: none;
+    border-top: none;
+    border-bottom: none;
+    box-shadow: none;
+    background: transparent;
+  }
 }
+
 
 /* Hide graffiti on smaller screens to prevent overlap */
 @media (max-width: 1280px) {
 
   .class-container::before,
   .class-container::after {
-    display: none !important;
+    display: none;
   }
 }
 
 @media (max-width: 480px) {
   .class-container {
     padding: var(--space-md) var(--space-sm);
+  }
+
+  .class-content {
+    padding: var(--space-md);
+    /* Further reduce padding on small phones */
   }
 
   .concept-highlight,

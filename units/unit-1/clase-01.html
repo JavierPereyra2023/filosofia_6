@@ -13,6 +13,85 @@
   <link rel="stylesheet" href="../../assets/css/navigation.css">
   <link rel="stylesheet" href="../../assets/css/components.css">
   <link rel="stylesheet" href="../../assets/css/unit-page.css">
+  <link rel="stylesheet" href="../../assets/css/book-layout.css">
+
+  <!-- Custom Graffiti for Class 1 -->
+  <style>
+    .class-container::before {
+      content: 'Tierra Inmóvil ⊕\A  (Centro del Universo)\A\A  Estrellas Fijas\A  (La última esfera)\A\A  Ptolomeo\A  (El Almagesto)';
+      position: fixed;
+      top: 15%;
+      right: 5%;
+      font-family: 'Caveat', 'Comic Sans MS', cursive;
+      font-size: 24px;
+      font-weight: 700;
+      line-height: 1.6;
+      white-space: pre;
+      color: rgba(255, 255, 255, 0.35);
+      text-shadow:
+        0 2px 4px rgba(65, 105, 225, 0.4),
+        0 4px 8px rgba(0, 0, 0, 0.25),
+        -2px -2px 3px rgba(255, 255, 255, 0.6),
+        2px 2px 4px rgba(65, 105, 225, 0.3);
+      pointer-events: none;
+      z-index: 0;
+      transform: rotate(-6deg);
+      letter-spacing: 1px;
+    }
+
+    .class-container::after {
+      content: 'GEOCENTRISMO\A\A  Aristóteles\A  Física\A\A  Epiciclos\A  (bucles en el cielo)\A\A  "Salvar los Fenómenos"';
+      position: fixed;
+      bottom: 15%;
+      left: 5%;
+      font-family: 'Caveat', 'Comic Sans MS', cursive;
+      font-size: 22px;
+      font-weight: 700;
+      line-height: 1.5;
+      white-space: pre;
+      color: rgba(255, 255, 255, 0.32);
+      text-shadow:
+        0 2px 4px rgba(65, 105, 225, 0.4),
+        0 4px 8px rgba(0, 0, 0, 0.25),
+        -2px -2px 3px rgba(255, 255, 255, 0.6),
+        2px 2px 4px rgba(65, 105, 225, 0.3);
+      pointer-events: none;
+      z-index: 0;
+      transform: rotate(5deg);
+      letter-spacing: 1px;
+    }
+
+    /* Mobile Responsive Graffiti */
+    @media (max-width: 1024px) {
+
+      .class-container::before,
+      .class-container::after {
+        position: relative;
+        display: block;
+        width: 100%;
+        text-align: center;
+        top: auto;
+        bottom: auto;
+        left: auto;
+        right: auto;
+        margin: var(--space-xl) 0;
+        transform: rotate(0deg);
+        font-size: 20px;
+        white-space: pre-wrap;
+      }
+
+      .class-container::before {
+        order: -1;
+        margin-bottom: var(--space-lg);
+        content: 'Tierra Inmóvil (Centro) | Estrellas Fijas | Ptolomeo (Almagesto)';
+      }
+
+      .class-container::after {
+        margin-top: var(--space-lg);
+        content: 'GEOCENTRISMO | Aristóteles | Epiciclos (bucles) | "Salvar los Fenómenos"';
+      }
+    }
+  </style>
 </head>
 
 <body>
