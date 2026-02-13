@@ -1,25 +1,97 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Clase 2: La Revolución Copernicana | Filosofía 6to</title>
   <link rel="stylesheet" href="../../assets/css/variables.css">
+  <link rel="stylesheet" href="../../assets/css/reset.css">
   <link rel="stylesheet" href="../../assets/css/base.css">
+  <link rel="stylesheet" href="../../assets/css/typography.css">
   <link rel="stylesheet" href="../../assets/css/layout.css">
+  <link rel="stylesheet" href="../../assets/css/navigation.css">
   <link rel="stylesheet" href="../../assets/css/components.css">
   <link rel="stylesheet" href="../../assets/css/unit-page.css">
-</head>
+
+  <!-- Custom Graffiti for Class 2 -->
+  <style>
+    .class-container::before {
+      content: 'Sol ☉\A  (Centro)\A\A  Tierra ⊕\A  gira alrededor\A\A  Año = 365 días\A\A  Día = 24 horas\A\A  De Revolutionibus';
+      position: fixed;
+      top: 15%;
+      right: 5%;
+      font-family: 'Caveat', 'Comic Sans MS', cursive;
+      font-size: 24px;
+      font-weight: 700;
+      line-height: 1.6;
+      white-space: pre;
+      color: rgba(255, 255, 255, 0.35);
+      text-shadow:
+        0 2px 4px rgba(65, 105, 225, 0.4),
+        0 4px 8px rgba(0, 0, 0, 0.25),
+        -2px -2px 3px rgba(255, 255, 255, 0.6),
+        2px 2px 4px rgba(65, 105, 225, 0.3);
+      pointer-events: none;
+      z-index: 0;
+      transform: rotate(-6deg);
+      letter-spacing: 1px;
+    }
+
+    .class-container::after {
+      content: 'HELIOCENTRISMO\A\A  Copérnico\A  1543\A\A  Paradigma:\A  Sol = Centro\A\A  Movimiento\A  de la Tierra';
+      position: fixed;
+      bottom: 15%;
+      left: 5%;
+      font-family: 'Caveat', 'Comic Sans MS', cursive;
+      font-size: 22px;
+      font-weight: 700;
+      line-height: 1.5;
+      white-space: pre;
+      color: rgba(255, 255, 255, 0.32);
+      text-shadow:
+        0 2px 4px rgba(65, 105, 225, 0.4),
+        0 4px 8px rgba(0, 0, 0, 0.25),
+        -2px -2px 3px rgba(255, 255, 255, 0.6),
+        2px 2px 4px rgba(65, 105, 225, 0.3);
+      pointer-events: none;
+      z-index: 0;
+      transform: rotate(5deg);
+      letter-spacing: 1px;
+    }
+
+    [data-theme="dark"] .class-container::before,
+    [data-theme="dark"] .class-container::after {
+      color: rgba(255, 255, 255, 0.22);
+      text-shadow:
+        0 3px 6px rgba(65, 105, 225, 0.6),
+        0 5px 10px rgba(0, 0, 0, 0.6),
+        -2px -2px 4px rgba(255, 255, 255, 0.4),
+        2px 2px 5px rgba(65, 105, 225, 0.5),
+        0 0 30px rgba(65, 105, 225, 0.3);
+    }
+  </style>
+
 <body>
   <!-- Navigation Bar -->
   <nav class="main-nav">
     <div class="nav-container">
-      <a href="../../index.html" class="nav-brand">Filosofía 6to</a>
+      <div class="nav-left">
+        <a href="index.html" class="nav-back-button" title="Volver al índice de la unidad">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24"
+            stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M15 19l-7-7 7-7" />
+          </svg>
+          <span>Unidad 1</span>
+        </a>
+        <a href="../../index.html" class="nav-brand">Filosofía 6to</a>
+      </div>
       <div class="nav-controls">
-        <button id="theme-toggle" class="btn btn-icon" aria-label="Cambiar tema">
-          <svg class="theme-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path class="sun" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path>
-            <path class="moon" d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
+        <button id="dark-mode-toggle" class="dark-mode-toggle" aria-label="Cambiar tema">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24"
+            stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
           </svg>
         </button>
       </div>
@@ -56,15 +128,22 @@
         <h2>El Libro que Cambió el Mundo</h2>
 
         <p>
-          El 24 de mayo de 1543, un hombre moribundo recibió en sus manos la primera copia impresa de su libro. Nicolás Copérnico había trabajado en esa obra durante casi 30 años, pero dudó en publicarla. ¿La razón? Contenía una idea que consideraba tan radical, tan contraria al sentido común y a la tradición, que temía el ridículo de sus contemporáneos.
+          El 24 de mayo de 1543, un hombre moribundo recibió en sus manos la primera copia impresa de su libro. Nicolás
+          Copérnico había trabajado en esa obra durante casi 30 años, pero dudó en publicarla. ¿La razón? Contenía una
+          idea que consideraba tan radical, tan contraria al sentido común y a la tradición, que temía el ridículo de
+          sus contemporáneos.
         </p>
 
         <p>
-          El libro se titulaba <em>De revolutionibus orbium coelestium</em> (Sobre las revoluciones de las esferas celestes). En sus páginas, Copérnico proponía algo impensable: <strong>la Tierra no está en el centro del universo. Es el Sol el que está inmóvil, y la Tierra —junto con los demás planetas— gira alrededor de él.</strong>
+          El libro se titulaba <em>De revolutionibus orbium coelestium</em> (Sobre las revoluciones de las esferas
+          celestes). En sus páginas, Copérnico proponía algo impensable: <strong>la Tierra no está en el centro del
+            universo. Es el Sol el que está inmóvil, y la Tierra —junto con los demás planetas— gira alrededor de
+            él.</strong>
         </p>
 
         <div style="text-align: center; margin: var(--space-xl) 0;">
-          <img src="https://via.placeholder.com/500x600/667eea/ffffff?text=Nicolas+Copernico" alt="Nicolás Copérnico" style="max-width: 100%; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+          <img src="https://via.placeholder.com/500x600/667eea/ffffff?text=Nicolas+Copernico" alt="Nicolás Copérnico"
+            style="max-width: 100%; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
           <p style="margin-top: var(--space-sm); font-size: 0.9em; color: var(--color-text-secondary);">
             <em>Nicolás Copérnico (1473-1543), astrónomo polaco que revolucionó nuestra comprensión del cosmos</em>
           </p>
@@ -72,7 +151,10 @@
 
         <div class="concept-highlight">
           <p>
-            <strong>Pregunta para reflexionar:</strong> Si tú hubieras sido Copérnico, ¿habrías publicado una teoría que contradice la experiencia cotidiana (no sentimos que la Tierra se mueve), la física aristotélica (que explicaba por qué la Tierra debe estar inmóvil), y las escrituras religiosas (que mencionan que Dios "detuvo el Sol")? ¿Qué te habría motivado a hacerlo?
+            <strong>Pregunta para reflexionar:</strong> Si tú hubieras sido Copérnico, ¿habrías publicado una teoría que
+            contradice la experiencia cotidiana (no sentimos que la Tierra se mueve), la física aristotélica (que
+            explicaba por qué la Tierra debe estar inmóvil), y las escrituras religiosas (que mencionan que Dios "detuvo
+            el Sol")? ¿Qué te habría motivado a hacerlo?
           </p>
         </div>
       </section>
@@ -82,17 +164,24 @@
         <h2>¿Quién Fue Nicolás Copérnico?</h2>
 
         <p>
-          <strong>Nicolás Copérnico (Mikołaj Kopernik)</strong> nació en 1473 en Toruń, Polonia. No era un astrónomo profesional en el sentido moderno: era un clérigo católico, administrador eclesiástico, médico, traductor, diplomático y economista. La astronomía era su pasión intelectual, no su profesión.
+          <strong>Nicolás Copérnico (Mikołaj Kopernik)</strong> nació en 1473 en Toruń, Polonia. No era un astrónomo
+          profesional en el sentido moderno: era un clérigo católico, administrador eclesiástico, médico, traductor,
+          diplomático y economista. La astronomía era su pasión intelectual, no su profesión.
         </p>
 
         <ul>
-          <li><strong>Educación:</strong> Estudió en la Universidad de Cracovia, luego en Italia (Bolonia, Padua, Ferrara), donde aprendió matemáticas, astronomía, derecho canónico y medicina.</li>
-          <li><strong>Carrera:</strong> Fue canónigo de la catedral de Frombork (Frauenburg), donde administraba propiedades de la Iglesia y ejercía la medicina.</li>
-          <li><strong>Trabajo astronómico:</strong> En su tiempo libre, realizaba observaciones astronómicas desde una torre y desarrollaba su teoría heliocéntrica.</li>
+          <li><strong>Educación:</strong> Estudió en la Universidad de Cracovia, luego en Italia (Bolonia, Padua,
+            Ferrara), donde aprendió matemáticas, astronomía, derecho canónico y medicina.</li>
+          <li><strong>Carrera:</strong> Fue canónigo de la catedral de Frombork (Frauenburg), donde administraba
+            propiedades de la Iglesia y ejercía la medicina.</li>
+          <li><strong>Trabajo astronómico:</strong> En su tiempo libre, realizaba observaciones astronómicas desde una
+            torre y desarrollaba su teoría heliocéntrica.</li>
         </ul>
 
         <p>
-          Copérnico era un hombre cauteloso y perfeccionista. Circuló un manuscrito preliminar (<em>Commentariolus</em>) entre amigos en 1514, pero esperó casi 30 años antes de publicar su obra completa. Solo accedió a la publicación cuando un joven matemático alemán, Georg Joachim Rheticus, lo convenció.
+          Copérnico era un hombre cauteloso y perfeccionista. Circuló un manuscrito preliminar (<em>Commentariolus</em>)
+          entre amigos en 1514, pero esperó casi 30 años antes de publicar su obra completa. Solo accedió a la
+          publicación cuando un joven matemático alemán, Georg Joachim Rheticus, lo convenció.
         </p>
       </section>
 
@@ -101,7 +190,8 @@
         <h2>El Problema con el Modelo Ptolemaico</h2>
 
         <p>
-          Como vimos en la Clase 1, el modelo de Ptolomeo funcionaba matemáticamente: podía predecir posiciones planetarias. Pero tenía varios problemas que incomodaban a algunos astrónomos:
+          Como vimos en la Clase 1, el modelo de Ptolomeo funcionaba matemáticamente: podía predecir posiciones
+          planetarias. Pero tenía varios problemas que incomodaban a algunos astrónomos:
         </p>
 
         <div class="concept-highlight">
@@ -109,12 +199,16 @@
 
           <h4>1. Complejidad Creciente</h4>
           <p>
-            Para mejorar la precisión, los astrónomos medievales añadían cada vez más epiciclos sobre epiciclos. Algunos modelos llegaron a tener más de 80 círculos. Esto violaba el principio de <strong>parsimonia</strong> (preferir explicaciones más simples).
+            Para mejorar la precisión, los astrónomos medievales añadían cada vez más epiciclos sobre epiciclos. Algunos
+            modelos llegaron a tener más de 80 círculos. Esto violaba el principio de <strong>parsimonia</strong>
+            (preferir explicaciones más simples).
           </p>
 
           <h4>2. El Ecuante Violaba la Uniformidad</h4>
           <p>
-            Ptolomeo había introducido el "ecuante" (un punto desplazado desde el cual el movimiento angular es uniforme) para mejorar las predicciones. Pero esto violaba el principio filosófico de que los movimientos celestes deben ser perfectamente circulares y uniformes.
+            Ptolomeo había introducido el "ecuante" (un punto desplazado desde el cual el movimiento angular es
+            uniforme) para mejorar las predicciones. Pero esto violaba el principio filosófico de que los movimientos
+            celestes deben ser perfectamente circulares y uniformes.
           </p>
 
           <h4>3. Anomalías Persistentes</h4>
@@ -123,18 +217,24 @@
           </p>
           <ul>
             <li>¿Por qué Mercurio y Venus siempre aparecen cerca del Sol en el cielo?</li>
-            <li>¿Por qué el brillo de los planetas varía tanto? (Si giran en círculos fijos alrededor de la Tierra, deberían mantener brillo constante)</li>
-            <li>¿Por qué las "estaciones" de movimiento retrógrado ocurren cuando los planetas están en oposición al Sol?</li>
+            <li>¿Por qué el brillo de los planetas varía tanto? (Si giran en círculos fijos alrededor de la Tierra,
+              deberían mantener brillo constante)</li>
+            <li>¿Por qué las "estaciones" de movimiento retrógrado ocurren cuando los planetas están en oposición al
+              Sol?</li>
           </ul>
 
           <h4>4. Falta de Armonía</h4>
           <p>
-            En el sistema ptolemaico, cada planeta se movía independientemente. No había una estructura unificada que explicara por qué el sistema tenía ese orden particular (Luna, Mercurio, Venus, Sol, Marte, Júpiter, Saturno).
+            En el sistema ptolemaico, cada planeta se movía independientemente. No había una estructura unificada que
+            explicara por qué el sistema tenía ese orden particular (Luna, Mercurio, Venus, Sol, Marte, Júpiter,
+            Saturno).
           </p>
         </div>
 
         <div style="text-align: center; margin: var(--space-xl) 0;">
-          <img src="https://via.placeholder.com/700x400/4a5f8f/ffffff?text=Complejidad+del+Sistema+Ptolemaico" alt="Sistema Ptolemaico Complejo" style="max-width: 100%; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+          <img src="https://via.placeholder.com/700x400/4a5f8f/ffffff?text=Complejidad+del+Sistema+Ptolemaico"
+            alt="Sistema Ptolemaico Complejo"
+            style="max-width: 100%; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
           <p style="margin-top: var(--space-sm); font-size: 0.9em; color: var(--color-text-secondary);">
             <em>La creciente complejidad del sistema ptolemaico: múltiples epiciclos para cada planeta</em>
           </p>
@@ -146,7 +246,9 @@
         <h2>La Solución de Copérnico: Heliocentrismo</h2>
 
         <p>
-          Copérnico propuso una idea revolucionaria pero, en realidad, muy antigua. Ya en el siglo III a.C., el astrónomo griego <strong>Aristarco de Samos</strong> había sugerido que la Tierra giraba alrededor del Sol. Sin embargo, esa idea fue rechazada porque no podía explicar la ausencia de paralaje estelar observable.
+          Copérnico propuso una idea revolucionaria pero, en realidad, muy antigua. Ya en el siglo III a.C., el
+          astrónomo griego <strong>Aristarco de Samos</strong> había sugerido que la Tierra giraba alrededor del Sol.
+          Sin embargo, esa idea fue rechazada porque no podía explicar la ausencia de paralaje estelar observable.
         </p>
 
         <div class="concept-highlight">
@@ -154,7 +256,8 @@
 
           <ol>
             <li>
-              <strong>El Sol está en el centro del universo</strong> (o casi; Copérnico lo colocó cerca del centro pero no exactamente).
+              <strong>El Sol está en el centro del universo</strong> (o casi; Copérnico lo colocó cerca del centro pero
+              no exactamente).
             </li>
 
             <li>
@@ -162,7 +265,8 @@
             </li>
 
             <li>
-              <strong>La Tierra rota sobre su propio eje</strong> una vez cada 24 horas, lo que explica el movimiento diurno del cielo.
+              <strong>La Tierra rota sobre su propio eje</strong> una vez cada 24 horas, lo que explica el movimiento
+              diurno del cielo.
             </li>
 
             <li>
@@ -170,23 +274,29 @@
             </li>
 
             <li>
-              <strong>Los planetas giran alrededor del Sol</strong> en el siguiente orden: Mercurio, Venus, Tierra, Marte, Júpiter, Saturno.
+              <strong>Los planetas giran alrededor del Sol</strong> en el siguiente orden: Mercurio, Venus, Tierra,
+              Marte, Júpiter, Saturno.
             </li>
 
             <li>
-              <strong>Las estrellas están inmóviles</strong> a una distancia enorme, por lo que no observamos paralaje (su aparente desplazamiento debido al movimiento de la Tierra).
+              <strong>Las estrellas están inmóviles</strong> a una distancia enorme, por lo que no observamos paralaje
+              (su aparente desplazamiento debido al movimiento de la Tierra).
             </li>
 
             <li>
-              <strong>El movimiento retrógrado es una ilusión óptica</strong> causada por el movimiento relativo de la Tierra y los otros planetas.
+              <strong>El movimiento retrógrado es una ilusión óptica</strong> causada por el movimiento relativo de la
+              Tierra y los otros planetas.
             </li>
           </ol>
         </div>
 
         <div style="text-align: center; margin: var(--space-xl) 0;">
-          <img src="https://via.placeholder.com/700x500/5a72d8/ffffff?text=Modelo+Heliocentrico+de+Copernico" alt="Modelo Heliocéntrico" style="max-width: 100%; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+          <img src="https://via.placeholder.com/700x500/5a72d8/ffffff?text=Modelo+Heliocentrico+de+Copernico"
+            alt="Modelo Heliocéntrico"
+            style="max-width: 100%; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
           <p style="margin-top: var(--space-sm); font-size: 0.9em; color: var(--color-text-secondary);">
-            <em>Sistema heliocéntrico de Copérnico: el Sol en el centro, los planetas (incluyendo la Tierra) girando a su alrededor</em>
+            <em>Sistema heliocéntrico de Copérnico: el Sol en el centro, los planetas (incluyendo la Tierra) girando a
+              su alrededor</em>
           </p>
         </div>
       </section>
@@ -196,7 +306,9 @@
         <h2>Explicando el Movimiento Retrógrado</h2>
 
         <p>
-          Una de las mayores ventajas del modelo copernicano era su elegante explicación del movimiento retrógrado. En lugar de requerir complejos epiciclos, el heliocentrismo lo explicaba como una simple consecuencia del movimiento relativo.
+          Una de las mayores ventajas del modelo copernicano era su elegante explicación del movimiento retrógrado. En
+          lugar de requerir complejos epiciclos, el heliocentrismo lo explicaba como una simple consecuencia del
+          movimiento relativo.
         </p>
 
         <div class="concept-highlight">
@@ -207,25 +319,34 @@
           </p>
 
           <ul>
-            <li><strong>Antes de adelantar:</strong> Ves el auto lento adelante tuyo, moviéndose en la misma dirección.</li>
-            <li><strong>Mientras adelantas:</strong> El auto lento parece moverse hacia atrás respecto a objetos lejanos en el horizonte.</li>
-            <li><strong>Después de adelantar:</strong> El auto lento vuelve a moverse en la dirección original, ahora detrás tuyo.</li>
+            <li><strong>Antes de adelantar:</strong> Ves el auto lento adelante tuyo, moviéndose en la misma dirección.
+            </li>
+            <li><strong>Mientras adelantas:</strong> El auto lento parece moverse hacia atrás respecto a objetos lejanos
+              en el horizonte.</li>
+            <li><strong>Después de adelantar:</strong> El auto lento vuelve a moverse en la dirección original, ahora
+              detrás tuyo.</li>
           </ul>
 
           <p>
-            Lo mismo ocurre con los planetas. Cuando la Tierra "adelanta" a Marte (que está más lejos del Sol y se mueve más lento), Marte parece moverse hacia atrás contra el fondo de estrellas fijas. ¡Es solo perspectiva!
+            Lo mismo ocurre con los planetas. Cuando la Tierra "adelanta" a Marte (que está más lejos del Sol y se mueve
+            más lento), Marte parece moverse hacia atrás contra el fondo de estrellas fijas. ¡Es solo perspectiva!
           </p>
         </div>
 
         <div style="text-align: center; margin: var(--space-xl) 0;">
-          <img src="https://via.placeholder.com/800x450/667eea/ffffff?text=Movimiento+Retrogrado+Explicado" alt="Explicación del movimiento retrógrado" style="max-width: 100%; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+          <img src="https://via.placeholder.com/800x450/667eea/ffffff?text=Movimiento+Retrogrado+Explicado"
+            alt="Explicación del movimiento retrógrado"
+            style="max-width: 100%; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
           <p style="margin-top: var(--space-sm); font-size: 0.9em; color: var(--color-text-secondary);">
-            <em>Cuando la Tierra adelanta a Marte, este parece retroceder (movimiento retrógrado) desde nuestra perspectiva</em>
+            <em>Cuando la Tierra adelanta a Marte, este parece retroceder (movimiento retrógrado) desde nuestra
+              perspectiva</em>
           </p>
         </div>
 
         <p>
-          Esta explicación era mucho más simple y natural que el sistema de epiciclos de Ptolomeo. Además, explicaba por qué el movimiento retrógrado ocurre cuando los planetas exteriores están en oposición al Sol: ¡es precisamente cuando la Tierra los está adelantando!
+          Esta explicación era mucho más simple y natural que el sistema de epiciclos de Ptolomeo. Además, explicaba por
+          qué el movimiento retrógrado ocurre cuando los planetas exteriores están en oposición al Sol: ¡es precisamente
+          cuando la Tierra los está adelantando!
         </p>
       </section>
 
@@ -236,33 +357,41 @@
         <div class="concept-highlight">
           <h3>1. Mayor Simplicidad Matemática</h3>
           <p>
-            Aunque Copérnico todavía usaba epiciclos (porque asumía que las órbitas eran circulares perfectas), necesitaba muchos menos que Ptolomeo. Su sistema requería solo unos 34 círculos en total, comparado con los 80+ del modelo ptolemaico refinado.
+            Aunque Copérnico todavía usaba epiciclos (porque asumía que las órbitas eran circulares perfectas),
+            necesitaba muchos menos que Ptolomeo. Su sistema requería solo unos 34 círculos en total, comparado con los
+            80+ del modelo ptolemaico refinado.
           </p>
 
           <h3>2. Explicación Natural del Movimiento Retrógrado</h3>
           <p>
-            Como vimos, el movimiento retrógrado surgía automáticamente de la geometría del sistema, sin necesidad de construcciones ad hoc.
+            Como vimos, el movimiento retrógrado surgía automáticamente de la geometría del sistema, sin necesidad de
+            construcciones ad hoc.
           </p>
 
           <h3>3. Explicación de las Posiciones de Mercurio y Venus</h3>
           <p>
-            En el modelo geocéntrico, era un misterio por qué Mercurio y Venus siempre aparecen cerca del Sol. En el heliocéntrico, esto es obvio: ¡sus órbitas están dentro de la órbita de la Tierra!
+            En el modelo geocéntrico, era un misterio por qué Mercurio y Venus siempre aparecen cerca del Sol. En el
+            heliocéntrico, esto es obvio: ¡sus órbitas están dentro de la órbita de la Tierra!
           </p>
 
           <h3>4. Orden Natural de los Planetas</h3>
           <p>
-            El sistema copernicano proporcionaba un criterio natural para ordenar los planetas: su distancia al Sol correlacionaba perfectamente con su período orbital. Cuanto más lejos del Sol, más lento el planeta. Esto creaba una armonía matemática que Copérnico encontraba hermosa.
+            El sistema copernicano proporcionaba un criterio natural para ordenar los planetas: su distancia al Sol
+            correlacionaba perfectamente con su período orbital. Cuanto más lejos del Sol, más lento el planeta. Esto
+            creaba una armonía matemática que Copérnico encontraba hermosa.
           </p>
 
           <h3>5. Explicación del Brillo Variable</h3>
           <p>
-            Los planetas cambian de brillo porque su distancia a la Tierra varía mientras ambos se mueven en sus órbitas. En el modelo geocéntrico, esto era difícil de explicar.
+            Los planetas cambian de brillo porque su distancia a la Tierra varía mientras ambos se mueven en sus
+            órbitas. En el modelo geocéntrico, esto era difícil de explicar.
           </p>
         </div>
 
         <div class="philosophical-quote">
           <p>
-            "En el centro de todo reside el Sol. ¿Quién colocaría esta lámpara de un hermosísimo templo en otro o mejor lugar que aquél desde donde puede iluminar todo al mismo tiempo?"
+            "En el centro de todo reside el Sol. ¿Quién colocaría esta lámpara de un hermosísimo templo en otro o mejor
+            lugar que aquél desde donde puede iluminar todo al mismo tiempo?"
           </p>
           <cite>— Nicolás Copérnico, De revolutionibus orbium coelestium (1543)</cite>
         </div>
@@ -273,40 +402,54 @@
         <h2>Problemas del Modelo Copernicano</h2>
 
         <p>
-          A pesar de sus ventajas, el modelo de Copérnico enfrentaba serios problemas que hicieron que muy pocos astrónomos lo aceptaran inicialmente:
+          A pesar de sus ventajas, el modelo de Copérnico enfrentaba serios problemas que hicieron que muy pocos
+          astrónomos lo aceptaran inicialmente:
         </p>
 
         <div class="concept-highlight">
           <h3>1. Ausencia de Paralaje Estelar</h3>
           <p>
-            Si la Tierra se mueve alrededor del Sol, las estrellas deberían mostrar un aparente desplazamiento (paralaje) cuando las observamos en diferentes épocas del año. Pero no se observaba paralaje. Copérnico argumentó que las estrellas están tan lejos que el paralaje es demasiado pequeño para detectar. Esto era correcto, pero no se pudo confirmar hasta 1838.
+            Si la Tierra se mueve alrededor del Sol, las estrellas deberían mostrar un aparente desplazamiento
+            (paralaje) cuando las observamos en diferentes épocas del año. Pero no se observaba paralaje. Copérnico
+            argumentó que las estrellas están tan lejos que el paralaje es demasiado pequeño para detectar. Esto era
+            correcto, pero no se pudo confirmar hasta 1838.
           </p>
 
           <h3>2. Contradecía la Física Aristotélica</h3>
           <p>
-            Aristóteles había argumentado que objetos pesados caen hacia el centro del universo. Si la Tierra no está en el centro, ¿por qué las cosas caen "hacia abajo"? Se necesitaba una nueva física para explicar esto. (Newton la proporcionaría 140 años después.)
+            Aristóteles había argumentado que objetos pesados caen hacia el centro del universo. Si la Tierra no está en
+            el centro, ¿por qué las cosas caen "hacia abajo"? Se necesitaba una nueva física para explicar esto. (Newton
+            la proporcionaría 140 años después.)
           </p>
 
           <h3>3. Contradecía la Experiencia Cotidiana</h3>
           <p>
-            No sentimos que la Tierra se mueve. Si la Tierra rota a más de 1.600 km/h en el ecuador, ¿por qué no salimos volando? ¿Por qué las nubes no se quedan atrás?
+            No sentimos que la Tierra se mueve. Si la Tierra rota a más de 1.600 km/h en el ecuador, ¿por qué no salimos
+            volando? ¿Por qué las nubes no se quedan atrás?
           </p>
 
           <h3>4. Parecía Contradecir las Escrituras</h3>
           <p>
-            Algunos pasajes bíblicos (como Josué 10:12-13, donde Dios "detiene el Sol") parecían asumir que el Sol se mueve y la Tierra está quieta. Aunque Copérnico era un clérigo católico devoto, su teoría eventualmente sería vista como problemática por la Iglesia.
+            Algunos pasajes bíblicos (como Josué 10:12-13, donde Dios "detiene el Sol") parecían asumir que el Sol se
+            mueve y la Tierra está quieta. Aunque Copérnico era un clérigo católico devoto, su teoría eventualmente
+            sería vista como problemática por la Iglesia.
           </p>
 
           <h3>5. No Era Más Preciso (Inicialmente)</h3>
           <p>
-            El sistema de Copérnico no era más preciso que el de Ptolomeo en sus predicciones. De hecho, en algunos casos era menos preciso. Esto se debía a que Copérnico mantenía el supuesto de órbitas circulares perfectas. Solo cuando Kepler (1609) descubrió que las órbitas son elípticas, el modelo heliocéntrico superó claramente al geocéntrico en precisión.
+            El sistema de Copérnico no era más preciso que el de Ptolomeo en sus predicciones. De hecho, en algunos
+            casos era menos preciso. Esto se debía a que Copérnico mantenía el supuesto de órbitas circulares perfectas.
+            Solo cuando Kepler (1609) descubrió que las órbitas son elípticas, el modelo heliocéntrico superó claramente
+            al geocéntrico en precisión.
           </p>
         </div>
 
         <div style="text-align: center; margin: var(--space-xl) 0;">
-          <img src="https://via.placeholder.com/600x400/4a5f8f/ffffff?text=Paralaje+Estelar" alt="Paralaje Estelar" style="max-width: 100%; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+          <img src="https://via.placeholder.com/600x400/4a5f8f/ffffff?text=Paralaje+Estelar" alt="Paralaje Estelar"
+            style="max-width: 100%; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
           <p style="margin-top: var(--space-sm); font-size: 0.9em; color: var(--color-text-secondary);">
-            <em>El paralaje estelar: si la Tierra se mueve, las estrellas deberían mostrar un aparente desplazamiento. No se detectó hasta 1838 con telescopios muy potentes</em>
+            <em>El paralaje estelar: si la Tierra se mueve, las estrellas deberían mostrar un aparente desplazamiento.
+              No se detectó hasta 1838 con telescopios muy potentes</em>
           </p>
         </div>
       </section>
@@ -316,47 +459,79 @@
         <h2>La Recepción Inicial: ¿Por Qué No Se Aceptó de Inmediato?</h2>
 
         <p>
-          Contrario a lo que a veces se piensa, el libro de Copérnico no causó un escándalo inmediato. De hecho, fue ampliamente ignorado durante décadas. ¿Por qué?
+          Contrario a lo que a veces se piensa, el libro de Copérnico no causó un escándalo inmediato. De hecho, fue
+          ampliamente ignorado durante décadas. ¿Por qué?
         </p>
 
         <ul>
-          <li><strong>Matemática compleja:</strong> El libro era extremadamente técnico, lleno de trigonometría esférica y tablas numéricas. Pocos podían leerlo.</li>
-          <li><strong>Prefacio engañoso:</strong> Andreas Osiander, quien supervisó la publicación, añadió un prefacio anónimo (sin permiso de Copérnico) diciendo que el heliocentrismo era solo un "artificio matemático" para simplificar cálculos, no una descripción de la realidad. Esto hizo que muchos lectores no tomaran la teoría literalmente.</li>
-          <li><strong>Sin evidencia decisiva:</strong> No había experimentos u observaciones que demostraran inequívocamente que Copérnico tenía razón. Era una teoría matemáticamente elegante, pero no obviamente superior empíricamente.</li>
-          <li><strong>Inercia del paradigma:</strong> Los astrónomos habían invertido siglos en refinar el modelo ptolemaico. Cambiar requería reaprender todo desde cero.</li>
+          <li><strong>Matemática compleja:</strong> El libro era extremadamente técnico, lleno de trigonometría esférica
+            y tablas numéricas. Pocos podían leerlo.</li>
+          <li><strong>Prefacio engañoso:</strong> Andreas Osiander, quien supervisó la publicación, añadió un prefacio
+            anónimo (sin permiso de Copérnico) diciendo que el heliocentrismo era solo un "artificio matemático" para
+            simplificar cálculos, no una descripción de la realidad. Esto hizo que muchos lectores no tomaran la teoría
+            literalmente.</li>
+          <li><strong>Sin evidencia decisiva:</strong> No había experimentos u observaciones que demostraran
+            inequívocamente que Copérnico tenía razón. Era una teoría matemáticamente elegante, pero no obviamente
+            superior empíricamente.</li>
+          <li><strong>Inercia del paradigma:</strong> Los astrónomos habían invertido siglos en refinar el modelo
+            ptolemaico. Cambiar requería reaprender todo desde cero.</li>
         </ul>
 
         <p>
-          No fue hasta más de 60 años después, con las observaciones telescópicas de Galileo (1609-1610), que el heliocentrismo comenzó a ganar aceptación. Exploraremos esto en la próxima clase.
+          No fue hasta más de 60 años después, con las observaciones telescópicas de Galileo (1609-1610), que el
+          heliocentrismo comenzó a ganar aceptación. Exploraremos esto en la próxima clase.
         </p>
       </section>
 
-      <!-- Reflection Questions -->
+      <!-- Development Questions -->
       <section class="class-section">
-        <h2>Preguntas para Reflexionar</h2>
+        <h2>Preguntas a Desarrollar</h2>
+
+        <p style="margin-bottom: var(--space-lg); font-style: italic;">
+          Responda las siguientes preguntas de manera completa, utilizando el vocabulario técnico apropiado y
+          desarrollando sus argumentos con claridad.
+        </p>
 
         <div class="activity-container">
-          <ol>
-            <li>
-              <strong>Simplicidad vs Precisión:</strong> El modelo de Copérnico era más simple que el de Ptolomeo, pero no más preciso. ¿Debería la ciencia preferir la simplicidad o la precisión? ¿Qué pasa cuando entran en conflicto?
-            </li>
+          <div
+            style="margin-bottom: var(--space-xl); padding: var(--space-lg); border-left: 4px solid var(--color-accent); background: var(--color-bg-tertiary);">
+            <h3 style="margin-top: 0;">Pregunta 1</h3>
+            <p>
+              <strong>Compare y contraste el modelo geocéntrico de Ptolomeo con el modelo heliocéntrico de
+                Copérnico</strong> en cuanto a: (a) simplicidad explicativa, (b) poder predictivo, (c) coherencia con la
+              experiencia cotidiana. Desarrolle las ventajas y desventajas de cada modelo.
+            </p>
+          </div>
 
-            <li>
-              <strong>Evidencia vs Intuición:</strong> El heliocentrismo contradecía la experiencia cotidiana ("no sentimos que la Tierra se mueve"). ¿Deberíamos confiar en teorías que contradicen nuestros sentidos? ¿Cuándo es apropiado hacerlo?
-            </li>
+          <div
+            style="margin-bottom: var(--space-xl); padding: var(--space-lg); border-left: 4px solid var(--color-accent); background: var(--color-bg-tertiary);">
+            <h3 style="margin-top: 0;">Pregunta 2</h3>
+            <p>
+              <strong>Explique cómo el modelo heliocéntrico de Copérnico resuelve el problema del movimiento retrógrado
+                de los planetas.</strong> Utilice los conceptos de movimiento relativo y perspectiva del observador.
+              ¿Por qué esta explicación es más simple que el sistema de epiciclos ptolemaico?
+            </p>
+          </div>
 
-            <li>
-              <strong>Cambio de paradigma:</strong> ¿Por qué crees que tan pocos astrónomos aceptaron inmediatamente la teoría de Copérnico, incluso si era más elegante matemáticamente? ¿Qué se necesita para que una comunidad científica abandone un paradigma establecido?
-            </li>
+          <div
+            style="margin-bottom: var(--space-xl); padding: var(--space-lg); border-left: 4px solid var(--color-accent); background: var(--color-bg-tertiary);">
+            <h3 style="margin-top: 0;">Pregunta 3</h3>
+            <p>
+              <strong>Identifique y explique tres problemas importantes que enfrentaba el modelo heliocéntrico de
+                Copérnico.</strong> Para cada problema, desarrolle por qué constituía una objeción seria y cómo afectaba
+              la aceptación de la teoría por parte de la comunidad científica de la época.
+            </p>
+          </div>
 
-            <li>
-              <strong>Ciencia y autoridad:</strong> Copérnico era un clérigo católico que publicó una teoría que eventualmente sería vista como herética. ¿Cómo deberían los científicos navegar conflictos entre evidencia científica y autoridad religiosa o política?
-            </li>
-
-            <li>
-              <strong>Armonía matemática:</strong> Copérnico se sintió atraído por la "armonía" y "elegancia" de su sistema. ¿Son la belleza y la elegancia matemática criterios legítimos para evaluar teorías científicas? ¿Por qué o por qué no?
-            </li>
-          </ol>
+          <div
+            style="margin-bottom: var(--space-xl); padding: var(--space-lg); border-left: 4px solid var(--color-accent); background: var(--color-bg-tertiary);">
+            <h3 style="margin-top: 0;">Pregunta 4</h3>
+            <p>
+              <strong>Analice por qué el libro de Copérnico no causó una revolución científica inmediata.</strong>
+              Desarrolle al menos cuatro factores (científicos, matemáticos, filosóficos o sociales) que expliquen la
+              lenta aceptación del heliocentrismo durante el siglo XVI.
+            </p>
+          </div>
         </div>
       </section>
 
@@ -366,32 +541,44 @@
 
         <div class="concept-highlight">
           <ul>
-            <li><strong>Heliocentrismo:</strong> Modelo cosmológico que coloca al Sol en el centro del sistema, con los planetas (incluyendo la Tierra) girando a su alrededor.</li>
-            <li><strong>Paralaje estelar:</strong> Aparente desplazamiento de las estrellas debido al movimiento de la Tierra alrededor del Sol. No fue detectado hasta 1838.</li>
-            <li><strong>Parsimonia (Navaja de Ockham):</strong> Principio que dice que, entre dos teorías que explican los mismos fenómenos, se debe preferir la más simple.</li>
-            <li><strong>Movimiento relativo:</strong> El movimiento observado depende del marco de referencia del observador. El movimiento retrógrado es una consecuencia del movimiento relativo de la Tierra y los planetas.</li>
-            <li><strong>Hipótesis ad hoc:</strong> Modificación de una teoría diseñada solo para salvar una observación problemática, sin justificación independiente. (Copérnico criticaba los múltiples epiciclos como hipótesis ad hoc.)</li>
+            <li><strong>Heliocentrismo:</strong> Modelo cosmológico que coloca al Sol en el centro del sistema, con los
+              planetas (incluyendo la Tierra) girando a su alrededor.</li>
+            <li><strong>Paralaje estelar:</strong> Aparente desplazamiento de las estrellas debido al movimiento de la
+              Tierra alrededor del Sol. No fue detectado hasta 1838.</li>
+            <li><strong>Parsimonia (Navaja de Ockham):</strong> Principio que dice que, entre dos teorías que explican
+              los mismos fenómenos, se debe preferir la más simple.</li>
+            <li><strong>Movimiento relativo:</strong> El movimiento observado depende del marco de referencia del
+              observador. El movimiento retrógrado es una consecuencia del movimiento relativo de la Tierra y los
+              planetas.</li>
+            <li><strong>Hipótesis ad hoc:</strong> Modificación de una teoría diseñada solo para salvar una observación
+              problemática, sin justificación independiente. (Copérnico criticaba los múltiples epiciclos como hipótesis
+              ad hoc.)</li>
           </ul>
         </div>
       </section>
 
       <!-- Next Class Preview -->
-      <section class="class-section" style="background: var(--color-bg-tertiary); padding: var(--space-lg); border-radius: 8px;">
+      <section class="class-section"
+        style="background: var(--color-bg-tertiary); padding: var(--space-lg); border-radius: 8px;">
         <h2>Próxima Clase</h2>
         <h3 style="color: var(--color-accent);">Clase 3: Galileo y la Defensa del Copernicanismo</h3>
         <p>
-          Sesenta años después de la publicación del libro de Copérnico, un profesor de matemáticas italiano construyó un instrumento revolucionario: el telescopio astronómico. Con él, Galileo Galilei observó fenómenos que nadie había visto antes: montañas en la Luna, lunas girando alrededor de Júpiter, fases de Venus como las de la Luna. Estas observaciones proporcionaron la evidencia que faltaba para el heliocentrismo.
+          Sesenta años después de la publicación del libro de Copérnico, un profesor de matemáticas italiano construyó
+          un instrumento revolucionario: el telescopio astronómico. Con él, Galileo Galilei observó fenómenos que nadie
+          había visto antes: montañas en la Luna, lunas girando alrededor de Júpiter, fases de Venus como las de la
+          Luna. Estas observaciones proporcionaron la evidencia que faltaba para el heliocentrismo.
         </p>
         <p>
-          Exploraremos cómo Galileo defendió el modelo copernicano, su conflicto con la Iglesia, y el papel de la observación empírica en el cambio científico.
+          Exploraremos cómo Galileo defendió el modelo copernicano, su conflicto con la Iglesia, y el papel de la
+          observación empírica en el cambio científico.
         </p>
       </section>
 
       <!-- Navigation -->
-      <nav class="class-nav">
-        <a href="clase-01.html" class="btn btn-outline">← Clase Anterior</a>
-        <a href="../../index.html" class="btn btn-outline">Inicio</a>
-        <a href="clase-03.html" class="btn btn-primary">Siguiente Clase →</a>
+      <nav class="class-navigation">
+        <a href="clase-01.html" class="nav-button">← Clase Anterior</a>
+        <a href="index.html" class="nav-button nav-button-index">📚 Índice de Unidad</a>
+        <a href="clase-03.html" class="nav-button">Siguiente Clase →</a>
       </nav>
     </article>
   </main>
@@ -414,4 +601,5 @@
   <!-- JavaScript -->
   <script src="../../assets/js/dark-mode.js"></script>
 </body>
+
 </html>

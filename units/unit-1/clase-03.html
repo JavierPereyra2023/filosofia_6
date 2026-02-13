@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clase 3: Galileo - Observación y Telescopio | Filosofía 6to</title>
+  <link rel="stylesheet" href="../../assets/css/variables.css">
+  <link rel="stylesheet" href="../../assets/css/reset.css">
+  <link rel="stylesheet" href="../../assets/css/base.css">
+  <link rel="stylesheet" href="../../assets/css/typography.css">
+  <link rel="stylesheet" href="../../assets/css/layout.css">
+  <link rel="stylesheet" href="../../assets/css/navigation.css">
+  <link rel="stylesheet" href="../../assets/css/components.css">
+  <link rel="stylesheet" href="../../assets/css/unit-page.css">
+
+  <!-- Custom Graffiti for Class 3 -->
+  <style>
+    .class-container::before {
+      content: 'Telescopio 🔭\A  x30 aumentos\A\A  Lunas de Júpiter\A  ● ● ♃ ●\A\A  d = 1/2 g t²\A  (Caída Libre)\A\A  Fases de Venus';
+      position: fixed;
+      top: 15%;
+      right: 5%;
+      font-family: 'Caveat', 'Comic Sans MS', cursive;
+      font-size: 24px;
+      font-weight: 700;
+      line-height: 1.6;
+      white-space: pre;
+      color: rgba(255, 255, 255, 0.35);
+      text-shadow:
+        0 2px 4px rgba(65, 105, 225, 0.4),
+        0 4px 8px rgba(0, 0, 0, 0.25),
+        -2px -2px 3px rgba(255, 255, 255, 0.6),
+        2px 2px 4px rgba(65, 105, 225, 0.3);
+      pointer-events: none;
+      z-index: 0;
+      transform: rotate(-6deg);
+      letter-spacing: 1px;
+    }
+
+    .class-container::after {
+      content: 'EMPIRISMO\A\A  Galileo Galilei\A  1610\A\A  Sidereus Nuncius\A\A  "Y sin embargo,\A  se mueve"';
+      position: fixed;
+      bottom: 15%;
+      left: 5%;
+      font-family: 'Caveat', 'Comic Sans MS', cursive;
+      font-size: 22px;
+      font-weight: 700;
+      line-height: 1.5;
+      white-space: pre;
+      color: rgba(255, 255, 255, 0.32);
+      text-shadow:
+        0 2px 4px rgba(65, 105, 225, 0.4),
+        0 4px 8px rgba(0, 0, 0, 0.25),
+        -2px -2px 3px rgba(255, 255, 255, 0.6),
+        2px 2px 4px rgba(65, 105, 225, 0.3);
+      pointer-events: none;
+      z-index: 0;
+      transform: rotate(4deg);
+      letter-spacing: 1px;
+    }
+
+    [data-theme="dark"] .class-container::before,
+    [data-theme="dark"] .class-container::after {
+      color: rgba(255, 255, 255, 0.22);
+      text-shadow:
+        0 3px 6px rgba(65, 105, 225, 0.6),
+        0 5px 10px rgba(0, 0, 0, 0.6),
+        -2px -2px 4px rgba(255, 255, 255, 0.4),
+        2px 2px 5px rgba(65, 105, 225, 0.5),
+        0 0 30px rgba(65, 105, 225, 0.3);
+    }
+  </style>
+
+<body>
+  <!-- Navigation Bar -->
+  <nav class="main-nav">
+    <div class="nav-container">
+      <div class="nav-left">
+        <a href="index.html" class="nav-back-button" title="Volver al índice de la unidad">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24"
+            stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M15 19l-7-7 7-7" />
+          </svg>
+          <span>Unidad 1</span>
+        </a>
+        <a href="../../index.html" class="nav-brand">Filosofía 6to</a>
+      </div>
+      <div class="nav-controls">
+        <button id="dark-mode-toggle" class="dark-mode-toggle" aria-label="Cambiar tema">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24"
+            stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Progress Bar -->
+  <div class="class-progress">
+    <div class="container">
+      <div class="progress-info">
+        <span class="progress-label">Unidad 1: Teorías Científicas</span>
+        <span class="progress-count">Clase 3 de 10</span>
+      </div>
+      <div class="progress-bar">
+        <div class="progress-fill" style="width: 30%"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Content -->
+  <main class="class-container">
+    <article class="class-content">
+      <!-- Header -->
+      <header class="class-header">
+        <div class="class-badge">Clase 3</div>
+        <h1 class="class-title">Galileo: Observación y Telescopio</h1>
+        <p class="class-subtitle">
+          El instrumento que cambió nuestra visión del universo
+        </p>
+      </header>
+
+      <!-- Introduction -->
+      <section class="class-section">
+        <h2>Un Catalejo para las Estrellas</h2>
+
+        <p>
+          En 1609, un profesor de matemáticas de 45 años en la Universidad de Padua escuchó rumores sobre un invento
+          holandés: un tubo con lentes que hacía que los objetos lejanos parecieran más cercanos. Sin haber visto el
+          dispositivo, <strong>Galileo Galilei</strong> construyó su propia versión mejorada. Pero a diferencia de los
+          fabricantes de telescopios holandeses, que lo vendían como herramienta para navegación marítima y espionaje
+          militar, Galileo hizo algo revolucionario: <strong>apuntó su telescopio al cielo nocturno</strong>.
+        </p>
+
+        <p>
+          Lo que vio en los siguientes meses cambiaría para siempre nuestra comprensión del cosmos. Por primera vez en
+          la historia humana, alguien veía lo que ningún ojo desnudo había visto jamás: lunas girando alrededor de otro
+          planeta, montañas en la Luna, manchas en el Sol, una miríada de estrellas invisibles. La evidencia empírica
+          que faltaba para apoyar el heliocentrismo de Copérnico finalmente estaba aquí.
+        </p>
+
+        <div style="text-align: center; margin: var(--space-xl) 0;">
+          <img src="https://via.placeholder.com/500x600/667eea/ffffff?text=Galileo+Galilei" alt="Galileo Galilei"
+            style="max-width: 100%; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+          <p style="margin-top: var(--space-sm); font-size: 0.9em; color: var(--color-text-secondary);">
+            <em>Galileo Galilei (1564-1642), matemático, físico y astrónomo italiano</em>
+          </p>
+        </div>
+
+        <div class="concept-highlight">
+          <p>
+            <strong>Pregunta inicial:</strong> Antes de los telescopios, los astrónomos solo podían ver con sus ojos.
+            ¿Cómo limita esto el tipo de evidencia que pueden usar para apoyar o refutar teorías? ¿Qué papel juegan los
+            instrumentos tecnológicos en el progreso científico?
+          </p>
+        </div>
+      </section>
+
+      <!-- Who Was Galileo -->
+      <section class="class-section">
+        <h2>¿Quién Fue Galileo Galilei?</h2>
+
+        <p>
+          <strong>Galileo Galilei</strong> nació en Pisa, Italia, en 1564 (el mismo año que murió Miguel Ángel y nació
+          Shakespeare). Su padre era músico y teórico musical, y esperaba que Galileo estudiara medicina. Sin embargo,
+          Galileo se sintió atraído por las matemáticas y la filosofía natural (lo que hoy llamamos física).
+        </p>
+
+        <ul>
+          <li><strong>Educación:</strong> Estudió en la Universidad de Pisa, aunque no completó su grado médico. En
+            cambio, se dedicó a estudiar matemáticas y física de forma autodidacta.</li>
+          <li><strong>Primeros trabajos:</strong> Profesor de matemáticas en Pisa (1589-1592) y luego en Padua
+            (1592-1610), donde pasó sus años más productivos.</li>
+          <li><strong>Personalidad:</strong> Galileo era brillante, polémico, sarcástico y ambicioso. Tenía un talento
+            excepcional para la divulgación científica, escribiendo en italiano (no en latín) para llegar a un público
+            más amplio.</li>
+          <li><strong>Habilidades:</strong> No solo era teórico; era un excelente experimentador, matemático,
+            constructor de instrumentos y observador meticuloso.</li>
+        </ul>
+
+        <p>
+          Galileo no "inventó" el telescopio, pero lo perfeccionó dramáticamente. Los primeros telescopios holandeses
+          ampliaban 3-4 veces; Galileo construyó versiones que ampliaban hasta 30 veces, con lentes pulidas
+          cuidadosamente para mayor claridad.
+        </p>
+      </section>
+
+      <!-- Galileo's Discoveries -->
+      <section class="class-section">
+        <h2>Los Descubrimientos Telescópicos de Galileo</h2>
+
+        <p>
+          Entre 1609 y 1610, Galileo realizó una serie de observaciones que publicó en un libro titulado <em>Sidereus
+            Nuncius</em> (El Mensajero Sideral) en marzo de 1610. Este pequeño libro de 60 páginas causó sensación en
+          toda Europa. Veamos sus descubrimientos más importantes:
+        </p>
+
+        <h3>1. La Luna Tiene Montañas y Valles</h3>
+
+        <div class="concept-highlight">
+          <p>
+            <strong>Observación:</strong> La Luna no es una esfera perfecta y lisa, como enseñaba la filosofía
+            aristotélica. Tiene montañas, cráteres, valles y "mares" (manchas oscuras que Galileo pensó que eran
+            océanos, aunque hoy sabemos que son llanuras de lava solidificada).
+          </p>
+          <p style="margin-top: var(--space-sm);">
+            <strong>Implicación:</strong> Los cielos no son "perfectos" e inmutables, diferentes de la Tierra "corrupta"
+            e imperfecta. La Luna es un mundo físico similar a la Tierra. Esto cuestionaba la división aristotélica
+            entre mundo sublunar (imperfecto) y supralunar (perfecto).
+          </p>
+        </div>
+
+        <div style="text-align: center; margin: var(--space-xl) 0;">
+          <img src="https://via.placeholder.com/700x500/4a5f8f/ffffff?text=Dibujos+de+la+Luna+por+Galileo"
+            alt="Dibujos lunares de Galileo"
+            style="max-width: 100%; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+          <p style="margin-top: var(--space-sm); font-size: 0.9em; color: var(--color-text-secondary);">
+            <em>Dibujos de la Luna realizados por Galileo en 1610, mostrando montañas y cráteres</em>
+          </p>
+        </div>
+
+        <p>
+          Galileo no solo vio las irregularidades; las <strong>midió</strong>. Observando las sombras proyectadas por
+          las montañas lunares e iluminadas por el Sol, calculó que algunas montañas lunares tenían más de 6 km de
+          altura (comparable a los Alpes terrestres). Este uso de matemáticas y geometría para analizar observaciones
+          fue característico de Galileo.
+        </p>
+
+        <h3>2. Los Satélites de Júpiter</h3>
+
+        <div class="concept-highlight">
+          <p>
+            <strong>Observación:</strong> El 7 de enero de 1610, Galileo observó tres "estrellitas" cerca de Júpiter.
+            Las noches siguientes, notó que se movían, siempre cerca de Júpiter. Pronto descubrió una cuarta. Se dio
+            cuenta de que no eran estrellas, sino <strong>lunas girando alrededor de Júpiter</strong>.
+          </p>
+          <p style="margin-top: var(--space-sm);">
+            <strong>Implicación:</strong> Esta fue quizás la observación más revolucionaria. Demostraba que NO todo gira
+            alrededor de la Tierra. Existía un "mini sistema solar" con Júpiter en el centro. Si Júpiter podía tener
+            lunas girando a su alrededor mientras él se movía, ¿por qué no podría la Tierra girar alrededor del Sol
+            mientras la Luna gira alrededor de la Tierra?
+          </p>
+        </div>
+
+        <div style="text-align: center; margin: var(--space-xl) 0;">
+          <img src="https://via.placeholder.com/800x400/5a72d8/ffffff?text=Lunas+de+Jupiter+observadas+por+Galileo"
+            alt="Satélites de Júpiter"
+            style="max-width: 100%; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+          <p style="margin-top: var(--space-sm); font-size: 0.9em; color: var(--color-text-secondary);">
+            <em>Dibujos de Galileo mostrando las posiciones cambiantes de las lunas de Júpiter noche tras noche</em>
+          </p>
+        </div>
+
+        <p>
+          Galileo llamó a estas lunas "Medici Sidera" (Astros Mediceos) en honor a su mecenas, Cosme II de Médici, Gran
+          Duque de Toscana. Hoy las conocemos como las cuatro <strong>lunas galileanas</strong>: Ío, Europa, Ganimedes y
+          Calisto. Este descubrimiento le valió a Galileo fama inmediata y un puesto como "Matemático y Filósofo del
+          Gran Duque" en Florencia.
+        </p>
+
+        <h3>3. Las Fases de Venus</h3>
+
+        <p>
+          En septiembre de 1610, Galileo comenzó a observar Venus sistemáticamente. Lo que descubrió fue crucial:
+        </p>
+
+        <div class="concept-highlight">
+          <p>
+            <strong>Observación:</strong> Venus muestra fases completas, como la Luna: fase creciente, llena, menguante,
+            nueva. Además, el tamaño aparente de Venus cambia dramáticamente: es grande cuando está en fase creciente y
+            pequeño cuando está lleno.
+          </p>
+          <p style="margin-top: var(--space-sm);">
+            <strong>Implicación:</strong> Esto era INCOMPATIBLE con el modelo ptolemaico geocéntrico. En el sistema de
+            Ptolomeo, Venus siempre debería estar entre la Tierra y el Sol, por lo que solo debería mostrar fases
+            crecientes (nunca llena). Las fases completas de Venus solo son posibles si Venus gira alrededor del Sol, no
+            de la Tierra.
+          </p>
+        </div>
+
+        <div style="text-align: center; margin: var(--space-xl) 0;">
+          <img src="https://via.placeholder.com/700x450/667eea/ffffff?text=Fases+de+Venus" alt="Fases de Venus"
+            style="max-width: 100%; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+          <p style="margin-top: var(--space-sm); font-size: 0.9em; color: var(--color-text-secondary);">
+            <em>Las fases de Venus: solo explicables si Venus orbita el Sol, no la Tierra</em>
+          </p>
+        </div>
+
+        <p>
+          Esta observación era un <strong>argumento decisivo contra el geocentrismo puro</strong>. Sin embargo, todavía
+          era compatible con el "sistema de Tycho Brahe", donde los planetas giraban alrededor del Sol, pero el Sol
+          giraba alrededor de la Tierra. El debate continuaba.
+        </p>
+
+        <h3>4. Las Manchas Solares</h3>
+
+        <div class="concept-highlight">
+          <p>
+            <strong>Observación:</strong> En 1611-1612, Galileo observó manchas oscuras en la superficie del Sol
+            (mirando a través de un telescopio proyectando la imagen, para no dañar sus ojos). Las manchas aparecían, se
+            movían a través del disco solar, y desaparecían.
+          </p>
+          <p style="margin-top: var(--space-sm);">
+            <strong>Implicación:</strong> El Sol, considerado el cuerpo celeste más perfecto e inmutable, tenía
+            "imperfecciones" que cambiaban con el tiempo. Además, el movimiento de las manchas sugería que el Sol rotaba
+            sobre su eje. Otro golpe a la cosmología aristotélica de esferas celestes perfectas.
+          </p>
+        </div>
+
+        <h3>5. Las Estrellas y la Vía Láctea</h3>
+
+        <div class="concept-highlight">
+          <p>
+            <strong>Observación:</strong> El telescopio revelaba miles de estrellas invisibles a simple vista. La Vía
+            Láctea, que parecía una banda nebulosa, en realidad estaba compuesta por innumerables estrellas
+            individuales.
+          </p>
+          <p style="margin-top: var(--space-sm);">
+            <strong>Implicación:</strong> El universo era mucho más vasto de lo que se pensaba. Esto era consistente con
+            la idea copernicana de que las estrellas están enormemente lejos, explicando por qué no observamos paralaje
+            estelar.
+          </p>
+        </div>
+      </section>
+
+      <!-- Significance -->
+      <section class="class-section">
+        <h2>¿Por Qué Fueron Tan Importantes Estas Observaciones?</h2>
+
+        <p>
+          Los descubrimientos telescópicos de Galileo no "probaban" definitivamente el heliocentrismo, pero sí cumplían
+          varios objetivos cruciales:
+        </p>
+
+        <div class="concept-highlight">
+          <h3>1. Refutaban Objeciones al Heliocentrismo</h3>
+          <p>
+            <strong>Objeción:</strong> "Si la Tierra se mueve alrededor del Sol, la Luna debería quedarse atrás."<br>
+            <strong>Respuesta de Galileo:</strong> Las lunas de Júpiter demuestran que un cuerpo puede tener satélites y
+            moverse al mismo tiempo.
+          </p>
+
+          <h3>2. Mostraban Anomalías en el Geocentrismo</h3>
+          <p>
+            Las fases de Venus eran inexplicables en el modelo ptolemaico tradicional. El geocentrismo necesitaba
+            modificaciones importantes (como el sistema de Tycho).
+          </p>
+
+          <h3>3. Debilitaban la Cosmología Aristotélica</h3>
+          <p>
+            La filosofía aristotélica, que sostenía el geocentrismo, se basaba en la perfección de los cielos. Las
+            montañas lunares, manchas solares, y la similitud entre cuerpos celestes y terrestres minaban esta
+            distinción.
+          </p>
+
+          <h3>4. Mostraban el Poder de la Tecnología Científica</h3>
+          <p>
+            El telescopio extendía los sentidos humanos. Galileo argumentaba que los instrumentos bien construidos
+            podían revelar verdades ocultas a nuestros sentidos naturales. Esto era una idea revolucionaria.
+          </p>
+
+          <h3>5. Cambiaban Qué Contaba Como Evidencia</h3>
+          <p>
+            Algunos filósofos aristotélicos se negaron a mirar por el telescopio, argumentando que podía crear
+            ilusiones. Galileo insistía en que la observación empírica (incluso mediada por instrumentos) debía tener
+            prioridad sobre la autoridad de textos antiguos.
+          </p>
+        </div>
+      </section>
+
+      <!-- Reception and Resistance -->
+      <section class="class-section">
+        <h2>La Recepción: Entusiasmo y Resistencia</h2>
+
+        <p>
+          El <em>Sidereus Nuncius</em> fue un éxito editorial inmediato. Se agotó en una semana. Astrónomos de toda
+          Europa confirmaron las observaciones de Galileo (una vez que tuvieron telescopios decentes). Pero no todos
+          estaban contentos:
+        </p>
+
+        <h3>Resistencia de Filósofos Aristotélicos</h3>
+
+        <ul>
+          <li><strong>Algunos se negaron a mirar:</strong> El filósofo Cesare Cremonini, colega de Galileo en Padua, se
+            negó a mirar por el telescopio, diciendo que era innecesario porque Aristóteles ya había explicado los
+            cielos.</li>
+
+          <li><strong>Argumentaban que era ilusión:</strong> Otros miraron pero argumentaron que el telescopio creaba
+            ilusiones ópticas. ¿Cómo saber que esas "lunas de Júpiter" no eran defectos en las lentes?</li>
+
+          <li><strong>Rechazaban la autoridad de los instrumentos:</strong> La tradición filosófica confiaba en la razón
+            y en textos autoritativos (Aristóteles, la Biblia), no en dispositivos mecánicos novedosos.</li>
+        </ul>
+
+        <h3>Apoyo de Astrónomos Matemáticos</h3>
+
+        <ul>
+          <li><strong>Johannes Kepler</strong> (1571-1630), el astrónomo imperial, escribió entusiasmado a Galileo
+            apoyando sus descubrimientos. Kepler mismo confirmaría las observaciones en 1610.</li>
+
+          <li><strong>Jesuitas del Collegio Romano</strong> (el principal centro de educación jesuita) confirmaron las
+            observaciones telescópicas de Galileo en 1611, aunque mantenían reservas sobre las interpretaciones
+            copernicanas.</li>
+
+          <li><strong>Príncipes, nobles y mecenas</strong> estaban fascinados. Galileo se convirtió en una celebridad
+            científica, recibiendo honores y un puesto bien remunerado en Florencia.</li>
+        </ul>
+
+        <div class="philosophical-quote">
+          <p>
+            "Doy gracias infinitas a Dios, que se ha dignado hacerme solo a mí el primer observador de cosas admirables,
+            mantenidas ocultas durante todos los siglos pasados."
+          </p>
+          <cite>— Galileo Galilei, Sidereus Nuncius (1610)</cite>
+        </div>
+      </section>
+
+      <!-- Philosophical Implications -->
+      <section class="class-section">
+        <h2>Implicaciones Filosóficas</h2>
+
+        <p>
+          Los descubrimientos de Galileo planteaban preguntas filosóficas profundas que todavía son relevantes:
+        </p>
+
+        <h3>1. ¿Son Confiables los Instrumentos?</h3>
+        <p>
+          Galileo argumentaba que los telescopios, si están bien construidos y se usan correctamente, revelan la
+          realidad. Los críticos argumentaban que los instrumentos pueden crear artefactos y distorsiones. ¿Cómo
+          distinguir entre observaciones genuinas y artefactos instrumentales?
+        </p>
+
+        <h3>2. Observación vs Autoridad</h3>
+        <p>
+          ¿Qué tiene más peso: lo que vemos con nuestros propios ojos (o telescopios) o lo que enseñan textos antiguos
+          respetados? Galileo favorecía la evidencia empírica; sus críticos favorecían la autoridad de Aristóteles y la
+          Biblia.
+        </p>
+
+        <h3>3. El Rol de las Matemáticas</h3>
+        <p>
+          Galileo no solo observaba; medía, calculaba y geometrizaba. Creía que "el libro de la naturaleza está escrito
+          en lenguaje matemático". Esto contrastaba con la tradición aristotélica, que privilegiaba explicaciones
+          cualitativas (¿por qué?) sobre cuantitativas (¿cuánto?).
+        </p>
+
+        <h3>4. Realismo vs Instrumentalismo</h3>
+        <p>
+          ¿El heliocentrismo describe la realidad, o es solo un modelo matemático útil para cálculos? Galileo era
+          realista: creía que la Tierra realmente se mueve. Algunos astrónomos jesuitas eran instrumentalistas:
+          aceptaban usar el modelo copernicano para cálculos pero no como descripción de la realidad.
+        </p>
+      </section>
+
+      <!-- Development Questions -->
+      <section class="class-section">
+        <h2>Preguntas a Desarrollar</h2>
+
+        <p style="margin-bottom: var(--space-lg); font-style: italic;">
+          Responda las siguientes preguntas de manera completa, utilizando el vocabulario técnico apropiado y
+          desarrollando sus argumentos con claridad.
+        </p>
+
+        <div class="activity-container">
+          <div
+            style="margin-bottom: var(--space-xl); padding: var(--space-lg); border-left: 4px solid var(--color-accent); background: var(--color-bg-tertiary);">
+            <h3 style="margin-top: 0;">Pregunta 1</h3>
+            <p>
+              <strong>Describa los cinco descubrimientos telescópicos más importantes de Galileo Galilei.</strong> Para
+              cada descubrimiento, explique: (a) qué observó, (b) qué implicación tenía para el debate geocentrismo vs.
+              heliocentrismo, y (c) qué aspecto de la cosmología aristotélica cuestionaba.
+            </p>
+          </div>
+
+          <div
+            style="margin-bottom: var(--space-xl); padding: var(--space-lg); border-left: 4px solid var(--color-accent); background: var(--color-bg-tertiary);">
+            <h3 style="margin-top: 0;">Pregunta 2</h3>
+            <p>
+              <strong>Explique por qué las fases de Venus observadas por Galileo eran incompatibles con el modelo
+                geocéntrico ptolemaico.</strong> Desarrolle su respuesta incluyendo: la predicción del modelo
+              geocéntrico sobre las fases de Venus, lo que Galileo observó realmente, y por qué esto constituía
+              evidencia decisiva a favor del heliocentrismo.
+            </p>
+          </div>
+
+          <div
+            style="margin-bottom: var(--space-xl); padding: var(--space-lg); border-left: 4px solid var(--color-accent); background: var(--color-bg-tertiary);">
+            <h3 style="margin-top: 0;">Pregunta 3</h3>
+            <p>
+              <strong>Analice las objeciones que los filósofos aristotélicos plantearon contra el uso del telescopio
+                como instrumento científico.</strong> ¿Qué temían sobre la confiabilidad de las observaciones
+              telescópicas? ¿Eran estas objeciones completamente irracionales o tenían algún fundamento epistemológico
+              legítimo?
+            </p>
+          </div>
+
+          <div
+            style="margin-bottom: var(--space-xl); padding: var(--space-lg); border-left: 4px solid var(--color-accent); background: var(--color-bg-tertiary);">
+            <h3 style="margin-top: 0;">Pregunta 4</h3>
+            <p>
+              <strong>Explique el concepto de "observación mediada por instrumentos" y discuta su importancia en el
+                progreso científico.</strong> Utilice el caso del telescopio de Galileo como ejemplo, y reflexione sobre
+              cómo los instrumentos tecnológicos extienden nuestros sentidos naturales pero también introducen nuevos
+              problemas epistemológicos.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Key Terms -->
+      <section class="class-section">
+        <h2>Conceptos Clave de Esta Clase</h2>
+
+        <div class="concept-highlight">
+          <ul>
+            <li><strong>Evidencia empírica:</strong> Información obtenida mediante observación y experimentación, no
+              mediante razonamiento puro o autoridad.</li>
+            <li><strong>Satélites galileanos:</strong> Las cuatro lunas de Júpiter descubiertas por Galileo: Ío, Europa,
+              Ganimedes, Calisto.</li>
+            <li><strong>Fases de Venus:</strong> Los cambios en la apariencia de Venus similares a las fases lunares,
+              solo explicables si Venus orbita el Sol.</li>
+            <li><strong>Instrumentalismo vs Realismo:</strong> Debate sobre si las teorías científicas son solo
+              herramientas útiles (instrumentalismo) o descripciones de la realidad (realismo).</li>
+            <li><strong>Observación mediada por instrumentos:</strong> Observación que requiere dispositivos
+              tecnológicos (telescopios, microscopios) que extienden nuestros sentidos naturales.</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Next Class Preview -->
+      <section class="class-section"
+        style="background: var(--color-bg-tertiary); padding: var(--space-lg); border-radius: 8px;">
+        <h2>Próxima Clase</h2>
+        <h3 style="color: var(--color-accent);">Clase 4: Galileo vs Aristóteles - El Problema del Movimiento</h3>
+        <p>
+          Las observaciones telescópicas de Galileo debilitaron el geocentrismo, pero no era suficiente. Para que el
+          heliocentrismo fuera aceptable, se necesitaba una nueva física que explicara cómo puede moverse la Tierra sin
+          que lo notemos. Galileo desafió las ideas de Aristóteles sobre el movimiento mediante experimentos ingeniosos
+          y razonamiento matemático.
+        </p>
+        <p>
+          Exploraremos cómo Galileo revolucionó la física estudiando la caída de los cuerpos, el movimiento de
+          proyectiles, y desarrollando el concepto crucial de <strong>inercia</strong>.
+        </p>
+      </section>
+
+      <!-- Navigation -->
+      <nav class="class-navigation">
+        <a href="clase-02.html" class="nav-button">← Clase Anterior</a>
+        <a href="index.html" class="nav-button nav-button-index">📚 Índice de Unidad</a>
+        <a href="clase-04.html" class="nav-button">Siguiente Clase →</a>
+      </nav>
+    </article>
+  </main>
+
+  <!-- Footer -->
+  <footer class="main-footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h4>Filosofía 6to</h4>
+          <p>Unidad 1: Teorías Científicas - Clase 3 de 10</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Filosofía 6to. Material educativo.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JavaScript -->
+  <script src="../../assets/js/dark-mode.js"></script>
+</body>
+
+</html>

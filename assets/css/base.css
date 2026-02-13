@@ -1,0 +1,103 @@
+/* Base Styles */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-sans);
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-normal);
+  color: var(--color-text-primary);
+  background-color: var(--color-bg-primary);
+  background-image:
+    linear-gradient(90deg, rgba(65, 105, 225, 0.02) 1px, transparent 1px),
+    linear-gradient(rgba(65, 105, 225, 0.02) 1px, transparent 1px);
+  background-size: 40px 40px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  min-height: 100vh;
+}
+
+/* Dark mode background */
+[data-theme="dark"] body {
+  background-image:
+    linear-gradient(90deg, rgba(77, 159, 255, 0.05) 1px, transparent 1px),
+    linear-gradient(rgba(77, 159, 255, 0.05) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+/* Selection */
+::selection {
+  background-color: var(--color-accent);
+  color: #FFFFFF;
+}
+
+::-moz-selection {
+  background-color: var(--color-accent);
+  color: #FFFFFF;
+}
+
+/* Scrollbar - Light Mode */
+::-webkit-scrollbar {
+  width: 14px;
+  height: 14px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-bg-secondary);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, var(--color-accent) 0%, var(--color-accent-hover) 100%);
+  border-radius: 10px;
+  border: 3px solid var(--color-bg-secondary);
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.2);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, var(--color-accent-hover) 0%, var(--color-accent) 100%);
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Scrollbar - Dark Mode */
+[data-theme="dark"] ::-webkit-scrollbar-track {
+  background: #1A1A1A;
+  border: 1px solid #2D2D2D;
+}
+
+[data-theme="dark"] ::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #4169E1 0%, #1E40AF 100%);
+  border: 3px solid #1A1A1A;
+  box-shadow: 0 0 10px rgba(65, 105, 225, 0.5), inset 0 0 6px rgba(255, 255, 255, 0.1);
+}
+
+[data-theme="dark"] ::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #60A5FA 0%, #4169E1 100%);
+  box-shadow: 0 0 15px rgba(65, 105, 225, 0.8), inset 0 0 10px rgba(255, 255, 255, 0.2);
+}

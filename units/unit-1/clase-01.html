@@ -5,8 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Clase 1: Paradigmas - Ptolomeo y el Geocentrismo | Filosofía 6to</title>
   <link rel="stylesheet" href="../../assets/css/variables.css">
+  <link rel="stylesheet" href="../../assets/css/reset.css">
   <link rel="stylesheet" href="../../assets/css/base.css">
+  <link rel="stylesheet" href="../../assets/css/typography.css">
   <link rel="stylesheet" href="../../assets/css/layout.css">
+  <link rel="stylesheet" href="../../assets/css/navigation.css">
   <link rel="stylesheet" href="../../assets/css/components.css">
   <link rel="stylesheet" href="../../assets/css/unit-page.css">
 </head>
@@ -14,12 +17,19 @@
   <!-- Navigation Bar -->
   <nav class="main-nav">
     <div class="nav-container">
-      <a href="../../index.html" class="nav-brand">Filosofía 6to</a>
+      <div class="nav-left">
+        <a href="index.html" class="nav-back-button" title="Volver al índice de la unidad">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M15 19l-7-7 7-7" />
+          </svg>
+          <span>Unidad 1</span>
+        </a>
+        <a href="../../index.html" class="nav-brand">Filosofía 6to</a>
+      </div>
       <div class="nav-controls">
-        <button id="theme-toggle" class="btn btn-icon" aria-label="Cambiar tema">
-          <svg class="theme-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path class="sun" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path>
-            <path class="moon" d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
+        <button id="dark-mode-toggle" class="dark-mode-toggle" aria-label="Cambiar tema">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
           </svg>
         </button>
       </div>
@@ -93,9 +103,9 @@
         </p>
 
         <div style="text-align: center; margin: var(--space-xl) 0;">
-          <img src="https://via.placeholder.com/600x400/4a5f8f/ffffff?text=Thomas+Kuhn+(1922-1996)" alt="Thomas Kuhn" style="max-width: 100%; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+          <img src="../../imagenes/Thomas-kuhn.png" alt="Thomas Kuhn" style="max-width: 100%; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
           <p style="margin-top: var(--space-sm); font-size: 0.9em; color: var(--color-text-secondary);">
-            <em>Thomas Kuhn, filósofo que revolucionó nuestra comprensión de cómo avanza la ciencia</em>
+            <em>Thomas Kuhn (1922-1996), filósofo que revolucionó nuestra comprensión de cómo avanza la ciencia</em>
           </p>
         </div>
       </section>
@@ -109,7 +119,7 @@
         </p>
 
         <div style="text-align: center; margin: var(--space-xl) 0;">
-          <img src="https://via.placeholder.com/500x600/667eea/ffffff?text=Claudio+Ptolomeo" alt="Claudio Ptolomeo" style="max-width: 100%; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+          <img src="../../imagenes/retrato-Ptholomeo.jpg" alt="Claudio Ptolomeo" style="max-width: 100%; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
           <p style="margin-top: var(--space-sm); font-size: 0.9em; color: var(--color-text-secondary);">
             <em>Claudio Ptolomeo (c. 100-170 d.C.), astrónomo alejandrino</em>
           </p>
@@ -130,7 +140,7 @@
         </div>
 
         <div style="text-align: center; margin: var(--space-xl) 0;">
-          <img src="https://via.placeholder.com/700x500/5a72d8/ffffff?text=Modelo+Geocentrico+de+Ptolomeo" alt="Modelo Geocéntrico" style="max-width: 100%; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+          <img src="../../imagenes/Geocentrismo.jpg" alt="Modelo Geocéntrico" style="max-width: 100%; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
           <p style="margin-top: var(--space-sm); font-size: 0.9em; color: var(--color-text-secondary);">
             <em>Esquema del modelo geocéntrico: la Tierra en el centro, rodeada por esferas de Luna, Mercurio, Venus, Sol, Marte, Júpiter, Saturno y las estrellas fijas</em>
           </p>
@@ -146,9 +156,9 @@
         </p>
 
         <div style="text-align: center; margin: var(--space-xl) 0;">
-          <img src="https://via.placeholder.com/800x300/4a5f8f/ffffff?text=Movimiento+Retrogrado+de+Marte" alt="Movimiento Retrógrado" style="max-width: 100%; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+          <img src="../../imagenes/epiciclo.jpg" alt="Movimiento Retrógrado con Epiciclo" style="max-width: 100%; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
           <p style="margin-top: var(--space-sm); font-size: 0.9em; color: var(--color-text-secondary);">
-            <em>Diagrama del movimiento retrógrado: el planeta describe un bucle en el cielo</em>
+            <em>El epiciclo explica el movimiento retrógrado: el planeta describe un bucle en el cielo</em>
           </p>
         </div>
 
@@ -177,7 +187,7 @@
         </div>
 
         <div style="text-align: center; margin: var(--space-xl) 0;">
-          <img src="https://via.placeholder.com/600x600/667eea/ffffff?text=Epiciclos+y+Deferentes" alt="Epiciclos y Deferentes" style="max-width: 100%; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+          <img src="../../imagenes/Epiciclo-deferente.png" alt="Epiciclos y Deferentes" style="max-width: 100%; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
           <p style="margin-top: var(--space-sm); font-size: 0.9em; color: var(--color-text-secondary);">
             <em>Sistema de epiciclos: el planeta gira en un círculo pequeño (epiciclo) cuyo centro gira en un círculo grande (deferente) alrededor de la Tierra</em>
           </p>
@@ -196,6 +206,83 @@
           </p>
           <cite>— Claudio Ptolomeo, introducción al Almagesto</cite>
         </div>
+      </section>
+
+      <!-- The Scientific Method -->
+      <section class="class-section">
+        <h2>El Método Científico y Ptolomeo</h2>
+
+        <p>
+          Para entender cómo Ptolomeo construyó su modelo, necesitamos comprender qué es el <strong>método científico</strong>. Aunque Ptolomeo vivió mucho antes de que se formalizara este método, su trabajo sigue estos pasos fundamentales:
+        </p>
+
+        <div style="text-align: center; margin: var(--space-xl) 0;">
+          <img src="https://via.placeholder.com/600x500/667eea/ffffff?text=Pasos+del+Metodo+Cientifico" alt="Método Científico" style="max-width: 100%; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+          <p style="margin-top: var(--space-sm); font-size: 0.9em; color: var(--color-text-secondary);">
+            <em>Los siete pasos del método científico</em>
+          </p>
+        </div>
+
+        <div class="concept-highlight">
+          <h3>Los 7 Pasos del Método Científico</h3>
+
+          <p><strong>1. Observación:</strong> Utilizando instrumentos de medición (telescopios, microscopios, etc.), se toman datos. Ptolomeo observó meticulosamente las posiciones de los planetas durante años.</p>
+
+          <p><strong>2. Identificar un problema:</strong> Se plantea una pregunta. En el caso de Ptolomeo: ¿Cómo predecir las posiciones futuras de los planetas?</p>
+
+          <p><strong>3. Establecer una hipótesis:</strong> Una proposición guiada por la observación, el razonamiento y la intuición que resultará ser "verdadera" o "falsa". <em>Hipótesis de Ptolomeo: Los planetas se mueven en círculos (epiciclos y deferentes) alrededor de la Tierra.</em></p>
+
+          <p><strong>4. Experimentación:</strong> Se somete a prueba la hipótesis. Ptolomeo calculó matemáticamente si su modelo predecía correctamente las posiciones observadas.</p>
+
+          <p><strong>5. Obtener resultados:</strong> Se registran las consecuencias de la observación y experimentación. El modelo de Ptolomeo predecía posiciones con notable precisión.</p>
+
+          <p><strong>6. Confirmar o refutar:</strong> Los resultados apoyan o contradicen la hipótesis. Las predicciones de Ptolomeo funcionaban, confirmando (aparentemente) su modelo.</p>
+
+          <p><strong>7. Comunicar:</strong> Se comparten los resultados con la comunidad científica. Ptolomeo escribió el <em>Almagesto</em>, que se convirtió en el texto astronómico estándar por siglos.</p>
+        </div>
+
+        <h3>Conceptos Clave de Thomas Kuhn</h3>
+
+        <p>
+          El filósofo Thomas Kuhn (1922-1996) nos ayuda a entender cómo evoluciona la ciencia. Según Kuhn, la ciencia no avanza simplemente acumulando conocimientos, sino a través de revoluciones. Varios conceptos de Kuhn son esenciales para entender la historia del geocentrismo:
+        </p>
+
+        <div class="concept-highlight">
+          <h4>Ciencia Normal</h4>
+          <p>
+            Período en el que hay consenso en la comunidad científica. Las teorías vigentes guían la experimentación. Los científicos resuelven problemas dentro del paradigma aceptado. Durante más de 1.000 años, el geocentrismo fue la "ciencia normal" en astronomía.
+          </p>
+
+          <h4>Enigmas vs. Anomalías</h4>
+          <p>
+            <strong>Enigmas:</strong> Problemas que pueden resolverse dentro del paradigma vigente usando las herramientas y teorías disponibles. El movimiento retrógrado era un enigma que Ptolomeo resolvió con epiciclos.
+          </p>
+          <p>
+            <strong>Anomalías:</strong> Observaciones que NO pueden explicarse satisfactoriamente dentro del paradigma actual, incluso con ajustes. Las anomalías se acumulan y crean crisis. El brillo variable de los planetas era una anomalía para el geocentrismo simple.
+          </p>
+
+          <h4>Hipótesis Ad Hoc</h4>
+          <p>
+            Cuando surgen anomalías, los científicos suelen agregar <strong>hipótesis auxiliares</strong> (llamadas <em>ad hoc</em>) para salvar el paradigma sin abandonarlo. Estas son modificaciones especiales agregadas solo para explicar una observación problemática, sin justificación independiente.
+          </p>
+          <p>
+            <strong>Ejemplo:</strong> Los epiciclos de Ptolomeo eran, en cierto sentido, hipótesis ad hoc. Cada vez que las predicciones fallaban, se agregaban más epiciclos o se ajustaban los existentes. Eventualmente, el sistema tenía docenas de círculos sin un principio unificador claro. ¿Eran reales estos círculos o solo artificio matemático?
+          </p>
+
+          <h4>Crisis del Paradigma</h4>
+          <p>
+            Cuando se acumulan muchas anomalías y las hipótesis ad hoc se multiplican sin resolver satisfactoriamente los problemas, el paradigma entra en <strong>crisis</strong>. La confianza en el paradigma se erosiona. Esto prepara el terreno para una revolución científica.
+          </p>
+
+          <h4>Revolución Científica</h4>
+          <p>
+            Cuando un <strong>paradigma rival</strong> puede resolver las anomalías que el paradigma antiguo no podía, y la comunidad científica se inclina hacia el nuevo paradigma, ocurre una revolución científica. Luego se establece un nuevo período de ciencia normal bajo el nuevo paradigma.
+          </p>
+        </div>
+
+        <p>
+          El geocentrismo de Ptolomeo fue el paradigma dominante durante la ciencia normal astronómica medieval. Pero eventualmente, las anomalías se acumularon. El sistema se volvió cada vez más complejo con hipótesis ad hoc (más y más epiciclos). Esto preparó el terreno para la revolución copernicana, que exploraremos en la próxima clase.
+        </p>
       </section>
 
       <!-- Why It Worked -->
@@ -236,32 +323,49 @@
         </div>
       </section>
 
-      <!-- Reflection Questions -->
+      <!-- Development Questions -->
       <section class="class-section">
-        <h2>Preguntas para Reflexionar</h2>
+        <h2>Preguntas a Desarrollar</h2>
+
+        <p style="margin-bottom: var(--space-lg); font-style: italic;">
+          Responda las siguientes preguntas de manera completa, utilizando el vocabulario técnico apropiado y desarrollando sus argumentos con claridad.
+        </p>
 
         <div class="activity-container">
-          <ol>
-            <li>
-              <strong>Observación y teoría:</strong> ¿Por qué la observación directa ("veo que el Sol se mueve") no siempre es suficiente para determinar qué está realmente ocurriendo?
-            </li>
+          <div style="margin-bottom: var(--space-xl); padding: var(--space-lg); border-left: 4px solid var(--color-accent); background: var(--color-bg-tertiary);">
+            <h3 style="margin-top: 0;">Pregunta 1</h3>
+            <p>
+              <strong>Explique qué es un paradigma científico y diferencie entre el paradigma Geocéntrico y el paradigma Heliocéntrico.</strong> En su respuesta, mencione las características principales de cada modelo y sus implicaciones sobre la posición de la Tierra en el cosmos.
+            </p>
+          </div>
 
-            <li>
-              <strong>Complejidad vs simplicidad:</strong> El sistema de epiciclos de Ptolomeo era matemáticamente complejo pero funcionaba. ¿Es la simplicidad un criterio válido para elegir entre teorías científicas? ¿Por qué o por qué no?
-            </li>
+          <div style="margin-bottom: var(--space-xl); padding: var(--space-lg); border-left: 4px solid var(--color-accent); background: var(--color-bg-tertiary);">
+            <h3 style="margin-top: 0;">Pregunta 2</h3>
+            <p>
+              <strong>Señale las anomalías presentes en el paradigma geocéntrico y relacione su acumulación con el concepto de crisis del paradigma.</strong> Desarrolle cómo el movimiento retrógrado de los planetas y el brillo variable constituyeron problemas para el modelo ptolemaico.
+            </p>
+          </div>
 
-            <li>
-              <strong>Paradigmas y resistencia al cambio:</strong> Si el modelo geocéntrico concordaba con la experiencia cotidiana, tenía precisión predictiva y el apoyo de la autoridad religiosa y filosófica, ¿por qué crees que eventualmente fue reemplazado?
-            </li>
+          <div style="margin-bottom: var(--space-xl); padding: var(--space-lg); border-left: 4px solid var(--color-accent); background: var(--color-bg-tertiary);">
+            <h3 style="margin-top: 0;">Pregunta 3</h3>
+            <p>
+              <strong>Explique y ejemplifique el concepto de hipótesis ad hoc utilizando el caso de los epiciclos y deferentes de Ptolomeo.</strong> ¿Por qué el agregado continuo de epiciclos puede considerarse problemático desde un punto de vista epistemológico?
+            </p>
+          </div>
 
-            <li>
-              <strong>Ciencia y sociedad:</strong> ¿Cómo influyeron factores no científicos (religión, filosofía, sentido común) en la aceptación del geocentrismo? ¿Ocurre esto hoy en día con teorías científicas contemporáneas?
-            </li>
+          <div style="margin-bottom: var(--space-xl); padding: var(--space-lg); border-left: 4px solid var(--color-accent); background: var(--color-bg-tertiary);">
+            <h3 style="margin-top: 0;">Pregunta 4</h3>
+            <p>
+              <strong>¿Cuándo se produce una revolución científica según Thomas Kuhn?</strong> Desarrolle su respuesta utilizando los conceptos de ciencia normal, enigma, anomalía, crisis y paradigma rival. Proporcione un ejemplo anticipando la transición del geocentrismo al heliocentrismo.
+            </p>
+          </div>
 
-            <li>
-              <strong>Predicción vs explicación:</strong> El modelo de Ptolomeo podía <em>predecir</em> dónde estaría un planeta, pero ¿realmente <em>explicaba</em> por qué se movía así? ¿Cuál es más importante en la ciencia?
-            </li>
-          </ol>
+          <div style="margin-bottom: var(--space-xl); padding: var(--space-lg); border-left: 4px solid var(--color-accent); background: var(--color-bg-tertiary);">
+            <h3 style="margin-top: 0;">Pregunta 5</h3>
+            <p>
+              <strong>Describa los siete pasos del método científico y explique cómo Claudio Ptolomeo aplicó estos pasos en la construcción de su modelo geocéntrico.</strong> Identifique específicamente cuál fue su observación inicial, qué problema buscaba resolver, cuál fue su hipótesis principal, y cómo la sometió a prueba.
+            </p>
+          </div>
         </div>
       </section>
 
@@ -271,12 +375,20 @@
 
         <div class="concept-highlight">
           <ul>
-            <li><strong>Paradigma:</strong> Conjunto de ideas, métodos y suposiciones compartidas por una comunidad científica.</li>
+            <li><strong>Paradigma:</strong> Conjunto de ideas, métodos y suposiciones compartidas por una comunidad científica que guía la investigación.</li>
             <li><strong>Geocentrismo:</strong> Modelo cosmológico que coloca a la Tierra inmóvil en el centro del universo.</li>
+            <li><strong>Heliocéntrico:</strong> Modelo cosmológico alternativo donde el Sol está en el centro y los planetas (incluyendo la Tierra) giran a su alrededor.</li>
+            <li><strong>Hipótesis:</strong> Proposición guiada por la observación, el razonamiento y la intuición que se someterá a prueba experimental.</li>
+            <li><strong>Hipótesis ad hoc:</strong> Modificación auxiliar agregada a una teoría solo para explicar una observación problemática, sin justificación independiente.</li>
+            <li><strong>Método científico:</strong> Proceso sistemático de investigación que incluye observación, identificación del problema, formulación de hipótesis, experimentación, obtención de resultados, confirmación/refutación y comunicación.</li>
+            <li><strong>Ciencia normal:</strong> Período de consenso científico donde los investigadores resuelven enigmas dentro del paradigma aceptado.</li>
+            <li><strong>Enigma:</strong> Problema que puede resolverse dentro del paradigma vigente utilizando las herramientas y teorías disponibles.</li>
+            <li><strong>Anomalía:</strong> Observación que NO puede explicarse satisfactoriamente dentro del paradigma actual, incluso con ajustes.</li>
+            <li><strong>Crisis del paradigma:</strong> Acumulación de anomalías no resueltas que erosiona la confianza en el paradigma vigente.</li>
+            <li><strong>Revolución científica:</strong> Cambio de un paradigma a otro cuando la comunidad científica adopta un paradigma rival que resuelve las anomalías acumuladas.</li>
             <li><strong>Movimiento retrógrado:</strong> Aparente movimiento hacia atrás de los planetas contra el fondo de estrellas fijas.</li>
             <li><strong>Epiciclo:</strong> Círculo pequeño sobre el cual se mueve un planeta en el modelo ptolemaico.</li>
             <li><strong>Deferente:</strong> Círculo grande cuyo centro está cerca de la Tierra y sobre el cual se mueve el centro del epiciclo.</li>
-            <li><strong>Enigma:</strong> Problema que puede resolverse dentro del paradigma vigente (a diferencia de una anomalía, que desafía el paradigma).</li>
           </ul>
         </div>
       </section>
@@ -294,9 +406,10 @@
       </section>
 
       <!-- Navigation -->
-      <nav class="class-nav">
-        <a href="../../index.html" class="btn btn-outline">← Inicio</a>
-        <a href="clase-02.html" class="btn btn-primary">Siguiente Clase →</a>
+      <nav class="class-navigation">
+        <span class="nav-button" style="opacity: 0.5; cursor: not-allowed;">← Clase Anterior</span>
+        <a href="index.html" class="nav-button nav-button-index">📚 Índice de Unidad</a>
+        <a href="clase-02.html" class="nav-button">Siguiente Clase →</a>
       </nav>
     </article>
   </main>

@@ -1,47 +1,54 @@
 /* CSS Custom Properties - Design Tokens */
 
 :root {
-  /* Light Mode Colors */
-  --color-bg-primary: #ffffff;
-  --color-bg-secondary: #f7f7f7;
-  --color-bg-tertiary: #efefef;
+  /* Light Mode Colors - Inspired by filco.es */
+  --color-bg-primary: #FFFFFF;
+  --color-bg-secondary: #F7FAFC;
+  --color-bg-tertiary: #EDF2F7;
+  --color-bg-accent: #EBF4FF;  /* Fondo azul claro para cajas destacadas */
 
-  --color-text-primary: #1a1a1a;
-  --color-text-secondary: #555555;
-  --color-text-tertiary: #888888;
+  --color-text-primary: #1A202C;  /* Negro más puro para mejor contraste */
+  --color-text-secondary: #4A5568;
+  --color-text-tertiary: #718096;
 
-  --color-accent: #0066cc;
-  --color-accent-hover: #0052a3;
+  --color-accent: #4169E1;  /* Azul royal más vivo */
+  --color-accent-hover: #1E40AF;
+  --color-highlight: #FF3366;  /* Coral más vibrante */
+  --color-accent-light: #60A5FA;  /* Azul claro para acentos */
 
-  --color-border: #e0e0e0;
-  --color-shadow: rgba(0, 0, 0, 0.08);
-  --color-shadow-hover: rgba(0, 0, 0, 0.15);
+  --color-border: #E0E0E5;
+  --color-shadow: rgba(38, 38, 87, 0.08);
+  --color-shadow-hover: rgba(38, 38, 87, 0.15);
 
   --color-success: #2e7d32;
   --color-warning: #f57c00;
   --color-error: #c62828;
 
-  /* Typography */
-  --font-serif: 'Lora', 'Georgia', serif;
-  --font-sans: 'Inter', 'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  /* Typography - Magazine Style */
+  --font-serif: 'Lora', 'Georgia', 'Merriweather', serif;
+  --font-sans: 'Roboto', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
 
   --font-size-base: 18px;
   --font-size-small: 14px;
+  --font-size-medium: 16px;
   --font-size-large: 20px;
+  --font-size-xl: 22px;
 
-  --font-size-h1: 42px;
-  --font-size-h2: 32px;
-  --font-size-h3: 24px;
-  --font-size-h4: 20px;
+  --font-size-h1: 48px;  /* Títulos más grandes estilo magazine */
+  --font-size-h2: 36px;
+  --font-size-h3: 28px;
+  --font-size-h4: 22px;
 
   --font-weight-light: 300;
   --font-weight-normal: 400;
   --font-weight-medium: 500;
+  --font-weight-semibold: 600;
   --font-weight-bold: 700;
 
-  --line-height-tight: 1.3;
+  --line-height-tight: 1.2;
   --line-height-normal: 1.6;
   --line-height-relaxed: 1.8;
+  --line-height-loose: 2.0;
 
   /* Spacing */
   --space-xs: 8px;
@@ -79,16 +86,17 @@
 
 /* Dark Mode Colors */
 [data-theme="dark"] {
-  --color-bg-primary: #1a1a1a;
+  --color-bg-primary: #1A1A1A;
   --color-bg-secondary: #242424;
-  --color-bg-tertiary: #2d2d2d;
+  --color-bg-tertiary: #2D2D2D;
 
-  --color-text-primary: #e8e8e8;
-  --color-text-secondary: #b0b0b0;
+  --color-text-primary: #E8E8E8;
+  --color-text-secondary: #B5B5B5;
   --color-text-tertiary: #808080;
 
-  --color-accent: #4d9fff;
-  --color-accent-hover: #6bb3ff;
+  --color-accent: #4D9FFF;  /* Azul más suave en dark */
+  --color-accent-hover: #6BB3FF;
+  --color-highlight: #FF6B9D;  /* Coral más suave en dark */
 
   --color-border: #404040;
   --color-shadow: rgba(0, 0, 0, 0.3);

@@ -7,7 +7,11 @@
       "mcp__c1fc4002-5f49-5f9d-a4e5-93c4ef5d6a75__google_drive_search",
       "mcp__c1fc4002-5f49-5f9d-a4e5-93c4ef5d6a75__google_drive_fetch",
       "Bash(cmd.exe /c start index.html)",
-      "Bash(cat:*)"
+      "Bash(cat:*)",
+      "Bash(for i in {4..10})",
+      "Bash(do echo \"Clase $i pendiente\")",
+      "Bash(done)",
+      "Bash(grep:*)"
     ]
   }
 }
