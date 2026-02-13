@@ -26,15 +26,28 @@ body .class-content {
     border-radius: 0 !important;
 }
 
-/* 3. Text Typography - ALIGN LEFT */
+/* 3. Text Typography - ALIGN JUSTIFY (for "book" feel) */
 body .class-header,
 body .class-section,
 body .class-section h2,
 body .class-section h3,
-body .class-section p,
 body .class-section ul,
 body .class-section li {
     text-align: left !important;
+    /* Headers and lists usually look better left-aligned */
+    max-width: 100% !important;
+    width: 100% !important;
+    margin-left: 0 !important;
+    padding-left: 0 !important;
+}
+
+/* Paragraphs specifically JUSTIFIED */
+body .class-section p {
+    text-align: justify !important;
+    text-justify: inter-word !important;
+    /* Better spacing */
+    hyphens: auto !important;
+    /* Optional: prevents huge gaps */
     max-width: 100% !important;
     width: 100% !important;
     margin-left: 0 !important;
