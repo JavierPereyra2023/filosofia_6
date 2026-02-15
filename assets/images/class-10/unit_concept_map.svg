@@ -1,0 +1,152 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 900" style="background: white;">
+  <defs>
+    <marker id="arrow-concept" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#34495e" />
+    </marker>
+  </defs>
+
+  <!-- Title -->
+  <text x="500" y="30" font-family="Arial, sans-serif" font-size="24" font-weight="bold" text-anchor="middle" fill="#2c3e50">Mapa Conceptual: Unidad 1 - Teorías Científicas</text>
+
+  <!-- CENTRAL NODE: Revolución Científica -->
+  <ellipse cx="500" cy="450" rx="120" ry="60" fill="#e74c3c" stroke="#c0392b" stroke-width="4"/>
+  <text x="500" y="445" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle" fill="white">REVOLUCIÓN</text>
+  <text x="500" y="465" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle" fill="white">CIENTÍFICA</text>
+
+  <!-- TOP CLUSTER: Historia -->
+  <!-- Ptolomeo -->
+  <rect x="100" y="80" width="120" height="50" rx="6" fill="#3498db" stroke="#2980b9" stroke-width="2"/>
+  <text x="160" y="100" font-family="Arial, sans-serif" font-size="12" font-weight="bold" text-anchor="middle" fill="white">Ptolomeo</text>
+  <text x="160" y="118" font-family="Arial, sans-serif" font-size="10" text-anchor="middle" fill="white">(Geocentrismo)</text>
+
+  <!-- Copérnico -->
+  <rect x="250" y="80" width="120" height="50" rx="6" fill="#3498db" stroke="#2980b9" stroke-width="2"/>
+  <text x="310" y="100" font-family="Arial, sans-serif" font-size="12" font-weight="bold" text-anchor="middle" fill="white">Copérnico</text>
+  <text x="310" y="118" font-family="Arial, sans-serif" font-size="10" text-anchor="middle" fill="white">(Heliocentrismo)</text>
+
+  <!-- Galileo -->
+  <rect x="400" y="80" width="120" height="50" rx="6" fill="#3498db" stroke="#2980b9" stroke-width="2"/>
+  <text x="460" y="100" font-family="Arial, sans-serif" font-size="12" font-weight="bold" text-anchor="middle" fill="white">Galileo</text>
+  <text x="460" y="118" font-family="Arial, sans-serif" font-size="10" text-anchor="middle" fill="white">(Telescopio/Física)</text>
+
+  <!-- Kepler -->
+  <rect x="550" y="80" width="120" height="50" rx="6" fill="#3498db" stroke="#2980b9" stroke-width="2"/>
+  <text x="610" y="100" font-family="Arial, sans-serif" font-size="12" font-weight="bold" text-anchor="middle" fill="white">Kepler</text>
+  <text x="610" y="118" font-family="Arial, sans-serif" font-size="10" text-anchor="middle" fill="white">(3 Leyes)</text>
+
+  <!-- Newton -->
+  <rect x="700" y="80" width="120" height="50" rx="6" fill="#3498db" stroke="#2980b9" stroke-width="2"/>
+  <text x="760" y="100" font-family="Arial, sans-serif" font-size="12" font-weight="bold" text-anchor="middle" fill="white">Newton</text>
+  <text x="760" y="118" font-family="Arial, sans-serif" font-size="10" text-anchor="middle" fill="white">(Síntesis)</text>
+
+  <!-- LEFT CLUSTER: Metodología -->
+  <!-- Método H-D -->
+  <rect x="50" y="250" width="150" height="60" rx="6" fill="#27ae60" stroke="#229954" stroke-width="2"/>
+  <text x="125" y="275" font-family="Arial, sans-serif" font-size="13" font-weight="bold" text-anchor="middle" fill="white">Método</text>
+  <text x="125" y="295" font-family="Arial, sans-serif" font-size="13" font-weight="bold" text-anchor="middle" fill="white">Hipotético-Deductivo</text>
+
+  <!-- Falsacionismo -->
+  <rect x="50" y="340" width="150" height="50" rx="6" fill="#9b59b6" stroke="#8e44ad" stroke-width="2"/>
+  <text x="125" y="360" font-family="Arial, sans-serif" font-size="12" font-weight="bold" text-anchor="middle" fill="white">Falsacionismo</text>
+  <text x="125" y="378" font-family="Arial, sans-serif" font-size="10" text-anchor="middle" fill="white">(Popper)</text>
+
+  <!-- Duhem-Quine -->
+  <rect x="50" y="410" width="150" height="50" rx="6" fill="#9b59b6" stroke="#8e44ad" stroke-width="2"/>
+  <text x="125" y="430" font-family="Arial, sans-serif" font-size="12" font-weight="bold" text-anchor="middle" fill="white">Tesis Duhem-Quine</text>
+  <text x="125" y="448" font-family="Arial, sans-serif" font-size="10" text-anchor="middle" fill="white">(Holismo)</text>
+
+  <!-- RIGHT CLUSTER: Kuhn -->
+  <!-- Paradigma -->
+  <rect x="750" y="250" width="150" height="60" rx="6" fill="#f39c12" stroke="#e67e22" stroke-width="2"/>
+  <text x="825" y="275" font-family="Arial, sans-serif" font-size="13" font-weight="bold" text-anchor="middle" fill="white">Paradigma</text>
+  <text x="825" y="295" font-family="Arial, sans-serif" font-size="11" text-anchor="middle" fill="white">(Kuhn)</text>
+
+  <!-- Ciencia Normal -->
+  <rect x="750" y="340" width="150" height="50" rx="6" fill="#16a085" stroke="#138d75" stroke-width="2"/>
+  <text x="825" y="360" font-family="Arial, sans-serif" font-size="12" font-weight="bold" text-anchor="middle" fill="white">Ciencia Normal</text>
+  <text x="825" y="378" font-family="Arial, sans-serif" font-size="10" text-anchor="middle" fill="white">(Resolver enigmas)</text>
+
+  <!-- Anomalías -->
+  <rect x="750" y="410" width="150" height="50" rx="6" fill="#e67e22" stroke="#d35400" stroke-width="2"/>
+  <text x="825" y="430" font-family="Arial, sans-serif" font-size="12" font-weight="bold" text-anchor="middle" fill="white">Anomalías</text>
+  <text x="825" y="448" font-family="Arial, sans-serif" font-size="10" text-anchor="middle" fill="white">(Problemas persistentes)</text>
+
+  <!-- Crisis -->
+  <rect x="750" y="480" width="150" height="50" rx="6" fill="#c0392b" stroke="#a93226" stroke-width="2"/>
+  <text x="825" y="505" font-family="Arial, sans-serif" font-size="12" font-weight="bold" text-anchor="middle" fill="white">CRISIS</text>
+
+  <!-- BOTTOM CLUSTER: Epistemology -->
+  <!-- Carga Teórica -->
+  <rect x="100" y="620" width="140" height="50" rx="6" fill="#8e44ad" stroke="#7d3c98" stroke-width="2"/>
+  <text x="170" y="640" font-family="Arial, sans-serif" font-size="12" font-weight="bold" text-anchor="middle" fill="white">Carga Teórica</text>
+  <text x="170" y="658" font-family="Arial, sans-serif" font-size="10" text-anchor="middle" fill="white">(Hanson)</text>
+
+  <!-- Inconmensurabilidad -->
+  <rect x="270" y="620" width="160" height="50" rx="6" fill="#8e44ad" stroke="#7d3c98" stroke-width="2"/>
+  <text x="350" y="640" font-family="Arial, sans-serif" font-size="11" font-weight="bold" text-anchor="middle" fill="white">Inconmensurabilidad</text>
+  <text x="350" y="658" font-family="Arial, sans-serif" font-size="10" text-anchor="middle" fill="white">(Paradigmas incomparables)</text>
+
+  <!-- Valores -->
+  <rect x="460" y="620" width="180" height="50" rx="6" fill="#2ecc71" stroke="#27ae60" stroke-width="2"/>
+  <text x="550" y="640" font-family="Arial, sans-serif" font-size="11" font-weight="bold" text-anchor="middle" fill="white">5 Valores de Kuhn</text>
+  <text x="550" y="658" font-family="Arial, sans-serif" font-size="9" text-anchor="middle" fill="white">(Precisión, Coherencia, Simplicidad...)</text>
+
+  <!-- Hipótesis Ad Hoc -->
+  <rect x="670" y="620" width="140" height="50" rx="6" fill="#e67e22" stroke="#d35400" stroke-width="2"/>
+  <text x="740" y="640" font-family="Arial, sans-serif" font-size="11" font-weight="bold" text-anchor="middle" fill="white">Hipótesis Ad Hoc</text>
+  <text x="740" y="658" font-family="Arial, sans-serif" font-size="10" text-anchor="middle" fill="white">(Buenas vs Malas)</text>
+
+  <!-- Lakatos -->
+  <rect x="840" y="620" width="140" height="50" rx="6" fill="#9b59b6" stroke="#8e44ad" stroke-width="2"/>
+  <text x="910" y="635" font-family="Arial, sans-serif" font-size="11" font-weight="bold" text-anchor="middle" fill="white">Programas de</text>
+  <text x="910" y="653" font-family="Arial, sans-serif" font-size="11" font-weight="bold" text-anchor="middle" fill="white">Investigación (PIC)</text>
+
+  <!-- CONNECTIONS -->
+  <!-- Top row to center -->
+  <line x1="220" y1="130" x2="420" y2="410" stroke="#7f8c8d" stroke-width="2" marker-end="url(#arrow-concept)"/>
+  <line x1="310" y1="130" x2="450" y2="410" stroke="#7f8c8d" stroke-width="2" marker-end="url(#arrow-concept)"/>
+  <line x1="460" y1="130" x2="480" y2="410" stroke="#7f8c8d" stroke-width="2" marker-end="url(#arrow-concept)"/>
+  <line x1="610" y1="130" x2="510" y2="410" stroke="#7f8c8d" stroke-width="2" marker-end="url(#arrow-concept)"/>
+  <line x1="760" y1="130" x2="540" y2="410" stroke="#7f8c8d" stroke-width="2" marker-end="url(#arrow-concept)"/>
+
+  <!-- Left to center -->
+  <line x1="200" y1="280" x2="380" y2="430" stroke="#27ae60" stroke-width="2" marker-end="url(#arrow-concept)"/>
+
+  <!-- Right to center -->
+  <line x1="750" y1="280" x2="620" y2="430" stroke="#f39c12" stroke-width="2" marker-end="url(#arrow-concept)"/>
+  <line x1="750" y1="365" x2="620" y2="440" stroke="#16a085" stroke-width="2" marker-end="url(#arrow-concept)"/>
+  <line x1="750" y1="435" x2="620" y2="450" stroke="#e67e22" stroke-width="2" marker-end="url(#arrow-concept)"/>
+  <line x1="750" y1="505" x2="620" y2="460" stroke="#c0392b" stroke-width="2" marker-end="url(#arrow-concept)"/>
+
+  <!-- Center to bottom -->
+  <line x1="440" y1="500" x2="200" y2="620" stroke="#7f8c8d" stroke-width="2" marker-end="url(#arrow-concept)"/>
+  <line x1="460" y1="500" x2="350" y2="620" stroke="#7f8c8d" stroke-width="2" marker-end="url(#arrow-concept)"/>
+  <line x1="500" y1="510" x2="550" y2="620" stroke="#7f8c8d" stroke-width="2" marker-end="url(#arrow-concept)"/>
+  <line x1="540" y1="500" x2="740" y2="620" stroke="#7f8c8d" stroke-width="2" marker-end="url(#arrow-concept)"/>
+  <line x1="560" y1="490" x2="880" y2="620" stroke="#7f8c8d" stroke-width="2" marker-end="url(#arrow-concept)"/>
+
+  <!-- Legend -->
+  <g transform="translate(50, 730)">
+    <text x="0" y="0" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#2c3e50">Código de Colores:</text>
+    <rect x="0" y="10" width="30" height="15" fill="#3498db"/>
+    <text x="35" y="22" font-family="Arial, sans-serif" font-size="11" fill="#2c3e50">Historia (Científicos)</text>
+
+    <rect x="200" y="10" width="30" height="15" fill="#27ae60"/>
+    <text x="235" y="22" font-family="Arial, sans-serif" font-size="11" fill="#2c3e50">Metodología</text>
+
+    <rect x="350" y="10" width="30" height="15" fill="#f39c12"/>
+    <text x="385" y="22" font-family="Arial, sans-serif" font-size="11" fill="#2c3e50">Paradigma (Kuhn)</text>
+
+    <rect x="520" y="10" width="30" height="15" fill="#9b59b6"/>
+    <text x="555" y="22" font-family="Arial, sans-serif" font-size="11" fill="#2c3e50">Epistemología</text>
+
+    <rect x="690" y="10" width="30" height="15" fill="#e74c3c"/>
+    <text x="725" y="22" font-family="Arial, sans-serif" font-size="11" fill="#2c3e50">Concepto Central</text>
+  </g>
+
+  <!-- Title Box -->
+  <rect x="300" y="780" width="400" height="80" rx="8" fill="#34495e" stroke="#2c3e50" stroke-width="2"/>
+  <text x="500" y="805" font-family="Arial, sans-serif" font-size="13" font-weight="bold" text-anchor="middle" fill="#ecf0f1">SÍNTESIS DE LA UNIDAD</text>
+  <text x="500" y="825" font-family="Arial, sans-serif" font-size="11" text-anchor="middle" fill="white">La ciencia avanza mediante revoluciones paradigmáticas</text>
+  <text x="500" y="845" font-family="Arial, sans-serif" font-size="11" text-anchor="middle" fill="white">guiadas por valores epistémicos, no por lógica pura</text>
+</svg>

@@ -1,0 +1,222 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 820" width="1000" height="820">
+  <defs>
+    <!-- Marcadores de flechas -->
+    <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <polygon points="0 0, 10 3, 0 6" fill="#2c3e50" />
+    </marker>
+    <marker id="arrowhead-green" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <polygon points="0 0, 10 3, 0 6" fill="#27ae60" />
+    </marker>
+    <marker id="arrowhead-red" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <polygon points="0 0, 10 3, 0 6" fill="#e74c3c" />
+    </marker>
+    <marker id="arrowhead-gray" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <polygon points="0 0, 10 3, 0 6" fill="#95a5a6" />
+    </marker>
+
+    <!-- Animaciones -->
+    <style>
+      @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(-10px); }
+        to { opacity: 1; transform: translateY(0); }
+      }
+      @keyframes drawLine {
+        from { stroke-dashoffset: 100; }
+        to { stroke-dashoffset: 0; }
+      }
+      @keyframes pulse {
+        0%, 100% { transform: scale(1); opacity: 1; }
+        50% { transform: scale(1.05); opacity: 0.9; }
+      }
+      @keyframes slideIn {
+        from { opacity: 0; transform: translateX(-20px); }
+        to { opacity: 1; transform: translateX(0); }
+      }
+
+      /* Pasos del método */
+      .step-1 { animation: fadeIn 0.5s ease-out 0.5s both; }
+      .step-2 { animation: fadeIn 0.5s ease-out 1s both; }
+      .step-3 { animation: fadeIn 0.5s ease-out 1.5s both; }
+      .step-4 { animation: fadeIn 0.5s ease-out 2s both; }
+      .step-5 { animation: fadeIn 0.5s ease-out 2.5s both; }
+      .step-6 { animation: fadeIn 0.5s ease-out 3s both; }
+      .step-result { animation: fadeIn 0.5s ease-out 3.5s both; }
+
+      /* Líneas conectoras */
+      .line-1 { stroke-dasharray: 100; animation: drawLine 0.5s ease-out 0.8s forwards; stroke-dashoffset: 100; }
+      .line-2 { stroke-dasharray: 100; animation: drawLine 0.5s ease-out 1.3s forwards; stroke-dashoffset: 100; }
+      .line-3 { stroke-dasharray: 100; animation: drawLine 0.5s ease-out 1.8s forwards; stroke-dashoffset: 100; }
+      .line-4 { stroke-dasharray: 100; animation: drawLine 0.5s ease-out 2.3s forwards; stroke-dashoffset: 100; }
+      .line-5 { stroke-dasharray: 100; animation: drawLine 0.5s ease-out 2.8s forwards; stroke-dashoffset: 100; }
+      .line-fork { stroke-dasharray: 200; animation: drawLine 0.8s ease-out 3.3s forwards; stroke-dashoffset: 200; }
+      .line-cycle { stroke-dasharray: 600; animation: drawLine 1.2s ease-out 4s forwards; stroke-dashoffset: 600; }
+
+      /* Ejemplo lateral */
+      .example-box { animation: slideIn 0.6s ease-out 0.2s both; }
+      .example-text { animation: fadeIn 0.4s ease-out both; }
+
+      /* Hipótesis (paso creativo) */
+      .creative-step { animation: pulse 2s ease-in-out 2s infinite; }
+
+      .title-text {
+        font-family: 'Arial', sans-serif;
+        font-size: 24px;
+        font-weight: bold;
+        fill: #2c3e50;
+        text-anchor: middle;
+      }
+    </style>
+  </defs>
+
+  <!-- Fondo blanco -->
+  <rect width="1000" height="820" fill="#ffffff"/>
+
+  <!-- Título -->
+  <text x="500" y="35" class="title-text">Método Hipotético-Deductivo</text>
+
+  <!-- ========== EJEMPLO LATERAL (IZQUIERDA): VENUS ========== -->
+  <g class="example-box">
+    <rect x="30" y="80" width="270" height="630" rx="8" fill="#ecf0f1" stroke="#95a5a6" stroke-width="2" stroke-dasharray="5,5"/>
+    <text x="165" y="110" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle" fill="#34495e">EJEMPLO: VENUS</text>
+
+    <!-- Observación -->
+    <g class="example-text" style="animation-delay: 0.7s;">
+      <text x="165" y="145" font-family="Arial, sans-serif" font-size="11" text-anchor="middle" fill="#2c3e50">"Venus cambia de</text>
+      <text x="165" y="162" font-family="Arial, sans-serif" font-size="11" text-anchor="middle" fill="#2c3e50">tamaño aparente"</text>
+    </g>
+
+    <!-- Problema -->
+    <g class="example-text" style="animation-delay: 1.2s;">
+      <text x="165" y="235" font-family="Arial, sans-serif" font-size="11" text-anchor="middle" fill="#2c3e50">¿Por qué varía</text>
+      <text x="165" y="252" font-family="Arial, sans-serif" font-size="11" text-anchor="middle" fill="#2c3e50">su tamaño?</text>
+    </g>
+
+    <!-- Hipótesis -->
+    <g class="example-text" style="animation-delay: 1.7s;">
+      <text x="165" y="325" font-family="Arial, sans-serif" font-size="11" font-weight="bold" text-anchor="middle" fill="#e67e22">"Venus orbita</text>
+      <text x="165" y="342" font-family="Arial, sans-serif" font-size="11" font-weight="bold" text-anchor="middle" fill="#e67e22">alrededor del SOL"</text>
+    </g>
+
+    <!-- Deducción -->
+    <g class="example-text" style="animation-delay: 2.2s;">
+      <text x="165" y="415" font-family="Arial, sans-serif" font-size="11" text-anchor="middle" fill="#2c3e50">Si orbita al Sol,</text>
+      <text x="165" y="432" font-family="Arial, sans-serif" font-size="11" text-anchor="middle" fill="#2c3e50">su distancia varía</text>
+    </g>
+
+    <!-- Predicción -->
+    <g class="example-text" style="animation-delay: 2.7s;">
+      <text x="165" y="505" font-family="Arial, sans-serif" font-size="11" font-weight="bold" text-anchor="middle" fill="#27ae60">"Debería mostrar</text>
+      <text x="165" y="522" font-family="Arial, sans-serif" font-size="11" font-weight="bold" text-anchor="middle" fill="#27ae60">FASES COMPLETAS"</text>
+    </g>
+
+    <!-- Experimento -->
+    <g class="example-text" style="animation-delay: 3.2s;">
+      <text x="165" y="595" font-family="Arial, sans-serif" font-size="11" text-anchor="middle" fill="#2c3e50">Galileo observa con</text>
+      <text x="165" y="612" font-family="Arial, sans-serif" font-size="11" text-anchor="middle" fill="#2c3e50">telescopio (1610)</text>
+    </g>
+
+    <!-- Resultado -->
+    <g class="example-text" style="animation-delay: 3.7s;">
+      <text x="165" y="670" font-family="Arial, sans-serif" font-size="12" font-weight="bold" text-anchor="middle" fill="#27ae60">✓ ¡SÍ! Venus muestra</text>
+      <text x="165" y="687" font-family="Arial, sans-serif" font-size="12" font-weight="bold" text-anchor="middle" fill="#27ae60">fases completas</text>
+    </g>
+  </g>
+
+  <!-- ========== FLUJO PRINCIPAL (CENTRO) ========== -->
+
+  <!-- 1. OBSERVACIÓN -->
+  <g class="step-1">
+    <rect x="420" y="80" width="180" height="65" rx="8" fill="#3498db" stroke="#2980b9" stroke-width="2"/>
+    <text x="510" y="107" font-family="Arial, sans-serif" font-size="15" font-weight="bold" text-anchor="middle" fill="white">1. OBSERVACIÓN</text>
+    <text x="510" y="130" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="white">Fenómeno anómalo</text>
+  </g>
+
+  <!-- Línea 1 -->
+  <line x1="510" y1="145" x2="510" y2="200" class="line-1" stroke="#2c3e50" stroke-width="2" marker-end="url(#arrowhead)"/>
+
+  <!-- 2. PROBLEMA -->
+  <g class="step-2">
+    <rect x="420" y="200" width="180" height="65" rx="8" fill="#9b59b6" stroke="#8e44ad" stroke-width="2"/>
+    <text x="510" y="227" font-family="Arial, sans-serif" font-size="15" font-weight="bold" text-anchor="middle" fill="white">2. PROBLEMA</text>
+    <text x="510" y="250" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="white">¿Por qué ocurre?</text>
+  </g>
+
+  <!-- Línea 2 -->
+  <line x1="510" y1="265" x2="510" y2="290" class="line-2" stroke="#2c3e50" stroke-width="2" marker-end="url(#arrowhead)"/>
+
+  <!-- 3. HIPÓTESIS (Paso Creativo) -->
+  <g class="step-3 creative-step">
+    <rect x="420" y="290" width="180" height="75" rx="8" fill="#f39c12" stroke="#e67e22" stroke-width="3"/>
+    <text x="510" y="313" font-family="Arial, sans-serif" font-size="15" font-weight="bold" text-anchor="middle" fill="white">3. HIPÓTESIS (H)</text>
+    <text x="510" y="336" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="white">Conjetura explicativa</text>
+    <text x="510" y="355" font-family="Arial, sans-serif" font-size="10" font-style="italic" text-anchor="middle" fill="white">(PASO CREATIVO)</text>
+  </g>
+
+  <!-- Línea 3 -->
+  <line x1="510" y1="365" x2="510" y2="400" class="line-3" stroke="#2c3e50" stroke-width="2" marker-end="url(#arrowhead)"/>
+
+  <!-- 4. DEDUCCIÓN -->
+  <g class="step-4">
+    <rect x="420" y="400" width="180" height="65" rx="8" fill="#16a085" stroke="#138d75" stroke-width="2"/>
+    <text x="510" y="422" font-family="Arial, sans-serif" font-size="15" font-weight="bold" text-anchor="middle" fill="white">4. DEDUCCIÓN</text>
+    <text x="510" y="441" font-family="Arial, sans-serif" font-size="11" text-anchor="middle" fill="white">Si H es cierta,</text>
+    <text x="510" y="456" font-family="Arial, sans-serif" font-size="11" text-anchor="middle" fill="white">entonces predecimos...</text>
+  </g>
+
+  <!-- Línea 4 -->
+  <line x1="510" y1="465" x2="510" y2="490" class="line-4" stroke="#2c3e50" stroke-width="2" marker-end="url(#arrowhead)"/>
+
+  <!-- 5. PREDICCIÓN -->
+  <g class="step-5">
+    <rect x="420" y="490" width="180" height="65" rx="8" fill="#27ae60" stroke="#229954" stroke-width="2"/>
+    <text x="510" y="517" font-family="Arial, sans-serif" font-size="15" font-weight="bold" text-anchor="middle" fill="white">5. PREDICCIÓN (P)</text>
+    <text x="510" y="540" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="white">Consecuencia observable</text>
+  </g>
+
+  <!-- Línea 5 -->
+  <line x1="510" y1="555" x2="510" y2="580" class="line-5" stroke="#2c3e50" stroke-width="2" marker-end="url(#arrowhead)"/>
+
+  <!-- 6. EXPERIMENTO -->
+  <g class="step-6">
+    <rect x="420" y="580" width="180" height="65" rx="8" fill="#e67e22" stroke="#d35400" stroke-width="2"/>
+    <text x="510" y="607" font-family="Arial, sans-serif" font-size="15" font-weight="bold" text-anchor="middle" fill="white">6. EXPERIMENTO</text>
+    <text x="510" y="630" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="white">Contrastación empírica</text>
+  </g>
+
+  <!-- Líneas de bifurcación (DEBAJO de las cajas) -->
+  <line x1="510" y1="645" x2="360" y2="695" class="line-fork" stroke="#27ae60" stroke-width="3" marker-end="url(#arrowhead-green)"/>
+  <line x1="510" y1="645" x2="660" y2="695" class="line-fork" stroke="#e74c3c" stroke-width="3" marker-end="url(#arrowhead-red)"/>
+
+  <!-- RESULTADO POSITIVO (Izquierda del centro) -->
+  <g class="step-result">
+    <rect x="210" y="695" width="300" height="75" rx="8" fill="#27ae60" stroke="#229954" stroke-width="2"/>
+    <text x="360" y="718" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle" fill="white">✓ PREDICCIÓN CUMPLIDA</text>
+    <text x="360" y="740" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="white">Hipótesis CORROBORADA</text>
+    <text x="360" y="760" font-family="Arial, sans-serif" font-size="10" font-style="italic" text-anchor="middle" fill="white">(Aceptación provisional)</text>
+  </g>
+
+  <!-- RESULTADO NEGATIVO (Derecha) -->
+  <g class="step-result" style="animation-delay: 3.5s;">
+    <rect x="510" y="695" width="300" height="75" rx="8" fill="#e74c3c" stroke="#c0392b" stroke-width="2"/>
+    <text x="660" y="718" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle" fill="white">✗ PREDICCIÓN FALLA</text>
+    <text x="660" y="740" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="white">Hipótesis REFUTADA</text>
+    <text x="660" y="760" font-family="Arial, sans-serif" font-size="10" font-style="italic" text-anchor="middle" fill="white">(Modus Tollens)</text>
+  </g>
+
+  <!-- Flecha de retroalimentación (ciclo) - MEJORADA -->
+  <path d="M 810 733 C 880 733, 920 600, 920 450 C 920 327, 880 327, 820 327 L 600 327"
+        class="line-cycle"
+        fill="none"
+        stroke="#95a5a6"
+        stroke-width="3"
+        stroke-dasharray="8,5"
+        marker-end="url(#arrowhead-gray)"/>
+  <text x="935" y="450" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#7f8c8d" text-anchor="middle">Nueva</text>
+  <text x="935" y="468" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#7f8c8d" text-anchor="middle">hipótesis</text>
+
+  <!-- Notas de lógica formal (pie) -->
+  <text x="500" y="800" font-family="Arial, sans-serif" font-size="11" font-style="italic" text-anchor="middle" fill="#7f8c8d">
+    Si H → P, y observamos ¬P, entonces ¬H (Modus Tollens) | Si H → P, y observamos P, H queda corroborada (NO probada definitivamente)
+  </text>
+
+</svg>

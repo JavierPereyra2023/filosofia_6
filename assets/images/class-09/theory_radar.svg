@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="500" height="400" viewBox="0 0 500 400" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <style>
+            .axis-line { stroke: #ccc; stroke-width: 1; }
+            .axis-label { font-family: 'Segoe UI', sans-serif; font-size: 14px; fill: #666; font-weight: bold; text-anchor: middle;}
+            .grid-circle { fill: none; stroke: #eee; stroke-width: 1; stroke-dasharray: 4; }
+            
+            /* Data Series */
+            .area-ptolemy { fill: rgba(255, 99, 132, 0.2); stroke: rgba(255, 99, 132, 1); stroke-width: 2; }
+            .point-ptolemy { fill: rgba(255, 99, 132, 1); }
+            
+            .area-copernicus { fill: rgba(54, 162, 235, 0.2); stroke: rgba(54, 162, 235, 1); stroke-width: 2; }
+            .point-copernicus { fill: rgba(54, 162, 235, 1); }
+            
+            /* Animations */
+            .chart-group { transform-origin: center; animation: growIn 1s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards; }
+            .ptolemy-anim { opacity: 0; animation: fadeInSeries 1s forwards 0.5s; }
+            .copernicus-anim { opacity: 0; animation: fadeInSeries 1s forwards 2s; }
+            
+            @keyframes growIn { from { transform: scale(0.8); opacity: 0; } to { transform: scale(1); opacity: 1; } }
+            @keyframes fadeInSeries { from { opacity: 0; } to { opacity: 1; } }
+
+        </style>
+    </defs>
+
+    <!-- Background -->
+    <rect width="100%" height="100%" fill="#fff" />
+    
+    <!-- Chart Center -->
+    <g transform="translate(250, 200)">
+        
+        <!-- Grid Circles (Levels 1 to 5) -->
+        <circle r="30" class="grid-circle" />
+        <circle r="60" class="grid-circle" />
+        <circle r="90" class="grid-circle" />
+        <circle r="120" class="grid-circle" />
+        <circle r="150" class="grid-circle" /> <!-- Max (Level 5) -->
+        
+        <!-- Axes (5 Axes for 5 Values) -->
+        <!-- Angles: 0 (Up), 72, 144, 216, 288 -->
+        <g class="axes">
+             <!-- Axis 1: Precision (Top) -->
+            <line x1="0" y1="0" x2="0" y2="-150" class="axis-line" />
+            <text x="0" y="-160" class="axis-label" style="fill:#333">Precisión</text>
+            
+            <!-- Axis 2: Consistency (Top Right) -->
+            <line x1="0" y1="0" x2="142" y2="-46" class="axis-line" /> <!-- cos(18)*150, -sin(18)*150 -->
+            <text x="160" y="-40" class="axis-label" style="text-anchor:start">Coherencia</text>
+            
+            <!-- Axis 3: Simplicity (Bottom Right) -->
+            <line x1="0" y1="0" x2="88" y2="121" class="axis-line" />
+            <text x="100" y="135" class="axis-label" style="text-anchor:start">Simplicidad</text>
+            
+            <!-- Axis 4: Fruitfulness (Bottom Left) -->
+            <line x1="0" y1="0" x2="-88" y2="121" class="axis-line" />
+            <text x="-100" y="135" class="axis-label" style="text-anchor:end">Fecundidad</text>
+            
+            <!-- Axis 5: Scope (Top Left) -->
+            <line x1="0" y1="0" x2="-142" y2="-46" class="axis-line" />
+            <text x="-160" y="-40" class="axis-label" style="text-anchor:end">Amplitud</text>
+        </g>
+        
+        <!-- DATA SERIES -->
+        
+        <!-- Ptolemy Data (Red) -->
+        <!-- Precision: 4/5 (Good at predicting) -->
+        <!-- Consistency: 5/5 (Perfect w/ Aristotle) -->
+        <!-- Simplicity: 1/5 (Terrible, Epiciles) -->
+        <!-- Fruitfulness: 1/5 (Stagnant) -->
+        <!-- Scope: 3/5 (Ok) -->
+        <g class="ptolemy-anim">
+            <polygon points="
+                0,-120 
+                142,-46
+                17, 24
+                -17, 24
+                -85, -27" 
+                class="area-ptolemy" />
+            <circle cx="0" cy="-120" r="4" class="point-ptolemy" />
+            <circle cx="142" cy="-46" r="4" class="point-ptolemy" />
+            <circle cx="17" cy="24" r="4" class="point-ptolemy" />
+            <circle cx="-17" cy="24" r="4" class="point-ptolemy" />
+            <circle cx="-85" cy="-27" r="4" class="point-ptolemy" />
+            <text x="110" y="-60" class="axis-label" style="fill:#ff6384; font-size:12px;">Ptolomeo</text>
+        </g>
+
+        <!-- Copernicus Data (Blue) -->
+        <!-- Precision: 4/5 (Equal to Ptol at first) -->
+        <!-- Consistency: 1/5 (Conflict w/ Physics) -->
+        <!-- Simplicity: 5/5 (Elegant circles) -->
+        <!-- Fruitfulness: 5/5 (Leads to Kepler/Newton) -->
+        <!-- Scope: 4/5 (Unifies distances) -->
+        <g class="copernicus-anim">
+            <polygon points="
+                0,-120
+                28, -9
+                88, 121
+                -88, 121
+                -113, -37" 
+                class="area-copernicus" />
+            <circle cx="0" cy="-120" r="4" class="point-copernicus" />
+            <circle cx="28" cy="-9" r="4" class="point-copernicus" />
+            <circle cx="88" cy="121" r="4" class="point-copernicus" />
+            <circle cx="-88" cy="121" r="4" class="point-copernicus" />
+            <circle cx="-113" cy="-37" r="4" class="point-copernicus" />
+             <text x="-100" y="100" class="axis-label" style="fill:#36a2eb; font-size:12px;">Copérnico</text>
+        </g>
+
+    </g>
+</svg>

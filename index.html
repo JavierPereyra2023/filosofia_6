@@ -1,402 +1,613 @@
 <!DOCTYPE html>
 <html lang="es">
-<!-- Filosofía 6to - Página Principal -->
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description"
-    content="Plataforma de filosofía para estudiantes de 6to grado. Explora las grandes preguntas de la humanidad de manera interactiva.">
-  <meta name="keywords" content="filosofía, educación, secundaria, pensamiento crítico">
-  <meta name="author" content="Filosofía 6to">
+  <title>Filosofía e Historia de la Ciencia y la Tecnología</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
 
-  <title>Filosofía para Pensar | 6to Grado</title>
-
-  <!-- Favicon (to be added) -->
-  <link rel="icon" type="image/png" href="assets/images/favicon.png">
-
-  <!-- CSS -->
-  <link rel="stylesheet" href="assets/css/reset.css">
-  <link rel="stylesheet" href="assets/css/variables.css">
-  <link rel="stylesheet" href="assets/css/typography.css">
-  <link rel="stylesheet" href="assets/css/layout.css">
-  <link rel="stylesheet" href="assets/css/components.css">
-  <link rel="stylesheet" href="assets/css/navigation.css">
-  <link rel="stylesheet" href="assets/css/responsive.css">
-
-  <!-- Styles specific to home page -->
   <style>
-    /* Hero Section */
-    .hero {
-      position: relative;
-      width: 100%;
-      height: 60vh;
-      min-height: 500px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: linear-gradient(to bottom, #000011 0%, #001133 50%, #0a1854 100%);
+      height: 100vh;
       overflow: hidden;
-      background: linear-gradient(135deg,
-          #4a5f8f 0%,
-          #667eea 25%,
-          #5a72d8 50%,
-          #667eea 75%,
-          #4a5f8f 100%);
-      background-size: 200% 200%;
-      animation: metallicShine 8s ease infinite;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      position: relative;
     }
 
-    [data-theme="dark"] .hero {
-      background: linear-gradient(135deg,
-          #1e3a5f 0%,
-          #2d4a7c 25%,
-          #3b5a99 50%,
-          #2d4a7c 75%,
-          #1e3a5f 100%);
-      background-size: 200% 200%;
-      animation: metallicShine 8s ease infinite;
+    /* Container for content */
+    .content {
+      text-align: center;
+      color: #ffffff;
+      z-index: 10;
+      position: relative;
+      padding: 20px;
     }
 
-    @keyframes metallicShine {
-      0% {
-        background-position: 0% 50%;
-      }
-
-      50% {
-        background-position: 100% 50%;
-      }
-
-      100% {
-        background-position: 0% 50%;
-      }
+    h1 {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 3.8rem;
+      font-weight: 400;
+      letter-spacing: 1px;
+      line-height: 1.3;
+      margin-bottom: 50px;
+      text-shadow: 0 2px 20px rgba(255, 255, 255, 0.3), 0 0 40px rgba(165, 194, 255, 0.4);
+      background: linear-gradient(135deg, #ffffff 0%, #c5d9ff 50%, #8bb4ff 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      opacity: 0;
+      animation: fadeIn 2s ease-out forwards 0.5s;
     }
 
-    .hero::before {
+    .btn-enter {
+      display: inline-block;
+      padding: 18px 50px;
+      font-family: 'Inter', sans-serif;
+      font-size: 1.1rem;
+      font-weight: 600;
+      text-decoration: none;
+      color: #ffffff;
+      border: 2px solid rgba(255, 255, 255, 0.4);
+      border-radius: 60px;
+      background: linear-gradient(135deg, rgba(100, 150, 255, 0.15), rgba(150, 180, 255, 0.15));
+      backdrop-filter: blur(10px);
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      opacity: 0;
+      animation: fadeIn 2s ease-out forwards 1.5s;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .btn-enter::before {
       content: '';
       position: absolute;
       top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background: rgba(0, 0, 0, 0.4);
-      z-index: 1;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+      transition: left 0.5s ease;
     }
 
-    .hero-background {
+    .btn-enter:hover::before {
+      left: 100%;
+    }
+
+    .btn-enter:hover {
+      background: linear-gradient(135deg, rgba(100, 150, 255, 0.3), rgba(150, 180, 255, 0.3));
+      border-color: rgba(255, 255, 255, 0.6);
+      box-shadow: 0 0 30px rgba(150, 200, 255, 0.5), 0 8px 25px rgba(0, 0, 0, 0.3);
+      transform: translateY(-3px);
+      letter-spacing: 4px;
+    }
+
+    .btn-enter:active {
+      transform: translateY(-1px);
+      box-shadow: 0 0 20px rgba(150, 200, 255, 0.4), 0 4px 15px rgba(0, 0, 0, 0.3);
+    }
+
+    /* Stars Background */
+    .stars {
       position: absolute;
       top: 0;
       left: 0;
       width: 100%;
       height: 100%;
-      object-fit: cover;
-      z-index: 0;
+      pointer-events: none;
     }
 
-    .hero-content {
-      position: relative;
-      z-index: 2;
-      text-align: center;
-      color: white;
-      max-width: 800px;
-      padding: 0 var(--space-md);
+    .star {
+      position: absolute;
+      background: white;
+      border-radius: 50%;
+      animation: twinkle var(--duration) ease-in-out infinite;
+      opacity: var(--opacity);
     }
 
-    .hero-title {
-      font-family: var(--font-serif);
-      font-size: 48px;
-      font-weight: var(--font-weight-bold);
-      margin-bottom: var(--space-md);
-      line-height: 1.2;
-      text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    @keyframes twinkle {
+      0% {
+        opacity: var(--opacity);
+        transform: scale(1);
+        filter: brightness(1);
+      }
+
+      25% {
+        opacity: calc(var(--opacity) * 1.3);
+        transform: scale(1.2);
+        filter: brightness(1.3);
+      }
+
+      50% {
+        opacity: 1;
+        transform: scale(1.5);
+        box-shadow: 0 0 8px rgba(255, 255, 255, 0.8), 0 0 4px rgba(150, 200, 255, 0.6);
+        filter: brightness(1.5);
+      }
+
+      75% {
+        opacity: calc(var(--opacity) * 1.2);
+        transform: scale(1.1);
+        filter: brightness(1.2);
+      }
+
+      100% {
+        opacity: var(--opacity);
+        transform: scale(1);
+        filter: brightness(1);
+      }
     }
 
-    .hero-subtitle {
-      font-size: 20px;
-      font-weight: var(--font-weight-light);
-      margin-bottom: var(--space-xl);
-      opacity: 0.95;
-      text-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
+    /* Constellations */
+    .constellation {
+      position: absolute;
+      opacity: 0.6;
+      pointer-events: none;
     }
 
-    /* Intro Section */
-    .intro-section {
-      padding: var(--space-2xl) 0;
-      background: var(--color-bg-primary);
+    /* Tres Marías (Orion's Belt) approx - 3 stars in a line */
+    .tres-marias {
+      top: 20%;
+      right: 15%;
+      width: 100px;
+      height: 40px;
+      transform: rotate(-15deg);
     }
 
-    .intro-text {
-      max-width: 700px;
-      margin: 0 auto;
-      text-align: center;
-      font-size: var(--font-size-large);
-      line-height: var(--line-height-relaxed);
-      color: var(--color-text-secondary);
+    .tres-marias .c-star {
+      width: 3px;
+      height: 3px;
+      background: #fff;
+      position: absolute;
+      border-radius: 50%;
+      box-shadow: 0 0 5px rgba(255, 255, 255, 0.8);
+      animation: twinkle 4s infinite;
     }
 
-    /* Units Grid */
-    .units-section {
-      padding: var(--space-2xl) 0;
-      background: var(--color-bg-secondary);
+    .tres-marias .c-star:nth-child(1) {
+      left: 0;
+      top: 50%;
+      animation-delay: 0s;
     }
 
-    .section-title-main {
-      text-align: center;
-      font-family: var(--font-serif);
-      font-size: var(--font-size-h1);
-      margin-bottom: var(--space-xl);
-      color: var(--color-text-primary);
+    .tres-marias .c-star:nth-child(2) {
+      left: 45%;
+      top: 48%;
+      animation-delay: 1.5s;
     }
 
-    .units-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: var(--space-lg);
+    .tres-marias .c-star:nth-child(3) {
+      right: 0;
+      top: 46%;
+      animation-delay: 0.7s;
     }
 
-    /* Results summary styles for quiz */
-    .results-summary {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-      gap: var(--space-md);
-      margin: var(--space-xl) 0;
+    /* Cruz del Sur (Southern Cross) */
+    .cruz-del-sur {
+      bottom: 25%;
+      left: 10%;
+      width: 80px;
+      height: 100px;
+      transform: rotate(15deg);
     }
 
-    .result-stat {
-      text-align: center;
-      padding: var(--space-md);
-      background: var(--color-bg-tertiary);
-      border-radius: var(--radius-md);
+    .cruz-del-sur .c-star {
+      width: 3px;
+      height: 3px;
+      background: #fff;
+      position: absolute;
+      border-radius: 50%;
+      box-shadow: 0 0 6px rgba(255, 255, 255, 0.8);
+      animation: twinkle 5s infinite;
     }
 
-    .stat-number {
-      display: block;
-      font-size: 42px;
-      font-weight: var(--font-weight-bold);
-      color: var(--color-accent);
-      margin-bottom: var(--space-xs);
+    /* Top */
+    .cruz-del-sur .c-star:nth-child(1) {
+      left: 50%;
+      top: 0;
+      animation-delay: 2s;
     }
 
-    .stat-label {
-      display: block;
-      font-size: var(--font-size-small);
-      color: var(--color-text-secondary);
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
+    /* Bottom */
+    .cruz-del-sur .c-star:nth-child(2) {
+      left: 45%;
+      bottom: 0;
+      animation-delay: 0.5s;
     }
 
-    .results-message {
-      text-align: center;
-      font-size: var(--font-size-large);
-      color: var(--color-text-primary);
-      margin: var(--space-xl) 0;
+    /* Left */
+    .cruz-del-sur .c-star:nth-child(3) {
+      left: 0;
+      top: 45%;
+      animation-delay: 3s;
     }
 
-    .activity-progress {
-      text-align: center;
-      color: var(--color-text-tertiary);
-      font-size: var(--font-size-small);
-      margin-bottom: var(--space-md);
+    /* Right */
+    .cruz-del-sur .c-star:nth-child(4) {
+      right: 0;
+      top: 42%;
+      animation-delay: 1s;
     }
 
-    .quiz-actions {
-      display: flex;
-      justify-content: center;
-      margin-top: var(--space-lg);
+    /* Small 5th star (Epsilon Crucis) */
+    .cruz-del-sur .c-star:nth-child(5) {
+      right: 25%;
+      top: 60%;
+      width: 2px;
+      height: 2px;
+      opacity: 0.7;
+    }
+
+
+    /* Comets */
+    .comet {
+      position: absolute;
+      width: 1.5px;
+      height: 1.5px;
+      background: radial-gradient(circle, var(--comet-color) 0%, var(--comet-color-fade) 100%);
+      box-shadow: 0 0 6px 1.5px var(--comet-glow), 0 0 3px 0.5px var(--comet-color);
+      border-radius: 50%;
+      z-index: 1;
+      opacity: 0;
+      animation: shoot var(--speed) cubic-bezier(0.22, 0.61, 0.36, 1) forwards;
+      animation-delay: var(--delay);
+    }
+
+    /* Cola principal del cometa */
+    .comet::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform-origin: 100% 50%;
+      transform: translate(0%, -50%) rotate(var(--tail-angle));
+      width: 60px;
+      height: 1px;
+      background: linear-gradient(to right,
+        var(--comet-color) 0%,
+        var(--comet-color-mid) 25%,
+        var(--comet-color-fade) 65%,
+        transparent 100%);
+      filter: blur(0.5px);
+      pointer-events: none;
+    }
+
+    /* Cola secundaria difusa */
+    .comet::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform-origin: 100% 50%;
+      transform: translate(0%, -50%) rotate(var(--tail-angle));
+      width: 35px;
+      height: 3px;
+      background: linear-gradient(to right,
+        var(--comet-color-mid) 0%,
+        var(--comet-color-fade) 45%,
+        transparent 100%);
+      filter: blur(1.5px);
+      pointer-events: none;
+    }
+
+    /* Colores para cometas */
+    .comet.white {
+      --comet-color: rgba(255, 255, 255, 1);
+      --comet-color-mid: rgba(255, 255, 255, 0.6);
+      --comet-color-fade: rgba(255, 255, 255, 0.3);
+      --comet-glow: rgba(255, 255, 255, 0.5);
+    }
+
+    .comet.blue {
+      --comet-color: rgba(0, 200, 255, 1);
+      --comet-color-mid: rgba(0, 200, 255, 0.6);
+      --comet-color-fade: rgba(0, 200, 255, 0.3);
+      --comet-glow: rgba(0, 200, 255, 0.6);
+    }
+
+    .comet.red {
+      --comet-color: rgba(255, 50, 100, 1);
+      --comet-color-mid: rgba(255, 50, 100, 0.6);
+      --comet-color-fade: rgba(255, 50, 100, 0.3);
+      --comet-glow: rgba(255, 50, 100, 0.6);
+    }
+
+    .comet.green {
+      --comet-color: rgba(50, 255, 150, 1);
+      --comet-color-mid: rgba(50, 255, 150, 0.6);
+      --comet-color-fade: rgba(50, 255, 150, 0.3);
+      --comet-glow: rgba(50, 255, 150, 0.6);
+    }
+
+    @keyframes shoot {
+      0% {
+        transform: translate(var(--start-x), var(--start-y)) scale(0);
+        opacity: 0;
+      }
+
+      3% {
+        opacity: 0.5;
+        transform: translate(calc(var(--start-x) + var(--move-x) * 0.03), calc(var(--start-y) + var(--move-y) * 0.03)) scale(1);
+      }
+
+      8% {
+        opacity: 0.75;
+        transform: translate(calc(var(--start-x) + var(--move-x) * 0.08), calc(var(--start-y) + var(--move-y) * 0.08)) scale(1);
+      }
+
+      92% {
+        opacity: 0.65;
+        transform: translate(calc(var(--start-x) + var(--move-x) * 0.92), calc(var(--start-y) + var(--move-y) * 0.92)) scale(0.95);
+      }
+
+      100% {
+        transform: translate(calc(var(--start-x) + var(--move-x)), calc(var(--start-y) + var(--move-y))) scale(0.7);
+        opacity: 0;
+      }
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Mobile Responsive adjustments */
+
+    /* Tablets landscape and smaller desktops (1024px and below) */
+    @media (max-width: 1024px) {
+      h1 {
+        font-size: 3.2rem;
+        margin-bottom: 40px;
+      }
+
+      .btn-enter {
+        padding: 16px 45px;
+        font-size: 1.05rem;
+      }
+    }
+
+    /* Tablets portrait (768px and below) */
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 2.2rem;
+        letter-spacing: 0.5px;
+        margin-bottom: 35px;
+        padding: 0 15px;
+      }
+
+      .btn-enter {
+        padding: 15px 35px;
+        font-size: 1rem;
+        letter-spacing: 2px;
+      }
+
+      .btn-enter:hover {
+        letter-spacing: 3px;
+      }
+
+      .tres-marias {
+        top: 10%;
+        right: 10%;
+        transform: scale(0.7) rotate(-15deg);
+      }
+
+      .cruz-del-sur {
+        bottom: 15%;
+        left: 5%;
+        transform: scale(0.7) rotate(15deg);
+      }
+
+      /* Ajuste de estrellas para tablets */
+      .star {
+        max-width: 2.5px;
+        max-height: 2.5px;
+      }
+    }
+
+    /* Mobile large (576px and below) */
+    @media (max-width: 576px) {
+      h1 {
+        font-size: 2rem;
+        letter-spacing: 0.3px;
+      }
+
+      .btn-enter {
+        padding: 14px 32px;
+        font-size: 0.95rem;
+      }
+
+      .content {
+        padding: 15px;
+      }
+    }
+
+    /* Mobile small (480px and below) */
+    @media (max-width: 480px) {
+      h1 {
+        font-size: 1.8rem;
+        line-height: 1.4;
+      }
+
+      .btn-enter {
+        padding: 12px 30px;
+        font-size: 0.9rem;
+        letter-spacing: 2px;
+      }
+
+      .btn-enter:hover {
+        letter-spacing: 2.5px;
+      }
+    }
+
+    /* Mobile extra small (360px and below) */
+    @media (max-width: 360px) {
+      h1 {
+        font-size: 1.5rem;
+        margin-bottom: 30px;
+      }
+
+      .btn-enter {
+        padding: 10px 25px;
+        font-size: 0.85rem;
+        letter-spacing: 1.5px;
+      }
+
+      .tres-marias,
+      .cruz-del-sur {
+        transform: scale(0.5);
+      }
+    }
+
+    /* Landscape orientation for mobile */
+    @media (max-height: 500px) and (orientation: landscape) {
+      h1 {
+        font-size: 1.8rem;
+        margin-bottom: 20px;
+      }
+
+      .btn-enter {
+        padding: 10px 30px;
+        font-size: 0.9rem;
+      }
+
+      .content {
+        padding: 10px;
+      }
     }
   </style>
 </head>
 
 <body>
-  <!-- Main Header -->
-  <nav class="main-nav">
-    <div class="nav-container">
-      <a href="index.html" class="nav-brand">Filosofía 6to</a>
-      <div class="nav-controls">
-        <button id="dark-mode-toggle" class="dark-mode-toggle" aria-label="Cambiar tema">
-          <!-- Icon will be inserted by JavaScript -->
-        </button>
-      </div>
-    </div>
-  </nav>
 
-  <!-- Hero Section -->
-  <section class="hero">
-    <!-- Background image will be added here -->
-    <!-- <img src="assets/images/hero/main-hero.jpg" alt="" class="hero-background"> -->
+  <div class="stars" id="starContainer"></div>
 
-    <div class="hero-content">
-      <h1 class="hero-title">Filosofía para Pensar</h1>
-      <p class="hero-subtitle">Explora las grandes preguntas de la humanidad</p>
-    </div>
-  </section>
+  <!-- Constellations -->
+  <div class="constellation tres-marias" title="Las Tres Marías">
+    <div class="c-star"></div>
+    <div class="c-star"></div>
+    <div class="c-star"></div>
+  </div>
 
-  <!-- Intro Section -->
-  <section class="intro-section">
-    <div class="container">
-      <p class="intro-text">
-        Bienvenido a tu espacio de filosofía. Aquí descubrirás cómo los grandes pensadores
-        han abordado las preguntas más importantes de la existencia humana, y aprenderás
-        a desarrollar tu propio pensamiento crítico.
-      </p>
-    </div>
-  </section>
+  <div class="constellation cruz-del-sur" title="Cruz del Sur">
+    <div class="c-star"></div>
+    <div class="c-star"></div>
+    <div class="c-star"></div>
+    <div class="c-star"></div>
+    <div class="c-star"></div>
+  </div>
 
-  <!-- Units Grid Section -->
-  <section class="units-section">
-    <div class="container">
-      <h2 class="section-title-main">Unidades Didácticas</h2>
+  <div class="content">
+    <h1>Filosofía e Historia de la Ciencia y la Tecnología</h1>
+    <a href="home.html" class="btn-enter">Entrar</a>
+  </div>
 
-      <div class="units-grid">
-        <!-- Unit 1: Las teorías científicas -->
-        <article class="unit-card">
-          <a href="units/unit-1/index.html" class="unit-card__link">
-            <div class="unit-card__image-wrapper">
-              <img src="https://images.unsplash.com/photo-1534972195531-d756b9bfa9f2?w=800&h=600&fit=crop"
-                alt="La revolución copernicana" class="unit-card__image">
-            </div>
-            <div class="unit-card__content">
-              <h3 class="unit-card__title">Unidad 1: Las Teorías Científicas</h3>
-              <p class="unit-card__description">
-                Explora cómo se construyen las teorías científicas a través del caso histórico de la revolución
-                copernicana. Comprende la relación entre observación, hipótesis y teoría.
-              </p>
-              <span class="unit-card__cta">Explorar unidad →</span>
-            </div>
-          </a>
-        </article>
+  <script>
+    // Generate random stars
+    const starContainer = document.getElementById('starContainer');
+    const starCount = 150;
 
-        <!-- Unit 2: Controversias científicas -->
-        <article class="unit-card">
-          <a href="units/unit-2/index.html" class="unit-card__link">
-            <div class="unit-card__image-wrapper">
-              <img src="https://images.unsplash.com/photo-1579165466780-9224c534cd27?w=800&h=600&fit=crop"
-                alt="Controversia Pasteur-Pouchet" class="unit-card__image">
-            </div>
-            <div class="unit-card__content">
-              <h3 class="unit-card__title">Unidad 2: Controversias Científicas</h3>
-              <p class="unit-card__description">
-                Analiza cómo se resuelven los debates entre teorías rivales mediante el estudio de la controversia
-                Pasteur-Pouchet sobre la generación espontánea.
-              </p>
-              <span class="unit-card__cta">Explorar unidad →</span>
-            </div>
-          </a>
-        </article>
+    for (let i = 0; i < starCount; i++) {
+      const star = document.createElement('div');
+      star.classList.add('star');
 
-        <!-- Unit 3: Teorías y métodos -->
-        <article class="unit-card">
-          <a href="units/unit-3.html" class="unit-card__link">
-            <div class="unit-card__image-wrapper">
-              <img src="https://images.unsplash.com/photo-1596720426673-e4dad15b0db8?w=800&h=600&fit=crop"
-                alt="Mendel y la genética" class="unit-card__image">
-            </div>
-            <div class="unit-card__content">
-              <h3 class="unit-card__title">Unidad 3: Teorías y Métodos</h3>
-              <p class="unit-card__description">
-                Descubre los métodos científicos y cómo las teorías estructuran el conocimiento a través del trabajo de
-                Mendel y el nacimiento de la genética.
-              </p>
-              <span class="unit-card__cta">Explorar unidad →</span>
-            </div>
-          </a>
-        </article>
+      const x = Math.random() * 100;
+      const y = Math.random() * 100;
+      const size = Math.random() * 2.5 + 0.8; // 0.8 to 3.3px
+      const duration = Math.random() * 4 + 2.5; // 2.5 to 6.5s - más variedad
+      const opacity = Math.random() * 0.6 + 0.25; // 0.25 to 0.85 - más rango
+      const delay = Math.random() * 3; // 0 to 3s - delay aleatorio
 
-        <!-- Unit 4: Sucesión de teorías -->
-        <article class="unit-card">
-          <a href="units/unit-4.html" class="unit-card__link">
-            <div class="unit-card__image-wrapper">
-              <img src="https://images.unsplash.com/photo-1505567745926-ba89000d2c5a?w=800&h=600&fit=crop"
-                alt="Evolucionismo en biología" class="unit-card__image">
-            </div>
-            <div class="unit-card__content">
-              <h3 class="unit-card__title">Unidad 4: Sucesión de Teorías</h3>
-              <p class="unit-card__description">
-                Examina cómo evolucionan las teorías científicas y el concepto de progreso en la ciencia mediante el
-                estudio del evolucionismo en biología.
-              </p>
-              <span class="unit-card__cta">Explorar unidad →</span>
-            </div>
-          </a>
-        </article>
+      star.style.left = `${x}%`;
+      star.style.top = `${y}%`;
+      star.style.width = `${size}px`;
+      star.style.height = `${size}px`;
+      star.style.setProperty('--duration', `${duration}s`);
+      star.style.setProperty('--opacity', opacity);
+      star.style.animationDelay = `${delay}s`;
 
-        <!-- Unit 5: Articulación entre teorías -->
-        <article class="unit-card">
-          <a href="units/unit-5.html" class="unit-card__link">
-            <div class="unit-card__image-wrapper">
-              <img src="https://images.unsplash.com/photo-1462331940025-496dfbfc7564?w=800&h=600&fit=crop"
-                alt="Cosmología actual" class="unit-card__image">
-            </div>
-            <div class="unit-card__content">
-              <h3 class="unit-card__title">Unidad 5: Articulación entre Teorías</h3>
-              <p class="unit-card__description">
-                Investiga cómo diferentes teorías científicas se relacionan y complementan a través del desarrollo de la
-                cosmología y nuestra comprensión del universo.
-              </p>
-              <span class="unit-card__cta">Explorar unidad →</span>
-            </div>
-          </a>
-        </article>
+      starContainer.appendChild(star);
+    }
 
-        <!-- Unit 6: Ciencias y Sociedad -->
-        <article class="unit-card">
-          <a href="units/unit-6.html" class="unit-card__link">
-            <div class="unit-card__image-wrapper">
-              <img src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=800&h=600&fit=crop"
-                alt="Ciencias formales, fácticas y sociales" class="unit-card__image">
-            </div>
-            <div class="unit-card__content">
-              <h3 class="unit-card__title">Unidad 6: Ciencias y Sociedad</h3>
-              <p class="unit-card__description">
-                Distingue entre ciencias formales, fácticas y sociales. Reflexiona sobre los aspectos éticos de la
-                investigación científica y su impacto social.
-              </p>
-              <span class="unit-card__cta">Explorar unidad →</span>
-            </div>
-          </a>
-        </article>
-      </div>
-    </div>
-  </section>
+    // Generate comets dynamically - ONE at a time
+    function createComet() {
+      const comet = document.createElement('div');
+      comet.classList.add('comet');
 
-  <!-- Footer -->
-  <footer class="main-footer">
-    <div class="container">
-      <div class="footer-content">
-        <div class="footer-section">
-          <h4>Sobre este proyecto</h4>
-          <p>
-            Plataforma educativa de filosofía diseñada para estudiantes de 6to grado.
-            Fomenta el pensamiento crítico y la reflexión sobre las grandes preguntas.
-          </p>
-        </div>
+      // Random color - white, blue neon, red neon, green neon
+      const colors = ['white', 'blue', 'red', 'green'];
+      const randomColor = colors[Math.floor(Math.random() * colors.length)];
+      comet.classList.add(randomColor);
 
-        <div class="footer-section">
-          <h4>Recursos</h4>
-          <p>
-            <a href="index.html">Inicio</a><br>
-            <a href="#unidades">Unidades</a><br>
-            <a href="#contacto">Contacto</a>
-          </p>
-        </div>
+      // Start from completely random position across the entire top
+      // This ensures each comet comes from a different place
+      const startX = Math.random() * window.innerWidth;
+      const startY = -80 - Math.random() * 40; // -80 to -120px above screen
 
-        <div class="footer-section">
-          <h4>Contacto</h4>
-          <p>
-            Para más información sobre este proyecto educativo,
-            contacta con tu profesor de filosofía.
-          </p>
-        </div>
-      </div>
+      // Calculate movement - oblique descent
+      // Comets move down and to the side (either left or right)
+      const direction = Math.random() < 0.5 ? 1 : -1; // Random left or right
+      const horizontalDistance = (300 + Math.random() * 400) * direction; // 300-700px horizontal
+      const verticalDistance = 450 + Math.random() * 450; // 450-900px vertical
 
-      <div class="footer-bottom">
-        <p>&copy; 2025 Filosofía 6to. Material educativo.</p>
-      </div>
-    </div>
-  </footer>
+      // Calculate angle for tail (opposite to movement direction)
+      const angle = Math.atan2(verticalDistance, horizontalDistance) * (180 / Math.PI);
+      const tailAngle = angle - 180; // Tail points opposite to movement
 
-  <!-- JavaScript -->
-  <script src="assets/js/dark-mode.js"></script>
-  <script src="assets/js/navigation.js"></script>
-  <script src="assets/js/interactions.js"></script>
+      // Random properties - slower and more subtle
+      const speed = Math.random() * 4 + 4; // 4-8s - más lento
+      const delay = 0; // Sin delay inicial
+
+      comet.style.left = '0px';
+      comet.style.top = '0px';
+      comet.style.setProperty('--start-x', `${startX}px`);
+      comet.style.setProperty('--start-y', `${startY}px`);
+      comet.style.setProperty('--move-x', `${horizontalDistance}px`);
+      comet.style.setProperty('--move-y', `${verticalDistance}px`);
+      comet.style.setProperty('--tail-angle', `${tailAngle}deg`);
+      comet.style.setProperty('--speed', `${speed}s`);
+      comet.style.setProperty('--delay', `${delay}s`);
+
+      document.body.appendChild(comet);
+
+      // Clean up when animation finishes
+      setTimeout(() => {
+        comet.remove();
+      }, speed * 1000);
+    }
+
+    // Schedule comets ONE at a time with long intervals
+    function scheduleNextComet() {
+      createComet();
+      // Wait for next comet - long random interval
+      const nextInterval = Math.random() * 20000 + 15000; // 15-35 seconds between comets
+      setTimeout(scheduleNextComet, nextInterval);
+    }
+
+    // Start first comet after initial page load
+    setTimeout(scheduleNextComet, 6000); // First comet at 6 seconds
+
+  </script>
 </body>
 
 </html>

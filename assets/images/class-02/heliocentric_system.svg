@@ -1,0 +1,236 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" width="800" height="800">
+  <defs>
+    <!-- Gradientes para el Sol -->
+    <radialGradient id="sunGrad">
+      <stop offset="0%" style="stop-color:#FDB813;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#FCAF17;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#F58220;stop-opacity:1" />
+    </radialGradient>
+
+    <!-- Gradientes para planetas -->
+    <radialGradient id="mercuryGrad">
+      <stop offset="0%" style="stop-color:#B7B8B9;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#8A8C8E;stop-opacity:1" />
+    </radialGradient>
+
+    <radialGradient id="venusGrad">
+      <stop offset="0%" style="stop-color:#FFC649;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#E8A040;stop-opacity:1" />
+    </radialGradient>
+
+    <radialGradient id="earthGrad">
+      <stop offset="0%" style="stop-color:#6BB6FF;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#4A90E2;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#2E5C8A;stop-opacity:1" />
+    </radialGradient>
+
+    <radialGradient id="marsGrad">
+      <stop offset="0%" style="stop-color:#E27B58;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#C1440E;stop-opacity:1" />
+    </radialGradient>
+
+    <radialGradient id="jupiterGrad">
+      <stop offset="0%" style="stop-color:#C88B3A;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#D4A574;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#A67C52;stop-opacity:1" />
+    </radialGradient>
+
+    <radialGradient id="saturnGrad">
+      <stop offset="0%" style="stop-color:#FAD5A5;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#E0B070;stop-opacity:1" />
+    </radialGradient>
+
+    <!-- Animaciones de rotación -->
+    <style>
+      @keyframes orbit-mercury {
+        from { transform: rotate(0deg) translateX(80px) rotate(0deg); }
+        to { transform: rotate(360deg) translateX(80px) rotate(-360deg); }
+      }
+      @keyframes orbit-venus {
+        from { transform: rotate(0deg) translateX(120px) rotate(0deg); }
+        to { transform: rotate(360deg) translateX(120px) rotate(-360deg); }
+      }
+      @keyframes orbit-earth {
+        from { transform: rotate(0deg) translateX(165px) rotate(0deg); }
+        to { transform: rotate(360deg) translateX(165px) rotate(-360deg); }
+      }
+      @keyframes orbit-mars {
+        from { transform: rotate(0deg) translateX(210px) rotate(0deg); }
+        to { transform: rotate(360deg) translateX(210px) rotate(-360deg); }
+      }
+      @keyframes orbit-jupiter {
+        from { transform: rotate(0deg) translateX(280px) rotate(0deg); }
+        to { transform: rotate(360deg) translateX(280px) rotate(-360deg); }
+      }
+      @keyframes orbit-saturn {
+        from { transform: rotate(0deg) translateX(350px) rotate(0deg); }
+        to { transform: rotate(360deg) translateX(350px) rotate(-360deg); }
+      }
+      @keyframes pulse-sun {
+        0%, 100% { transform: scale(1); opacity: 1; }
+        50% { transform: scale(1.05); opacity: 0.9; }
+      }
+      @keyframes moon-orbit {
+        from { transform: rotate(0deg) translateX(15px) rotate(0deg); }
+        to { transform: rotate(360deg) translateX(15px) rotate(-360deg); }
+      }
+
+      .mercury-orbit { animation: orbit-mercury 10s linear infinite; }
+      .venus-orbit { animation: orbit-venus 15s linear infinite; }
+      .earth-orbit { animation: orbit-earth 20s linear infinite; }
+      .mars-orbit { animation: orbit-mars 25s linear infinite; }
+      .jupiter-orbit { animation: orbit-jupiter 40s linear infinite; }
+      .saturn-orbit { animation: orbit-saturn 50s linear infinite; }
+      .sun-glow { animation: pulse-sun 4s ease-in-out infinite; }
+      .moon-orbit { animation: moon-orbit 3s linear infinite; }
+
+      .orbit-line {
+        fill: none;
+        stroke: #CBD5E1;
+        stroke-width: 1.5;
+        stroke-dasharray: 5,5;
+        opacity: 0.5;
+      }
+
+      .planet-label {
+        font-family: 'Arial', sans-serif;
+        font-size: 12px;
+        font-weight: 600;
+        fill: #1e293b;
+        text-anchor: middle;
+      }
+
+      .title-text {
+        font-family: 'Arial', sans-serif;
+        font-size: 28px;
+        font-weight: bold;
+        fill: #1e293b;
+        text-anchor: middle;
+      }
+
+      .subtitle-text {
+        font-family: 'Arial', sans-serif;
+        font-size: 14px;
+        fill: #475569;
+        text-anchor: middle;
+        font-style: italic;
+      }
+    </style>
+  </defs>
+
+  <!-- Fondo blanco -->
+  <rect width="800" height="800" fill="#ffffff"/>
+
+  <!-- Título -->
+  <text x="400" y="40" class="title-text">Sistema Heliocéntrico de Copérnico</text>
+  <text x="400" y="65" class="subtitle-text">El Sol en el centro - Los planetas en órbita (1543)</text>
+
+  <!-- Centro del sistema (400, 420) -->
+  <g transform="translate(400, 420)">
+
+    <!-- Órbitas (círculos punteados) -->
+    <circle cx="0" cy="0" r="80" class="orbit-line"/>
+    <circle cx="0" cy="0" r="120" class="orbit-line"/>
+    <circle cx="0" cy="0" r="165" class="orbit-line"/>
+    <circle cx="0" cy="0" r="210" class="orbit-line"/>
+    <circle cx="0" cy="0" r="280" class="orbit-line"/>
+    <circle cx="0" cy="0" r="350" class="orbit-line"/>
+
+    <!-- El Sol (centro) -->
+    <g class="sun-glow">
+      <circle cx="0" cy="0" r="40" fill="url(#sunGrad)" stroke="#F58220" stroke-width="2"/>
+      <!-- Rayos del sol -->
+      <g opacity="0.6">
+        <line x1="-50" y1="0" x2="-60" y2="0" stroke="#FDB813" stroke-width="3" stroke-linecap="round"/>
+        <line x1="50" y1="0" x2="60" y2="0" stroke="#FDB813" stroke-width="3" stroke-linecap="round"/>
+        <line x1="0" y1="-50" x2="0" y2="-60" stroke="#FDB813" stroke-width="3" stroke-linecap="round"/>
+        <line x1="0" y1="50" x2="0" y2="60" stroke="#FDB813" stroke-width="3" stroke-linecap="round"/>
+        <line x1="-35" y1="-35" x2="-43" y2="-43" stroke="#FDB813" stroke-width="2" stroke-linecap="round"/>
+        <line x1="35" y1="35" x2="43" y2="43" stroke="#FDB813" stroke-width="2" stroke-linecap="round"/>
+        <line x1="35" y1="-35" x2="43" y2="-43" stroke="#FDB813" stroke-width="2" stroke-linecap="round"/>
+        <line x1="-35" y1="35" x2="-43" y2="43" stroke="#FDB813" stroke-width="2" stroke-linecap="round"/>
+      </g>
+    </g>
+    <text x="0" y="65" class="planet-label" style="font-size: 14px; font-weight: bold;">SOL</text>
+
+    <!-- Mercurio -->
+    <g class="mercury-orbit" transform-origin="0 0">
+      <circle cx="0" cy="0" r="6" fill="url(#mercuryGrad)" stroke="#6B7280" stroke-width="1"/>
+      <text x="0" y="-12" class="planet-label" style="font-size: 10px;">Mercurio</text>
+    </g>
+
+    <!-- Venus -->
+    <g class="venus-orbit" transform-origin="0 0">
+      <circle cx="0" cy="0" r="10" fill="url(#venusGrad)" stroke="#D97706" stroke-width="1"/>
+      <text x="0" y="-17" class="planet-label">Venus</text>
+    </g>
+
+    <!-- Tierra (con Luna) -->
+    <g class="earth-orbit" transform-origin="0 0">
+      <circle cx="0" cy="0" r="11" fill="url(#earthGrad)" stroke="#1E40AF" stroke-width="1"/>
+      <!-- Luna orbitando la Tierra -->
+      <g class="moon-orbit" transform-origin="0 0">
+        <circle cx="0" cy="0" r="3" fill="#D1D5DB" stroke="#9CA3AF" stroke-width="0.5"/>
+      </g>
+      <text x="0" y="-18" class="planet-label">Tierra</text>
+      <text x="0" y="-30" class="planet-label" style="font-size: 9px; opacity: 0.7;">+ Luna</text>
+    </g>
+
+    <!-- Marte -->
+    <g class="mars-orbit" transform-origin="0 0">
+      <circle cx="0" cy="0" r="8" fill="url(#marsGrad)" stroke="#991B1B" stroke-width="1"/>
+      <text x="0" y="-15" class="planet-label">Marte</text>
+    </g>
+
+    <!-- Júpiter -->
+    <g class="jupiter-orbit" transform-origin="0 0">
+      <circle cx="0" cy="0" r="22" fill="url(#jupiterGrad)" stroke="#92400E" stroke-width="1.5"/>
+      <!-- Bandas de Júpiter -->
+      <ellipse cx="0" cy="-5" rx="20" ry="3" fill="#A67C52" opacity="0.4"/>
+      <ellipse cx="0" cy="5" rx="20" ry="3" fill="#8B6341" opacity="0.4"/>
+      <text x="0" y="-32" class="planet-label" style="font-size: 11px;">Júpiter</text>
+    </g>
+
+    <!-- Saturno -->
+    <g class="saturn-orbit" transform-origin="0 0">
+      <g>
+        <!-- Anillos de Saturno (detrás) -->
+        <ellipse cx="0" cy="0" rx="32" ry="8" fill="none" stroke="#D4A574" stroke-width="2" opacity="0.6"/>
+        <ellipse cx="0" cy="0" rx="28" ry="7" fill="none" stroke="#E0B070" stroke-width="1.5" opacity="0.5"/>
+        <!-- Planeta -->
+        <circle cx="0" cy="0" r="18" fill="url(#saturnGrad)" stroke="#B8860B" stroke-width="1.5"/>
+        <!-- Anillos de Saturno (delante) -->
+        <ellipse cx="0" cy="0" rx="32" ry="3" fill="#E0B070" opacity="0.3"/>
+      </g>
+      <text x="0" y="-38" class="planet-label" style="font-size: 11px;">Saturno</text>
+    </g>
+
+  </g>
+
+  <!-- Leyenda inferior -->
+  <g transform="translate(50, 720)">
+    <rect x="0" y="0" width="700" height="60" rx="8" fill="#F1F5F9" stroke="#94A3B8" stroke-width="2"/>
+
+    <text x="350" y="25" class="planet-label" style="font-size: 13px; font-weight: bold;">
+      Planetas conocidos en época de Copérnico
+    </text>
+
+    <text x="350" y="45" class="subtitle-text" style="font-size: 11px;">
+      Observación clave: El movimiento retrógrado se explica naturalmente si la Tierra también orbita
+    </text>
+  </g>
+
+  <!-- Notas laterales -->
+  <g transform="translate(620, 150)">
+    <text x="0" y="0" style="font-family: Arial; font-size: 11px; font-weight: 600; fill: #475569;">
+      <tspan x="0" dy="0">★ Orden desde el Sol:</tspan>
+      <tspan x="5" dy="18">1. Mercurio</tspan>
+      <tspan x="5" dy="16">2. Venus</tspan>
+      <tspan x="5" dy="16">3. Tierra + Luna</tspan>
+      <tspan x="5" dy="16">4. Marte</tspan>
+      <tspan x="5" dy="16">5. Júpiter</tspan>
+      <tspan x="5" dy="16">6. Saturno</tspan>
+    </text>
+  </g>
+
+</svg>

@@ -1,0 +1,716 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clase 6: Anomalías e Hipótesis Ad Hoc | Filosofía 6to</title>
+    <link rel="stylesheet" href="../../assets/css/variables.css">
+    <link rel="stylesheet" href="../../assets/css/reset.css">
+    <link rel="stylesheet" href="../../assets/css/base.css">
+    <link rel="stylesheet" href="../../assets/css/typography.css">
+    <link rel="stylesheet" href="../../assets/css/layout.css">
+    <link rel="stylesheet" href="../../assets/css/navigation.css">
+    <link rel="stylesheet" href="../../assets/css/components.css">
+    <link rel="stylesheet" href="../../assets/css/unit-page.css">
+    <link rel="stylesheet" href="../../assets/css/book-layout.css">
+
+    <style>
+        .class-container::before {
+            content: '    O ≠ P\A    ¿Refutación?\A    NO!\A    Culpa a Auxiliar';
+            position: fixed;
+            top: 15%;
+            right: 5%;
+            font-family: 'Caveat', 'Comic Sans MS', cursive;
+            font-size: 26px;
+            font-weight: 700;
+            white-space: pre;
+            color: rgba(255, 255, 255, 0.35);
+            transform: rotate(-6deg);
+        }
+
+        .class-container::after {
+            content: '    Enigma ✓\A    (Solucionable)\A\A    Anomalía ⚠\A    (Crisis)';
+            position: fixed;
+            bottom: 20%;
+            left: 5%;
+            font-family: 'Caveat', 'Comic Sans MS', cursive;
+            font-size: 24px;
+            font-weight: 700;
+            white-space: pre;
+            color: rgba(255, 255, 255, 0.32);
+            transform: rotate(5deg);
+        }
+
+        @media (max-width: 1024px) {
+
+            .class-container::before,
+            .class-container::after {
+                position: relative;
+                top: auto;
+                bottom: auto;
+                left: auto;
+                right: auto;
+                transform: none;
+                display: block;
+                margin: 20px 0;
+                width: 100%;
+                text-align: center;
+            }
+
+            .class-container::before {
+                content: 'Cuando la predicción falla: ¿Hipótesis Ad Hoc?';
+            }
+
+            .class-container::after {
+                content: 'Salvando el Paradigma: Descubrimiento de Neptuno';
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="main-nav">
+        <div class="nav-container">
+            <div class="nav-left">
+                <a href="index.html" class="nav-back-button" title="Volver al índice de la unidad">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M15 19l-7-7 7-7" />
+                    </svg>
+                    <span>Unidad 1</span>
+                </a>
+                <a href="../../home.html" class="nav-brand">Filosofía 6to</a>
+            </div>
+            <div class="nav-controls">
+                <button id="dark-mode-toggle" class="dark-mode-toggle" aria-label="Cambiar tema">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="class-progress">
+        <div class="container">
+            <div class="progress-info">
+                <span class="progress-label">Unidad 1: Teorías Científicas</span>
+                <span class="progress-count">Clase 6 de 10</span>
+            </div>
+            <div class="progress-bar">
+                <div class="progress-fill" style="width: 60%"></div>
+            </div>
+        </div>
+    </div>
+
+    <main class="class-container">
+        <article class="class-content">
+            <header class="class-header">
+                <div class="class-badge">Clase 6</div>
+                <h1 class="class-title">Anomalías e Hipótesis Ad Hoc</h1>
+                <p class="class-subtitle">¿Qué ocurre cuando la teoría falla? Estrategias para salvar el paradigma.</p>
+            </header>
+
+            <section class="class-section">
+                <h2>Cuando la Naturaleza Dice "NO"</h2>
+                <p>
+                    Vimos en la clase anterior (Modus Tollens) que lógicamente, si una predicción falla, la hipótesis
+                    queda refutada.
+                    <br>
+                    <strong>Pero la ciencia real no es tan simple.</strong>
+                </p>
+                <div class="concept-highlight">
+                    <h3>Tesis de Duhem-Quine</h3>
+                    <p>
+                        Nunca ponemos a prueba una hipótesis aislada. Siempre probamos:
+                        <br>
+                        <strong>(Hipótesis Principal + Hipótesis Auxiliares + Condiciones Iniciales) →
+                            Predicción</strong>
+                    </p>
+                    <p>
+                        Si la predicción falla, la lógica nos dice que <em>algo</em> está mal en el conjunto, pero no
+                        nos dice qué. ¿Es la teoría principal? ¿O falló el telescopio (hipótesis auxiliar)? ¿O
+                        calculamos mal la posición inicial?
+                    </p>
+                    <p>
+                        Esto permite a los científicos <strong>salvar su teoría central</strong> culpando a las
+                        hipótesis auxiliares.
+                    </p>
+                </div>
+            </section>
+
+            <section class="class-section">
+                <h2>El Caso de Urano: Un Éxito Espectacular</h2>
+                <p>
+                    En el siglo XIX, el planeta Urano no se comportaba como predecían las leyes de Newton. Su órbita
+                    tenía un "bamboleo" extraño.
+                </p>
+                <ul>
+                    <li><strong>Predicción (Newton):</strong> Urano debe estar en la posición X.</li>
+                    <li><strong>Observación:</strong> Urano está en la posición Y.</li>
+                    <li><strong>¿Refutación?</strong> ¿Debemos tirar las leyes de Newton a la basura?</li>
+                </ul>
+                <p>
+                    Los astrónomos Le Verrier y Adams dijeron: <strong>"NO".</strong> Propusieron una <strong>Hipótesis
+                        Auxiliar</strong>: "Existe un planeta desconocido más allá de Urano que lo está atrayendo con su
+                    gravedad".
+                </p>
+
+                <div style="text-align: center; margin: var(--space-xl) 0;">
+                    <div style="display: inline-block; background: #000; padding: 10px; border-radius: 8px;">
+                        <!-- Dynamic SVG: Orbital Perturbation -->
+                        <object data="../../assets/images/class-06/neptune_discovery.svg" type="image/svg+xml"
+                            style="width: 100%; max-width: 600px;">
+                            Tu navegador no soporta SVG.
+                        </object>
+                    </div>
+                    <p style="margin-top: var(--space-sm); font-size: 0.9em; color: var(--color-text-secondary);">
+                        <em>Simulación de la perturbación orbital. La órbita de Urano (azul) es "tironeada" por la
+                            gravedad de un cuerpo invisible (Neptune - verde), causando que se adelante o atrase
+                            respecto a la predicción teórica.</em>
+                    </p>
+                </div>
+
+                <p>
+                    Le Verrier calculó <em>dónde</em> debería estar ese planeta invisible para causar tal perturbación.
+                    Apuntaron el telescopio a esa coordenada y... <strong>¡allí estaba el planeta Neptuno!</strong>
+                </p>
+                <p>
+                    Lo que parecía una refutación (anomalía) se convirtió en una confirmación brillante gracias a una
+                    hipótesis auxiliar correcta.
+                </p>
+            </section>
+
+            <section class="class-section">
+                <h2>Hipótesis Ad Hoc: ¿Buenas o Malas?</h2>
+                <p>
+                    Una <strong>hipótesis ad hoc</strong> ("para esto") es una hipótesis que se introduce
+                    específicamente para salvar una teoría de una refutación.
+                </p>
+
+                <div class="activity-container">
+                    <div class="question-card">
+                        <h3>Ad Hoc "Mala" (Ptolomeo)</h3>
+                        <p>
+                            Para explicar por qué los planetas retrogradaban, Ptolomeo añadió epiciclos. Cuando los
+                            datos mejoraron y aún no encajaban, añadió "epiciclos sobre epiciclos".
+                            <br>
+                            <strong>Problema:</strong> Solo servía para acomodar los datos *que ya tenían*. No predecía
+                            nada nuevo. Era un parche estéril para evitar aceptar el error.
+                        </p>
+                    </div>
+                    <div class="question-card">
+                        <h3>Ad Hoc "Buena" (Neptuno)</h3>
+                        <p>
+                            La hipótesis de Neptuno también fue introducida para salvar a Newton. Pero tenía una
+                            diferencia crucial:
+                            <br>
+                            <strong>Predicción Independiente:</strong> Predecía la existencia de un objeto *nuevo* que
+                            podíamos buscar. Aumentaba nuestro conocimiento del mundo (contenido empírico).
+                        </p>
+                    </div>
+                </div>
+
+                <div class="concept-highlight">
+                    <h3>Criterio de Demarcación (Lakatos)</h3>
+                    <ul>
+                        <li><strong>Cambio Progresivo:</strong> La hipótesis auxiliar predice hechos nuevos (Neptuno).
+                            El programa de investigación avanza.</li>
+                        <li><strong>Cambio Degenerativo:</strong> La hipótesis auxiliar solo explica lo que ya sabíamos
+                            (epiciclos extra). El programa se estanca y protege su núcleo dogmáticamente.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="class-section">
+                <h2>Enigmas vs Anomalías (Kuhn)</h2>
+                <p>
+                    Thomas Kuhn distinguió dos tipos de problemas:
+                </p>
+                <ul>
+                    <li><strong>Enigma (Puzzle):</strong> Un problema que la comunidad científica cree que puede
+                        resolver <em>dentro</em> del paradigma actual (ej: la órbita de Urano antes de ver a Neptuno).
+                        Es un desafío a la inteligencia del científico.</li>
+                    <li><strong>Anomalía:</strong> Un problema persistente que resiste todos los intentos de solución
+                        dentro del paradigma y ataca sus fundamentos (ej: la órbita de Mercurio, que ni Newton ni
+                        hipotéticos planetas pudieron explicar... hasta que Einstein cambió el paradigma por completo).
+                    </li>
+                </ul>
+                <p>
+                    Cuando las anomalías se acumulan, el paradigma entra en <strong>CRISIS</strong>.
+                </p>
+            </section>
+
+            <div class="graffiti-divider" style="margin: var(--space-xl) 0; text-align: center;">
+                <span
+                    style="font-family: 'Caveat', cursive; font-size: 2.5em; color: var(--color-accent); text-shadow: 2px 2px 4px rgba(0,0,0,0.1);">
+                    ⚡ El Caso Mercurio: De Anomalía a Crisis ⚡
+                </span>
+            </div>
+
+            <section class="class-section">
+                <h2>El Caso Mercurio: De Anomalía a Crisis</h2>
+                <p>
+                    Si el descubrimiento de Neptuno fue el mayor triunfo del newtonianismo, el problema de Mercurio fue
+                    su mayor humillación. Y la diferencia entre ambos casos revela exactamente cuándo un "enigma" se
+                    convierte en una verdadera "anomalía" paradigmática.
+                </p>
+
+                <h3>La Precesión Anómala del Perihelio</h3>
+                <p>
+                    En 1859, el mismo astrónomo Urbain Le Verrier que había predicho Neptuno detectó un problema en la
+                    órbita de Mercurio. Las órbitas planetarias no son círculos perfectos sino elipses, y el punto más
+                    cercano al Sol (perihelio) de Mercurio avanza lentamente con el tiempo. Esto se llama
+                    <strong>precesión del perihelio</strong>.
+                </p>
+                <p>
+                    La teoría de Newton predecía que, debido a las perturbaciones gravitacionales de los otros planetas
+                    (Venus, Tierra, Júpiter, etc.), el perihelio de Mercurio debería avanzar aproximadamente 531 segundos
+                    de arco por siglo.
+                </p>
+                <p>
+                    <strong>Problema:</strong> Las observaciones mostraban una precesión de 574 segundos de arco por
+                    siglo.
+                    <br>
+                    <strong>Diferencia:</strong> 43 segundos de arco por siglo de exceso inexplicable.
+                </p>
+
+                <div style="text-align: center; margin: var(--space-xl) 0;">
+                    <div
+                        style="display: inline-block; background: white; padding: 20px; border-radius: 8px; border: 1px solid var(--color-border);">
+                        <object data="../../assets/images/class-06/mercury_precession.svg" type="image/svg+xml"
+                            class="class-image-diagram" style="width: 100%; max-width: 650px;">
+                            Tu navegador no soporta SVG.
+                        </object>
+                    </div>
+                    <p style="margin-top: var(--space-sm); font-size: 0.9em; color: var(--color-text-secondary);">
+                        <em>La precesión del perihelio de Mercurio. La elipse orbital rota lentamente, haciendo que el
+                            punto más cercano al Sol (perihelio) avance con cada órbita. Newton predecía 531"/siglo; se
+                            observaban 574"/siglo. Los 43" de diferencia eran inexplicables.</em>
+                    </p>
+                </div>
+
+                <div class="concept-highlight">
+                    <h3>¿43 Segundos de Arco? ¿Es Mucho?</h3>
+                    <p>
+                        Un segundo de arco (") es 1/3600 de un grado. 43 segundos de arco es aproximadamente el tamaño
+                        angular de una moneda vista desde 4 kilómetros de distancia. Parece insignificante.
+                    </p>
+                    <p>
+                        <strong>Pero en astronomía de precisión es ENORME.</strong> Las mediciones del siglo XIX eran
+                        tan exactas que este residuo era indiscutible. Y lo más grave: no había ninguna fuente de error
+                        instrumental que pudiera explicarlo.
+                    </p>
+                </div>
+
+                <h3>La Hipótesis Ad Hoc: El Planeta Vulcano</h3>
+                <p>
+                    Le Verrier aplicó la misma estrategia que le había dado fama con Neptuno. Propuso una
+                    <strong>hipótesis auxiliar</strong>: debe existir un planeta desconocido entre Mercurio y el Sol
+                    (al que llamó <strong>Vulcano</strong>) cuya gravedad causa la precesión extra.
+                </p>
+                <p>
+                    Calculó su órbita predicha y comenzó la búsqueda. Durante décadas, astrónomos de todo el mundo
+                    buscaron a Vulcano:
+                </p>
+                <ul>
+                    <li>Se reportaron varios "avistamientos" durante eclipses solares (cuando el brillo del Sol no
+                        deslumbra).</li>
+                    <li>Todos los avistamientos resultaron ser estrellas de fondo o errores de observación.</li>
+                    <li>Ningún objeto consistente con la masa y órbita predichas fue jamás encontrado.</li>
+                </ul>
+
+                <div class="concept-highlight">
+                    <h3>¿Por Qué Vulcano fue una Hipótesis Ad Hoc "Mala"?</h3>
+                    <p>
+                        A diferencia de Neptuno, Vulcano tenía problemas graves:
+                    </p>
+                    <ul>
+                        <li><strong>Predicción fallida:</strong> Si Vulcano existiera con la masa necesaria para explicar
+                            Mercurio, debería haber sido visible durante tránsitos solares. Nunca apareció de forma
+                            consistente.</li>
+                        <li><strong>Sin contenido empírico nuevo:</strong> La hipótesis solo servía para "salvar las
+                            apariencias" de los 43 segundos. No predecía ningún fenómeno adicional verificable
+                            independientemente.</li>
+                        <li><strong>Búsqueda infructuosa:</strong> A diferencia de Neptuno (encontrado en la primera
+                            noche de búsqueda), Vulcano fue buscado durante más de 50 años sin éxito.</li>
+                    </ul>
+                    <p>
+                        En términos de Lakatos: el programa de investigación newtoniano, en este caso, estaba siendo
+                        <strong>degenerativo</strong>. Se estaba protegiendo dogmáticamente el núcleo duro (las leyes de
+                        Newton) mediante hipótesis auxiliares cada vez más desesperadas.
+                    </p>
+                </div>
+
+                <h3>La Solución de Einstein (1915)</h3>
+                <p>
+                    El problema de Mercurio permaneció sin resolver hasta que Albert Einstein publicó su
+                    <strong>Teoría de la Relatividad General</strong> en 1915. Esta teoría revolucionaria propuso que la
+                    gravedad no es una "fuerza" que actúa a distancia (como pensaba Newton), sino una
+                    <strong>curvatura del espacio-tiempo</strong> causada por la masa.
+                </p>
+                <p>
+                    Cuando Einstein aplicó sus ecuaciones al caso de Mercurio, obtuvo automáticamente (sin introducir
+                    ninguna hipótesis ad hoc) una precesión del perihelio de:
+                    <br>
+                    <strong>43 segundos de arco por siglo de exceso sobre la predicción newtoniana.</strong>
+                </p>
+                <p>
+                    La coincidencia era perfecta. Einstein recordó este momento como uno de los más emocionantes de su
+                    vida. La anomalía que había acosado al newtonianismo durante 56 años se evaporó instantáneamente en
+                    el nuevo paradigma.
+                </p>
+
+                <div class="philosophical-quote">
+                    <blockquote>
+                        <p>
+                            "Durante unos días estuve fuera de mí mismo por la gozosa excitación... La Naturaleza me había
+                            hablado. Fue la experiencia más fuerte de mi vida científica."
+                        </p>
+                        <footer>— Albert Einstein, sobre la resolución del problema de Mercurio (1915)</footer>
+                    </blockquote>
+                </div>
+
+                <h3>Mercurio como Ejemplo Perfecto de Anomalía → Crisis → Revolución</h3>
+                <p>
+                    El caso de Mercurio ilustra perfectamente el esquema kuhniano de las revoluciones científicas:
+                </p>
+                <ol>
+                    <li><strong>Paradigma normal:</strong> La mecánica newtoniana resuelve brillantemente casi todos los
+                        problemas astronómicos (incluido Neptuno).</li>
+                    <li><strong>Aparición de anomalía:</strong> Mercurio no encaja (1859). Inicialmente se trata como un
+                        "enigma" solucionable (Vulcano).</li>
+                    <li><strong>Persistencia de la anomalía:</strong> Pasan décadas y Vulcano nunca aparece. La anomalía
+                        resiste todos los intentos de solución dentro del paradigma.</li>
+                    <li><strong>Crisis:</strong> En las primeras décadas del siglo XX, varios problemas adicionales
+                        (radiación del cuerpo negro, efecto fotoeléctrico, órbitas atómicas) tampoco se pueden resolver
+                        con física clásica. El paradigma entra en crisis.</li>
+                    <li><strong>Revolución:</strong> Einstein propone un nuevo paradigma (Relatividad General). Mercurio
+                        queda explicado sin hipótesis ad hoc. El nuevo paradigma se impone.</li>
+                </ol>
+
+                <div class="concept-highlight">
+                    <h3>¿Por Qué No Tiraron a Newton Inmediatamente?</h3>
+                    <p>
+                        Esto es crucial: <strong>43 segundos de discrepancia no fueron suficientes para derribar 200
+                            años de éxitos newtonianos</strong>. ¿Por qué?
+                    </p>
+                    <ul>
+                        <li>Newton había explicado miles de fenómenos (mareas, cometas, forma de la Tierra, movimientos
+                            planetarios, etc.).</li>
+                        <li>La ciencia es conservadora racionalmente: no abandonas una teoría extraordinariamente exitosa
+                            por UNA anomalía, a menos que tengas una alternativa mejor.</li>
+                        <li>Según Kuhn, se necesita un nuevo paradigma para reemplazar el viejo. No se abandona una
+                            teoría solo porque tiene problemas; solo cuando hay una alternativa superior.</li>
+                    </ul>
+                    <p>
+                        Esta es la diferencia con el falsacionismo ingenuo de Popper: en la práctica, los científicos no
+                        tiran teorías a la basura ante la primera refutación. Primero intentan salvarlas (hipótesis ad
+                        hoc). Solo cuando las anomalías se vuelven intolerables Y existe una alternativa superior, ocurre
+                        la revolución.
+                    </p>
+                </div>
+            </section>
+
+            <div class="graffiti-divider" style="margin: var(--space-xl) 0; text-align: center;">
+                <span
+                    style="font-family: 'Caveat', cursive; font-size: 2.5em; color: var(--color-accent); text-shadow: 2px 2px 4px rgba(0,0,0,0.1);">
+                    ⚡ De Anomalía a Crisis Científica ⚡
+                </span>
+            </div>
+
+            <section class="class-section">
+                <h2>De Anomalía a Crisis Científica</h2>
+                <p>
+                    No toda discrepancia entre teoría y observación desencadena una revolución científica. Entonces,
+                    ¿cuándo exactamente una simple "anomalía" se convierte en una "crisis" que amenaza el paradigma?
+                </p>
+
+                <h3>Factores que Convierten una Anomalía en Crisis</h3>
+
+                <div
+                    style="background: rgba(231, 76, 60, 0.1); padding: 20px; border-radius: 8px; border-left: 4px solid #e74c3c; margin: 20px 0;">
+                    <h4 style="color: #c0392b;">1. Acumulación de Anomalías</h4>
+                    <p>
+                        Una sola anomalía raramente derriba un paradigma. Pero cuando se acumulan varios problemas
+                        persistentes, la confianza en el paradigma se erosiona. En el caso de la física clásica a
+                        principios del siglo XX:
+                    </p>
+                    <ul>
+                        <li>Mercurio (problema gravitacional)</li>
+                        <li>Radiación del cuerpo negro (problema termodinámico)</li>
+                        <li>Efecto fotoeléctrico (problema electromagnético)</li>
+                        <li>Espectros atómicos (problema de estabilidad)</li>
+                        <li>Resultado negativo del experimento de Michelson-Morley (problema del éter)</li>
+                    </ul>
+                    <p>
+                        Ninguno de estos problemas, por sí solo, era fatal. Pero juntos, crearon una sensación de crisis.
+                    </p>
+                </div>
+
+                <div
+                    style="background: rgba(243, 156, 18, 0.1); padding: 20px; border-radius: 8px; border-left: 4px solid #f39c12; margin: 20px 0;">
+                    <h4 style="color: #e67e22;">2. Importancia Fundamental</h4>
+                    <p>
+                        Algunas anomalías atacan aspectos periféricos de una teoría. Otras atacan el corazón mismo del
+                        paradigma. La precesión de Mercurio era especialmente grave porque:
+                    </p>
+                    <ul>
+                        <li>Mercurio es el planeta más cercano al Sol, donde la gravedad es más intensa.</li>
+                        <li>Si Newton fallaba en el caso más extremo accesible, ¿qué tan confiable era realmente?</li>
+                        <li>El éxito con Neptuno había elevado las expectativas. El fracaso con Vulcano era más
+                            humillante.</li>
+                    </ul>
+                </div>
+
+                <div
+                    style="background: rgba(155, 89, 182, 0.1); padding: 20px; border-radius: 8px; border-left: 4px solid #9b59b6; margin: 20px 0;">
+                    <h4 style="color: #8e44ad;">3. Resistencia Prolongada a la Solución</h4>
+                    <p>
+                        Un enigma se espera resolver en semanas, meses, o a lo sumo unos pocos años. Una anomalía
+                        verdadera persiste durante décadas a pesar de los mejores esfuerzos de la comunidad científica.
+                    </p>
+                    <ul>
+                        <li>Urano → Neptuno: resuelto en ~20 años desde la primera detección de la anomalía.</li>
+                        <li>Mercurio → Einstein: sin resolver durante 56 años (1859-1915).</li>
+                    </ul>
+                    <p>
+                        Cuando los científicos más brillantes de varias generaciones fallan en resolver un problema
+                        dentro del paradigma, comienza a sospecharse que el problema está en el paradigma mismo.
+                    </p>
+                </div>
+
+                <div
+                    style="background: rgba(52, 152, 219, 0.1); padding: 20px; border-radius: 8px; border-left: 4px solid #3498db; margin: 20px 0;">
+                    <h4 style="color: #2980b9;">4. Fracaso de las Hipótesis Ad Hoc</h4>
+                    <p>
+                        Como vimos, no todas las hipótesis ad hoc son malas. Neptuno fue una hipótesis ad hoc exitosa.
+                        Pero cuando las hipótesis ad hoc fallan repetidamente (Vulcano), el paradigma pierde credibilidad.
+                    </p>
+                    <p>
+                        Peor aún: cuando se empiezan a multiplicar hipótesis ad hoc sin confirmación independiente
+                        (epiciclos sobre epiciclos), el programa de investigación se vuelve "degenerativo" (Lakatos) y
+                        la comunidad empieza a buscar alternativas.
+                    </p>
+                </div>
+
+                <h3>Señales de que un Paradigma está en Crisis</h3>
+                <p>
+                    Thomas Kuhn identificó varios síntomas típicos de un paradigma en crisis:
+                </p>
+                <ul>
+                    <li><strong>Debates filosóficos intensificados:</strong> Los científicos empiezan a cuestionar los
+                        fundamentos conceptuales de su disciplina, algo que raramente ocurre durante la ciencia normal.
+                    </li>
+                    <li><strong>Proliferación de versiones rivales:</strong> Aparecen múltiples variantes modificadas
+                        del paradigma (diferentes hipótesis ad hoc compitiendo entre sí).</li>
+                    <li><strong>Recurso a la filosofía:</strong> Los científicos vuelven a los textos clásicos
+                        fundacionales y debaten sobre primeros principios.</li>
+                    <li><strong>Disposición a ensayar cualquier cosa:</strong> Se prueban ideas especulativas que en
+                        tiempos normales habrían sido descartadas inmediatamente.</li>
+                    <li><strong>Expresiones de descontento explícito:</strong> Artículos y discursos donde científicos
+                        prominentes expresan que "algo está fundamentalmente mal".</li>
+                </ul>
+
+                <div class="concept-highlight">
+                    <h3>Crisis ≠ Caos</h3>
+                    <p>
+                        Es importante notar que una "crisis científica" no significa que los científicos dejen de hacer
+                        ciencia o que todo se vuelva subjetivo. Durante una crisis:
+                    </p>
+                    <ul>
+                        <li>La ciencia normal continúa en áreas no afectadas por la anomalía.</li>
+                        <li>Los experimentos siguen realizándose con rigor.</li>
+                        <li>Se mantienen los estándares de evidencia.</li>
+                        <li>Lo que cambia es la disposición psicológica a considerar alternativas radicales.</li>
+                    </ul>
+                    <p>
+                        La crisis es, en cierto sentido, el estado mental de la comunidad científica: una mezcla de
+                        inseguridad sobre el paradigma vigente y apertura a nuevas ideas fundamentales.
+                    </p>
+                </div>
+            </section>
+
+            <section class="class-section">
+                <h2>Actividades de Desarrollo</h2>
+                <div class="activity-container">
+                    <div class="question-card">
+                        <h3>1. El Dilema del Científico</h3>
+                        <p>
+                            Imagina que eres un astrónomo newtoniano en 1880. Has dedicado toda tu carrera a la mecánica
+                            celestial y has resuelto docenas de problemas usando las leyes de Newton. Ahora te enfrentas
+                            al problema de Mercurio.
+                        </p>
+                        <p><strong>Pregunta:</strong></p>
+                        <ul>
+                            <li>¿Estarías dispuesto a abandonar las leyes de Newton por una discrepancia de 43 segundos
+                                de arco? ¿Por qué sí o por qué no?</li>
+                            <li>¿En qué punto exacto (qué evidencia adicional) te haría cambiar de opinión?</li>
+                            <li>Reflexiona sobre el balance entre conservadurismo racional y apertura a nuevas ideas en
+                                la ciencia.</li>
+                        </ul>
+                    </div>
+
+                    <div class="question-card">
+                        <h3>2. Comparación Neptuno vs Vulcano</h3>
+                        <p>
+                            Completa la siguiente tabla comparativa y luego responde: ¿qué convierte una hipótesis ad hoc
+                            en "buena" (progresiva) vs "mala" (degenerativa)?
+                        </p>
+                        <table style="width: 100%; border-collapse: collapse; margin: 15px 0;">
+                            <thead>
+                                <tr style="background: var(--color-bg-tertiary);">
+                                    <th style="padding: 10px; border: 1px solid var(--color-border);">Criterio</th>
+                                    <th style="padding: 10px; border: 1px solid var(--color-border);">Neptuno</th>
+                                    <th style="padding: 10px; border: 1px solid var(--color-border);">Vulcano</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td style="padding: 10px; border: 1px solid var(--color-border);">¿Se encontró el
+                                        objeto predicho?</td>
+                                    <td style="padding: 10px; border: 1px solid var(--color-border);"></td>
+                                    <td style="padding: 10px; border: 1px solid var(--color-border);"></td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 10px; border: 1px solid var(--color-border);">¿Predijo hechos
+                                        nuevos verificables?</td>
+                                    <td style="padding: 10px; border: 1px solid var(--color-border);"></td>
+                                    <td style="padding: 10px; border: 1px solid var(--color-border);"></td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 10px; border: 1px solid var(--color-border);">Tiempo de búsqueda
+                                    </td>
+                                    <td style="padding: 10px; border: 1px solid var(--color-border);"></td>
+                                    <td style="padding: 10px; border: 1px solid var(--color-border);"></td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 10px; border: 1px solid var(--color-border);">¿Aumentó el
+                                        contenido empírico?</td>
+                                    <td style="padding: 10px; border: 1px solid var(--color-border);"></td>
+                                    <td style="padding: 10px; border: 1px solid var(--color-border);"></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="question-card">
+                        <h3>3. La Tesis Duhem-Quine en Acción</h3>
+                        <p>
+                            Cuando las observaciones de Mercurio contradecían las predicciones, había múltiples posibles
+                            "culpables":
+                        </p>
+                        <ul>
+                            <li>Las leyes de Newton podrían ser incorrectas</li>
+                            <li>Los cálculos matemáticos podrían tener errores</li>
+                            <li>Las observaciones podrían tener errores sistemáticos</li>
+                            <li>Podría existir un planeta desconocido (Vulcano)</li>
+                            <li>Podría existir masa invisible (polvo interplanetario)</li>
+                        </ul>
+                        <p><strong>Pregunta:</strong> ¿Por qué los científicos eligieron culpar a "planetas
+                            desconocidos" en lugar de a las leyes de Newton? ¿Qué nos dice esto sobre cómo funciona
+                            realmente la ciencia vs. cómo dice Popper que debería funcionar?</p>
+                    </div>
+
+                    <div class="question-card">
+                        <h3>4. Ensayo Breve: De Enigma a Anomalía</h3>
+                        <p>
+                            Escribe un texto de 200-300 palabras explicando:
+                        </p>
+                        <ul>
+                            <li>¿Por qué el problema de Urano fue tratado como un "enigma" mientras que el de Mercurio se
+                                convirtió en una "anomalía"?</li>
+                            <li>¿Qué factores determinan cuándo un problema pasa de ser un desafío técnico a ser una
+                                amenaza al paradigma?</li>
+                            <li>¿Crees que este proceso es racional o tiene elementos subjetivos/sociológicos?</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section class="class-section">
+                <h2>Conceptos Clave</h2>
+                <div class="concept-highlight">
+                    <ul>
+                        <li><strong>Tesis Duhem-Quine:</strong> Imposibilidad de falsar una hipótesis aislada. Toda
+                            contrastación involucra un conjunto de hipótesis (principal + auxiliares + condiciones
+                            iniciales). Si la predicción falla, la lógica no nos dice cuál elemento del conjunto está
+                            equivocado.</li>
+                        <li><strong>Hipótesis Auxiliar:</strong> Suposición adicional necesaria para derivar predicciones
+                            contrastables a partir de una teoría (ej: "el telescopio funciona correctamente", "no hay
+                            polvo interplanetario significativo", "los cálculos matemáticos son correctos").</li>
+                        <li><strong>Hipótesis Ad Hoc:</strong> Modificación introducida en una teoría específicamente
+                            para salvarla de una refutación potencial. Su valor depende de si aumenta o no el contenido
+                            empírico de la teoría.</li>
+                        <li><strong>Hipótesis Ad Hoc Progresiva (Buena):</strong> Aquella que predice hechos nuevos
+                            verificables independientemente. Ejemplo: la hipótesis de Neptuno predecía la existencia de
+                            un objeto observable en coordenadas específicas.</li>
+                        <li><strong>Hipótesis Ad Hoc Degenerativa (Mala):</strong> Aquella que solo acomoda los datos ya
+                            conocidos sin predecir nada nuevo. Ejemplo: los epiciclos adicionales de Ptolomeo, o la
+                            hipótesis de Vulcano que nunca produjo observaciones confirmables.</li>
+                        <li><strong>Programa de Investigación Progresivo (Lakatos):</strong> Secuencia de teorías donde
+                            cada modificación lleva a descubrir nuevos hechos. La teoría crece en contenido empírico y
+                            poder predictivo.</li>
+                        <li><strong>Programa de Investigación Degenerativo (Lakatos):</strong> Secuencia donde las
+                            modificaciones solo sirven para acomodar anomalías conocidas. La teoría se vuelve un sistema
+                            de parches sin crecimiento genuino.</li>
+                        <li><strong>Enigma (Puzzle - Kuhn):</strong> Problema que la comunidad científica confía poder
+                            resolver dentro del paradigma vigente usando las herramientas conceptuales y experimentales
+                            disponibles. Es un desafío a la habilidad del investigador, no al paradigma.</li>
+                        <li><strong>Anomalía (Kuhn):</strong> Problema persistente que resiste todos los intentos de
+                            solución dentro del paradigma y que ataca aspectos fundamentales del mismo. Puede
+                            eventualmente provocar una crisis.</li>
+                        <li><strong>Crisis Científica (Kuhn):</strong> Estado de un paradigma cuando la acumulación de
+                            anomalías persistentes genera inseguridad generalizada en la comunidad científica sobre la
+                            viabilidad de los fundamentos del paradigma.</li>
+                        <li><strong>Precesión del Perihelio:</strong> Avance lento de la orientación de la órbita
+                            elíptica de un planeta. En el caso de Mercurio, había un exceso de 43 segundos de arco por
+                            siglo no explicable por la teoría newtoniana.</li>
+                        <li><strong>Contenido Empírico:</strong> Conjunto de predicciones observables que una teoría hace
+                            sobre el mundo. Una teoría con mayor contenido empírico es más informativa y más fácilmente
+                            falsable (Popper).</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="class-section"
+                style="background: var(--color-bg-tertiary); padding: var(--space-lg); border-radius: 8px;">
+                <h2>Próxima Clase</h2>
+                <h3 style="color: var(--color-accent);">Clase 7: Newton y la Gran Síntesis</h3>
+                <p>
+                    Finalmente, veremos cómo Isaac Newton tomó las piezas del rompecabezas (Copérnico, Galileo, Kepler)
+                    y las unió en la teoría científica más exitosa de la historia: la Gravitación Universal. Un
+                    paradigma que reinaría por más de 200 años.
+                </p>
+            </section>
+
+            <nav class="class-navigation">
+                <a href="clase-05.html" class="nav-button">← Clase Anterior</a>
+                <a href="index.html" class="nav-button nav-button-index">📚 Índice de Unidad</a>
+                <a href="clase-07.html" class="nav-button deshabilitado">Siguiente Clase →</a>
+            </nav>
+        </article>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Filosofía 6to</h4>
+                    <p>Unidad 1: Teorías Científicas - Clase 6 de 10</p>
+                    <p>Profesor: Javier Pereyra</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Filosofía 6to. Material educativo.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../../assets/js/dark-mode.js"></script>
+</body>
+
+</html>

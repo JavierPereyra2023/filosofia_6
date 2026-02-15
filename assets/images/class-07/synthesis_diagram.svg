@@ -1,0 +1,214 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1020 750" width="1020" height="750">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&amp;display=swap');
+
+      .main-title {
+        font-family: 'Merriweather', serif;
+        font-size: 32px;
+        font-weight: 700;
+        fill: #1a1a2e;
+      }
+      .scientist-name {
+        font-family: 'Merriweather', serif;
+        font-size: 24px;
+        font-weight: 700;
+      }
+      .contribution {
+        font-family: 'Merriweather', serif;
+        font-size: 15px;
+        fill: #2d3436;
+      }
+      .synthesis-text {
+        font-family: 'Merriweather', serif;
+        font-size: 18px;
+        font-weight: 700;
+        fill: #d63031;
+      }
+      .arrow-label {
+        font-family: 'Merriweather', serif;
+        font-size: 14px;
+        font-weight: 700;
+        fill: #0984e3;
+      }
+
+      @keyframes glow {
+        0%, 100% { filter: drop-shadow(0 0 5px rgba(214, 48, 49, 0.5)); }
+        50% { filter: drop-shadow(0 0 15px rgba(214, 48, 49, 0.9)); }
+      }
+
+      .newton-box {
+        animation: glow 3s ease-in-out infinite;
+      }
+    </style>
+
+    <marker id="arrow-blue" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <polygon points="0 0, 12 6, 0 12" fill="#0984e3" />
+    </marker>
+    <marker id="arrow-red" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <polygon points="0 0, 12 6, 0 12" fill="#d63031" />
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1020" height="750" fill="#f8f9fa"/>
+
+  <!-- Title -->
+  <text x="450" y="50" text-anchor="middle" class="main-title">
+    La Gran Síntesis Newtoniana
+  </text>
+  <text x="450" y="80" text-anchor="middle" style="font-family: 'Merriweather', serif; font-size: 18px; fill: #636e72; font-style: italic;">
+    Unificación de la Física Terrestre y Celeste
+  </text>
+
+  <!-- GALILEO BOX -->
+  <g id="galileo">
+    <rect x="50" y="140" width="280" height="200" fill="#e8f5e9" stroke="#27ae60" stroke-width="3" rx="12"/>
+
+    <text x="190" y="175" text-anchor="middle" class="scientist-name" fill="#27ae60">
+      GALILEO GALILEI
+    </text>
+    <text x="190" y="200" text-anchor="middle" style="font-family: 'Merriweather', serif; font-size: 13px; fill: #636e72; font-style: italic;">
+      (1564-1642)
+    </text>
+
+    <text x="190" y="235" text-anchor="middle" class="contribution" font-weight="700">
+      Física Terrestre:
+    </text>
+
+    <text x="190" y="260" text-anchor="middle" class="contribution">
+      • Principio de Inercia
+    </text>
+    <text x="190" y="282" text-anchor="middle" class="contribution">
+      • Caída libre: d = ½gt²
+    </text>
+    <text x="190" y="304" text-anchor="middle" class="contribution">
+      • Movimiento uniformemente
+    </text>
+    <text x="190" y="324" text-anchor="middle" class="contribution">
+      acelerado
+    </text>
+  </g>
+
+  <!-- KEPLER BOX -->
+  <g id="kepler">
+    <rect x="50" y="380" width="280" height="240" fill="#fff3e0" stroke="#e67e22" stroke-width="3" rx="12"/>
+
+    <text x="190" y="415" text-anchor="middle" class="scientist-name" fill="#e67e22">
+      JOHANNES KEPLER
+    </text>
+    <text x="190" y="440" text-anchor="middle" style="font-family: 'Merriweather', serif; font-size: 13px; fill: #636e72; font-style: italic;">
+      (1571-1630)
+    </text>
+
+    <text x="190" y="475" text-anchor="middle" class="contribution" font-weight="700">
+      Física Celeste (3 Leyes):
+    </text>
+
+    <text x="190" y="500" text-anchor="middle" class="contribution">
+      1. Órbitas elípticas
+    </text>
+    <text x="190" y="522" text-anchor="middle" class="contribution">
+      2. Áreas iguales en tiempos
+    </text>
+    <text x="190" y="544" text-anchor="middle" class="contribution">
+      iguales
+    </text>
+    <text x="190" y="566" text-anchor="middle" class="contribution">
+      3. T² ∝ r³
+    </text>
+    <text x="190" y="595" text-anchor="middle" class="contribution" font-size="13px" font-style="italic">
+      (Leyes empíricas sin explicación)
+    </text>
+  </g>
+
+  <!-- ARROWS TO NEWTON -->
+  <!-- Arrow from Galileo -->
+  <path d="M 340 240 L 540 300" stroke="#0984e3" stroke-width="5" fill="none" marker-end="url(#arrow-blue)"/>
+  <text x="420" y="240" text-anchor="middle" class="arrow-label">
+    Mecánica +
+  </text>
+  <text x="420" y="258" text-anchor="middle" class="arrow-label">
+    Inercia
+  </text>
+
+  <!-- Arrow from Kepler -->
+  <path d="M 340 500 L 540 400" stroke="#0984e3" stroke-width="5" fill="none" marker-end="url(#arrow-blue)"/>
+  <text x="420" y="478" text-anchor="middle" class="arrow-label">
+    Leyes
+  </text>
+  <text x="420" y="496" text-anchor="middle" class="arrow-label">
+    Planetarias
+  </text>
+
+  <!-- NEWTON BOX (Central) -->
+  <g id="newton" class="newton-box">
+    <rect x="550" y="250" width="300" height="200" fill="#ffe6e6" stroke="#d63031" stroke-width="4" rx="12"/>
+
+    <text x="700" y="285" text-anchor="middle" class="scientist-name" fill="#d63031" font-size="28px">
+      ISAAC NEWTON
+    </text>
+    <text x="700" y="310" text-anchor="middle" style="font-family: 'Merriweather', serif; font-size: 14px; fill: #636e72; font-style: italic;">
+      (1643-1727)
+    </text>
+
+    <rect x="570" y="325" width="260" height="45" fill="white" stroke="#d63031" stroke-width="2" rx="6"/>
+    <text x="700" y="345" text-anchor="middle" class="synthesis-text" font-size="16px">
+      Gravitación Universal
+    </text>
+    <text x="700" y="365" text-anchor="middle" style="font-family: 'Times New Roman', serif; font-size: 20px; font-style: italic; fill: #d63031;">
+      F = G·(m₁·m₂)/r²
+    </text>
+
+    <text x="700" y="395" text-anchor="middle" class="contribution" font-size="14px">
+      + 3 Leyes del Movimiento
+    </text>
+
+    <rect x="570" y="408" width="260" height="30" fill="#d5f4e6" rx="5"/>
+    <text x="700" y="428" text-anchor="middle" class="synthesis-text" fill="#00b894" font-size="15px">
+      SÍNTESIS COMPLETA
+    </text>
+  </g>
+
+  <!-- ARROWS FROM NEWTON (Implications) -->
+  <!-- Arrow to unification -->
+  <path d="M 700 460 L 700 530" stroke="#d63031" stroke-width="5" fill="none" marker-end="url(#arrow-red)"/>
+
+  <!-- RESULT BOX -->
+  <g id="result">
+    <rect x="400" y="540" width="610" height="130" fill="#f0e6ff" stroke="#6c5ce7" stroke-width="3" rx="12"/>
+
+    <text x="705" y="570" text-anchor="middle" class="scientist-name" fill="#6c5ce7" font-size="22px">
+      UNIFICACIÓN CIELO-TIERRA
+    </text>
+
+    <text x="705" y="600" text-anchor="middle" class="contribution" font-size="15px">
+      ✓ Las MISMAS leyes rigen para la manzana y la Luna
+    </text>
+    <text x="705" y="625" text-anchor="middle" class="contribution" font-size="15px">
+      ✓ Se deriva matemáticamente T² ∝ r³ de Kepler
+    </text>
+    <text x="705" y="650" text-anchor="middle" class="contribution" font-size="15px" font-weight="700">
+      ✓ Una sola física para TODO el universo
+    </text>
+  </g>
+
+  <!-- Bottom note -->
+  <rect x="50" y="630" width="330" height="110" fill="white" stroke="#95a5a6" stroke-width="2" rx="8"/>
+  <text x="215" y="655" text-anchor="middle" class="contribution" font-size="14px" font-weight="700" fill="#2c3e50">
+    La Revolución Conceptual:
+  </text>
+  <text x="215" y="677" text-anchor="middle" class="contribution" font-size="13px">
+    Antes: Dos físicas separadas
+  </text>
+  <text x="215" y="695" text-anchor="middle" class="contribution" font-size="13px">
+    (Aristóteles)
+  </text>
+  <text x="215" y="718" text-anchor="middle" class="contribution" font-size="13px" font-weight="700" fill="#d63031">
+    Después: Una sola física universal
+  </text>
+  <text x="215" y="735" text-anchor="middle" class="contribution" font-size="13px" font-weight="700" fill="#d63031">
+    (Newton)
+  </text>
+
+</svg>

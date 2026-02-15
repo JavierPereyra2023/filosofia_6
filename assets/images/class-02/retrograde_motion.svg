@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" width="530" height="230" xmlns="http://www.w3.org/2000/svg">
+  <g fill="none" stroke="#000">
+    <circle cx="107.576" cy="111.109" r="7.062" fill="#fff200" stroke-width="1.1"/>
+    <circle cx="107.615" cy="112.12" r="94.366" stroke-width="2.6"/>
+    <circle cx="107.479" cy="112.12" r="62.375" stroke-width="2.6"/>
+  </g>
+  <g fill="none" stroke="#00f">
+    <path d="M105.979,174.838l410.118,29.994"/>
+    <path d="M107.07,48.312l412.3-16.361"/>
+    <path d="M149.609,157.386L521.552,90.85"/>
+    <path d="M150.7,66.854l369.216,79.625"/>
+    <path d="M169.243,113.21l351.764,5.999"/>
+  </g>
+  <path fill="#080080" d="M465.625,0.063c21.753,78.386,18.418,157.453-9.625,232.375h11.063 c27.275-74.938,30.634-154.229,9.719-232.375H465.625z"/>
+  <g fill="#e8d484" stroke="#000" stroke-width="1.4175">
+    <g fill="#84c2ff">
+      <circle r="4.4" cx="107.183" cy="173.793"/>
+      <circle r="4.4" cx="149.932" cy="157.152"/>
+      <circle r="4.4" cx="169.599" cy="113.575"/>
+      <circle r="4.4" cx="149.161" cy="66.913"/>
+      <circle r="4.4" cx="107.126" cy="48.788"/>
+    </g>
+    <circle r="4.4" cx="173.455" cy="179.519"/>
+    <circle r="4.4" cx="194.28" cy="149.824"/>
+    <circle r="4.4" cx="202.378" cy="113.575"/>
+    <circle r="4.4" cx="194.765" cy="75.012"/>
+    <circle r="4.4" cx="174.998" cy="45.317"/>
+    <ellipse rx="3.81" ry="6.74" cx="472.195" cy="33.72" transform="rotate(-14.4 472.195 33.72)"/>
+    <ellipse rx="3.81" ry="6.74" cx="479.967" cy="98.076" transform="rotate(-3.65 479.967 98.076)"/>
+    <ellipse rx="3.81" ry="6.74" cx="479.830" cy="118.392"/>
+    <ellipse rx="3.81" ry="6.74" cx="479.287" cy="138.16" transform="rotate(3.6 479.287 138.16)"/>
+    <ellipse rx="3.81" ry="6.74" cx="469.125" cy="201.56" transform="rotate(14.4 469.125 201.56)"/>
+  </g>
+  <g font-family="DejaVu Sans" font-size="16">
+    <text x="85.15" y="118.2" font-size="20">S</text>
+    <text x="96.0825" y="168.2881">T1</text>
+    <text x="127.0859" y="148.8203">T2</text>
+    <text x="142.1255" y="117.9697">T3</text>
+    <text x="126.7002" y="85.9619">T4</text>
+    <text x="97.3921" y="67.8379">T5</text>
+    <text x="168.7344" y="200.8818">P1</text>
+    <text x="196.9551" y="166.5596">P2</text>
+    <text x="208.0684" y="131.4668">P3</text>
+    <text x="202.6694" y="72.4648">P4</text>
+    <text x="180.3022" y="39.6855">P5</text>
+    <text x="490.5" y="26.5">A5</text>
+    <text x="492.5703" y="87.1191">A2</text>
+    <text x="493.3418" y="116.042">A3</text>
+    <text x="491.7988" y="160.7754">A4</text>
+    <text x="481.9395" y="220.9346">A1</text>
+  </g>
+</svg>

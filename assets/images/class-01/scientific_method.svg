@@ -1,0 +1,204 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 900" width="800" height="900">
+  <defs>
+    <!-- Gradientes para los círculos -->
+    <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#667eea;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#764ba2;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="grad2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f093fb;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#f5576c;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="grad3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#4facfe;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#00f2fe;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="grad4" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#43e97b;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#38f9d7;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="grad5" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#fa709a;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#fee140;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="grad6" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#30cfd0;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#330867;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="grad7" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#a8edea;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#fed6e3;stop-opacity:1" />
+    </linearGradient>
+
+    <!-- Animación de pulso -->
+    <style>
+      @keyframes pulse {
+        0%, 100% { transform: scale(1); opacity: 1; }
+        50% { transform: scale(1.05); opacity: 0.9; }
+      }
+      .step-circle {
+        animation: pulse 3s ease-in-out infinite;
+        cursor: pointer;
+        transition: all 0.3s ease;
+      }
+      .step-circle:hover {
+        filter: brightness(1.2);
+      }
+      .arrow {
+        fill: none;
+        stroke: #64748b;
+        opacity: 0.7;
+      }
+      .step-text {
+        font-family: 'Arial', sans-serif;
+        font-weight: bold;
+        fill: white;
+        text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+      }
+      .step-number {
+        font-family: 'Arial', sans-serif;
+        font-size: 36px;
+        font-weight: bold;
+        fill: white;
+        text-shadow: 2px 2px 4px rgba(0,0,0,0.4);
+      }
+      .step-description {
+        font-family: 'Arial', sans-serif;
+        font-size: 14px;
+        font-weight: 600;
+        fill: #1e293b;
+        text-anchor: middle;
+      }
+    </style>
+  </defs>
+
+  <!-- Fondo blanco -->
+  <rect width="800" height="900" fill="#ffffff"/>
+
+  <!-- Título -->
+  <text x="400" y="45" text-anchor="middle" style="font-family: Arial; font-size: 32px; font-weight: bold; fill: #1e293b;">
+    Los 7 Pasos del Método Científico
+  </text>
+
+  <!-- Flechas conectoras -->
+  <!-- Paso 1 a 2 -->
+  <path d="M 400 160 L 400 215" class="arrow" stroke-width="4" marker-end="url(#arrowhead)"/>
+
+  <!-- Paso 2 a 3 -->
+  <path d="M 400 290 L 400 345" class="arrow" stroke-width="4" marker-end="url(#arrowhead)"/>
+
+  <!-- Paso 3 a 4 -->
+  <path d="M 400 420 L 400 475" class="arrow" stroke-width="4" marker-end="url(#arrowhead)"/>
+
+  <!-- Paso 4 a 5 -->
+  <path d="M 400 550 L 400 605" class="arrow" stroke-width="4" marker-end="url(#arrowhead)"/>
+
+  <!-- Paso 5 a 6 -->
+  <path d="M 400 680 L 400 735" class="arrow" stroke-width="4" marker-end="url(#arrowhead)"/>
+
+  <!-- Paso 6 a 7 -->
+  <path d="M 350 785 L 280 825" class="arrow" stroke-width="4" marker-end="url(#arrowhead)"/>
+
+  <!-- Paso 7 de vuelta a 1 (ciclo) -->
+  <path d="M 180 825 Q 50 450 180 125" class="arrow" stroke-width="4" stroke-dasharray="8,6" marker-end="url(#arrowhead)"/>
+
+  <!-- Marcador de flecha -->
+  <defs>
+    <marker id="arrowhead" markerWidth="12" markerHeight="12" refX="10" refY="4" orient="auto">
+      <polygon points="0 0, 12 4, 0 8" fill="#64748b" />
+    </marker>
+  </defs>
+
+  <!-- PASO 1: Observación -->
+  <g class="step-circle" style="animation-delay: 0s;">
+    <circle cx="400" cy="105" r="55" fill="url(#grad1)" stroke="#fff" stroke-width="4"/>
+    <text x="400" y="95" text-anchor="middle" class="step-number">1</text>
+    <text x="400" y="120" text-anchor="middle" class="step-text" style="font-size: 17px;">Observación</text>
+  </g>
+  <text x="400" y="180" class="step-description">Instrumentos de medición / Datos</text>
+
+  <!-- PASO 2: Identificar Problema -->
+  <g class="step-circle" style="animation-delay: 0.4s;">
+    <circle cx="400" cy="235" r="55" fill="url(#grad2)" stroke="#fff" stroke-width="4"/>
+    <text x="400" y="225" text-anchor="middle" class="step-number">2</text>
+    <text x="400" y="250" text-anchor="middle" class="step-text" style="font-size: 17px;">Problema</text>
+  </g>
+  <text x="400" y="310" class="step-description">Plantear una pregunta</text>
+
+  <!-- PASO 3: Hipótesis -->
+  <g class="step-circle" style="animation-delay: 0.8s;">
+    <circle cx="400" cy="365" r="55" fill="url(#grad3)" stroke="#fff" stroke-width="4"/>
+    <text x="400" y="355" text-anchor="middle" class="step-number">3</text>
+    <text x="400" y="380" text-anchor="middle" class="step-text" style="font-size: 17px;">Hipótesis</text>
+  </g>
+  <text x="400" y="440" class="step-description">Proposición "verdadera" o "falsa"</text>
+
+  <!-- PASO 4: Experimentación -->
+  <g class="step-circle" style="animation-delay: 1.2s;">
+    <circle cx="400" cy="495" r="55" fill="url(#grad4)" stroke="#fff" stroke-width="4"/>
+    <text x="400" y="485" text-anchor="middle" class="step-number">4</text>
+    <text x="400" y="510" text-anchor="middle" class="step-text" style="font-size: 16px;">Experimentar</text>
+  </g>
+  <text x="400" y="570" class="step-description">Someter a prueba</text>
+
+  <!-- PASO 5: Resultados -->
+  <g class="step-circle" style="animation-delay: 1.6s;">
+    <circle cx="400" cy="625" r="55" fill="url(#grad5)" stroke="#fff" stroke-width="4"/>
+    <text x="400" y="615" text-anchor="middle" class="step-number">5</text>
+    <text x="400" y="640" text-anchor="middle" class="step-text" style="font-size: 17px;">Resultados</text>
+  </g>
+  <text x="400" y="700" class="step-description">Registrar consecuencias</text>
+
+  <!-- PASO 6: Confirmar/Refutar -->
+  <g class="step-circle" style="animation-delay: 2.0s;">
+    <circle cx="400" cy="755" r="55" fill="url(#grad6)" stroke="#fff" stroke-width="4"/>
+    <text x="400" y="745" text-anchor="middle" class="step-number">6</text>
+    <text x="400" y="770" text-anchor="middle" class="step-text" style="font-size: 15px;">Confirmar</text>
+  </g>
+  <text x="400" y="830" class="step-description">¿Apoyan o contradicen?</text>
+
+  <!-- PASO 7: Comunicar -->
+  <g class="step-circle" style="animation-delay: 2.4s;">
+    <circle cx="230" cy="855" r="55" fill="url(#grad7)" stroke="#fff" stroke-width="4"/>
+    <text x="230" y="845" text-anchor="middle" class="step-number">7</text>
+    <text x="230" y="870" text-anchor="middle" class="step-text" style="font-size: 17px;">Comunicar</text>
+  </g>
+  <text x="230" y="890" text-anchor="middle" class="step-description" style="font-size: 12px; transform: translateY(-5px);">
+    Compartir con comunidad
+  </text>
+
+  <!-- Etiqueta del ciclo -->
+  <text x="80" y="470" class="step-description" style="font-size: 14px; fill: #475569; font-style: italic; font-weight: bold;">
+    El ciclo
+  </text>
+  <text x="80" y="492" class="step-description" style="font-size: 14px; fill: #475569; font-style: italic; font-weight: bold;">
+    continúa...
+  </text>
+
+  <!-- Ejemplo: Ptolomeo -->
+  <g opacity="1">
+    <rect x="540" y="85" width="240" height="310" rx="10" fill="#f1f5f9" stroke="#94a3b8" stroke-width="3"/>
+    <text x="660" y="120" text-anchor="middle" style="font-family: Arial; font-size: 18px; font-weight: bold; fill: #1e293b;">
+      Ejemplo: Ptolomeo
+    </text>
+
+    <text x="560" y="155" style="font-family: Arial; font-size: 13px; font-weight: 600; fill: #334155;">
+      <tspan x="560" dy="0">1. Observó posiciones</tspan>
+      <tspan x="570" dy="18">planetarias años</tspan>
+
+      <tspan x="560" dy="30">2. ¿Cómo predecir</tspan>
+      <tspan x="570" dy="18">posiciones futuras?</tspan>
+
+      <tspan x="560" dy="30">3. Epiciclos y</tspan>
+      <tspan x="570" dy="18">deferentes</tspan>
+
+      <tspan x="560" dy="30">4. Cálculos matemáticos</tspan>
+
+      <tspan x="560" dy="26">5. Predicciones precisas</tspan>
+
+      <tspan x="560" dy="26">6. Modelo confirmado</tspan>
+
+      <tspan x="560" dy="26">7. Escribió el Almagesto</tspan>
+    </text>
+  </g>
+</svg>

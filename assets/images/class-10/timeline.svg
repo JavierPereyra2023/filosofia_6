@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="800" height="300" viewBox="0 0 800 300" xmlns="http://www.w3.org/2000/svg">
+    <styles>
+        .timeline-line { stroke: #00f2fe; stroke-width: 6; stroke-linecap: round; }
+        .node-circle { fill: #000; stroke: #00f2fe; stroke-width: 4; cursor: pointer; transition: all 0.3s; r: 12; }
+        .node-circle:hover { fill: #00f2fe; stroke: #fff; r: 16; }
+        .year-label { font-family: 'Segoe UI', sans-serif; font-size: 18px; fill: #00f2fe; font-weight: bold; text-anchor: middle; }
+        .title-label { font-family: 'Segoe UI', sans-serif; font-size: 18px; fill: #00f2fe; font-weight: bold; text-anchor: middle; opacity: 0; }
+        
+        /* Animations */
+        @keyframes drawLine { from { stroke-dashoffset: 800; } to { stroke-dashoffset: 0; } }
+        /* Sequential appearance of nodes */
+        @keyframes popIn { 
+            0% { transform: scale(0); opacity: 0; } 
+            70% { transform: scale(1.2); opacity: 1; }
+            100% { transform: scale(1); opacity: 1; }
+        }
+        
+        @keyframes slideUp { from { transform: translateY(20px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
+
+        .line-anim { stroke-dasharray: 800; stroke-dashoffset: 800; animation: drawLine 2s ease-out forwards; }
+        
+        /* Delays for Nodes */
+        .node-1 { animation: popIn 0.5s ease-out forwards 0.5s; transform-origin: 100px 150px; }
+        .node-2 { animation: popIn 0.5s ease-out forwards 1.0s; transform-origin: 250px 150px; }
+        .node-3 { animation: popIn 0.5s ease-out forwards 1.5s; transform-origin: 400px 150px; }
+        .node-4 { animation: popIn 0.5s ease-out forwards 2.0s; transform-origin: 550px 150px; }
+        .node-5 { animation: popIn 0.5s ease-out forwards 2.5s; transform-origin: 700px 150px; }
+
+        /* Delays for Titles to Fade In */
+        .title-1 { animation: slideUp 0.5s forwards 0.7s; }
+        .title-2 { animation: slideUp 0.5s forwards 1.2s; }
+        .title-3 { animation: slideUp 0.5s forwards 1.7s; }
+        .title-4 { animation: slideUp 0.5s forwards 2.2s; }
+        .title-5 { animation: slideUp 0.5s forwards 2.7s; }
+
+    </styles>
+
+    <!-- Background -->
+    <rect width="100%" height="100%" fill="#fff" opacity="0" />
+
+    <!-- Timeline Bar -->
+    <line x1="50" y1="150" x2="750" y2="150" class="timeline-line line-anim" />
+
+    <!-- Node 1: Copernicus -->
+    <g>
+        <circle cx="100" cy="150" class="node-circle node-1" />
+        <text x="100" y="190" class="year-label title-1">1543</text>
+        <text x="100" y="125" class="title-label title-1">Copérnico</text>
+        <text x="100" y="105" class="title-label title-1" style="font-size:14px; fill:#00f2fe">De Revolutionibus</text>
+    </g>
+
+    <!-- Node 2: Tycho/Kepler -->
+    <g>
+        <circle cx="250" cy="150" class="node-circle node-2" />
+        <text x="250" y="190" class="year-label title-2">1609</text>
+        <text x="250" y="125" class="title-label title-2">Kepler</text>
+        <text x="250" y="105" class="title-label title-2" style="font-size:14px; fill:#00f2fe">Órbitas Elípticas</text>
+    </g>
+
+    <!-- Node 3: Galileo -->
+    <g>
+        <circle cx="400" cy="150" class="node-circle node-3" />
+        <text x="400" y="190" class="year-label title-3">1610</text>
+        <text x="400" y="125" class="title-label title-3">Galileo</text>
+        <text x="400" y="105" class="title-label title-3" style="font-size:14px; fill:#00f2fe">El Telescopio</text>
+    </g>
+
+    <!-- Node 4: Newton -->
+    <g>
+        <circle cx="550" cy="150" class="node-circle node-4" />
+        <text x="550" y="190" class="year-label title-4">1687</text>
+        <text x="550" y="125" class="title-label title-4">Newton</text>
+        <text x="550" y="105" class="title-label title-4" style="font-size:14px; fill:#00f2fe">Principia Mathematica</text>
+    </g>
+
+    <!-- Node 5: Einstein (Mentioned in outliers, optional/closure) -->
+    <g>
+        <circle cx="700" cy="150" class="node-circle node-5" style="stroke:#ff4757; fill: #000;" />
+        <text x="700" y="190" class="year-label title-5" style="fill:#ff4757;">1905</text>
+        <text x="700" y="130" class="title-label title-5" style="fill:#ff4757; font-size: 20px;">EINSTEIN</text>
+        <text x="700" y="90" class="title-label title-5" style="font-size:12px; fill:#ff4757; font-weight: 800; letter-spacing: 1px; filter: drop-shadow(0 0 5px #ff4757);">NUEVO</text>
+        <text x="700" y="105" class="title-label title-5" style="font-size:12px; fill:#ff4757; font-weight: 800; letter-spacing: 1px; filter: drop-shadow(0 0 5px #ff4757);">PARADIGMA</text>
+    </g>
+
+</svg>

@@ -1,0 +1,939 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clase 7: Newton y la Gran Síntesis | Filosofía 6to</title>
+    <link rel="stylesheet" href="../../assets/css/variables.css">
+    <link rel="stylesheet" href="../../assets/css/reset.css">
+    <link rel="stylesheet" href="../../assets/css/base.css">
+    <link rel="stylesheet" href="../../assets/css/typography.css">
+    <link rel="stylesheet" href="../../assets/css/layout.css">
+    <link rel="stylesheet" href="../../assets/css/navigation.css">
+    <link rel="stylesheet" href="../../assets/css/components.css">
+    <link rel="stylesheet" href="../../assets/css/unit-page.css">
+    <link rel="stylesheet" href="../../assets/css/book-layout.css">
+
+    <style>
+        .class-container::before {
+            content: '    F = m · a\A    F = G · (m1·m2)/r²';
+            position: fixed;
+            top: 20%;
+            right: 5%;
+            font-family: 'Caveat', 'Comic Sans MS', cursive;
+            font-size: 28px;
+            font-weight: 700;
+            white-space: pre;
+            color: rgba(255, 255, 255, 0.35);
+            transform: rotate(-3deg);
+        }
+
+        .class-container::after {
+            content: '    Cielo y Tierra\A    Una sola física';
+            position: fixed;
+            bottom: 20%;
+            left: 5%;
+            font-family: 'Caveat', 'Comic Sans MS', cursive;
+            font-size: 26px;
+            font-weight: 700;
+            white-space: pre;
+            color: rgba(255, 255, 255, 0.32);
+            transform: rotate(5deg);
+        }
+
+        @media (max-width: 1024px) {
+
+            .class-container::before,
+            .class-container::after {
+                position: relative;
+                transform: none;
+                display: block;
+                margin: 20px 0;
+                width: 100%;
+                text-align: center;
+            }
+
+            .class-container::before {
+                content: 'Principia Mathematica: La unión de las leyes universales';
+            }
+
+            .class-container::after {
+                content: 'Gravedad Universal: La fuerza que mueve todo';
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="main-nav">
+        <div class="nav-container">
+            <div class="nav-left">
+                <a href="index.html" class="nav-back-button" title="Volver al índice de la unidad">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M15 19l-7-7 7-7" />
+                    </svg>
+                    <span>Unidad 1</span>
+                </a>
+                <a href="../../home.html" class="nav-brand">Filosofía 6to</a>
+            </div>
+            <div class="nav-controls">
+                <button id="dark-mode-toggle" class="dark-mode-toggle" aria-label="Cambiar tema">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="class-progress">
+        <div class="container">
+            <div class="progress-info">
+                <span class="progress-label">Unidad 1: Teorías Científicas</span>
+                <span class="progress-count">Clase 7 de 10</span>
+            </div>
+            <div class="progress-bar">
+                <div class="progress-fill" style="width: 70%"></div>
+            </div>
+        </div>
+    </div>
+
+    <main class="class-container">
+        <article class="class-content">
+            <header class="class-header">
+                <div class="class-badge">Clase 7</div>
+                <h1 class="class-title">Newton: La Gran Síntesis</h1>
+                <p class="class-subtitle">Cómo una manzana y la Luna explicaron el universo entero.</p>
+            </header>
+
+            <!-- 1. ¿QUIÉN FUE ISAAC NEWTON? -->
+            <section class="class-section">
+                <div class="section-label">Biografía</div>
+                <h2>¿Quién Fue Isaac Newton?</h2>
+                <p>
+                    <strong>Isaac Newton (1643-1727)</strong> nació el día de Navidad de 1642 (calendario juliano) en
+                    Woolsthorpe, Inglaterra, el mismo año en que murió Galileo. Fue un niño prematuro y enfermizo que
+                    creció sin conocer a su padre. A pesar de un inicio difícil, llegó a la Universidad de Cambridge
+                    donde su genio matemático y científico comenzó a brillar.
+                </p>
+                <p>
+                    Durante los años 1665-1666, conocidos como su <strong>annus mirabilis</strong> (año milagroso),
+                    Newton tuvo que refugiarse en su casa de campo debido a la peste que azotaba Londres. En ese período
+                    de aislamiento, a los 23 años, desarrolló las bases de:
+                </p>
+                <ul>
+                    <li>El <strong>cálculo diferencial e integral</strong> (que llamó "método de fluxiones")</li>
+                    <li>La <strong>teoría de la gravitación universal</strong></li>
+                    <li>Sus estudios sobre la <strong>naturaleza de la luz y los colores</strong></li>
+                </ul>
+                <p>
+                    Sin embargo, Newton era extremadamente reservado. Publicó su obra maestra <em>Philosophiæ Naturalis
+                    Principia Mathematica</em> (Principios Matemáticos de la Filosofía Natural) recién en <strong>1687</strong>,
+                    20 años después de haberla desarrollado, y solo bajo la insistencia de su amigo Edmund Halley.
+                </p>
+                <p>
+                    Newton fue un personaje complejo: genio científico, pero también alquimista secreto, teólogo
+                    heterodoxo, y persona solitaria con tendencias obsesivas. Murió a los 84 años como el científico
+                    más famoso de Europa, habiendo revolucionado completamente nuestra comprensión del universo.
+                </p>
+            </section>
+
+            <!-- 2. ALFABETIZACIÓN CIENTÍFICA -->
+            <section class="class-section">
+                <div class="section-label">Alfabetización Científica</div>
+                <h2>La Ruptura con el Sentido Común y la Unificación</h2>
+                <p>
+                    La "Revolución Copernicana" culmina no con Copérnico, sino con Newton. Su obra marca el fin
+                    definitivo de la cosmovisión aristotélica que dividía el universo en dos reinos ontológicos:
+                </p>
+                <ul>
+                    <li><strong>Mundo Sublunar:</strong> Imperfecto, corruptible, elementos pesados que caen "buscando su lugar natural".</li>
+                    <li><strong>Mundo Supralunar:</strong> Perfecto, eterno, hecho de éter, donde los astros se mueven en círculos eternos.</li>
+                </ul>
+                <p>
+                    La <strong>Síntesis Newtoniana</strong> establece la <strong>Universalidad</strong> de las leyes
+                    físicas. No existen "físicas distintas" para el cielo y la tierra. Esta idea fue radical: implicaba
+                    que los movimientos de los planetas sagrados podían ser explicados con la misma matemática que
+                    describe el vuelo de una bala de cañón. El universo se convierte en comprensible, predecible y
+                    mecánico.
+                </p>
+                <p>
+                    La leyenda cuenta que Newton tuvo su inspiración al ver caer una manzana mientras contemplaba la
+                    Luna. La pregunta crucial fue: <em>¿Por qué la manzana cae hacia la Tierra pero la Luna no?</em>
+                    La respuesta revolucionaria: <strong>la Luna sí está cayendo</strong>, pero su velocidad lateral
+                    hace que "caiga alrededor" de la Tierra en lugar de caer hacia ella. La caída de la manzana y la
+                    órbita de la Luna son el <strong>mismo fenómeno</strong> explicado por la misma ley matemática.
+                </p>
+            </section>
+
+            <!-- 3. LAS TRES LEYES DEL MOVIMIENTO -->
+            <section class="class-section">
+                <div class="section-label">Aspectos Teóricos</div>
+                <h2>Las Tres Leyes del Movimiento</h2>
+                <p>
+                    Antes de formular la ley de gravitación universal, Newton estableció los fundamentos de toda la
+                    mecánica clásica en sus <strong>tres leyes del movimiento</strong>. Estas leyes describen cómo
+                    se mueven TODOS los objetos del universo, desde una pelota de fútbol hasta un planeta.
+                </p>
+
+                <div style="text-align: center; margin: var(--space-xl) 0;">
+                    <div style="display: inline-block; background: white; padding: 20px; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.15);">
+                        <object data="../../assets/images/class-07/newton_laws.svg" type="image/svg+xml"
+                            style="width: 100%; max-width: 750px;">
+                            Tu navegador no soporta SVG.
+                        </object>
+                    </div>
+                </div>
+
+                <h3>Primera Ley: Inercia</h3>
+                <p>
+                    <em>"Todo cuerpo persevera en su estado de reposo o movimiento uniforme y rectilíneo a menos que
+                    sea obligado a cambiar su estado por fuerzas impresas sobre él."</em>
+                </p>
+                <p>
+                    Esta ley, que Newton tomó de Galileo y refinó, contradice completamente nuestra intuición cotidiana.
+                    Estamos acostumbrados a que las cosas que empujamos eventualmente se detienen, por lo que Aristóteles
+                    creía que era "natural" detenerse. Newton mostró que lo que detiene las cosas es la <strong>fricción</strong>,
+                    una fuerza externa. Sin fuerzas, un objeto en movimiento continuaría moviéndose para siempre en línea recta.
+                </p>
+                <p>
+                    La inercia es la <strong>resistencia al cambio</strong>. Un objeto masivo tiene más inercia: es más
+                    difícil ponerlo en movimiento y más difícil detenerlo una vez que se mueve. Por eso es más fácil
+                    empujar un carrito vacío que uno lleno de ladrillos.
+                </p>
+                <p>
+                    <strong>Ejemplo:</strong> Los astronautas en la Estación Espacial Internacional flotan porque están
+                    en caída libre continua, pero cuando se empujan contra una pared, siguen moviéndose en línea recta
+                    hasta que algo los detenga (otra pared, por ejemplo).
+                </p>
+
+                <h3>Segunda Ley: La Ley Fundamental de la Dinámica</h3>
+                <p>
+                    <em>"El cambio de movimiento es proporcional a la fuerza motriz impresa y ocurre según la línea recta
+                    a lo largo de la cual aquella fuerza se imprime."</em>
+                </p>
+                <p>
+                    Esta es la ley más importante de toda la mecánica clásica. En forma matemática moderna:
+                </p>
+                <div style="background: var(--color-bg-secondary); padding: 20px; border-radius: 8px; text-align: center; margin: 20px 0; border: 2px solid var(--color-accent);">
+                    <p style="font-size: 2.2em; font-family: 'Times New Roman', serif; margin-bottom: 15px; color: var(--color-accent);">
+                        <strong>F = m · a</strong>
+                    </p>
+                    <p style="font-size: 0.95em; color: var(--color-text-secondary);">
+                        La <strong>fuerza</strong> (F) es igual a la <strong>masa</strong> (m) multiplicada por la
+                        <strong>aceleración</strong> (a)
+                    </p>
+                </div>
+                <p>
+                    Esta ecuación simple encierra toda la mecánica. Nos dice tres cosas fundamentales:
+                </p>
+                <ul>
+                    <li><strong>Mayor fuerza → Mayor aceleración:</strong> Si empujas más fuerte un objeto, acelera más rápido.</li>
+                    <li><strong>Mayor masa → Menor aceleración:</strong> Con la misma fuerza, un objeto pesado acelera menos que uno liviano.</li>
+                    <li><strong>Sin fuerza neta, sin aceleración:</strong> Si F = 0, entonces a = 0 (Primera Ley).</li>
+                </ul>
+                <p>
+                    <strong>Ejemplo:</strong> Cuando pateas una pelota de fútbol, la fuerza de tu pie causa una gran
+                    aceleración (es liviana). Pero si intentas patear una bola de boliche con la misma fuerza, apenas
+                    se moverá (tiene mucha más masa). La aceleración es inversamente proporcional a la masa.
+                </p>
+
+                <h3>Tercera Ley: Acción y Reacción</h3>
+                <p>
+                    <em>"Con toda acción ocurre siempre una reacción igual y contraria: o sea, las acciones mutuas de
+                    dos cuerpos siempre son iguales y dirigidas en sentidos opuestos."</em>
+                </p>
+                <p>
+                    Esta ley es quizás la más contraintuitiva. Cuando empujas una pared, la pared te empuja con exactamente
+                    la misma fuerza. Cuando caminas, empujas el suelo hacia atrás, y el suelo te empuja hacia adelante.
+                    Cuando el Sol atrae a la Tierra, la Tierra atrae al Sol con la misma fuerza (aunque el Sol se mueve
+                    mucho menos porque tiene mucha más masa).
+                </p>
+                <p>
+                    Lo crucial es que las fuerzas de acción y reacción <strong>actúan sobre objetos diferentes</strong>.
+                    Por eso no se cancelan entre sí. Si empujas un carro, tu fuerza actúa sobre el carro (lo mueve) y
+                    la fuerza de reacción actúa sobre ti (te empuja hacia atrás).
+                </p>
+                <p>
+                    <strong>Ejemplo:</strong> Los cohetes espaciales funcionan por la Tercera Ley. El motor expulsa gases
+                    hacia atrás con gran fuerza (acción), y esos gases empujan el cohete hacia adelante con igual fuerza
+                    (reacción). No necesitan "empujar contra el aire" para funcionar, por eso funcionan mejor en el vacío
+                    del espacio.
+                </p>
+            </section>
+
+            <div class="graffiti-divider" style="margin: var(--space-xl) 0; text-align: center;">
+                <span style="font-family: 'Caveat', cursive; font-size: 2.5em; color: var(--color-accent); text-shadow: 2px 2px 4px rgba(0,0,0,0.1);">
+                    ⚡ De las leyes del movimiento a la gravedad universal ⚡
+                </span>
+            </div>
+
+            <!-- 4. LA GRAVITACIÓN UNIVERSAL -->
+            <section class="class-section">
+                <div class="section-label">La Gran Ley</div>
+                <h2>La Ley de Gravitación Universal</h2>
+                <p>
+                    En sus <em>Philosophiæ Naturalis Principia Mathematica</em> (1687), Newton formula la ley que gobierna
+                    la estructura del cosmos a gran escala. Su genialidad radica en la cuantificación precisa y universal:
+                </p>
+                <div
+                    style="background: var(--color-bg-secondary); padding: 25px; border-radius: 8px; text-align: center; margin: 25px 0; border: 3px solid var(--color-accent); box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+                    <p
+                        style="font-size: 2.2em; font-family: 'Times New Roman', serif; margin-bottom: 20px; letter-spacing: 2px; color: var(--color-accent);">
+                        <strong>F = G · (m<sub>1</sub> · m<sub>2</sub>) / r²</strong>
+                    </p>
+                    <ul
+                        style="text-align: left; display: inline-block; font-size: 1em; color: var(--color-text-secondary); line-height: 1.8;">
+                        <li><strong>F:</strong> Fuerza de atracción gravitatoria (magnitud y dirección vectorial).</li>
+                        <li><strong>G:</strong> Constante de gravitación universal = 6.674 × 10<sup>-11</sup> N·m²/kg²
+                            (determinada experimentalmente por Cavendish en 1798).</li>
+                        <li><strong>m<sub>1</sub>, m<sub>2</sub>:</strong> Masas de los dos cuerpos que se atraen.</li>
+                        <li><strong>r²:</strong> Cuadrado de la distancia entre los centros de masa (Ley del inverso del cuadrado).</li>
+                    </ul>
+                </div>
+
+                <h3>¿Qué Significa Esta Fórmula?</h3>
+                <p>
+                    Esta ecuación aparentemente simple tiene implicaciones profundas:
+                </p>
+                <ul>
+                    <li>
+                        <strong>Universalidad:</strong> La MISMA fórmula describe la caída de una manzana, la órbita de
+                        la Luna, el movimiento de los planetas, y las galaxias girando. No hay una "gravedad terrestre"
+                        diferente de una "gravedad celeste". Es la misma fuerza en todo el universo.
+                    </li>
+                    <li>
+                        <strong>Proporcionalidad directa a las masas:</strong> Cuanto más masivos son los objetos, mayor
+                        es la fuerza. Por eso el Sol atrae más fuertemente que la Tierra.
+                    </li>
+                    <li>
+                        <strong>Ley del inverso del cuadrado:</strong> Si duplicas la distancia, la fuerza se reduce a
+                        ¼ (2² = 4). Si triplicas la distancia, se reduce a 1/9 (3² = 9). La gravedad disminuye rápidamente
+                        con la distancia, pero nunca llega a cero: todo atrae a todo en el universo.
+                    </li>
+                    <li>
+                        <strong>Mutualidad:</strong> La Tierra atrae a la Luna con la misma fuerza con que la Luna atrae
+                        a la Tierra (Tercera Ley). La diferencia es que la Tierra, al ser mucho más masiva, se mueve
+                        mucho menos (Segunda Ley: a = F/m).
+                    </li>
+                </ul>
+
+                <h3>El Problema Filosófico: Acción a Distancia</h3>
+                <p>
+                    Newton mismo reconocía que había algo profundamente misterioso en su ley: ¿cómo puede el Sol "saber"
+                    que la Tierra existe a 150 millones de kilómetros de distancia y ejercer una fuerza sobre ella a
+                    través del vacío absoluto?
+                </p>
+                <p>
+                    Esta <strong>acción a distancia</strong> instantánea sin medio material que la transmita era
+                    filosóficamente perturbadora. En una carta famosa, Newton escribió: <em>"Hypotheses non fingo"</em>
+                    (No invento hipótesis). Rechazaba especular sobre el MECANISMO por el cual actúa la gravedad. Él
+                    simplemente describía matemáticamente CÓMO actúa, no POR QUÉ actúa.
+                </p>
+                <p>
+                    Este misterio no se resolvió hasta 1915, cuando Albert Einstein mostró con su Teoría de la Relatividad
+                    General que la gravedad no es realmente una "fuerza" sino una curvatura del espacio-tiempo causada
+                    por la masa. Pero la fórmula de Newton sigue siendo extraordinariamente precisa para casi todas las
+                    aplicaciones prácticas.
+                </p>
+            </section>
+
+            <!-- 5. LA GRAN SÍNTESIS: DE NEWTON A KEPLER -->
+            <section class="class-section">
+                <div class="section-label">La Síntesis Matemática</div>
+                <h2>Derivando las Leyes de Kepler desde la Gravitación Universal</h2>
+                <p>
+                    El triunfo supremo de Newton fue demostrar que las tres leyes empíricas de Kepler (que describían
+                    CÓMO se mueven los planetas, pero sin explicar POR QUÉ) podían <strong>derivarse matemáticamente</strong>
+                    de su ley de gravitación universal. Esto probó que la gravitación era la causa de los movimientos
+                    planetarios.
+                </p>
+                <p>
+                    Vamos a ver cómo se deriva la Tercera Ley de Kepler (T² ∝ r³) usando un caso simplificado: una
+                    órbita circular. (Las órbitas reales son elípticas, pero el razonamiento es el mismo, solo que
+                    matemáticamente más complejo).
+                </p>
+
+                <div style="text-align: center; margin: var(--space-xl) 0;">
+                    <div style="display: inline-block; background: white; padding: 20px; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.15);">
+                        <object data="../../assets/images/class-07/kepler_derivation.svg" type="image/svg+xml"
+                            style="width: 100%; max-width: 850px;">
+                            Tu navegador no soporta SVG.
+                        </object>
+                    </div>
+                </div>
+
+                <h3>El Razonamiento Paso a Paso</h3>
+
+                <div class="concept-highlight" style="border-left: 5px solid var(--color-accent); margin: 20px 0;">
+                    <h4 style="color: var(--color-accent);">Paso 1: ¿Qué mantiene al planeta en órbita?</h4>
+                    <p>
+                        Un planeta que se mueve en círculo está siendo acelerado continuamente hacia el centro (aunque
+                        su rapidez sea constante, su DIRECCIÓN cambia constantemente, y cambio de dirección = aceleración).
+                        Esta aceleración centrípeta requiere una fuerza centrípeta:
+                    </p>
+                    <p style="text-align: center; font-family: 'Times New Roman', serif; font-size: 1.3em; font-style: italic; margin: 15px 0;">
+                        F<sub>centrípeta</sub> = m · v² / r
+                    </p>
+                    <p>
+                        donde <strong>m</strong> es la masa del planeta, <strong>v</strong> su velocidad orbital, y
+                        <strong>r</strong> el radio de la órbita.
+                    </p>
+                </div>
+
+                <div class="concept-highlight" style="border-left: 5px solid var(--color-accent); margin: 20px 0;">
+                    <h4 style="color: var(--color-accent);">Paso 2: ¿Qué fuerza proporciona esa aceleración centrípeta?</h4>
+                    <p>
+                        Newton propone que es la fuerza gravitacional del Sol:
+                    </p>
+                    <p style="text-align: center; font-family: 'Times New Roman', serif; font-size: 1.3em; font-style: italic; margin: 15px 0;">
+                        F<sub>gravitacional</sub> = G · M · m / r²
+                    </p>
+                    <p>
+                        donde <strong>M</strong> es la masa del Sol y <strong>m</strong> la masa del planeta.
+                    </p>
+                </div>
+
+                <div class="concept-highlight" style="border-left: 5px solid var(--color-accent); margin: 20px 0;">
+                    <h4 style="color: var(--color-accent);">Paso 3: Igualamos las dos fuerzas</h4>
+                    <p>
+                        La fuerza gravitacional ES la fuerza centrípeta (son la misma fuerza):
+                    </p>
+                    <p style="text-align: center; font-family: 'Times New Roman', serif; font-size: 1.2em; font-style: italic; margin: 15px 0;">
+                        m · v² / r = G · M · m / r²
+                    </p>
+                    <p>
+                        Cancelamos la masa del planeta <strong>m</strong> de ambos lados (¡interesante! la órbita no
+                        depende de la masa del planeta) y multiplicamos por <strong>r</strong>:
+                    </p>
+                    <p style="text-align: center; font-family: 'Times New Roman', serif; font-size: 1.2em; font-style: italic; margin: 15px 0;">
+                        v² = G · M / r
+                    </p>
+                </div>
+
+                <div class="concept-highlight" style="border-left: 5px solid var(--color-accent); margin: 20px 0;">
+                    <h4 style="color: var(--color-accent);">Paso 4: Expresamos la velocidad en términos del período</h4>
+                    <p>
+                        La velocidad orbital es la circunferencia dividida por el período:
+                    </p>
+                    <p style="text-align: center; font-family: 'Times New Roman', serif; font-size: 1.2em; font-style: italic; margin: 15px 0;">
+                        v = 2πr / T
+                    </p>
+                    <p>
+                        Elevamos al cuadrado:
+                    </p>
+                    <p style="text-align: center; font-family: 'Times New Roman', serif; font-size: 1.2em; font-style: italic; margin: 15px 0;">
+                        v² = 4π²r² / T²
+                    </p>
+                    <p>
+                        Sustituimos esto en la ecuación del Paso 3:
+                    </p>
+                    <p style="text-align: center; font-family: 'Times New Roman', serif; font-size: 1.2em; font-style: italic; margin: 15px 0;">
+                        4π²r² / T² = G · M / r
+                    </p>
+                    <p>
+                        Despejamos T²:
+                    </p>
+                    <p style="text-align: center; font-family: 'Times New Roman', serif; font-size: 1.4em; font-weight: 700; font-style: italic; margin: 20px auto; padding: 15px; color: var(--color-accent); max-width: 100%; overflow-x: auto;">
+                        T² = (4π² / GM) · r³
+                    </p>
+                </div>
+
+                <div class="concept-highlight" style="background: var(--color-accent); color: white; padding: 25px; margin: 25px 0; text-align: center; border-left: none;">
+                    <h3 style="color: white; margin-bottom: 15px;">¡La Tercera Ley de Kepler!</h3>
+                    <p style="font-size: 1.8em; font-family: 'Times New Roman', serif; font-weight: 700; margin: 15px 0; color: white;">
+                        T² ∝ r³
+                    </p>
+                    <p style="font-size: 1.1em; margin-top: 15px;">
+                        El cuadrado del período es proporcional al cubo del radio orbital.<br>
+                        La constante de proporcionalidad (4π²/GM) depende solo de la masa del Sol.
+                    </p>
+                </div>
+
+                <p>
+                    Esto es extraordinario. Kepler descubrió esta relación empíricamente, analizando años de datos
+                    observacionales. Newton la <strong>derivó matemáticamente</strong> a partir de principios más
+                    fundamentales. Esto demostró que la ley de gravitación universal era correcta y que explicaba
+                    por qué las leyes de Kepler funcionaban.
+                </p>
+                <p>
+                    Newton también derivó las otras dos leyes de Kepler (órbitas elípticas y áreas iguales), aunque
+                    la matemática es más compleja. El resultado fue la unificación completa de la física terrestre y
+                    celeste bajo un solo marco teórico.
+                </p>
+            </section>
+
+            <div class="graffiti-divider" style="margin: var(--space-xl) 0; text-align: center;">
+                <span style="font-family: 'Caveat', cursive; font-size: 2.5em; color: var(--color-accent); text-shadow: 2px 2px 4px rgba(0,0,0,0.1);">
+                    🌍 + 🌙 = Una Sola Física Universal
+                </span>
+            </div>
+
+            <!-- 6. LA SÍNTESIS VISUAL -->
+            <section class="class-section">
+                <div class="section-label">La Gran Unificación</div>
+                <h2>La Síntesis de Galileo, Kepler y Newton</h2>
+                <p>
+                    Newton no trabajó solo. Su genio consistió en unificar los descubrimientos de los dos gigantes que
+                    lo precedieron: Galileo (física terrestre) y Kepler (física celeste). La síntesis newtoniana mostró
+                    que ambas eran manifestaciones de las mismas leyes fundamentales.
+                </p>
+
+                <div style="text-align: center; margin: var(--space-xl) 0;">
+                    <div style="display: inline-block; background: white; padding: 20px; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.15);">
+                        <object data="../../assets/images/class-07/synthesis_diagram.svg" type="image/svg+xml"
+                            style="width: 100%; max-width: 850px;">
+                            Tu navegador no soporta SVG.
+                        </object>
+                    </div>
+                </div>
+
+                <h3>Lo que Newton heredó de Galileo:</h3>
+                <ul>
+                    <li><strong>El principio de inercia:</strong> Un cuerpo mantiene su estado de movimiento a menos que actúe una fuerza.</li>
+                    <li><strong>La ley de caída libre:</strong> En la Tierra, todos los cuerpos caen con aceleración constante g ≈ 9.8 m/s².</li>
+                    <li><strong>El concepto de movimiento relativo:</strong> El movimiento solo tiene sentido respecto a un marco de referencia.</li>
+                    <li><strong>El método experimental:</strong> La física debe basarse en mediciones cuantitativas, no en especulaciones.</li>
+                </ul>
+
+                <h3>Lo que Newton heredó de Kepler:</h3>
+                <ul>
+                    <li><strong>Las tres leyes del movimiento planetario:</strong> Descripción precisa de CÓMO se mueven los planetas.</li>
+                    <li><strong>Órbitas elípticas:</strong> Ruptura definitiva con el dogma de los círculos perfectos.</li>
+                    <li><strong>Regularidades matemáticas:</strong> La naturaleza obedece leyes matemáticas precisas.</li>
+                    <li><strong>El problema sin resolver:</strong> ¿POR QUÉ los planetas obedecen estas leyes?</li>
+                </ul>
+
+                <h3>Lo que Newton aportó:</h3>
+                <ul>
+                    <li><strong>Las tres leyes del movimiento:</strong> Marco general para entender TODO movimiento.</li>
+                    <li><strong>La ley de gravitación universal:</strong> La CAUSA de los movimientos planetarios.</li>
+                    <li><strong>La derivación matemática:</strong> Las leyes de Kepler como consecuencias de principios más profundos.</li>
+                    <li><strong>La unificación:</strong> Cielo y tierra obedecen las MISMAS leyes. Una sola física para TODO el universo.</li>
+                </ul>
+            </section>
+
+            <!-- 7. ASPECTOS EXPERIMENTALES -->
+            <section class="class-section">
+                <div class="section-label">Aspectos Experimentales</div>
+                <h2>El "Experimento Mental" y la Validación Empírica</h2>
+                <p>
+                    Newton validó su teoría teóricamente demostrando que la gravedad terrestre, extendida hasta la
+                    distancia de la Luna, era exactamente la fuerza necesaria (fuerza centrípeta) para mantener a la
+                    Luna en su órbita observada de 27.3 días.
+                </p>
+                <p>
+                    Calculó que un objeto en la superficie de la Tierra cae con aceleración g = 9.8 m/s². Usando su
+                    ley del inverso del cuadrado, predijo que a la distancia de la Luna (60 veces el radio terrestre),
+                    la aceleración sería g/60² = g/3600 ≈ 0.0027 m/s². Y resulta que esa es EXACTAMENTE la aceleración
+                    centrípeta necesaria para que la Luna complete su órbita en 27.3 días. ¡La teoría funcionaba!
+                </p>
+
+                <h3>El Cañón de Newton</h3>
+                <p>
+                    Para ilustrar la identidad entre caída libre y órbita, propuso este célebre experimento mental:
+                </p>
+
+                <div style="text-align: center; margin: var(--space-xl) 0;">
+                    <div
+                        style="display: inline-block; background: #1a1a2e; padding: 20px; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.3);">
+                        <object data="../../assets/images/class-07/newton_cannon.svg" type="image/svg+xml"
+                            style="width: 100%; max-width: 600px;">
+                            Tu navegador no soporta SVG.
+                        </object>
+                    </div>
+                    <p style="margin-top: var(--space-sm); font-size: 0.9em; color: var(--color-text-secondary);">
+                        <em>Un proyectil con suficiente velocidad tangencial (Velocidad de Escape/Orbital) "cae"
+                            perpetuamente siguiendo la curvatura de la Tierra.</em>
+                    </p>
+                </div>
+
+                <p>
+                    Imagina un cañón en la cima de una montaña muy alta (por encima de la atmósfera para ignorar la
+                    fricción del aire). Dispara una bala de cañón horizontalmente:
+                </p>
+                <ul>
+                    <li>Con <strong>poca velocidad</strong>: La bala cae al suelo rápidamente.</li>
+                    <li>Con <strong>más velocidad</strong>: La bala viaja más lejos antes de caer.</li>
+                    <li>Con <strong>velocidad orbital</strong> (~7.9 km/s a nivel del mar): La bala "cae" continuamente
+                        hacia la Tierra, pero la curvatura de la Tierra hace que el suelo se "aleje" a la misma velocidad.
+                        ¡La bala nunca toca el suelo! Entra en órbita.</li>
+                    <li>Con <strong>velocidad de escape</strong> (~11.2 km/s): La bala escapa completamente de la gravedad terrestre.</li>
+                </ul>
+                <p>
+                    Este experimento mental muestra que <strong>orbitar es simplemente caer continuamente</strong>.
+                    Los satélites artificiales, la Estación Espacial Internacional, y la Luna están todos "cayendo"
+                    hacia la Tierra, pero su velocidad lateral hace que continúen cayendo alrededor de la Tierra sin
+                    tocar nunca el suelo.
+                </p>
+            </section>
+
+            <!-- 8. IMPLICACIONES FILOSÓFICAS -->
+            <section class="class-section">
+                <div class="section-label">Filosofía de la Ciencia</div>
+                <h2>Implicaciones Filosóficas de la Física Newtoniana</h2>
+                <p>
+                    El éxito de Newton no solo revolucionó la ciencia, sino también la filosofía. Su sistema mecánico
+                    del universo tuvo profundas consecuencias para cómo pensamos sobre la naturaleza, el conocimiento
+                    y nuestro lugar en el cosmos.
+                </p>
+
+                <h3>1. Determinismo Mecánico: El Universo-Reloj</h3>
+                <p>
+                    Si el universo obedece leyes matemáticas precisas y todo está determinado por fuerzas que actúan
+                    según F = ma, entonces en principio TODO el futuro está determinado por el estado presente. El
+                    matemático Pierre-Simon Laplace (1749-1827) expresó esta idea en su famoso "demonio":
+                </p>
+                <div style="background: var(--color-bg-secondary); padding: 20px; border-radius: 8px; margin: 20px 0; border-left: 5px solid var(--color-accent); font-style: italic;">
+                    <p>
+                        "Una inteligencia que, en un momento dado, conociera todas las fuerzas que animan la naturaleza
+                        y la situación respectiva de los seres que la componen, si además fuera lo suficientemente vasta
+                        como para someter estos datos al análisis, podría abarcar en una sola fórmula los movimientos
+                        de los cuerpos más grandes del universo y los del átomo más ligero; nada sería incierto para ella,
+                        y tanto el futuro como el pasado estarían presentes ante sus ojos."
+                    </p>
+                    <p style="text-align: right; font-style: normal; margin-top: 10px;">
+                        — Pierre-Simon Laplace, <em>Ensayo Filosófico sobre las Probabilidades</em> (1814)
+                    </p>
+                </div>
+                <p>
+                    Esta visión del universo como una máquina gigantesca perfectamente predecible tiene consecuencias
+                    perturbadoras: ¿Qué pasa con el <strong>libre albedrío</strong>? Si todo está determinado por las
+                    leyes de la física, ¿somos realmente libres, o nuestras decisiones son el resultado inevitable de
+                    partículas siguiendo leyes mecánicas en nuestros cerebros?
+                </p>
+
+                <h3>2. Mecanicismo: Todo es Máquina</h3>
+                <p>
+                    Newton consolidó la visión <strong>mecanicista</strong> del mundo: el universo funciona como un
+                    mecanismo de relojería gigante. No hay propósitos, intenciones o "causas finales" (teleología)
+                    en la naturaleza. Las cosas no se mueven "buscando su lugar natural" como pensaba Aristóteles.
+                    Se mueven porque fuerzas mecánicas las empujan.
+                </p>
+                <p>
+                    Esta visión eliminó la necesidad de invocar espíritus, almas o inteligencias para explicar los
+                    fenómenos naturales. El universo podía entenderse completamente en términos de materia en movimiento
+                    obedeciendo leyes matemáticas. Esto fue liberador para la ciencia, pero planteó preguntas sobre el
+                    significado y el propósito en un universo puramente mecánico.
+                </p>
+
+                <h3>3. Espacio y Tiempo Absolutos</h3>
+                <p>
+                    Newton postuló la existencia de un <strong>espacio absoluto</strong> y un <strong>tiempo absoluto</strong>:
+                    un escenario fijo e inmutable en el que ocurren todos los eventos. El espacio es como una caja
+                    tridimensional infinita que existe independientemente de los objetos que contiene. El tiempo fluye
+                    uniformemente, igual para todos los observadores en cualquier parte del universo.
+                </p>
+                <p>
+                    Esta concepción fue criticada por filósofos como Leibniz, quien argumentaba que el espacio y el
+                    tiempo son solo relaciones entre objetos, no entidades independientes. Einstein finalmente mostró
+                    en el siglo XX que Leibniz tenía algo de razón: el espacio y el tiempo son relativos, no absolutos,
+                    y están entrelazados en el "espacio-tiempo". Pero para la vida cotidiana y la mayoría de aplicaciones
+                    prácticas, la concepción newtoniana funciona perfectamente.
+                </p>
+
+                <h3>4. "Hypotheses non fingo": No Invento Hipótesis</h3>
+                <p>
+                    Newton adoptó una postura filosófica interesante respecto al método científico. Frente a las críticas
+                    sobre el misterio de la acción a distancia, declaró: <em>"Hypotheses non fingo"</em> (No invento
+                    hipótesis).
+                </p>
+                <p>
+                    ¿Qué quería decir? Newton distinguía entre:
+                </p>
+                <ul>
+                    <li><strong>Fenómenos observables y medibles:</strong> La caída de objetos, las órbitas planetarias.</li>
+                    <li><strong>Leyes matemáticas que describen esos fenómenos:</strong> F = ma, F = Gm₁m₂/r².</li>
+                    <li><strong>Especulaciones sobre causas ocultas:</strong> ¿POR QUÉ existe la gravedad? ¿CÓMO actúa a distancia?</li>
+                </ul>
+                <p>
+                    Newton se negaba a especular sobre la tercera categoría sin evidencia empírica. Su trabajo era
+                    DESCRIBIR matemáticamente cómo funciona la naturaleza, no EXPLICAR por qué funciona así. Esta
+                    postura influyó profundamente en el desarrollo posterior de la ciencia, estableciendo que las
+                    teorías científicas deben basarse en evidencia observable, no en especulaciones metafísicas.
+                </p>
+
+                <h3>5. El Dios Relojero y el Deísmo</h3>
+                <p>
+                    El éxito de la mecánica newtoniana llevó a muchos pensadores ilustrados del siglo XVIII a adoptar
+                    el <strong>deísmo</strong>: la idea de que Dios creó el universo como un relojero crea un reloj,
+                    estableció las leyes de la naturaleza, y luego se retiró, dejando que el universo funcione
+                    automáticamente sin intervención divina continua.
+                </p>
+                <p>
+                    Esta visión contrastaba con la idea de un Dios activamente involucrado en el mundo (teísmo). El
+                    universo newtoniano es tan perfecto y autosuficiente que no necesita milagros ni intervenciones.
+                    Todo está explicado por las leyes naturales.
+                </p>
+            </section>
+
+            <div class="philosophical-quote" style="margin: var(--space-xl) 0; padding: var(--space-lg); background: var(--color-bg-tertiary); border-left: 5px solid var(--color-accent); border-radius: 8px;">
+                <blockquote style="font-size: 1.3em; font-style: italic; color: var(--color-text-primary); margin: 0;">
+                    "Si he visto más lejos es porque estoy sentado sobre los hombros de gigantes."
+                </blockquote>
+                <p style="text-align: right; margin-top: var(--space-sm); color: var(--color-text-secondary); font-size: 0.95em;">
+                    — Isaac Newton, carta a Robert Hooke (1675)
+                </p>
+                <p style="margin-top: var(--space-md); font-size: 0.95em; color: var(--color-text-secondary);">
+                    Newton reconocía que su trabajo se basaba en los descubrimientos de quienes vinieron antes: Galileo,
+                    Kepler, Descartes, y muchos otros. La ciencia es un esfuerzo colaborativo que se construye
+                    generación tras generación.
+                </p>
+            </div>
+
+            <!-- 9. ASPECTO TECNOLÓGICO -->
+            <section class="class-section">
+                <div class="section-label">Aspecto Tecnológico</div>
+                <h2>Ingeniería Orbital y Balística</h2>
+                <p>
+                    La física newtoniana no es solo teoría abstracta; es la base operativa de nuestra civilización
+                    tecnológica actual. Cada vez que usas GPS, cada vez que un cohete despega, cada vez que cruzas
+                    un puente, estás confiando en las leyes de Newton.
+                </p>
+                <ul>
+                    <li>
+                        <strong>Navegación Satelital (GPS):</strong> Para que tu celular sepa dónde estás, necesita una
+                        red de satélites en órbitas newtonianas precisas. Más de 30 satélites GPS orbitan a ~20,000 km
+                        de altura, completando dos órbitas por día. Sus trayectorias se calculan usando las leyes de
+                        Newton (con pequeñas correcciones relativistas que Einstein predijo).
+                    </li>
+                    <li>
+                        <strong>Viajes Interplanetarios:</strong> Las trayectorias de las sondas Voyager (que ahora están
+                        saliendo del Sistema Solar), los rovers en Marte, y las misiones a asteroides se calculan usando
+                        mecánica celeste newtoniana. Las "asistencias gravitacionales" (usar la gravedad de un planeta
+                        para acelerar una nave) son aplicaciones directas de la ley de gravitación universal.
+                    </li>
+                    <li>
+                        <strong>Balística:</strong> El diseño de proyectiles, cohetes y misiles se basa completamente en
+                        las leyes de Newton. Los ingenieros deben calcular cómo las fuerzas (gravedad, resistencia del
+                        aire, empuje) afectan la trayectoria.
+                    </li>
+                    <li>
+                        <strong>Ingeniería Civil y Estructural:</strong> El cálculo de estática y dinámica de fuerzas para
+                        construir puentes, rascacielos y represas se basa en las leyes del movimiento de Newton. Para que
+                        una estructura esté en equilibrio, la suma de todas las fuerzas debe ser cero (ΣF = 0).
+                    </li>
+                    <li>
+                        <strong>Industria Automotriz y Aeronáutica:</strong> El diseño de autos, aviones y trenes requiere
+                        entender cómo las fuerzas afectan el movimiento. Los airbags funcionan porque calculamos las
+                        fuerzas de impacto usando F = ma.
+                    </li>
+                    <li>
+                        <strong>Predicción de Eclipses:</strong> Podemos predecir eclipses solares y lunares con siglos de
+                        anticipación usando las ecuaciones de Newton para calcular las posiciones exactas de la Tierra,
+                        la Luna y el Sol.
+                    </li>
+                </ul>
+                <p>
+                    Es notable que leyes formuladas hace más de 300 años sigan siendo la base de tanta tecnología moderna.
+                    Aunque sabemos que la física newtoniana es una aproximación (Einstein la refinó para velocidades
+                    cercanas a la luz y campos gravitacionales muy intensos), funciona con precisión extraordinaria para
+                    la inmensa mayoría de situaciones prácticas.
+                </p>
+            </section>
+
+            <!-- 10. ACTIVIDAD PROPUESTA -->
+            <section class="class-section">
+                <div class="section-label">Actividad Propuesta</div>
+                <h2>Preguntas a Desarrollar</h2>
+                <p>
+                    Estas preguntas requieren reflexión profunda sobre las leyes de Newton y sus implicaciones. Responde
+                    con al menos un párrafo desarrollado para cada una.
+                </p>
+
+                <div class="activity-container">
+                    <div class="question-card">
+                        <h3>Pregunta 1: Las Tres Leyes y su Relación</h3>
+                        <p>
+                            Newton formuló tres leyes del movimiento. La Primera Ley (inercia) parece ser un caso especial
+                            de la Segunda Ley (F = ma): cuando F = 0, entonces a = 0, lo que significa movimiento uniforme.
+                        </p>
+                        <p>
+                            <strong>Desarrolla:</strong> Si la Primera Ley se puede derivar de la Segunda Ley, ¿por qué
+                            Newton la formuló por separado? ¿Qué importancia conceptual tiene el principio de inercia
+                            que va más allá de ser simplemente un caso especial de F = ma? Pista: piensa en qué define
+                            un "sistema de referencia inercial" y por qué eso es fundamental.
+                        </p>
+                    </div>
+
+                    <div class="question-card">
+                        <h3>Pregunta 2: La Síntesis de Galileo y Kepler</h3>
+                        <p>
+                            Newton tomó la mecánica terrestre de Galileo (caída libre, inercia) y las leyes planetarias
+                            de Kepler y las unificó bajo la ley de gravitación universal. Antes de Newton, estos eran
+                            dos dominios completamente separados de conocimiento.
+                        </p>
+                        <p>
+                            <strong>Desarrolla:</strong> Explica qué significa filosóficamente que las MISMAS leyes rijan
+                            tanto en la Tierra como en el cielo. ¿Por qué fue tan revolucionario afirmar que la manzana
+                            que cae y la Luna que orbita obedecen la misma ley? ¿Qué implicaciones tiene esto para la
+                            cosmovisión aristotélica que dividía el universo en mundo sublunar (imperfecto) y supralunar
+                            (perfecto)?
+                        </p>
+                    </div>
+
+                    <div class="question-card">
+                        <h3>Pregunta 3: Determinismo y Libre Albedrío</h3>
+                        <p>
+                            El éxito de Newton llevó a la idea del <strong>Determinismo Laplaciano</strong>: Si
+                            existiera una inteligencia que conociera la posición y velocidad de todas las partículas del
+                            universo en un instante dado, podría predecir todo el futuro y retrodicir todo el pasado con
+                            absoluta certeza.
+                        </p>
+                        <p>
+                            <strong>Desarrolla:</strong> ¿Qué implicaciones tiene esta visión determinista para el concepto
+                            de <em>libre albedrío</em> humano? Si nuestros cerebros son sistemas físicos compuestos de
+                            partículas que obedecen las leyes de Newton, ¿somos realmente libres para elegir, o nuestras
+                            "decisiones" son el resultado inevitable de estados físicos previos? ¿Es posible reconciliar
+                            el determinismo físico con la experiencia subjetiva de libertad? (Nota: la mecánica cuántica
+                            del siglo XX introduce indeterminismo, pero eso no resuelve necesariamente el problema del
+                            libre albedrío).
+                        </p>
+                    </div>
+
+                    <div class="question-card">
+                        <h3>Pregunta 4: "Hypotheses non fingo" y el Método Científico</h3>
+                        <p>
+                            Newton declaró <em>"Hypotheses non fingo"</em> (No invento hipótesis) al negarse a especular
+                            sobre el mecanismo por el cual actúa la gravedad a distancia. Él describió CÓMO funciona la
+                            gravedad matemáticamente (F = Gm₁m₂/r²), pero no explicó POR QUÉ existe o CÓMO se transmite
+                            a través del vacío.
+                        </p>
+                        <p>
+                            <strong>Desarrolla:</strong> Reflexiona sobre esta postura metodológica. ¿Es suficiente que
+                            una teoría científica describa los fenómenos con precisión matemática, o debe también explicar
+                            las causas últimas? ¿Cuál es la diferencia entre DESCRIBIR y EXPLICAR? ¿Debería la ciencia
+                            limitarse a predecir resultados observables, o debe aspirar a revelar la "realidad profunda"
+                            detrás de los fenómenos? Argumenta tu posición con ejemplos.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 11. CONCEPTOS CLAVE -->
+            <section class="class-section">
+                <h2>Conceptos Clave</h2>
+                <div class="concept-highlight">
+                    <ul>
+                        <li><strong>Primera Ley de Newton (Inercia):</strong> Todo cuerpo permanece en su estado de
+                            reposo o movimiento rectilíneo uniforme a menos que una fuerza neta actúe sobre él. La
+                            resistencia al cambio de movimiento.</li>
+
+                        <li><strong>Segunda Ley de Newton (F = ma):</strong> La aceleración de un objeto es directamente
+                            proporcional a la fuerza neta aplicada e inversamente proporcional a su masa. La ley
+                            fundamental de la dinámica.</li>
+
+                        <li><strong>Tercera Ley de Newton (Acción-Reacción):</strong> Para toda acción hay una reacción
+                            igual en magnitud y opuesta en dirección. Las fuerzas siempre vienen en pares que actúan sobre
+                            objetos diferentes.</li>
+
+                        <li><strong>Masa:</strong> Medida de la inercia de un cuerpo. Cuánta materia contiene y cuánto
+                            resiste a cambiar su estado de movimiento. Se mide en kilogramos.</li>
+
+                        <li><strong>Fuerza:</strong> Agente que causa aceleración. Una interacción que cambia el estado
+                            de movimiento de un objeto. Se mide en Newtons (N = kg·m/s²).</li>
+
+                        <li><strong>Aceleración:</strong> Cambio de velocidad por unidad de tiempo. Incluye cambios en
+                            rapidez O dirección. Se mide en m/s².</li>
+
+                        <li><strong>Gravitación Universal:</strong> Fuerza atractiva que actúa entre TODOS los objetos
+                            con masa del universo, proporcional al producto de las masas e inversamente proporcional al
+                            cuadrado de la distancia: F = Gm₁m₂/r².</li>
+
+                        <li><strong>Constante G:</strong> Constante de gravitación universal = 6.674 × 10⁻¹¹ N·m²/kg².
+                            Un número fundamental de la naturaleza que determina la "intensidad" de la gravedad.</li>
+
+                        <li><strong>Síntesis Newtoniana:</strong> Unificación de la física terrestre (Galileo: caída
+                            libre, inercia) y celeste (Kepler: leyes planetarias) bajo las mismas leyes fundamentales.
+                            La demostración de que cielo y tierra obedecen la misma física.</li>
+
+                        <li><strong>Derivación de las Leyes de Kepler:</strong> Demostración matemática de que las tres
+                            leyes empíricas de Kepler son consecuencias necesarias de la ley de gravitación universal
+                            y las leyes del movimiento. Prueba de que la teoría de Newton es correcta.</li>
+
+                        <li><strong>Mecanicismo:</strong> Visión filosófica del universo como una máquina gigante compuesta
+                            de partes materiales en interacción mecánica. No hay propósitos ni intenciones en la naturaleza,
+                            solo materia en movimiento obedeciendo leyes.</li>
+
+                        <li><strong>Determinismo Laplaciano:</strong> La idea de que el futuro del universo está completamente
+                            determinado por su estado presente y las leyes de la física. En principio, si conociéramos todas
+                            las posiciones y velocidades actuales, podríamos predecir todo el futuro con certeza absoluta.</li>
+
+                        <li><strong>Espacio Absoluto:</strong> Concepto newtoniano del espacio como un escenario fijo,
+                            tridimensional e infinito que existe independientemente de los objetos que contiene. Un "contenedor"
+                            inmutable para todos los eventos físicos.</li>
+
+                        <li><strong>Tiempo Absoluto:</strong> Concepto newtoniano del tiempo como un flujo uniforme que
+                            transcurre igual para todos los observadores en cualquier parte del universo. El tiempo es
+                            independiente de los eventos que ocurren en él.</li>
+
+                        <li><strong>Acción a Distancia:</strong> Problema filosófico de cómo un objeto puede ejercer fuerza
+                            sobre otro a través del vacío absoluto sin contacto físico ni medio de transmisión. Newton reconoció
+                            esto como misterioso pero matemáticamente preciso.</li>
+
+                        <li><strong>Hypotheses non fingo:</strong> "No invento hipótesis". Postura metodológica de Newton
+                            de limitarse a describir matemáticamente los fenómenos observables sin especular sobre causas
+                            ocultas o mecanismos no verificables empíricamente.</li>
+
+                        <li><strong>Fuerza Centrípeta:</strong> Fuerza dirigida hacia el centro que mantiene un objeto
+                            moviéndose en trayectoria circular. En órbitas planetarias, la gravedad proporciona la fuerza
+                            centrípeta necesaria: F_c = mv²/r.</li>
+
+                        <li><strong>Velocidad Orbital:</strong> La velocidad tangencial necesaria para que un objeto
+                            "caiga" alrededor de un cuerpo celeste sin alejarse ni estrellarse. Para la Tierra a nivel
+                            del mar: ~7.9 km/s.</li>
+
+                        <li><strong>Principia Mathematica:</strong> <em>Philosophiæ Naturalis Principia Mathematica</em>
+                            (Principios Matemáticos de la Filosofía Natural), obra maestra de Newton publicada en 1687.
+                            Uno de los libros científicos más importantes jamás escritos.</li>
+
+                        <li><strong>Annus Mirabilis:</strong> "Año milagroso". Los años 1665-1666 durante los cuales
+                            Newton, aislado por la peste, desarrolló las bases del cálculo, la teoría de la gravitación
+                            y la óptica. Tenía solo 23 años.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="class-section"
+                style="background: var(--color-bg-tertiary); padding: var(--space-lg); border-radius: 8px;">
+                <h2>Próxima Clase</h2>
+                <h3 style="color: var(--color-accent);">Clase 8: Carga Teórica de la Observación</h3>
+                <p>
+                    Hemos hablado mucho de teorías, pero ¿qué hay de nuestros ojos? ¿Vemos el mundo tal como es, o
+                    nuestras teorías previas moldean lo que vemos?
+                    Analizaremos ilusiones ópticas y casos históricos para entender por qué dos científicos pueden mirar
+                    lo mismo y ver cosas distintas.
+                </p>
+            </section>
+
+            <nav class="class-navigation">
+                <a href="clase-06.html" class="nav-button">← Clase Anterior</a>
+                <a href="index.html" class="nav-button nav-button-index">📚 Índice de Unidad</a>
+                <a href="clase-08.html" class="nav-button">Siguiente Clase →</a>
+            </nav>
+        </article>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Filosofía 6to</h4>
+                    <p>Unidad 1: Teorías Científicas - Clase 7 de 10</p>
+                    <p>Profesor: Javier Pereyra</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Filosofía 6to. Material educativo.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../../assets/js/dark-mode.js"></script>
+</body>
+
+</html>

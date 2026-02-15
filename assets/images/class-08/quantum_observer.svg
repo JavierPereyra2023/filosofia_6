@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="600" height="300" viewBox="0 0 600 300" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <linearGradient id="interference-grad" x1="0%" y1="0%" x2="0%" y2="100%">
+            <stop offset="0%" stop-color="#000" />
+            <stop offset="10%" stop-color="#00f2fe" />
+            <stop offset="20%" stop-color="#000" />
+            <stop offset="30%" stop-color="#00f2fe" />
+            <stop offset="40%" stop-color="#000" />
+            <stop offset="50%" stop-color="#00f2fe" stop-opacity="1" />
+            <stop offset="60%" stop-color="#000" />
+            <stop offset="70%" stop-color="#00f2fe" />
+            <stop offset="80%" stop-color="#000" />
+            <stop offset="90%" stop-color="#00f2fe" />
+            <stop offset="100%" stop-color="#000" />
+        </linearGradient>
+
+        <linearGradient id="particle-grad" x1="0%" y1="0%" x2="0%" y2="100%">
+            <stop offset="0%" stop-color="#000" />
+            <stop offset="30%" stop-color="#000" />
+            <stop offset="40%" stop-color="#ff4757" />
+            <stop offset="60%" stop-color="#ff4757" />
+            <stop offset="70%" stop-color="#000" />
+            <stop offset="100%" stop-color="#000" />
+        </linearGradient>
+
+        <filter id="glow">
+            <feGaussianBlur stdDeviation="2.5" result="coloredBlur"/>
+            <feMerge>
+                <feMergeNode in="coloredBlur"/>
+                <feMergeNode in="SourceGraphic"/>
+            </feMerge>
+        </filter>
+
+        <style>
+            .electron { fill: #00f2fe; filter: url(#glow); }
+            .wave-path { fill: none; stroke: #00f2fe; stroke-width: 2; opacity: 0.5; }
+            .screen { fill: #222; stroke: #555; stroke-width: 2; }
+            .detector { fill: #ff4757; }
+            .interference-band { fill: url(#interference-grad); opacity: 0; }
+            .particle-band { fill: url(#particle-grad); opacity: 0; }
+            
+            /* Animation States */
+            /* State 1: No Observer (Wave) - 0s to 5s */
+            /* State 2: Observer (Particle) - 5s to 10s */
+            
+            @keyframes toggleObserver {
+                0%, 45% { opacity: 0; } /* Invisible Eye */
+                50%, 95% { opacity: 1; } /* Visible Eye */
+            }
+
+            @keyframes showInterference {
+                0%, 45% { opacity: 1; }
+                50%, 100% { opacity: 0; }
+            }
+
+            @keyframes showParticles {
+                0%, 45% { opacity: 0; }
+                50%, 100% { opacity: 1; }
+            }
+            
+            /* Electron Animation */
+            @keyframes shootElectron {
+                0% { transform: translate(50px, 150px); opacity: 1; }
+                40% { transform: translate(300px, 150px); opacity: 1; } /* Slits */
+                100% { transform: translate(550px, 50px); opacity: 0; } /* Screen scatter */
+            }
+
+            .eye-icon { animation: toggleObserver 8s infinite steps(1); }
+            .pattern-wave { animation: showInterference 8s infinite steps(1); }
+            .pattern-part { animation: showParticles 8s infinite steps(1); }
+            
+            /* Controlling emission visibility */
+            .emitter-waves { animation: showInterference 8s infinite steps(1); }
+            .emitter-particles { animation: showParticles 8s infinite steps(1); }
+
+            /* Waves leaving gun */
+            .wave-arc { fill: none; stroke: #00f2fe; stroke-width: 2; opacity: 0; animation: expandWave 2s infinite linear; }
+            @keyframes expandWave {
+                0% { r: 5; opacity: 1; stroke-width:3; }
+                80% { r: 120; opacity: 0; stroke-width:1;}
+                100% { r: 120; opacity: 0; stroke-width:0;}
+            }
+
+            /* Particles leaving gun */
+            .particle-shot { fill: #ff4757; r: 6; opacity: 0; animation: shootParticle 2s infinite linear; }
+            @keyframes shootParticle {
+                0% { transform: translate(0, 0); opacity: 1; }
+                10% { transform: translate(20px, 0); opacity: 1; } /* Establish visibility */
+                90% { transform: translate(180px, 0); opacity: 1; } /* Move to slits */
+                100% { transform: translate(200px, 0); opacity: 0; } /* Fade out impact */
+            }
+        </style>
+    </defs>
+
+    <!-- Background -->
+    <rect width="100%" height="100%" fill="#111" />
+
+    <!-- Electron Gun -->
+    <rect x="20" y="130" width="40" height="40" fill="#333" stroke="#666" />
+    <text x="40" y="155" fill="#fff" text-anchor="middle" font-size="10" font-family="Arial">GUN</text>
+
+    <!-- Double Slit Barrier -->
+    <rect x="250" y="50" width="10" height="200" fill="#444" />
+    <!-- Slits -->
+    <rect x="250" y="110" width="10" height="20" fill="#111" />
+    <rect x="250" y="170" width="10" height="20" fill="#111" />
+
+    <!-- Detection Screen -->
+    <rect x="550" y="50" width="10" height="200" fill="#eee" />
+
+    <!-- PATTERNS ON SCREEN -->
+    <!-- Interference (Wave mode) -->
+    <rect x="552" y="50" width="6" height="200" class="pattern-wave" fill="url(#interference-grad)" />
+    <!-- Particles (Observer mode) -->
+    <rect x="552" y="50" width="6" height="200" class="pattern-part" fill="url(#particle-grad)" />
+
+    <!-- ANIMATION ELEMENTS -->
+    
+    <!-- Emitted WAVES (Visible when Observer is OFF) -->
+    <g transform="translate(60, 150)" class="emitter-waves">
+        <circle class="wave-arc" style="animation-duration: 2s; animation-delay: 0s;" />
+        <circle class="wave-arc" style="animation-duration: 2s; animation-delay: 1s;" />
+    </g>
+
+    <!-- Emitted PARTICLES (Visible when Observer is ON) -->
+    <g transform="translate(60, 150)" class="emitter-particles">
+        <circle class="particle-shot" style="animation-duration: 2s; animation-delay: 0s;" />
+        <circle class="particle-shot" style="animation-duration: 2s; animation-delay: 1s;" />
+    </g>
+
+    <!-- OBSERVER (EYE) -->
+    <g class="eye-icon" transform="translate(280, 80)">
+         <path d="M0 10 Q15 0 30 10 Q15 20 0 10Z" fill="#fff" />
+         <circle cx="15" cy="10" r="5" fill="#ff4757" />
+         <text x="35" y="15" fill="#ff4757" font-family="Arial" font-size="12" font-weight="bold">OBSERVANDO</text>
+         <!-- Laser beam from eye to slit for effect -->
+         <line x1="15" y1="10" x2="-20" y2="40" stroke="#ff4757" stroke-width="1" stroke-dasharray="2,2" />
+    </g>
+
+    <!-- LABELS -->
+    <text x="300" y="280" fill="#00f2fe" class="pattern-wave" font-family="Arial" font-size="16" text-anchor="middle">Sin Observador = Sale ONDA</text>
+    <text x="300" y="280" fill="#ff4757" class="pattern-part" font-family="Arial" font-size="16" text-anchor="middle">Con Observador = Sale PARTÍCULA</text>
+
+</svg>

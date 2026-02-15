@@ -101,7 +101,7 @@
           </svg>
           <span>Unidad 1</span>
         </a>
-        <a href="../../index.html" class="nav-brand">Filosofía 6to</a>
+        <a href="../../home.html" class="nav-brand">Filosofía 6to</a>
       </div>
       <div class="nav-controls">
         <button id="dark-mode-toggle" class="dark-mode-toggle" aria-label="Cambiar tema">
@@ -159,8 +159,10 @@
         </p>
 
         <div style="text-align: center; margin: var(--space-xl) 0;">
-          <img src="https://via.placeholder.com/500x600/667eea/ffffff?text=Nicolas+Copernico" alt="Nicolás Copérnico"
-            style="max-width: 100%; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+          <div style="display: inline-block;">
+            <img src="../../assets/images/class-02/copernicus_portrait.jpg" alt="Nicolás Copérnico"
+              class="class-image-small">
+          </div>
           <p style="margin-top: var(--space-sm); font-size: 0.9em; color: var(--color-text-secondary);">
             <em>Nicolás Copérnico (1473-1543), astrónomo polaco que revolucionó nuestra comprensión del cosmos</em>
           </p>
@@ -249,18 +251,81 @@
         </div>
 
         <div style="text-align: center; margin: var(--space-xl) 0;">
-          <img src="https://via.placeholder.com/700x400/4a5f8f/ffffff?text=Complejidad+del+Sistema+Ptolemaico"
-            alt="Sistema Ptolemaico Complejo"
-            style="max-width: 100%; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+          <div style="display: inline-block; background: white; padding: 10px; border-radius: 8px;">
+            <img src="../../assets/images/class-02/ptolemaic_system.svg" alt="Sistema Ptolemaico Complejo"
+              class="class-image-small">
+          </div>
           <p style="margin-top: var(--space-sm); font-size: 0.9em; color: var(--color-text-secondary);">
             <em>La creciente complejidad del sistema ptolemaico: múltiples epiciclos para cada planeta</em>
           </p>
         </div>
       </section>
 
+      <!-- Epistemological Interlude -->
+      <section class="class-section">
+        <h2>Modelo vs Teoría: Distinciones Epistemológicas</h2>
+
+        <p>
+          Antes de analizar la solución copernicana, es crucial entender la diferencia entre <strong>modelo</strong> y
+          <strong>teoría</strong>, conceptos que a menudo se confunden pero tienen significados distintos en filosofía
+          de la ciencia:
+        </p>
+
+        <div class="concept-highlight">
+          <h3>Modelo Científico</h3>
+          <p>
+            Un <strong>modelo</strong> es una representación simplificada de un fenómeno o sistema que permite hacer
+            predicciones y cálculos. Los modelos pueden ser:
+          </p>
+          <ul>
+            <li><strong>Descriptivos:</strong> Representan cómo se comporta un sistema (ej: modelo geocéntrico de
+              Ptolomeo describe las órbitas aparentes).</li>
+            <li><strong>Matemáticos:</strong> Usan ecuaciones para representar relaciones (ej: epiciclos como funciones
+              trigonométricas).</li>
+            <li><strong>Instrumentales:</strong> Sirven como herramientas para hacer predicciones sin necesariamente
+              afirmar que representan la realidad.</li>
+          </ul>
+
+          <h3 style="margin-top: var(--space-md);">Teoría Científica</h3>
+          <p>
+            Una <strong>teoría</strong> es un sistema explicativo más amplio que:
+          </p>
+          <ul>
+            <li>Propone <strong>mecanismos causales</strong> que explican por qué ocurren los fenómenos.</li>
+            <li>Integra múltiples leyes y modelos en un marco coherente.</li>
+            <li>Hace afirmaciones sobre la <strong>estructura de la realidad</strong>, no solo sobre cómo calcular
+              predicciones.</li>
+            <li>Puede generar nuevos modelos y predicciones.</li>
+          </ul>
+
+          <h3 style="margin-top: var(--space-md);">Copérnico: ¿Modelo o Teoría?</h3>
+          <p>
+            El heliocentrismo comenzó como un <strong>modelo alternativo</strong> de cálculo. Algunos contemporáneos lo
+            veían solo como herramienta matemática (instrumentalismo). Pero Copérnico y sus seguidores lo consideraban
+            una <strong>descripción verdadera</strong> de la realidad (realismo). Con Galileo y Newton, el
+            heliocentrismo se convirtió en parte de una teoría física completa que explicaba causalmente el movimiento
+            planetario.
+          </p>
+        </div>
+
+        <div class="graffiti-divider">
+          <span style="font-size: 1.4em;">Modelo ≠ Teoría</span>
+          <span>(Instrumento vs Explicación)</span>
+        </div>
+      </section>
+
       <!-- Copernican Solution -->
       <section class="class-section">
         <h2>La Solución de Copérnico: Heliocentrismo</h2>
+
+        <div style="text-align: center; margin: var(--space-xl) 0;">
+          <div style="display: inline-block;">
+            <img src="../../assets/images/class-02/heliocentric_system.svg" alt="Sistema Heliocéntrico de Copérnico" class="class-image-diagram">
+          </div>
+          <p style="margin-top: var(--space-sm); font-size: 0.9em; color: var(--color-text-secondary);">
+            <em>El sistema heliocéntrico de Copérnico: el Sol en el centro, los planetas en órbita</em>
+          </p>
+        </div>
 
         <p>
           Copérnico propuso una idea revolucionaria pero, en realidad, muy antigua. Ya en el siglo III a.C., el
@@ -308,9 +373,10 @@
         </div>
 
         <div style="text-align: center; margin: var(--space-xl) 0;">
-          <img src="https://via.placeholder.com/700x500/5a72d8/ffffff?text=Modelo+Heliocentrico+de+Copernico"
-            alt="Modelo Heliocéntrico"
-            style="max-width: 100%; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+          <div style="display: inline-block;">
+            <img src="../../assets/images/class-02/heliocentric_system.jpg" alt="Modelo Heliocéntrico"
+              class="class-image-small">
+          </div>
           <p style="margin-top: var(--space-sm); font-size: 0.9em; color: var(--color-text-secondary);">
             <em>Sistema heliocéntrico de Copérnico: el Sol en el centro, los planetas (incluyendo la Tierra) girando a
               su alrededor</em>
@@ -351,9 +417,10 @@
         </div>
 
         <div style="text-align: center; margin: var(--space-xl) 0;">
-          <img src="https://via.placeholder.com/800x450/667eea/ffffff?text=Movimiento+Retrogrado+Explicado"
-            alt="Explicación del movimiento retrógrado"
-            style="max-width: 100%; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+          <div style="display: inline-block; background: white; padding: 10px; border-radius: 8px;">
+            <img src="../../assets/images/class-02/retrograde_motion.svg" alt="Explicación del movimiento retrógrado"
+              class="class-image-small">
+          </div>
           <p style="margin-top: var(--space-sm); font-size: 0.9em; color: var(--color-text-secondary);">
             <em>Cuando la Tierra adelanta a Marte, este parece retroceder (movimiento retrógrado) desde nuestra
               perspectiva</em>
@@ -467,13 +534,221 @@
           </p>
         </div>
 
-        <div style="text-align: center; margin: var(--space-xl) 0;">
-          <img src="https://via.placeholder.com/600x400/4a5f8f/ffffff?text=Paralaje+Estelar" alt="Paralaje Estelar"
-            style="max-width: 100%; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
-          <p style="margin-top: var(--space-sm); font-size: 0.9em; color: var(--color-text-secondary);">
+        <div style="text-align: center; margin: var(--space-2xl) 0; position: relative;">
+          <div style="display: flex; justify-content: center; align-items: center; gap: 30px; flex-wrap: wrap;">
+
+            <!-- Graffiti izquierdo -->
+            <div style="font-family: 'Caveat', cursive; font-size: 17px; color: rgba(100, 149, 237, 0.5);
+                        text-align: center; line-height: 1.6; font-weight: 600;
+                        transform: rotate(-6deg); flex-shrink: 0;">
+              ★ Bessel 1838<br>
+              θ = d/D<br>
+              1 parsec<br>
+              = 3.26 años luz
+            </div>
+
+            <!-- Imagen central -->
+            <div style="display: inline-block; background: white; padding: 20px; border-radius: 8px; flex-shrink: 0;">
+              <img src="../../assets/images/class-02/stellar_parallax_blog.png" alt="Paralaje Estelar"
+                style="width: 640px !important; max-width: 640px !important; min-width: 640px !important;
+                          height: auto !important; max-height: 550px !important;
+                          border: 4px solid #87CEEB !important;
+                          border-radius: 8px !important; box-sizing: border-box !important; display: block !important;">
+            </div>
+
+            <!-- Graffiti derecho -->
+            <div style="font-family: 'Caveat', cursive; font-size: 17px; color: rgba(100, 149, 237, 0.5);
+                        text-align: center; line-height: 1.6; font-weight: 600;
+                        transform: rotate(6deg); flex-shrink: 0;">
+              Órbita terrestre<br>
+              2 AU = base<br>
+              Estrellas lejanas<br>
+              ángulo pequeño
+            </div>
+
+          </div>
+          <p style="margin-top: var(--space-md); font-size: 0.9em; color: var(--color-text-secondary);">
             <em>El paralaje estelar: si la Tierra se mueve, las estrellas deberían mostrar un aparente desplazamiento.
               No se detectó hasta 1838 con telescopios muy potentes</em>
           </p>
+        </div>
+      </section>
+
+      <!-- Theory-Laden Observation -->
+      <section class="class-section">
+        <h2>La Carga Teórica de la Observación</h2>
+
+        <p>
+          Un concepto epistemológico crucial para entender el cambio de paradigmas es la <strong>carga teórica de la
+            observación</strong> (theory-ladenness of observation). Este concepto, desarrollado por filósofos como
+          Norwood Russell Hanson y Thomas Kuhn, sostiene que:
+        </p>
+
+        <div class="concept-highlight">
+          <h3>¿Qué es la Carga Teórica?</h3>
+          <p>
+            <strong>La observación nunca es "pura" o neutral</strong>. Lo que vemos está influenciado por nuestras
+            teorías, expectativas y marcos conceptuales previos. Dos científicos con paradigmas diferentes pueden mirar
+            el mismo fenómeno y "ver" cosas distintas.
+          </p>
+
+          <h4 style="margin-top: var(--space-md);">Ejemplo: El Amanecer</h4>
+          <ul>
+            <li><strong>Observación "pura":</strong> "Veo un disco luminoso aparecer en el horizonte este."</li>
+            <li><strong>Interpretación geocéntrica:</strong> "Veo el Sol moviéndose alrededor de la Tierra inmóvil,
+              saliendo por el este."</li>
+            <li><strong>Interpretación heliocéntrica:</strong> "Veo el resultado de la rotación de la Tierra, que hace
+              que el Sol (inmóvil) parezca moverse."</li>
+          </ul>
+
+          <p style="margin-top: var(--space-md);">
+            La misma <strong>experiencia sensorial</strong> (disco luminoso apareciendo) recibe <strong>interpretaciones
+              diferentes</strong> según el paradigma del observador. No hay observación completamente independiente de
+            la teoría.
+          </p>
+
+          <h4 style="margin-top: var(--space-md);">Consecuencias Epistemológicas</h4>
+          <ul>
+            <li><strong>No existe un "lenguaje observacional neutral"</strong> para describir fenómenos sin supuestos
+              teóricos.</li>
+            <li><strong>Los datos no "hablan por sí mismos"</strong>; requieren interpretación dentro de un marco
+              teórico.</li>
+            <li><strong>El cambio de paradigma implica "ver el mundo de otra manera"</strong>, no solo cambiar de
+              opinión sobre teorías.</li>
+            <li><strong>La evidencia empírica no es suficiente</strong> para decidir entre paradigmas rivales, porque
+              cada paradigma interpreta los datos de manera diferente.</li>
+          </ul>
+        </div>
+
+        <div class="philosophical-quote">
+          <p>
+            "El astrónomo ptolemaico y el copernicano ven cosas diferentes cuando miran el Sol. [...] Ambos miran el
+            Sol, pero no ven lo mismo."
+          </p>
+          <cite>— Thomas Kuhn, La Estructura de las Revoluciones Científicas (1962)</cite>
+        </div>
+
+        <p>
+          Esta carga teórica explica por qué los datos astronómicos conocidos por siglos (amanecer, atardecer,
+          movimiento de planetas) podían interpretarse tanto geocéntricamente como heliocentricamente. No era solo una
+          cuestión de "más observaciones"; era necesario un cambio en el <strong>marco interpretativo</strong> completo.
+        </p>
+      </section>
+
+      <!-- Incommensurability -->
+      <section class="class-section">
+        <h2>Incomensurabilidad de Paradigmas</h2>
+
+        <p>
+          Uno de los conceptos más profundos y controvertidos de Thomas Kuhn es la <strong>incomensurabilidad</strong>
+          (incommensurability) de paradigmas rivales. Este concepto es crucial para entender por qué el cambio del
+          geocentrismo al heliocentrismo no fue simplemente una "corrección" basada en nuevos datos.
+        </p>
+
+        <div class="concept-highlight">
+          <h3>¿Qué es la Incomensurabilidad?</h3>
+
+          <p>
+            Dos paradigmas son <strong>inconmensurables</strong> cuando:
+          </p>
+
+          <ul>
+            <li><strong>No comparten estándares de evaluación comunes:</strong> Lo que cuenta como "evidencia
+              relevante", "problema importante" o "explicación satisfactoria" puede diferir entre paradigmas.</li>
+
+            <li><strong>Usan conceptos con significados diferentes:</strong> Términos como "planeta", "movimiento",
+              "masa" pueden tener significados sistemáticamente distintos en cada paradigma.</li>
+
+            <li><strong>Dividen el mundo de manera diferente:</strong> Lo que un paradigma considera como "un
+              fenómeno" puede ser dividido o agrupado diferentemente por otro.</li>
+
+            <li><strong>No son completamente traducibles:</strong> No existe un "meta-lenguaje neutro" desde el cual
+              comparar objetivamente ambos paradigmas.</li>
+          </ul>
+
+          <h3 style="margin-top: var(--space-md);">Ejemplos de Incomensurabilidad: Geocentrismo vs Heliocentrismo</h3>
+
+          <h4>1. Significado de "Planeta"</h4>
+          <ul>
+            <li><strong>En el geocentrismo:</strong> "Planeta" significa "estrella errante" que gira alrededor de la
+              Tierra. La Luna y el Sol SON planetas. La Tierra NO es un planeta.</li>
+            <li><strong>En el heliocentrismo:</strong> "Planeta" significa cuerpo que orbita el Sol. La Tierra ES un
+              planeta. La Luna es un satélite. El Sol NO es un planeta.</li>
+          </ul>
+          <p style="margin-top: var(--space-sm);">
+            ¿Cuántos planetas hay en el sistema solar? <em>La pregunta misma presupone un paradigma.</em> Un
+            ptolemaico y un copernicano no están simplemente en desacuerdo sobre el número; están usando el término
+            "planeta" con significados fundamentalmente distintos.
+          </p>
+
+          <h4 style="margin-top: var(--space-md);">2. Naturaleza del "Movimiento"</h4>
+          <ul>
+            <li><strong>Aristóteles/Ptolomeo:</strong> "Movimiento" requiere una causa continua. Movimiento violento
+              vs natural. Los objetos tienen "lugares naturales".</li>
+            <li><strong>Galileo/Newton:</strong> "Movimiento" uniforme es natural y no requiere causa. Solo los
+              <em>cambios</em> de movimiento (aceleración) requieren causas (fuerzas).
+            </li>
+          </ul>
+
+          <h4 style="margin-top: var(--space-md);">3. Criterios de Éxito</h4>
+          <ul>
+            <li><strong>Ptolemaicos:</strong> Una buena teoría debe: (a) salvar los fenómenos (predicciones), (b) usar
+              solo círculos perfectos, (c) respetar la distinción cielo/tierra, (d) concordar con la física
+              aristotélica.</li>
+            <li><strong>Copernicanos:</strong> Una buena teoría debe: (a) ser matemáticamente simple, (b) unificar
+              fenómenos dispersos, (c) hacer predicciones precisas, (d) eventualmente, concordar con nueva física
+              (Galileo, Newton).</li>
+          </ul>
+          <p style="margin-top: var(--space-sm);">
+            Los dos paradigmas ni siquiera están de acuerdo sobre <em>qué cuenta como una teoría exitosa</em>.
+          </p>
+        </div>
+
+        <h3>¿Implica Esto Que No Hay Progreso Científico?</h3>
+
+        <p>
+          La incomensurabilidad llevó a algunos críticos a acusar a Kuhn de <strong>relativismo</strong>: si los
+          paradigmas son inconmensurables, ¿cómo podemos decir que la ciencia progresa? ¿No sería todo "cuestión de
+          perspectiva"?
+        </p>
+
+        <div class="concept-highlight">
+          <h3>Respuesta de Kuhn</h3>
+
+          <p>
+            Kuhn rechazaba el relativismo extremo. Aunque los paradigmas son inconmensurables, esto NO significa:
+          </p>
+
+          <ul>
+            <li><strong>No significa que sean incomparables:</strong> Podemos comparar paradigmas en ciertos aspectos
+              (precisión predictiva, simplicidad, fecundidad).</li>
+
+            <li><strong>No significa que la elección sea arbitraria:</strong> Hay razones (aunque no algoritmos
+              mecánicos) para preferir un paradigma sobre otro.</li>
+
+            <li><strong>No significa que no haya progreso:</strong> Los paradigmas posteriores típicamente resuelven
+              más problemas, son más precisos, y tienen mayor alcance explicativo.</li>
+          </ul>
+
+          <p style="margin-top: var(--space-md);">
+            Lo que SÍ significa es que el progreso científico no es <strong>acumulativo</strong> ni <strong>lineal</strong>.
+            Las revoluciones científicas implican <strong>rupturas</strong>, no solo adiciones. Parte del conocimiento
+            del viejo paradigma puede perderse o reinterpretarse radicalmente.
+          </p>
+        </div>
+
+        <div class="philosophical-quote">
+          <p>
+            "Los proponentes de paradigmas competidores practican sus profesiones en mundos diferentes. [...] Ambos
+            grupos observan el mundo, y lo que observan no ha cambiado. Pero en algunas áreas ven cosas diferentes, y
+            las ven en relaciones diferentes entre sí."
+          </p>
+          <cite>— Thomas Kuhn, La Estructura de las Revoluciones Científicas (1962)</cite>
+        </div>
+
+        <div class="graffiti-divider">
+          <span style="font-size: 1.4em;">Paradigma A ≠ Paradigma B</span>
+          <span>(Inconmensurables pero Comparables)</span>
         </div>
       </section>
 
@@ -562,16 +837,30 @@
           <ul>
             <li><strong>Heliocentrismo:</strong> Modelo cosmológico que coloca al Sol en el centro del sistema, con los
               planetas (incluyendo la Tierra) girando a su alrededor.</li>
+            <li><strong>Modelo científico:</strong> Representación simplificada de un fenómeno que permite hacer
+              predicciones y cálculos, sin necesariamente afirmar que representa la realidad.</li>
+            <li><strong>Teoría científica:</strong> Sistema explicativo que propone mecanismos causales y hace
+              afirmaciones sobre la estructura de la realidad.</li>
+            <li><strong>Carga teórica de la observación:</strong> Concepto que sostiene que toda observación está
+              influenciada por teorías, expectativas y marcos conceptuales previos. No existe observación "pura" o
+              neutral.</li>
+            <li><strong>Realismo vs Instrumentalismo:</strong> Debate sobre si las teorías científicas describen la
+              realidad (realismo) o son solo herramientas útiles para predicciones (instrumentalismo).</li>
             <li><strong>Paralaje estelar:</strong> Aparente desplazamiento de las estrellas debido al movimiento de la
               Tierra alrededor del Sol. No fue detectado hasta 1838.</li>
             <li><strong>Parsimonia (Navaja de Ockham):</strong> Principio que dice que, entre dos teorías que explican
               los mismos fenómenos, se debe preferir la más simple.</li>
+            <li><strong>Incomensurabilidad de paradigmas:</strong> Concepto kuhniano que sostiene que paradigmas
+              rivales no comparten estándares de evaluación comunes, usan conceptos con significados diferentes, y no
+              son completamente traducibles a un lenguaje neutral. No significa que sean incomparables o que la elección
+              sea arbitraria.</li>
+            <li><strong>Relativismo:</strong> Posición (que Kuhn rechaza) según la cual todas las teorías son
+              igualmente válidas y la elección entre ellas es arbitraria o meramente cultural.</li>
             <li><strong>Movimiento relativo:</strong> El movimiento observado depende del marco de referencia del
               observador. El movimiento retrógrado es una consecuencia del movimiento relativo de la Tierra y los
               planetas.</li>
             <li><strong>Hipótesis ad hoc:</strong> Modificación de una teoría diseñada solo para salvar una observación
-              problemática, sin justificación independiente. (Copérnico criticaba los múltiples epiciclos como hipótesis
-              ad hoc.)</li>
+              problemática, sin justificación independiente.</li>
           </ul>
         </div>
       </section>

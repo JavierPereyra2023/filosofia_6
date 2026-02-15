@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="600" height="400" viewBox="0 0 600 400" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <radialGradient id="sun-grad" cx="50%" cy="50%" r="50%">
+            <stop offset="0%" style="stop-color:yellow;stop-opacity:1" />
+            <stop offset="100%" style="stop-color:orange;stop-opacity:1" />
+        </radialGradient>
+        <style>
+             .orbit { fill: none; stroke: #555; stroke-width: 1; stroke-dasharray: 5,5; opacity: 0.5; }
+             .planet { stroke: none; }
+             .force-line { stroke: white; stroke-width: 2; stroke-dasharray: 4; marker-end: url(#arrow); }
+             .label { font-family: sans-serif; fill: white; font-size: 14px; text-shadow: 1px 1px 2px black; pointer-events: none;}
+             
+             /* Animation Keyframes */
+             @keyframes uranus-move {
+                0% { transform: rotate(0deg) translateX(100px) rotate(0deg); }
+                100% { transform: rotate(360deg) translateX(100px) rotate(-360deg); }
+             }
+             @keyframes neptune-move {
+                0% { transform: rotate(45deg) translateX(160px) rotate(-45deg); }
+                100% { transform: rotate(225deg) translateX(160px) rotate(-225deg); }
+             }
+             @keyframes perturbation {
+                0% { stroke-opacity: 0; }
+                40% { stroke-opacity: 0; } 
+                50% { stroke-opacity: 1; stroke: #00ffff; stroke-width: 3; } 
+                60% { stroke-opacity: 0; } 
+                100% { stroke-opacity: 0; }
+             }
+             
+             .uranus-group { animation: uranus-move 10s linear infinite; }
+             .neptune-group { animation: neptune-move 20s linear infinite; } 
+             
+             .gravity-pull {
+                stroke: cyan; stroke-width: 2; stroke-dasharray: 5;
+                animation: perturbation 10s linear infinite;
+             }
+        </style>
+    </defs>
+    
+    <!-- Background Space -->
+    <rect width="600" height="400" fill="#000022" />
+    
+    <!-- Sun -->
+    <circle cx="300" cy="200" r="15" fill="url(#sun-grad)" />
+    <text x="290" y="235" class="label" fill="yellow" style="font-size: 12px">Sol</text>
+    
+    <!-- Orbits (Significantly reduced to prevent overlap) -->
+    <!-- Max height available is 400. Center 200. Max down excursion 160 + radius 10 = 170. -->
+    <!-- Lowest y = 200 + 170 = 370. Legend is at 380+. Safe. -->
+    <circle cx="300" cy="200" r="100" class="orbit" /> 
+    <circle cx="300" cy="200" r="160" class="orbit" /> 
+    
+    <!-- Center Group for rotations -->
+    <g transform="translate(300, 200)">
+        
+        <!-- NEPTUNE -->
+        <g class="neptune-group">
+            <circle cx="0" cy="0" r="10" fill="#3355ff" />
+            <!-- Moved label above planet to avoid bottom overlap -->
+            <text x="-25" y="-15" class="label">Neptuno (Invisible)</text>
+        </g>
+        
+        <!-- URANUS -->
+        <g class="uranus-group">
+            <circle cx="0" cy="0" r="8" fill="#00aaff" />
+            <text x="12" y="5" class="label">Urano</text>
+        </g>
+    </g>
+    
+    <!-- Explanatory Text -->
+    <text x="20" y="30" class="label" style="font-size: 16px; fill: #aaa;">Simulación: Perturbación de la Órbita</text>
+    <text x="20" y="50" class="label" style="font-size: 12px; fill: #888;">Órbitas a escala reducida.</text>
+    <!-- Moved legend slightly higher to be absolutely safe -->
+    <text x="20" y="380" class="label" style="font-size: 13px; fill: cyan;">Azul Celeste: Hipótesis Principal | Azul Oscuro: Hipótesis Auxiliar</text>
+
+</svg>

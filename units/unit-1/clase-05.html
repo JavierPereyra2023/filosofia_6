@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clase 5: El Método Científico | Filosofía 6to</title>
+    <link rel="stylesheet" href="../../assets/css/variables.css">
+    <link rel="stylesheet" href="../../assets/css/reset.css">
+    <link rel="stylesheet" href="../../assets/css/base.css">
+    <link rel="stylesheet" href="../../assets/css/typography.css">
+    <link rel="stylesheet" href="../../assets/css/layout.css">
+    <link rel="stylesheet" href="../../assets/css/navigation.css">
+    <link rel="stylesheet" href="../../assets/css/components.css">
+    <link rel="stylesheet" href="../../assets/css/unit-page.css">
+    <link rel="stylesheet" href="../../assets/css/book-layout.css">
+
+    <style>
+        .class-container::before {
+            content: '    H → P\A    ¬P\A    ----\A    ¬H';
+            position: fixed;
+            top: 15%;
+            right: 5%;
+            font-family: 'Caveat', 'Comic Sans MS', cursive;
+            font-size: 26px;
+            font-weight: 700;
+            white-space: pre;
+            color: rgba(255, 255, 255, 0.35);
+            transform: rotate(-6deg);
+        }
+
+        .class-container::after {
+            content: '    Hipótesis\A       ↓\A    Predicción\A       ↓\A    Contrastación';
+            position: fixed;
+            bottom: 20%;
+            left: 5%;
+            font-family: 'Caveat', 'Comic Sans MS', cursive;
+            font-size: 24px;
+            font-weight: 700;
+            white-space: pre;
+            color: rgba(255, 255, 255, 0.32);
+            transform: rotate(5deg);
+        }
+
+        /* Mobile Responsive Graffiti */
+        @media (max-width: 1024px) {
+
+            .class-container::before,
+            .class-container::after {
+                position: relative;
+                width: 100%;
+                text-align: center;
+                top: auto;
+                bottom: auto;
+                left: auto;
+                right: auto;
+                transform: rotate(0deg);
+                margin: var(--space-xl) 0;
+                font-size: 20px;
+                display: block;
+            }
+
+            .class-container::before {
+                content: 'Modus Tollens: Si H → P, y no P, entonces no H | Refutación Lógica';
+            }
+
+            .class-container::after {
+                content: 'MÉTODO CIENTÍFICO | Hipótesis - Deducción - Experimento';
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="main-nav">
+        <div class="nav-container">
+            <div class="nav-left">
+                <a href="index.html" class="nav-back-button" title="Volver al índice de la unidad">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M15 19l-7-7 7-7" />
+                    </svg>
+                    <span>Unidad 1</span>
+                </a>
+                <a href="../../home.html" class="nav-brand">Filosofía 6to</a>
+            </div>
+            <div class="nav-controls">
+                <button id="dark-mode-toggle" class="dark-mode-toggle" aria-label="Cambiar tema">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="class-progress">
+        <div class="container">
+            <div class="progress-info">
+                <span class="progress-label">Unidad 1: Teorías Científicas</span>
+                <span class="progress-count">Clase 5 de 10</span>
+            </div>
+            <div class="progress-bar">
+                <div class="progress-fill" style="width: 50%"></div>
+            </div>
+        </div>
+    </div>
+
+    <main class="class-container">
+        <article class="class-content">
+            <header class="class-header">
+                <div class="class-badge">Clase 5</div>
+                <h1 class="class-title">El Método Científico: Hipótesis y Contrastación</h1>
+                <p class="class-subtitle">La lógica del descubrimiento y la justificación en la ciencia</p>
+            </header>
+
+            <section class="class-section">
+                <h2>El "Salto" Imaginativo</h2>
+                <p>
+                    A menudo pensamos que la ciencia comienza con la observación pura y que las teorías se "destilan" de
+                    los datos. Pero, como vimos, la observación siempre tiene carga teórica. Galileo no solo "miró"; él
+                    *interrogó* a la naturaleza con hipótesis específicas.
+                </p>
+                <p>
+                    El método científico moderno no es una simple acumulación de datos (inductivismo ingenuo). Es un
+                    proceso creativo y riguroso conocido como el <strong>Método Hipotético-Deductivo</strong>.
+                </p>
+
+                <div class="concept-highlight">
+                    <h3>¿Qué es una Hipótesis Científica?</h3>
+                    <p>
+                        Una hipótesis no es una "suposición educada" cualquiera. Es un <strong>enunciado
+                            conjetural</strong> que se propone para explicar un problema, y del cual se pueden deducir
+                        consecuencias observables (predicciones) que permitan ponerlo a prueba.
+                    </p>
+                    <ul>
+                        <li><strong>Debe ser falsable:</strong> Debe existir al menos un experimento u observación
+                            posible que, de dar un resultado negativo, refutaría la hipótesis. (Popper)</li>
+                        <li><strong>Debe tener poder explicativo:</strong> Debe dar cuenta de por qué ocurren los
+                            fenómenos, no solo describirlos.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="class-section">
+                <h2>Pasos del Método Hipotético-Deductivo</h2>
+                <ol>
+                    <li>
+                        <strong>Planteamiento del Problema:</strong> Surge de una observación anómala o una pregunta sin
+                        respuesta (ej: "¿Por qué Venus cambia de tamaño aparente?").
+                    </li>
+                    <li>
+                        <strong>Formulación de Hipótesis (H):</strong> Se inventa una posible solución (ej: "Venus
+                        orbita alrededor del Sol, no de la Tierra"). Este es el paso creativo.
+                    </li>
+                    <li>
+                        <strong>Deducción de Consecuencias Observables (CO):</strong> Si H es verdadera, ¿qué deberíamos
+                        observar? (ej: "Si Venus orbita el Sol, debería mostrar fases completas como la Luna y variar
+                        mucho su tamaño aparente").
+                    </li>
+                    <li>
+                        <strong>Contrastación (Experimento/Observación):</strong> Se realiza el experimento para ver si
+                        las consecuencias predichas ocurren realmente (ej: "Mirar Venus con el telescopio durante
+                        meses").
+                    </li>
+                    <li>
+                        <strong>Conclusión:</strong>
+                        <ul>
+                            <li>Si la predicción falla (¬CO), la hipótesis queda <strong>refutada</strong> (falsada).
+                            </li>
+                            <li>Si la predicción se cumple (CO), la hipótesis queda <strong>corroborada</strong>
+                                (confirmada provisionalmente).</li>
+                        </ul>
+                    </li>
+                </ol>
+
+                <div style="text-align: center; margin: var(--space-xl) 0;">
+                    <div
+                        style="display: inline-block; background: white; padding: 20px; border-radius: 8px; border: 1px solid var(--color-border); max-width: 100%;">
+                        <object data="../../assets/images/class-05/hypothetical_deductive.svg" type="image/svg+xml"
+                            style="width: 100%; max-width: 780px; min-height: 750px;">
+                            Tu navegador no soporta SVG.
+                        </object>
+                    </div>
+                    <p style="margin-top: var(--space-sm); font-size: 0.9em; color: var(--color-text-secondary);">
+                        <em>Diagrama completo del Método Hipotético-Deductivo con el ejemplo histórico de las fases de
+                            Venus. El ciclo muestra cómo una observación genera un problema que se resuelve mediante una
+                            hipótesis creativa, seguida de deducción, predicción y contrastación experimental.</em>
+                    </p>
+                </div>
+            </section>
+
+            <div class="graffiti-divider" style="margin: var(--space-xl) 0; text-align: center;">
+                <span
+                    style="font-family: 'Caveat', cursive; font-size: 2.5em; color: var(--color-accent); text-shadow: 2px 2px 4px rgba(0,0,0,0.1);">
+                    ⚡ Inducción vs Deducción: El Problema de Hume ⚡
+                </span>
+            </div>
+
+            <section class="class-section">
+                <h2>El Problema de la Inducción (David Hume)</h2>
+                <p>
+                    Antes de continuar con la lógica del método científico, debemos enfrentar un problema filosófico
+                    fundamental que David Hume (1711-1776) planteó en su <em>Investigación sobre el Entendimiento
+                        Humano</em>: ¿podemos justificar racionalmente nuestras expectativas sobre el futuro basándonos
+                    en el pasado?
+                </p>
+
+                <h3>¿Qué es el Razonamiento Inductivo?</h3>
+                <p>
+                    La <strong>inducción</strong> es el razonamiento que va de casos particulares a una conclusión
+                    general. Por ejemplo:
+                </p>
+                <ul>
+                    <li>Observación 1: El Sol salió ayer por el este.</li>
+                    <li>Observación 2: El Sol salió hoy por el este.</li>
+                    <li>Observación 3: El Sol salió hace 1000 años por el este (según registros).</li>
+                    <li><strong>Conclusión inductiva:</strong> El Sol siempre sale por el este / El Sol saldrá mañana
+                        por el este.</li>
+                </ul>
+                <p>
+                    Este tipo de razonamiento es la base de nuestra vida cotidiana y de la ciencia empírica tradicional.
+                    Pero Hume mostró que <strong>no es lógicamente válido</strong>.
+                </p>
+
+                <div class="concept-highlight">
+                    <h3>El Argumento de Hume</h3>
+                    <p>
+                        Hume pregunta: ¿Por qué creemos que el futuro será similar al pasado? La única justificación que
+                        podríamos dar es: <em>"Porque el futuro siempre se ha parecido al pasado"</em>. Pero este
+                        argumento es circular: estamos usando inducción (el pasado predice el futuro) para justificar la
+                        inducción misma.
+                    </p>
+                    <p>
+                        Desde un punto de vista puramente lógico, <strong>nada garantiza</strong> que las leyes de la
+                        naturaleza no cambien mañana. El hecho de que el Sol haya salido por el este durante millones de
+                        años no prueba lógicamente que lo hará mañana. Podría no salir, o salir por el oeste. La
+                        uniformidad de la naturaleza es una <em>suposición</em>, no una certeza lógica.
+                    </p>
+                </div>
+
+                <h3>Inducción vs Deducción</h3>
+                <p>
+                    Para entender por qué la inducción es problemática, comparémosla con la deducción:
+                </p>
+
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin: 20px 0;">
+                    <div
+                        style="background: rgba(52, 152, 219, 0.1); padding: 20px; border-radius: 8px; border-left: 4px solid #3498db;">
+                        <h4 style="color: #2980b9;">Deducción (Lógicamente Válida)</h4>
+                        <p style="font-family: monospace; background: white; padding: 10px; border-radius: 4px; color: #2c3e50;">
+                            Premisa 1: Todos los humanos son mortales<br>
+                            Premisa 2: Sócrates es humano<br>
+                            ------------------------<br>
+                            Conclusión: Sócrates es mortal
+                        </p>
+                        <p><strong>Característica:</strong> Si las premisas son verdaderas, la conclusión es
+                            <em>necesariamente</em> verdadera. No puede haber excepción.
+                        </p>
+                    </div>
+
+                    <div
+                        style="background: rgba(231, 76, 60, 0.1); padding: 20px; border-radius: 8px; border-left: 4px solid #e74c3c;">
+                        <h4 style="color: #c0392b;">Inducción (Lógicamente Inválida)</h4>
+                        <p style="font-family: monospace; background: white; padding: 10px; border-radius: 4px; color: #2c3e50;">
+                            Observación 1: Cisne 1 es blanco<br>
+                            Observación 2: Cisne 2 es blanco<br>
+                            Observación N: Cisne N es blanco<br>
+                            ------------------------<br>
+                            Conclusión: Todos los cisnes son blancos
+                        </p>
+                        <p><strong>Problema:</strong> Las premisas pueden ser verdaderas pero la conclusión ser falsa
+                            (existen cisnes negros en Australia). No hay garantía lógica.</p>
+                    </div>
+                </div>
+
+                <p>
+                    Karl Popper usó este problema de Hume para construir su filosofía del falsacionismo: la ciencia no
+                    puede <em>verificar</em> teorías (porque eso requeriría inducción), pero sí puede <em>falsarlas</em>
+                    (usando deducción lógica válida: Modus Tollens).
+                </p>
+            </section>
+
+            <div class="graffiti-divider" style="margin: var(--space-xl) 0; text-align: center;">
+                <span
+                    style="font-family: 'Caveat', cursive; font-size: 2.5em; color: var(--color-accent); text-shadow: 2px 2px 4px rgba(0,0,0,0.1);">
+                    ⚡ Lógica de la Refutación y Corroboración ⚡
+                </span>
+            </div>
+
+            <section class="class-section">
+                <h2>Lógica de la Refutación y Corroboración</h2>
+                <p>
+                    Aquí entra la lógica formal rigurosa. No es lo mismo refutar que confirmar.
+                </p>
+
+                <h3>El Experimento Crucial: Las Fases de Venus</h3>
+                <p>
+                    Analicemos el caso histórico de Galileo usando lógica formal. Teníamos dos hipótesis rivales sobre
+                    Venus:
+                </p>
+
+                <div style="text-align: center; margin: var(--space-xl) 0;">
+                    <div
+                        style="display: inline-block; background: white; padding: 20px; border-radius: 8px; border: 1px solid var(--color-border);">
+                        <object data="../../assets/images/class-05/venus_logic.svg" type="image/svg+xml"
+                            style="width: 100%; max-width: 600px;">
+                            Tu navegador no soporta SVG.
+                        </object>
+                    </div>
+                    <p style="margin-top: var(--space-sm); font-size: 0.9em; color: var(--color-text-secondary);">
+                        <em>Esquema lógico de la contrastación de las fases de Venus. El diagrama muestra cómo la
+                            observación de "Fases Completas" refuta lógicamente al modelo de Ptolomeo (vía Modus
+                            Tollens) y corrobora al de Copérnico.</em>
+                    </p>
+                </div>
+
+                <div class="concept-highlight">
+                    <h3>Modus Tollens (La Lógica de la Refutación)</h3>
+                    <p>
+                        Si la hipótesis de Ptolomeo (<i>H<sub>p</sub></i>) es correcta, entonces Venus NUNCA debe
+                        mostrarse llena
+                        (<i>I<sub>p</sub></i>).
+                    </p>
+                    <p style="font-family: monospace; background: rgba(0,0,0,0.05); padding: 10px; border-radius: 4px;">
+                        Si <i>H<sub>p</sub></i>, entonces <i>I<sub>p</sub></i> (Crecientes solamente)<br>
+                        Observamos NO <i>I<sub>p</sub></i> (Vemos Venus llena)<br>
+                        ---------------------------------------<br>
+                        Por lo tanto, NO <i>H<sub>p</sub></i> (Ptolomeo es falso)
+                    </p>
+                    <p>
+                        Esta estructura lógica es deductivamente válida. Una sola observación contraria basta para
+                        derribar una teoría universal.
+                    </p>
+
+                    <h3 style="margin-top: var(--space-md);">Falacia de Afirmación del Consecuente (La Verdad sobre la
+                        Corroboración)</h3>
+                    <p>
+                        Si Copérnico (<i>H<sub>c</sub></i>) es correcto, vemos fases completas (<i>I<sub>c</sub></i>).
+                    </p>
+                    <p style="font-family: monospace; background: rgba(0,0,0,0.05); padding: 10px; border-radius: 4px;">
+                        Si <i>H<sub>c</sub></i>, entonces <i>I<sub>c</sub></i> (Fases completas)<br>
+                        Observamos <i>I<sub>c</sub></i> (Vemos fases completas)<br>
+                        ---------------------------------------<br>
+                        Por lo tanto, ¿<i>H<sub>c</sub></i> es verdadera?
+                    </p>
+                    <p>
+                        <strong>¡Cuidado!</strong> Lógicamente, esto NO garantiza que <i>H<sub>c</sub></i> sea
+                        verdadera. Podría haber
+                        *otra* teoría (como la de Tycho Brahe) que también prediga fases completas.
+                        Por eso en ciencia nunca decimos que hemos "probado" una teoría como verdadera definitivamente;
+                        decimos que ha sido <strong>corroborada</strong> o que ha resistido los intentos de falsación.
+                    </p>
+                </div>
+            </section>
+
+            <section class="class-section">
+                <h2>Teoría vs Ley: Jerarquía del Conocimiento Científico</h2>
+                <p>
+                    Existe una confusión común: muchas personas piensan que una "teoría" es una hipótesis no comprobada,
+                    y que cuando se "prueba" se convierte en una "ley". <strong>Esto es falso</strong>. Las teorías y las
+                    leyes son tipos diferentes de conocimiento científico, con funciones distintas.
+                </p>
+
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 20px; margin: 25px 0;">
+                    <div
+                        style="background: rgba(155, 89, 182, 0.1); padding: 20px; border-radius: 8px; border-left: 4px solid #9b59b6;">
+                        <h3 style="color: #8e44ad;">Ley Científica</h3>
+                        <p><strong>Función:</strong> Describir CÓMO ocurren los fenómenos.</p>
+                        <p><strong>Naturaleza:</strong> Es una generalización empírica, típicamente expresada en forma
+                            matemática. No explica POR QUÉ ocurre.</p>
+                        <p><strong>Ejemplo:</strong> La Segunda Ley de Kepler dice que "un planeta barre áreas iguales
+                            en tiempos iguales". Es una descripción precisa del movimiento, pero no explica la causa.</p>
+                        <p><strong>Certeza:</strong> Las leyes suelen ser muy precisas y comprobadas, pero su aplicación
+                            puede ser limitada (ej: las leyes de Newton fallan a velocidades cercanas a la luz).</p>
+                    </div>
+
+                    <div
+                        style="background: rgba(52, 152, 219, 0.1); padding: 20px; border-radius: 8px; border-left: 4px solid #3498db;">
+                        <h3 style="color: #2980b9;">Teoría Científica</h3>
+                        <p><strong>Función:</strong> Explicar POR QUÉ ocurren los fenómenos.</p>
+                        <p><strong>Naturaleza:</strong> Es un modelo o framework conceptual amplio que unifica múltiples
+                            leyes y fenómenos bajo una explicación común.</p>
+                        <p><strong>Ejemplo:</strong> La Teoría de la Gravitación Universal de Newton explica POR QUÉ se
+                            cumplen las leyes de Kepler: porque existe una fuerza de atracción inversamente proporcional
+                            al cuadrado de la distancia.</p>
+                        <p><strong>Poder:</strong> Una buena teoría no solo explica lo conocido, sino que predice
+                            fenómenos nuevos (ej: Newton predijo el achatamiento polar de la Tierra).</p>
+                    </div>
+                </div>
+
+                <div class="concept-highlight">
+                    <h3>Relación entre Leyes y Teorías</h3>
+                    <p>
+                        Las leyes no "evolucionan" en teorías. Más bien, las teorías <strong>incorporan y explican</strong>
+                        las leyes. Newton tomó las tres leyes empíricas de Kepler y demostró que se derivaban de su
+                        teoría gravitacional. Las leyes siguieron siendo válidas (como descripciones), pero ahora tenían
+                        una explicación teórica profunda.
+                    </p>
+                    <p>
+                        Cuando alguien dice "es solo una teoría" despectivamente (como con la Teoría de la Evolución),
+                        no comprende que en ciencia, una <strong>teoría</strong> es el logro intelectual supremo: un
+                        sistema explicativo completo y verificado repetidamente.
+                    </p>
+                </div>
+            </section>
+
+            <section class="class-section">
+                <h2>Explicación vs Predicción</h2>
+                <p>
+                    Una cuestión filosófica profunda: ¿es suficiente que una teoría haga predicciones correctas, o debe
+                    también proporcionar una explicación verdadera de la realidad subyacente?
+                </p>
+
+                <h3>Dos Posturas Filosóficas</h3>
+                <div
+                    style="background: rgba(243, 156, 18, 0.1); padding: 20px; border-radius: 8px; border-left: 4px solid #f39c12; margin: 15px 0;">
+                    <h4 style="color: #e67e22;">1. Realismo Científico</h4>
+                    <p>
+                        Las teorías científicas exitosas nos dicen cómo es REALMENTE el mundo, no solo cómo predecir
+                        fenómenos. Los átomos, los electrones y los campos gravitacionales existen objetivamente, no son
+                        solo "herramientas útiles de cálculo". Si una teoría predice correctamente, es porque captura
+                        algo verdadero sobre la estructura de la naturaleza.
+                    </p>
+                    <p><em>Ejemplo:</em> Los realistas dirían que Newton descubrió una fuerza real (la gravedad) que
+                        realmente existe en la naturaleza, no solo un modelo matemático conveniente.</p>
+                </div>
+
+                <div
+                    style="background: rgba(39, 174, 96, 0.1); padding: 20px; border-radius: 8px; border-left: 4px solid #27ae60; margin: 15px 0;">
+                    <h4 style="color: #229954;">2. Instrumentalismo</h4>
+                    <p>
+                        Las teorías son <strong>instrumentos</strong> para organizar observaciones y hacer predicciones,
+                        no descripciones literales de la realidad. No tiene sentido preguntar si los electrones "existen
+                        realmente"; solo importa si el modelo del electrón es útil para predecir resultados experimentales.
+                    </p>
+                    <p><em>Ejemplo:</em> Los instrumentalistas dirían que la gravitación newtoniana es una herramienta
+                        de cálculo brillante, pero preguntarse si la "fuerza de gravedad" existe "realmente" o es solo
+                        curvatura del espacio-tiempo (Einstein) es metafísica inútil. Ambos modelos funcionan en sus
+                        dominios.</p>
+                </div>
+
+                <p>
+                    El debate realismo vs instrumentalismo persiste en filosofía de la ciencia. Popper era realista,
+                    mientras que muchos físicos cuánticos contemporáneos son más instrumentalistas (especialmente los
+                    seguidores de la interpretación de Copenhague).
+                </p>
+            </section>
+
+            <section class="class-section">
+                <h2>Actividades de Análisis</h2>
+                <div class="activity-container">
+                    <div class="question-card">
+                        <h3>1. Caso Semmelweis</h3>
+                        <p>
+                            Ignaz Semmelweis notó que las mujeres morían de fiebre puerperal mucho más en su sala
+                            (atendida por médicos) que en la de al lado (atendida por parteras).
+                            <br><br>
+                            <strong>Hipótesis:</strong> "La fiebre es causada por 'materia cadavérica' en las manos de
+                            los médicos que vienen de hacer autopsias".
+                            <br>
+                            <strong>Predicción:</strong> "Si los médicos se lavan las manos con cloro antes de atender
+                            partos, la mortalidad bajará".
+                            <br>
+                            <strong>Resultado:</strong> La mortalidad bajó drásticamente.
+                            <br><br>
+                            <strong>Preguntas:</strong>
+                        <ol>
+                            <li>Escriba el esquema lógico (Si H entonces CO...) de este caso.</li>
+                            <li>¿Quedó probada la hipótesis definitivamente?</li>
+                            <li>¿Es esta una confirmación inductiva o una corroboración popperiana?</li>
+                        </ol>
+                        </p>
+                    </div>
+
+                    <div class="question-card">
+                        <h3>2. El Cisne Negro</h3>
+                        <p>
+                            Hipótesis: "Todos los cisnes son blancos".
+                            <br><br>
+                            <strong>Preguntas:</strong>
+                        <ol>
+                            <li>¿Cuántos cisnes blancos necesito ver para <strong>probar</strong> que la hipótesis es
+                                verdadera? Justifique su respuesta usando el problema de la inducción de Hume.</li>
+                            <li>¿Cuántos cisnes negros necesito ver para <strong>refutarla</strong>?</li>
+                            <li>Reflexione sobre qué nos dice esto acerca de la asimetría entre verificar y falsar
+                                teorías en la ciencia.</li>
+                        </ol>
+                        </p>
+                    </div>
+
+                    <div class="question-card">
+                        <h3>3. Teoría vs Ley</h3>
+                        <p>
+                            Explique, con sus propias palabras y usando ejemplos concretos de la historia de la ciencia,
+                            la diferencia entre una ley científica y una teoría científica. ¿Por qué es un error decir
+                            que "la evolución es solo una teoría, no un hecho probado"?
+                        </p>
+                    </div>
+
+                    <div class="question-card">
+                        <h3>4. Realismo vs Instrumentalismo</h3>
+                        <p>
+                            La mecánica cuántica permite predecir con precisión asombrosa el comportamiento de las
+                            partículas subatómicas, pero muchos físicos admiten que no "entienden" realmente qué significa
+                            la función de onda. Desde una perspectiva instrumentalista, ¿importa esto? ¿Por qué sí o por
+                            qué no? Argumente su posición en 150 palabras.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="class-section">
+                <h2>Conceptos Clave</h2>
+                <div class="concept-highlight">
+                    <ul>
+                        <li><strong>Hipótesis:</strong> Enunciado conjetural propuesto para explicar un fenómeno, del
+                            cual se deducen consecuencias observables. Debe ser falsable (Popper).</li>
+                        <li><strong>Consecuencia Observacional (Predicción):</strong> Hecho que deberíamos observar si
+                            la hipótesis fuera correcta. Es el puente entre teoría y experimento.</li>
+                        <li><strong>Contrastación:</strong> El acto de comparar la predicción con la realidad mediante
+                            experimento u observación controlada.</li>
+                        <li><strong>Refutación (Falsación):</strong> Demostración lógica (Modus Tollens) de que una
+                            hipótesis es falsa porque sus predicciones fallaron.</li>
+                        <li><strong>Corroboración:</strong> Aceptación provisional de una hipótesis porque ha pasado con
+                            éxito las pruebas de contrastación. No implica verdad absoluta debido al problema de la
+                            inducción.</li>
+                        <li><strong>Modus Tollens:</strong> Regla lógica válida: Si P implica Q, y Q es falso, entonces
+                            P es falso. Base lógica de la refutación científica.</li>
+                        <li><strong>Asimetría Lógica:</strong> Es lógicamente posible refutar teorías definitivamente
+                            (mediante deducción), pero imposible verificarlas definitivamente (requeriría inducción).</li>
+                        <li><strong>Inducción:</strong> Razonamiento que va de casos particulares a una conclusión
+                            general. No es lógicamente válido según Hume.</li>
+                        <li><strong>Deducción:</strong> Razonamiento que va de premisas generales a conclusiones
+                            particulares. Lógicamente válido: si las premisas son verdaderas, la conclusión es
+                            necesariamente verdadera.</li>
+                        <li><strong>Problema de la Inducción (Hume):</strong> No existe justificación lógica para asumir
+                            que el futuro será similar al pasado. La uniformidad de la naturaleza es una suposición, no
+                            una certeza.</li>
+                        <li><strong>Ley Científica:</strong> Generalización empírica que describe CÓMO ocurren los
+                            fenómenos, típicamente en forma matemática. No explica el POR QUÉ.</li>
+                        <li><strong>Teoría Científica:</strong> Sistema explicativo amplio que unifica múltiples leyes y
+                            fenómenos bajo un marco conceptual común. Explica el POR QUÉ de los fenómenos.</li>
+                        <li><strong>Explicación:</strong> Dar cuenta de las causas o mecanismos subyacentes de un
+                            fenómeno. Es el objetivo del realismo científico.</li>
+                        <li><strong>Predicción:</strong> Anticipar observaciones futuras. Para el instrumentalismo, es
+                            el único objetivo legítimo de la ciencia.</li>
+                        <li><strong>Realismo Científico:</strong> Postura filosófica que sostiene que las teorías
+                            científicas exitosas describen la realidad objetiva.</li>
+                        <li><strong>Instrumentalismo:</strong> Postura que considera las teorías como herramientas útiles
+                            para predecir, sin comprometerse con su verdad literal sobre la realidad.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="class-section"
+                style="background: var(--color-bg-tertiary); padding: var(--space-lg); border-radius: 8px;">
+                <h2>Próxima Clase</h2>
+                <h3 style="color: var(--color-accent);">Clase 6: Anomalías e Hipótesis Ad Hoc</h3>
+                <p>
+                    ¿Qué hace un científico cuando el experimento sale mal? ¿Tira su teoría a la basura inmediatamente?
+                    (Spoiler: No).
+                    Veremos la diferencia entre una simple anomalía y una crisis científica, y cómo a veces se usan
+                    "parches" (hipótesis ad hoc) para salvar una teoría... a veces para bien (descubrimiento de Neptuno)
+                    y a veces para mal (el fantasma de Vulcano).
+                </p>
+            </section>
+
+            <nav class="class-navigation">
+                <a href="clase-04.html" class="nav-button">← Clase Anterior</a>
+                <a href="index.html" class="nav-button nav-button-index">📚 Índice de Unidad</a>
+                <a href="clase-06.html" class="nav-button">Siguiente Clase →</a>
+            </nav>
+        </article>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Filosofía 6to</h4>
+                    <p>Unidad 1: Teorías Científicas - Clase 5 de 10</p>
+                    <p>Profesor: Javier Pereyra</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Filosofía 6to. Material educativo.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../../assets/js/dark-mode.js"></script>
+</body>
+
+</html>

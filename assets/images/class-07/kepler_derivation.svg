@@ -1,0 +1,211 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 800" width="900" height="800">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&amp;display=swap');
+
+      .title-text {
+        font-family: 'Merriweather', serif;
+        font-size: 28px;
+        font-weight: 700;
+        fill: #1a1a2e;
+      }
+      .step-title {
+        font-family: 'Merriweather', serif;
+        font-size: 20px;
+        font-weight: 700;
+        fill: #2d3436;
+      }
+      .formula-text {
+        font-family: 'Times New Roman', serif;
+        font-size: 18px;
+        font-style: italic;
+        fill: #0984e3;
+      }
+      .label-text {
+        font-family: 'Merriweather', serif;
+        font-size: 14px;
+        fill: #636e72;
+      }
+      .highlight-formula {
+        font-family: 'Times New Roman', serif;
+        font-size: 22px;
+        font-weight: 700;
+        fill: #d63031;
+      }
+      .orbit {
+        fill: none;
+        stroke: #74b9ff;
+        stroke-width: 3;
+        stroke-dasharray: 8,4;
+      }
+      .arrow {
+        stroke-width: 3;
+        fill: none;
+        marker-end: url(#arrowhead);
+      }
+
+      @keyframes orbit-planet {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+
+      .planet-group {
+        animation: orbit-planet 10s linear infinite;
+        transform-origin: 240px 280px;
+      }
+    </style>
+
+    <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <polygon points="0 0, 10 3, 0 6" fill="#e74c3c" />
+    </marker>
+    <marker id="arrowhead-blue" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <polygon points="0 0, 10 3, 0 6" fill="#0984e3" />
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="900" height="800" fill="#f8f9fa"/>
+
+  <!-- Title -->
+  <text x="450" y="45" text-anchor="middle" class="title-text">
+    De la Gravitación Universal a las Leyes de Kepler
+  </text>
+  <text x="450" y="72" text-anchor="middle" class="label-text" font-size="16px">
+    Derivación matemática de T² ∝ r³ a partir de F = Gm₁m₂/r²
+  </text>
+
+  <!-- Orbital diagram -->
+  <g id="orbital-diagram">
+    <rect x="30" y="100" width="420" height="360" fill="white" stroke="#dfe6e9" stroke-width="2" rx="8"/>
+
+    <text x="240" y="130" text-anchor="middle" class="step-title" fill="#6c5ce7">Órbita Circular (simplificada)</text>
+
+    <!-- Sun at center -->
+    <circle cx="240" cy="280" r="20" fill="#ffeaa7" stroke="#fdcb6e" stroke-width="3"/>
+    <text x="240" y="288" text-anchor="middle" style="font-size: 24px;">☉</text>
+    <text x="240" y="315" text-anchor="middle" class="label-text" font-weight="700">Sol (M)</text>
+
+    <!-- Circular orbit -->
+    <circle cx="240" cy="280" r="100" class="orbit"/>
+
+    <!-- Planet with vectors (all animated together) -->
+    <g class="planet-group">
+      <!-- Planet at initial position (right of center) -->
+      <circle cx="340" cy="280" r="12" fill="#74b9ff" stroke="#0984e3" stroke-width="2"/>
+
+      <!-- Radius arrow from Sun to planet -->
+      <path d="M 240 280 L 330 280" stroke="#636e72" stroke-width="2" marker-end="url(#arrowhead-blue)"/>
+      <text x="285" y="270" text-anchor="middle" class="label-text" font-weight="700" fill="#0984e3">r</text>
+
+      <!-- Velocity vector (tangent - pointing down for clockwise motion) -->
+      <path d="M 340 280 L 340 340" class="arrow" stroke="#2ecc71" marker-end="url(#arrowhead)"/>
+      <text x="355" y="315" class="label-text" fill="#2ecc71" font-weight="700">v</text>
+
+      <!-- Gravitational force (centripetal - pointing to Sun) -->
+      <path d="M 340 280 L 290 280" class="arrow" stroke="#e74c3c"/>
+      <text x="315" y="295" class="label-text" fill="#e74c3c" font-weight="700">Fₘ</text>
+    </g>
+
+    <text x="240" y="410" text-anchor="middle" class="label-text" font-size="13px">
+      El planeta se mueve en órbita circular de radio r
+    </text>
+    <text x="240" y="430" text-anchor="middle" class="label-text" font-size="13px">
+      con período T (tiempo de una vuelta completa)
+    </text>
+  </g>
+
+  <!-- Step 1: Centripetal force -->
+  <g id="step1">
+    <rect x="480" y="100" width="390" height="140" fill="#fff5e6" stroke="#f39c12" stroke-width="2" rx="8"/>
+
+    <text x="675" y="130" text-anchor="middle" class="step-title" fill="#d63031">Paso 1: Fuerza Centrípeta</text>
+
+    <text x="675" y="160" text-anchor="middle" class="label-text">
+      Para mantener el movimiento circular:
+    </text>
+
+    <text x="675" y="190" text-anchor="middle" class="formula-text" font-size="20px">
+      F_centrípeta = m · v² / r
+    </text>
+
+    <text x="675" y="220" text-anchor="middle" class="label-text" font-size="12px">
+      donde m es la masa del planeta y v su velocidad orbital
+    </text>
+  </g>
+
+  <!-- Step 2: Gravitational force -->
+  <g id="step2">
+    <rect x="480" y="260" width="390" height="140" fill="#e8f4f8" stroke="#0984e3" stroke-width="2" rx="8"/>
+
+    <text x="675" y="290" text-anchor="middle" class="step-title" fill="#0984e3">Paso 2: Fuerza Gravitacional</text>
+
+    <text x="675" y="320" text-anchor="middle" class="label-text">
+      Ley de Newton:
+    </text>
+
+    <text x="675" y="350" text-anchor="middle" class="formula-text" font-size="20px">
+      F_gravitacional = G · M · m / r²
+    </text>
+
+    <text x="675" y="380" text-anchor="middle" class="label-text" font-size="12px">
+      donde M es la masa del Sol
+    </text>
+  </g>
+
+  <!-- Step 3: Equating forces -->
+  <g id="step3">
+    <rect x="30" y="480" width="840" height="280" fill="white" stroke="#00b894" stroke-width="3" rx="8"/>
+
+    <text x="450" y="515" text-anchor="middle" class="step-title" fill="#00b894">Paso 3: Igualamos las Fuerzas</text>
+
+    <text x="450" y="545" text-anchor="middle" class="label-text">
+      La fuerza gravitacional ES la fuerza centrípeta:
+    </text>
+
+    <!-- Equation 1 -->
+    <rect x="250" y="560" width="400" height="35" fill="#f0f3f4" rx="5"/>
+    <text x="450" y="585" text-anchor="middle" class="formula-text" font-size="20px">
+      m · v² / r  =  G · M · m / r²
+    </text>
+
+    <!-- Equation 2: Simplify -->
+    <text x="450" y="625" text-anchor="middle" class="label-text" font-size="13px">
+      Cancelamos m y multiplicamos por r:
+    </text>
+
+    <rect x="300" y="635" width="300" height="35" fill="#f0f3f4" rx="5"/>
+    <text x="450" y="660" text-anchor="middle" class="formula-text" font-size="20px">
+      v² = G · M / r
+    </text>
+
+    <!-- Equation 3: Replace v -->
+    <text x="450" y="690" text-anchor="middle" class="label-text" font-size="13px">
+      La velocidad orbital es v = 2πr / T, entonces v² = 4π²r² / T²:
+    </text>
+
+    <rect x="250" y="700" width="400" height="35" fill="#f0f3f4" rx="5"/>
+    <text x="450" y="725" text-anchor="middle" class="formula-text" font-size="20px">
+      4π²r² / T²  =  G · M / r
+    </text>
+
+    <!-- Final result -->
+    <text x="450" y="755" text-anchor="middle" class="label-text" font-weight="700" font-size="14px">
+      Despejando T²:
+    </text>
+
+    <rect x="200" y="762" width="500" height="42" fill="#ffe6e6" stroke="#d63031" stroke-width="3" rx="6"/>
+    <text x="450" y="792" text-anchor="middle" class="highlight-formula" font-size="26px">
+      T²  =  (4π² / GM) · r³
+    </text>
+
+    <rect x="150" y="815" width="600" height="35" fill="#d5f4e6" rx="5"/>
+    <text x="450" y="840" text-anchor="middle" class="step-title" fill="#00b894" font-size="18px">
+      ¡3ª Ley de Kepler!  →  T² ∝ r³
+    </text>
+  </g>
+
+</svg>

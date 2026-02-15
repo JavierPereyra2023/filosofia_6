@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clase 9: Criterios de Elección de Teorías | Filosofía 6to</title>
+    <link rel="stylesheet" href="../../assets/css/variables.css">
+    <link rel="stylesheet" href="../../assets/css/reset.css">
+    <link rel="stylesheet" href="../../assets/css/base.css">
+    <link rel="stylesheet" href="../../assets/css/typography.css">
+    <link rel="stylesheet" href="../../assets/css/layout.css">
+    <link rel="stylesheet" href="../../assets/css/navigation.css">
+    <link rel="stylesheet" href="../../assets/css/components.css">
+    <link rel="stylesheet" href="../../assets/css/unit-page.css">
+    <link rel="stylesheet" href="../../assets/css/book-layout.css">
+
+    <style>
+        .class-container::before {
+            content: '    Precisión\A    Coherencia\A    Simplicidad\A    Amplitud\A    Fecundidad';
+            position: fixed;
+            top: 20%;
+            right: 5%;
+            font-family: 'Caveat', 'Comic Sans MS', cursive;
+            font-size: 24px;
+            font-weight: 700;
+            white-space: pre;
+            color: rgba(255, 255, 255, 0.35);
+            transform: rotate(-3deg);
+        }
+
+        .class-container::after {
+            content: '    ¿Cuál es\A    mejor?';
+            position: fixed;
+            bottom: 20%;
+            left: 5%;
+            font-family: 'Caveat', 'Comic Sans MS', cursive;
+            font-size: 28px;
+            font-weight: 700;
+            white-space: pre;
+            color: rgba(255, 255, 255, 0.32);
+            transform: rotate(5deg);
+        }
+
+        @media (max-width: 1024px) {
+
+            .class-container::before,
+            .class-container::after {
+                position: relative;
+                transform: none;
+                display: block;
+                margin: 20px 0;
+                width: 100%;
+                text-align: center;
+            }
+
+            .class-container::before {
+                content: 'Los 5 Valores de Kuhn';
+            }
+
+            .class-container::after {
+                content: 'Juicio Racional vs Subjetividad';
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="main-nav">
+        <div class="nav-container">
+            <div class="nav-left">
+                <a href="index.html" class="nav-back-button" title="Volver al índice de la unidad">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M15 19l-7-7 7-7" />
+                    </svg>
+                    <span>Unidad 1</span>
+                </a>
+                <a href="../../home.html" class="nav-brand">Filosofía 6to</a>
+            </div>
+            <div class="nav-controls">
+                <button id="dark-mode-toggle" class="dark-mode-toggle" aria-label="Cambiar tema">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="class-progress">
+        <div class="container">
+            <div class="progress-info">
+                <span class="progress-label">Unidad 1: Teorías Científicas</span>
+                <span class="progress-count">Clase 9 de 10</span>
+            </div>
+            <div class="progress-bar">
+                <div class="progress-fill" style="width: 90%"></div>
+            </div>
+        </div>
+    </div>
+
+    <main class="class-container">
+        <article class="class-content">
+            <header class="class-header">
+                <div class="class-badge">Clase 9</div>
+                <h1 class="class-title">Criterios de Elección de Teorías</h1>
+                <p class="class-subtitle">¿Cómo decidimos entre paradigmas rivales? Los valores epistémicos.</p>
+            </header>
+
+            <!-- 1. ALFABETIZACIÓN CIENTÍFICA -->
+            <section class="class-section">
+                <div class="section-label">Alfabetización Científica</div>
+                <h2>La Racionalidad Científica y los Valores</h2>
+                <p>
+                    La filosofía de la ciencia tradicional distinguía tajantemente entre hechos y valores, reservando la
+                    objetividad para los primeros. Sin embargo, en situaciones de <strong>empate empírico</strong>
+                    (cuando dos teorías explican los mismos datos), la ciencia no se detiene.
+                </p>
+                <p>
+                    Thomas Kuhn, en <em>"La tensión esencial"</em>, argumenta que los científicos comparten una "matriz
+                    disciplinar" compuesta por valores. No son reglas algorítmicas que dictan una elección única, sino
+                    valores que influyen en la toma de decisiones. Esto no hace a la ciencia irracional, sino
+                    <strong>"razonable"</strong> en un sentido humano y pragmático.
+                </p>
+            </section>
+
+            <!-- 2. ASPECTOS TEÓRICOS -->
+            <section class="class-section">
+                <div class="section-label">Aspectos Teóricos</div>
+                <h2>Los 5 Valores Epistémicos de Kuhn</h2>
+                <p>
+                    Cuando los científicos deben elegir entre teorías rivales, no aplican un algoritmo mecánico.
+                    Kuhn identificó cinco valores epistémicos compartidos por la comunidad científica que guían estas
+                    decisiones. Ninguno es suficiente por sí solo; funcionan en conjunto y a veces en tensión.
+                </p>
+
+                <div style="text-align: center; margin: var(--space-xl) 0;">
+                    <div
+                        style="display: inline-block; background: white; padding: 20px; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); border: 1px solid var(--color-border);">
+                        <object data="../../assets/images/class-09/values_comparison.svg" type="image/svg+xml"
+                            class="class-image-diagram" style="width: 100%; max-width: 650px;">
+                            Tu navegador no soporta SVG.
+                        </object>
+                    </div>
+                    <p style="margin-top: var(--space-sm); font-size: 0.9em; color: var(--color-text-secondary);">
+                        <em>Los cinco valores epistémicos de Kuhn y su aplicación comparativa a diferentes teorías
+                            históricas.</em>
+                    </p>
+                </div>
+
+                <div
+                    style="background: rgba(52, 152, 219, 0.1); padding: 20px; border-radius: 8px; border-left: 4px solid #3498db; margin: 20px 0;">
+                    <h3 style="color: #2980b9;">1. Precisión (Accuracy)</h3>
+                    <p>
+                        Una teoría debe concordar cuantitativamente con los datos experimentales y observacionales. Este
+                        es el requisito mínimo y más obvio, pero no el único.
+                    </p>
+                    <p><strong>Ejemplo Histórico: Tablas Alfonsinas vs Tablas Rudolfinas</strong></p>
+                    <p>
+                        Las Tablas Alfonsinas (basadas en Ptolomeo, siglo XIII) predecían las posiciones planetarias con
+                        un error promedio de varios grados. Las Tablas Rudolfinas de Kepler (1627), basadas en órbitas
+                        elípticas, redujeron el error a minutos de arco. La mejora en precisión fue un argumento poderoso
+                        a favor del sistema copernicano/kepleriano.
+                    </p>
+                    <p>
+                        Sin embargo, la precisión por sí sola no es decisiva: Ptolomeo podía ser "parchado" con más
+                        epiciclos para igualar la precisión de Kepler, pero al costo de sacrificar simplicidad.
+                    </p>
+                </div>
+
+                <div
+                    style="background: rgba(155, 89, 182, 0.1); padding: 20px; border-radius: 8px; border-left: 4px solid #9b59b6; margin: 20px 0;">
+                    <h3 style="color: #8e44ad;">2. Coherencia (Consistency)</h3>
+                    <p>
+                        Una teoría debe ser lógicamente consistente y no debe contradecir otras teorías bien establecidas
+                        en campos relacionados.
+                    </p>
+                    <p><strong>Coherencia Interna:</strong> Sin contradicciones lógicas dentro de la propia teoría. Una
+                        teoría que predice que "X ocurre" y "X no ocurre" bajo las mismas condiciones es incoherente y
+                        debe ser rechazada.</p>
+                    <p><strong>Coherencia Externa:</strong> Compatible con otras teorías aceptadas en física, química,
+                        biología, etc.</p>
+                    <p><strong>Ejemplo Histórico: El Problema Inicial de Copérnico</strong></p>
+                    <p>
+                        El heliocentrismo de Copérnico tenía un serio problema de coherencia externa en el siglo XVI.
+                        Contradecía la física aristotélica aceptada:
+                    </p>
+                    <ul>
+                        <li>Si la Tierra gira, ¿por qué una piedra lanzada verticalmente cae en el mismo lugar?
+                            (Aristóteles predecía que debería caer hacia el oeste debido al movimiento de la Tierra).</li>
+                        <li>Si la Tierra se mueve a gran velocidad, ¿por qué no sentimos un viento constante?</li>
+                        <li>¿Por qué los objetos no salen volando de la superficie terrestre por la fuerza centrífuga?
+                        </li>
+                    </ul>
+                    <p>
+                        Solo cuando Galileo y Newton desarrollaron una nueva física del movimiento (inercia, relatividad
+                        galileana), el heliocentrismo logró coherencia externa con la física. Esto tomó casi 100 años.
+                    </p>
+                </div>
+
+                <div
+                    style="background: rgba(46, 204, 113, 0.1); padding: 20px; border-radius: 8px; border-left: 4px solid #27ae60; margin: 20px 0;">
+                    <h3 style="color: #229954;">3. Amplitud (Scope / Alcance)</h3>
+                    <p>
+                        Una teoría es más valiosa si explica una gama más amplia de fenómenos, especialmente si unifica
+                        dominios que antes se consideraban separados.
+                    </p>
+                    <p><strong>Ejemplo Histórico: La Síntesis Newtoniana</strong></p>
+                    <p>
+                        Antes de Newton, existían dos "físicas" separadas:
+                    </p>
+                    <ul>
+                        <li><strong>Física terrestre:</strong> Caída de objetos, proyectiles, péndulos (estudiada por
+                            Galileo).</li>
+                        <li><strong>Física celeste:</strong> Movimiento de planetas y lunas (descrita por las leyes de
+                            Kepler).</li>
+                    </ul>
+                    <p>
+                        Newton unificó ambas con una sola ley de gravitación universal: F = G(m₁m₂)/r². La misma fuerza
+                        que hace caer una manzana mantiene a la Luna en órbita. Esta unificación fue revolucionaria.
+                    </p>
+                    <p>
+                        La teoría de Newton también explicaba fenómenos no considerados originalmente: mareas (atracción
+                        lunar/solar), cometas (órbitas elípticas/parabólicas), precesión de equinoccios, achatamiento
+                        polar de la Tierra rotante. Su amplitud era vastísima.
+                    </p>
+                </div>
+
+                <div
+                    style="background: rgba(241, 196, 15, 0.1); padding: 20px; border-radius: 8px; border-left: 4px solid #f39c12; margin: 20px 0;">
+                    <h3 style="color: #e67e22;">4. Simplicidad (Simplicity / Parsimonia)</h3>
+                    <p>
+                        Entre dos teorías que explican los mismos fenómenos, se prefiere la que requiere menos
+                        suposiciones, entidades hipotéticas o mecanismos ad hoc. Este es el famoso principio de
+                        <strong>La Navaja de Ockham</strong>: "No multipliques entidades sin necesidad".
+                    </p>
+                    <p><strong>Ejemplo Histórico: Copérnico vs Ptolomeo (Epiciclos)</strong></p>
+                    <p>
+                        Uno de los argumentos más fuertes de Copérnico fue estético y de simplicidad: en su sistema, la
+                        retrogradación de los planetas se explica naturalmente como una ilusión perspectiva producida por
+                        el movimiento de la Tierra. No se necesitan epiciclos para ese fenómeno.
+                    </p>
+                    <p>
+                        Ptolomeo necesitaba docenas de círculos (deferentes, epiciclos, ecuantes) ajustados
+                        independientemente para cada planeta. Copérnico redujo drásticamente la complejidad geométrica al
+                        poner al Sol en el centro.
+                    </p>
+                    <p><strong>Advertencia:</strong> Simplicidad no significa "fácil de entender". La Relatividad General
+                        de Einstein es matemáticamente compleja, pero conceptualmente más simple que postular una "fuerza
+                        gravitacional misteriosa a distancia" como hacía Newton.
+                    </p>
+                </div>
+
+                <div
+                    style="background: rgba(231, 76, 60, 0.1); padding: 20px; border-radius: 8px; border-left: 4px solid #e74c3c; margin: 20px 0;">
+                    <h3 style="color: #c0392b;">5. Fecundidad (Fruitfulness)</h3>
+                    <p>
+                        Una teoría es fecunda si conduce a nuevos descubrimientos, abre líneas de investigación
+                        inesperadas, y genera problemas interesantes. Este es quizás el valor más importante para el
+                        progreso científico a largo plazo.
+                    </p>
+                    <p><strong>Ejemplo Histórico: La Teoría Atómica de Dalton</strong></p>
+                    <p>
+                        En 1803, John Dalton propuso que los elementos químicos están compuestos de átomos indivisibles.
+                        Inicialmente, la teoría atómica tenía poca ventaja en precisión sobre las teorías rivales.
+                    </p>
+                    <p>
+                        Pero fue extraordinariamente fecunda:
+                    </p>
+                    <ul>
+                        <li>Condujo a la Tabla Periódica de Mendeleev (1869).</li>
+                        <li>Predijo la existencia de elementos desconocidos (galio, germanio) que fueron descubiertos
+                            después.</li>
+                        <li>Abrió el campo de la química cuantitativa (estequiometría).</li>
+                        <li>Eventualmente condujo a la física nuclear, química cuántica, y toda la ciencia de
+                            materiales moderna.</li>
+                    </ul>
+                    <p>
+                        Una teoría que no genera nuevas preguntas es estéril, incluso si explica perfectamente lo ya
+                        conocido. La fecundidad mide el potencial futuro, no solo el desempeño presente.
+                    </p>
+                </div>
+            </section>
+
+            <div class="graffiti-divider" style="margin: var(--space-xl) 0; text-align: center;">
+                <span
+                    style="font-family: 'Caveat', cursive; font-size: 2.5em; color: var(--color-accent); text-shadow: 2px 2px 4px rgba(0,0,0,0.1);">
+                    ⚡ Cuando los Valores Entran en Conflicto ⚡
+                </span>
+            </div>
+
+            <section class="class-section">
+                <h2>Cuando los Valores Entran en Conflicto</h2>
+                <p>
+                    Aquí surge el problema filosófico profundo: ¿qué ocurre cuando los cinco valores no apuntan en la
+                    misma dirección? ¿Qué pasa cuando una teoría gana en simplicidad pero pierde en precisión, o gana
+                    en amplitud pero pierde en coherencia externa?
+                </p>
+
+                <h3>Caso Paradigmático: Copérnico en 1543</h3>
+                <p>
+                    Cuando Copérnico publicó <em>De Revolutionibus</em>, su teoría tenía un balance mixto:
+                </p>
+                <table
+                    style="width: 100%; border-collapse: collapse; margin: 20px 0; background: var(--color-bg-secondary);">
+                    <thead>
+                        <tr style="background: var(--color-bg-tertiary);">
+                            <th style="padding: 12px; border: 1px solid var(--color-border); text-align: left;">Valor
+                            </th>
+                            <th style="padding: 12px; border: 1px solid var(--color-border);">Ptolomeo</th>
+                            <th style="padding: 12px; border: 1px solid var(--color-border);">Copérnico (1543)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td style="padding: 10px; border: 1px solid var(--color-border);"><strong>Precisión</strong>
+                            </td>
+                            <td style="padding: 10px; border: 1px solid var(--color-border); text-align: center;">⭐⭐⭐
+                            </td>
+                            <td style="padding: 10px; border: 1px solid var(--color-border); text-align: center;">⭐⭐
+                                (igual o peor)</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 10px; border: 1px solid var(--color-border);"><strong>Coherencia</strong>
+                            </td>
+                            <td style="padding: 10px; border: 1px solid var(--color-border); text-align: center;">⭐⭐⭐⭐
+                                (física aristotélica)</td>
+                            <td style="padding: 10px; border: 1px solid var(--color-border); text-align: center;">⭐
+                                (contradecía física vigente)</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 10px; border: 1px solid var(--color-border);"><strong>Amplitud</strong>
+                            </td>
+                            <td style="padding: 10px; border: 1px solid var(--color-border); text-align: center;">⭐⭐⭐
+                            </td>
+                            <td style="padding: 10px; border: 1px solid var(--color-border); text-align: center;">⭐⭐⭐
+                                (similar)</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 10px; border: 1px solid var(--color-border);"><strong>Simplicidad</strong>
+                            </td>
+                            <td style="padding: 10px; border: 1px solid var(--color-border); text-align: center;">⭐
+                                (complicadísimo)</td>
+                            <td style="padding: 10px; border: 1px solid var(--color-border); text-align: center;">⭐⭐⭐⭐
+                                (elegante geométricamente)</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 10px; border: 1px solid var(--color-border);"><strong>Fecundidad</strong>
+                            </td>
+                            <td style="padding: 10px; border: 1px solid var(--color-border); text-align: center;">⭐
+                                (programa estancado)</td>
+                            <td style="padding: 10px; border: 1px solid var(--color-border); text-align: center;">⭐⭐⭐⭐⭐
+                                (abrió nueva física)</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <p>
+                    Como se ve, no había un "ganador claro". Copérnico ganaba dramáticamente en simplicidad y fecundidad,
+                    pero <em>perdía</em> en precisión y coherencia. ¿Cómo decidir?
+                </p>
+
+                <div class="concept-highlight">
+                    <h3>El Rol del Juicio Individual</h3>
+                    <p>
+                        Kuhn argumenta que, dado que los valores pueden entrar en conflicto, no hay un algoritmo para
+                        elegir entre teorías. Dos científicos racionales, mirando los mismos datos y compartiendo los
+                        mismos valores, pueden ponderar esos valores de manera diferente y llegar a conclusiones opuestas.
+                    </p>
+                    <ul>
+                        <li>Un científico conservador podría priorizar <strong>coherencia</strong> con la física vigente
+                            y rechazar a Copérnico.</li>
+                        <li>Un científico visionario podría priorizar <strong>simplicidad y fecundidad</strong> y apostar
+                            por Copérnico a pesar de sus problemas inmediatos.</li>
+                    </ul>
+                    <p>
+                        Ambas decisiones son <strong>racionales</strong>. La elección no es arbitraria ni subjetiva
+                        (porque está guiada por valores compartidos), pero tampoco es mecánicamente determinada por los
+                        datos.
+                    </p>
+                </div>
+
+                <h3>Subdeterminación de la Teoría por la Evidencia</h3>
+                <p>
+                    Este fenómeno se conecta con un problema filosófico profundo: la <strong>subdeterminación</strong>.
+                    Siempre es posible que múltiples teorías incompatibles expliquen exactamente los mismos datos
+                    empíricos.
+                </p>
+                <p>
+                    Cuando esto ocurre, los criterios empíricos (precisión) no bastan para decidir. Debemos recurrir a
+                    criterios "super-empíricos" como simplicidad, coherencia, fecundidad. Pero al hacerlo, introducimos
+                    un elemento de juicio que diferentes científicos pueden ejercer de manera distinta.
+                </p>
+                <p>
+                    <strong>Pregunta filosófica:</strong> ¿Hace esto a la ciencia menos objetiva? Kuhn diría que no. La
+                    ciencia sigue siendo racional porque los valores son compartidos y públicos. Pero la racionalidad
+                    científica es más parecida al juicio deliberativo en un tribunal que a una demostración matemática
+                    automática.
+                </p>
+            </section>
+
+            <!-- 3. ASPECTOS EXPERIMENTALES -->
+            <section class="class-section">
+                <div class="section-label">Aspectos Experimentales</div>
+                <h2>El Caso Histórico: El Problema de la Paridad</h2>
+                <p>
+                    En el s. XVI, el sistema de Copérnico y el de Ptolomeo eran <strong>observacionalmente
+                        equivalentes</strong> para la precisión de la época. No había ningún experimento que pudiera
+                    falsar uno y validar el otro de manera concluyente en 1543.
+                </p>
+                <p>
+                    Esto nos enseña que el dato experimental es condición necesaria pero no suficiente. La comunidad
+                    científica tuvo que apostar por la <em>Simplicidad</em> matemática del sistema copernicano mucho
+                    antes de tener la confirmación empírica (paralaje estelar) que llegó siglos después (Bessel, 1838).
+                </p>
+            </section>
+
+            <!-- 4. ASPECTO TECNOLÓGICO -->
+            <section class="class-section">
+                <div class="section-label">Aspecto Tecnológico</div>
+                <h2>Instrumentación como Árbitro</h2>
+                <p>
+                    ¿Qué rompió finalmente el estancamiento teórico? No fue un mejor argumento lógico, sino una
+                    innovación tecnológica: <strong>El Telescopio (1609)</strong>.
+                </p>
+                <p>
+                    La tecnología expandió el dominio de lo observable. Al revelar las fases de Venus, el telescopio
+                    proporcionó los datos que hicieron insostenible el modelo ptolemaico tradicional.
+                </p>
+                <div class="infobox"
+                    style="background: rgba(59, 130, 246, 0.1); border-left: 4px solid var(--color-accent); padding: 15px;">
+                    <strong>Relación Técnica-Ciencia:</strong> A menudo, la teoría debe esperar a que la tecnología
+                    (ingeniería) alcance la precisión necesaria para ser validada (ej. Ondas Gravitacionales predichas
+                    en 1916, detectadas por LIGO en 2015).
+                </div>
+            </section>
+
+            <!-- ACTIVIDADES -->
+            <section class="class-section">
+                <h2>Actividades de Desarrollo</h2>
+                <div class="activity-container">
+                    <div class="question-card">
+                        <h3>1. Análisis de Valores en Conflicto: Copérnico vs Ptolomeo</h3>
+                        <p>
+                            Revisa la tabla comparativa de valores entre Ptolomeo y Copérnico (1543) presentada en la
+                            clase. Luego responde:
+                        </p>
+                        <ul>
+                            <li>Si fueras un astrónomo en 1543, ¿habrías apoyado a Copérnico o a Ptolomeo? Justifica tu
+                                respuesta citando al menos tres de los cinco valores de Kuhn.</li>
+                            <li>¿Cuál de los cinco valores consideras más importante para el progreso científico a largo
+                                plazo? ¿Por qué?</li>
+                            <li>Reflexiona: ¿Es la "elección racional" de teorías un proceso puramente lógico, o
+                                involucra elementos de juicio personal? Argumenta tu posición en 150 palabras.</li>
+                        </ul>
+                    </div>
+
+                    <div class="question-card">
+                        <h3>2. Simulación: Comité de Financiación Científica</h3>
+                        <p>
+                            Eres miembro del comité director del CERN. Tienen presupuesto para UN solo megaproyecto.
+                            Deben elegir entre dos teorías competidoras sobre la Materia Oscura para construir el próximo
+                            detector:
+                        </p>
+                        <ul>
+                            <li><strong>Teoría A (WIMPs):</strong> Muy <em>coherente</em> con el Modelo Estándar actual,
+                                extensamente desarrollada matemáticamente, pero lleva 30 años de búsqueda experimental
+                                sin resultados positivos (baja <em>fecundidad</em> reciente, precisión no demostrada).
+                            </li>
+                            <li><strong>Teoría B (Gravedad Modificada - MOND):</strong> Rompe con las leyes de
+                                Newton/Einstein (baja <em>coherencia</em> externa con física establecida), pero es
+                                matemáticamente más <em>simple</em> y explica las curvas de rotación de galaxias sin
+                                postular partículas invisibles. Predicciones precisas pero pocas pruebas independientes.
+                            </li>
+                        </ul>
+                        <p><strong>Tarea:</strong> Escribe un dictamen de 250-300 palabras justificando tu voto.
+                            Debes:</p>
+                        <ul>
+                            <li>Evaluar cada teoría usando explícitamente al menos tres de los cinco valores de Kuhn.
+                            </li>
+                            <li>Explicar cómo priorizas los valores en conflicto (¿Prefieres la seguridad de la
+                                coherencia o el riesgo de la simplicidad revolucionaria?).</li>
+                            <li>Reconocer que la decisión contraria también podría ser racional.</li>
+                        </ul>
+                    </div>
+
+                    <div class="question-card">
+                        <h3>3. Caso Histórico: La Teoría Atómica de Dalton</h3>
+                        <p>
+                            Investiga brevemente la teoría atómica de John Dalton (1803) y cómo fue recibida inicialmente
+                            por la comunidad científica.
+                        </p>
+                        <p><strong>Pregunta:</strong> ¿Qué valor(es) de Kuhn hicieron que la teoría atómica fuera
+                            eventualmente aceptada a pesar de que inicialmente tenía poca ventaja en precisión sobre las
+                            teorías rivales? Escribe una respuesta de 200 palabras explicando cómo la fecundidad de una
+                            teoría puede ser más importante que su precisión inmediata.
+                        </p>
+                    </div>
+
+                    <div class="question-card">
+                        <h3>4. Debate Filosófico: Subdeterminación y Objetividad</h3>
+                        <p>
+                            La subdeterminación plantea que múltiples teorías incompatibles pueden ser igualmente
+                            compatibles con todos los datos disponibles. Cuando esto ocurre, debemos usar valores
+                            "super-empíricos" como simplicidad para decidir.
+                        </p>
+                        <p><strong>Pregunta de debate:</strong> ¿Hace esto a la ciencia menos objetiva? Escribe un breve
+                            ensayo (300 palabras) defendiendo UNA de estas posiciones:
+                        </p>
+                        <ul>
+                            <li><strong>Posición A:</strong> La subdeterminación muestra que la ciencia tiene un
+                                elemento irreductiblemente subjetivo. Diferentes científicos pueden legítimamente llegar
+                                a conclusiones opuestas usando los mismos datos, por lo que la "objetividad absoluta" es
+                                un mito.</li>
+                            <li><strong>Posición B:</strong> La subdeterminación no amenaza la objetividad porque los
+                                valores (simplicidad, fecundidad, etc.) son públicos y compartidos por la comunidad. La
+                                ciencia sigue siendo racional aunque no sea mecánicamente determinada por los datos
+                                puros.</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section class="class-section">
+                <h2>Conceptos Clave</h2>
+                <div class="concept-highlight">
+                    <ul>
+                        <li><strong>Valores Epistémicos (Kuhn):</strong> Criterios compartidos por la comunidad
+                            científica para evaluar teorías: precisión, coherencia, amplitud, simplicidad, y fecundidad.
+                            No son reglas algorítmicas sino guías para el juicio racional.</li>
+                        <li><strong>Precisión (Accuracy):</strong> Concordancia cuantitativa entre las predicciones de
+                            una teoría y los datos observacionales. Requisito mínimo pero no suficiente para aceptar una
+                            teoría.</li>
+                        <li><strong>Coherencia Interna:</strong> Ausencia de contradicciones lógicas dentro de una
+                            teoría. Una teoría internamente incoherente debe ser rechazada.</li>
+                        <li><strong>Coherencia Externa (Consistency):</strong> Compatibilidad de una teoría con otras
+                            teorías bien establecidas en campos relacionados. Las revoluciones científicas a menudo
+                            rompen temporalmente la coherencia externa.</li>
+                        <li><strong>Amplitud (Scope / Alcance):</strong> Capacidad de una teoría para explicar una gama
+                            amplia de fenómenos, especialmente si unifica dominios previamente separados. Ejemplo: Newton
+                            unificó física terrestre y celeste.</li>
+                        <li><strong>Simplicidad (Simplicity / Parsimonia):</strong> Preferencia por teorías que requieren
+                            menos suposiciones, entidades hipotéticas o mecanismos ad hoc. Conectado con la Navaja de
+                            Ockham.</li>
+                        <li><strong>Navaja de Ockham (Principio de Parsimonia):</strong> Principio metodológico
+                            atribuido al filósofo medieval Guillermo de Ockham: "No se deben multiplicar las entidades
+                            sin necesidad". Entre explicaciones igualmente satisfactorias, preferir la más simple.</li>
+                        <li><strong>Fecundidad (Fruitfulness):</strong> Capacidad de una teoría para conducir a nuevos
+                            descubrimientos, abrir líneas de investigación inesperadas, y generar problemas interesantes.
+                            Valor crucial para el progreso a largo plazo.</li>
+                        <li><strong>Subdeterminación de la Teoría por la Evidencia:</strong> Situación en la que
+                            múltiples teorías incompatibles son igualmente compatibles con todos los datos empíricos
+                            disponibles. Requiere usar criterios super-empíricos para decidir.</li>
+                        <li><strong>Juicio Científico:</strong> La elección de teorías no es un cálculo mecánico sino un
+                            ejercicio de juicio racional donde diferentes científicos pueden ponderar valores de manera
+                            distinta y llegar a conclusiones diferentes, ambas racionales.</li>
+                        <li><strong>Empate Empírico:</strong> Situación donde dos teorías rivales predicen exactamente
+                            los mismos fenómenos observables. En estos casos, los valores super-empíricos (simplicidad,
+                            fecundidad) se vuelven decisivos.</li>
+                        <li><strong>Matriz Disciplinar (Kuhn):</strong> Conjunto de compromisos compartidos por una
+                            comunidad científica, incluyendo valores epistémicos, ejemplares (casos modelo de buena
+                            ciencia), y generalizaciones simbólicas (leyes fundamentales).</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="class-section"
+                style="background: var(--color-bg-tertiary); padding: var(--space-lg); border-radius: 8px;">
+                <h2>Próxima Clase</h2>
+                <h3 style="color: var(--color-accent);">Clase 10: Integración y Evaluación</h3>
+                <p>
+                    ¡Llegamos al final de la unidad! Haremos un recorrido rápido por todo lo aprendido, conectando los
+                    puntos desde Ptolomeo hasta Newton, y evaluaremos nuestra comprensión del cambio científico.
+                </p>
+            </section>
+
+            <nav class="class-navigation">
+                <a href="clase-08.html" class="nav-button">← Clase Anterior</a>
+                <a href="index.html" class="nav-button nav-button-index">📚 Índice de Unidad</a>
+                <a href="clase-10.html" class="nav-button">Siguiente Clase →</a>
+            </nav>
+        </article>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Filosofía 6to</h4>
+                    <p>Unidad 1: Teorías Científicas - Clase 9 de 10</p>
+                    <p>Profesor: Javier Pereyra</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Filosofía 6to. Material educativo.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../../assets/js/dark-mode.js"></script>
+</body>
+
+</html>

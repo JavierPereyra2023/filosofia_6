@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clase 8: Carga Teórica de la Observación | Filosofía 6to</title>
+    <link rel="stylesheet" href="../../assets/css/variables.css">
+    <link rel="stylesheet" href="../../assets/css/reset.css">
+    <link rel="stylesheet" href="../../assets/css/base.css">
+    <link rel="stylesheet" href="../../assets/css/typography.css">
+    <link rel="stylesheet" href="../../assets/css/layout.css">
+    <link rel="stylesheet" href="../../assets/css/navigation.css">
+    <link rel="stylesheet" href="../../assets/css/components.css">
+    <link rel="stylesheet" href="../../assets/css/unit-page.css">
+    <link rel="stylesheet" href="../../assets/css/book-layout.css">
+
+    <style>
+        .class-container::before {
+            content: '    ¿Es un pato?\A    ¿Es un conejo?\A    Depende de tu\A    TEORÍA';
+            position: fixed;
+            top: 20%;
+            right: 5%;
+            font-family: 'Caveat', 'Comic Sans MS', cursive;
+            font-size: 26px;
+            font-weight: 700;
+            white-space: pre;
+            color: rgba(255, 255, 255, 0.35);
+            transform: rotate(-3deg);
+        }
+
+        .class-container::after {
+            content: '    Ver ES interpretar';
+            position: fixed;
+            bottom: 20%;
+            left: 5%;
+            font-family: 'Caveat', 'Comic Sans MS', cursive;
+            font-size: 26px;
+            font-weight: 700;
+            white-space: pre;
+            color: rgba(255, 255, 255, 0.32);
+            transform: rotate(5deg);
+        }
+
+        @media (max-width: 1024px) {
+
+            .class-container::before,
+            .class-container::after {
+                position: relative;
+                transform: none;
+                display: block;
+                margin: 20px 0;
+                width: 100%;
+                text-align: center;
+            }
+
+            .class-container::before {
+                content: 'No hay ojo inocente: Todo tiene carga teórica';
+            }
+
+            .class-container::after {
+                content: 'Hanson: Ver que vs Ver como';
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="main-nav">
+        <div class="nav-container">
+            <div class="nav-left">
+                <a href="index.html" class="nav-back-button" title="Volver al índice de la unidad">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M15 19l-7-7 7-7" />
+                    </svg>
+                    <span>Unidad 1</span>
+                </a>
+                <a href="../../home.html" class="nav-brand">Filosofía 6to</a>
+            </div>
+            <div class="nav-controls">
+                <button id="dark-mode-toggle" class="dark-mode-toggle" aria-label="Cambiar tema">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="class-progress">
+        <div class="container">
+            <div class="progress-info">
+                <span class="progress-label">Unidad 1: Teorías Científicas</span>
+                <span class="progress-count">Clase 8 de 10</span>
+            </div>
+            <div class="progress-bar">
+                <div class="progress-fill" style="width: 80%"></div>
+            </div>
+        </div>
+    </div>
+
+    <main class="class-container">
+        <article class="class-content">
+            <header class="class-header">
+                <div class="class-badge">Clase 8</div>
+                <h1 class="class-title">Carga Teórica de la Observación</h1>
+                <p class="class-subtitle">¿Existe el "ojo inocente"? Por qué ver es siempre interpretar.</p>
+            </header>
+
+            <!-- 1. ALFABETIZACIÓN CIENTÍFICA -->
+            <!-- 1. ALFABETIZACIÓN CIENTÍFICA -->
+            <section class="class-section">
+                <div class="section-label">Alfabetización Científica</div>
+                <h2>La Crisis de la Objetividad: Psicología y Física</h2>
+                <p>
+                    El ideal clásico de la ciencia suponía una separación tajante entre el <strong>Sujeto</strong> (el
+                    científico) y el <strong>Objeto</strong> (la naturaleza). Pero el siglo XX trajo dos revoluciones
+                    que cuestionaron esta certeza:
+                </p>
+
+                <h3>1. La Psicología de la Gestalt (La Carga Teórica)</h3>
+                <p>
+                    ¿Vemos con los ojos o con el cerebro? N.R. Hanson argumentó que <strong>"la observación está cargada
+                        de teoría"</strong>. No vemos manchas de luz; vemos objetos interpretados por nuestros conceptos
+                    previos.
+                </p>
+                <div style="text-align: center; margin: var(--space-xl) 0;">
+                    <div
+                        style="display: inline-block; background: white; padding: 20px; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); border: 1px solid var(--color-border);">
+                        <!-- Dynamic SVG: Duck-Rabbit Illusion -->
+                        <!-- Static Image: Duck-Rabbit Illusion -->
+                        <img src="../../assets/images/class-08/pato_conejo.jpg" alt="Ilusión Pato-Conejo"
+                            style="width: 100%; max-width: 400px; display: block;">
+                    </div>
+                    <p style="margin-top: var(--space-sm); font-size: 0.9em; color: var(--color-text-secondary);">
+                        <em>Ilusión Pato-Conejo: Los mismos datos sensoriales producen dos "hechos" distintos según la
+                            configuración mental (Gestalt Switch).</em>
+                    </p>
+                </div>
+                <p>
+                    Si un astrónomo ptolemaico y uno copernicano miran el amanecer, ¿ven lo mismo? Físicamente sí
+                    (mismos fotones), pero conceptualmente no: uno ve al Sol moverse; el otro ve el horizonte bajar.
+                </p>
+
+                <h3>2. La Mecánica Cuántica (La Intervención Física)</h3>
+                <p>
+                    Si en psicología el observador <em>interpreta</em>, en física cuántica el observador
+                    <em>interviene</em> físicamente. La medición no solo revela propiedades preexistentes; en cierto
+                    sentido, las crea. Exploraremos esto brevemente más adelante en el curso.
+                </p>
+            </section>
+
+            <!-- 2. ASPECTOS TEÓRICOS -->
+            <section class="class-section">
+                <div class="section-label">Aspectos Teóricos</div>
+                <h2>N.R. Hanson y la Tesis de la Carga Teórica</h2>
+
+                <div style="text-align: center; margin: var(--space-xl) 0;">
+                    <div
+                        style="display: inline-block; background: white; padding: 20px; border-radius: 8px; border: 1px solid var(--color-border);">
+                        <object data="../../assets/images/class-08/theory_laden_observation.svg" type="image/svg+xml"
+                            class="class-image-diagram" style="width: 100%; max-width: 700px;">
+                            Tu navegador no soporta SVG.
+                        </object>
+                    </div>
+                    <p style="margin-top: var(--space-sm); font-size: 0.9em; color: var(--color-text-secondary);">
+                        <em>Esquema visual de la carga teórica: el mismo estímulo sensorial produce percepciones
+                            radicalmente diferentes según el marco teórico del observador.</em>
+                    </p>
+                </div>
+
+                <h3>La Distinción: "Ver Que" vs "Ver Como"</h3>
+                <p>
+                    Norwood Russell Hanson (1958) atacó la distinción empirista tradicional entre observación neutral y
+                    teoría interpretativa. Su argumento central: <strong>la observación está cargada de teoría desde el
+                        inicio</strong>.
+                </p>
+                <p>
+                    Hanson distinguió entre dos tipos de "ver":
+                </p>
+                <ul>
+                    <li><strong>"Ver que":</strong> La percepción pura de datos sensoriales (el empirista cree que esto
+                        es posible y es la base neutral de la ciencia).</li>
+                    <li><strong>"Ver como":</strong> La percepción interpretada conceptualmente (Hanson argumenta que
+                        TODA observación es de este tipo).</li>
+                </ul>
+                <p>
+                    Cuando un físico mira un tubo de rayos catódicos, no ve "un destello de luz en un punto de la
+                    pantalla" que luego interpreta. Ve directamente <em>"un electrón colisionando"</em>. Su conocimiento
+                    teórico sobre electrones, campos electromagnéticos y física del estado sólido moldea su percepción
+                    visual desde el primer instante.
+                </p>
+
+                <div class="philosophical-quote">
+                    <blockquote>
+                        <p>
+                            "Hay más en la visión que lo que llega al globo ocular."
+                        </p>
+                        <footer>— Norwood Russell Hanson, <em>Patterns of Discovery</em> (1958)</footer>
+                    </blockquote>
+                </div>
+
+                <h3>Casos Históricos: ¿Qué Ven Realmente los Científicos?</h3>
+
+                <div
+                    style="background: rgba(52, 152, 219, 0.1); padding: 20px; border-radius: 8px; border-left: 4px solid #3498db; margin: 20px 0;">
+                    <h4 style="color: #2980b9;">Caso 1: Aristóteles vs Galileo Viendo Caer una Piedra</h4>
+                    <p>
+                        Imagina que Aristóteles y Galileo están juntos en la Torre de Pisa viendo caer una piedra desde
+                        la cima hasta el suelo.
+                    </p>
+                    <ul>
+                        <li><strong>¿Qué ve Aristóteles?</strong> Ve una piedra que se mueve de un estado
+                            <em>antinatural</em> (suspendida en el aire) a su <em>lugar natural</em> (el suelo, centro
+                            del universo). Ve un objeto que se mueve cada vez más rápido porque se está "acercando a
+                            casa" y por lo tanto se mueve con más entusiasmo. Ve una actualización de potencialidad.
+                        </li>
+                        <li><strong>¿Qué ve Galileo?</strong> Ve un cuerpo que cae con <em>aceleración constante</em>
+                            debido a una fuerza (gravedad). Ve un movimiento que es independiente del peso del objeto
+                            (en vacío). Ve una instancia de las leyes matemáticas del movimiento uniformemente acelerado:
+                            d = ½gt².
+                        </li>
+                    </ul>
+                    <p>
+                        Ambos tienen la misma imagen retiniana (una roca moviéndose verticalmente hacia abajo), pero
+                        <strong>ven hechos diferentes</strong>. Sus marcos conceptuales filtran y organizan la
+                        experiencia sensorial de maneras incompatibles. No es que uno "observe neutralmente" y luego
+                        "interprete mal"; es que la observación misma está saturada de teoría.
+                    </p>
+                </div>
+
+                <div
+                    style="background: rgba(155, 89, 182, 0.1); padding: 20px; border-radius: 8px; border-left: 4px solid #9b59b6; margin: 20px 0;">
+                    <h4 style="color: #8e44ad;">Caso 2: Ptolomeo vs Copérnico Viendo el Amanecer</h4>
+                    <p>
+                        Dos astrónomos observan el amanecer desde el mismo lugar, en el mismo momento, con instrumentos
+                        idénticos.
+                    </p>
+                    <ul>
+                        <li><strong>¿Qué ve Ptolomeo?</strong> Ve al Sol <em>saliendo</em>: un objeto que estaba debajo
+                            del horizonte y ahora asciende en el cielo. Ve el movimiento del Sol alrededor de la Tierra
+                            inmóvil, una de las esferas celestiales completando su rotación diaria.
+                        </li>
+                        <li><strong>¿Qué ve Copérnico?</strong> Ve el horizonte <em>descendiendo</em>: la rotación de la
+                            Tierra sobre su eje hace que el observador gire hacia el Sol (que está fijo). Ve el Sol
+                            revelarse gradualmente debido al movimiento del observador, no del Sol.
+                        </li>
+                    </ul>
+                    <p>
+                        La descripción fenomenológica del evento es radicalmente distinta. No es solo que usan
+                        vocabulario diferente para describir lo mismo; literalmente <strong>perciben eventos
+                            diferentes</strong>. Para Ptolomeo, es el Sol el que se mueve. Para Copérnico, es el
+                        observador el que se mueve. La teoría determina qué cuenta como "lo que está ocurriendo".
+                    </p>
+                </div>
+
+                <div
+                    style="background: rgba(243, 156, 18, 0.1); padding: 20px; border-radius: 8px; border-left: 4px solid #f39c12; margin: 20px 0;">
+                    <h4 style="color: #e67e22;">Caso 3: Priestley vs Lavoisier Viendo Combustión</h4>
+                    <p>
+                        Cuando se quema madera en aire, ¿qué ocurre químicamente?
+                    </p>
+                    <ul>
+                        <li><strong>Joseph Priestley (teoría del flogisto):</strong> Ve al flogisto (sustancia
+                            hipotética del fuego) <em>liberándose</em> de la madera hacia el aire. El material se vuelve
+                            más ligero porque pierde flogisto. El aire "desflogistizado" (oxígeno) es aire que absorbió
+                            máximo flogisto y ya no puede tomar más.
+                        </li>
+                        <li><strong>Antoine Lavoisier (teoría del oxígeno):</strong> Ve al oxígeno del aire
+                            <em>combinándose</em> químicamente con la madera. El material gana masa porque incorpora
+                            oxígeno. El oxígeno es un elemento que reacciona; el flogisto no existe.
+                        </li>
+                    </ul>
+                    <p>
+                        Aunque ambos realizan los mismos experimentos cuantitativos (pesadas antes y después), sus
+                        observaciones están filtradas por ontologías incompatibles. Priestley nunca "vio" oxígeno porque
+                        su teoría no tenía un concepto para ello; Lavoisier nunca "vio" flogisto porque consideraba que
+                        no existía tal entidad.
+                    </p>
+                </div>
+
+                <div class="concept-highlight">
+                    <h3>Implicaciones Filosóficas de la Carga Teórica</h3>
+                    <p>
+                        Si la observación está siempre cargada de teoría, surgen problemas profundos para la concepción
+                        empirista clásica de la ciencia:
+                    </p>
+                    <ul>
+                        <li><strong>Problema del Punto de Partida:</strong> Si no hay observación neutral, ¿cómo
+                            empezamos a hacer ciencia? ¿Cómo sabemos que nuestras observaciones iniciales no están
+                            completamente sesgadas por teorías falsas?</li>
+                        <li><strong>Problema de la Contrastación:</strong> Si las observaciones dependen de teorías,
+                            ¿cómo podemos usar observaciones para poner a prueba esas mismas teorías sin circularidad?
+                        </li>
+                        <li><strong>Problema de la Comunicación:</strong> Si científicos con paradigmas diferentes ven
+                            cosas diferentes, ¿cómo pueden siquiera discutir sus desacuerdos? (Esto conecta con el
+                            concepto de inconmensurabilidad de Kuhn).</li>
+                    </ul>
+                </div>
+
+                <h3>Conexión con Kuhn: Inconmensurabilidad como Carga Teórica Extrema</h3>
+                <p>
+                    Thomas Kuhn llevó la tesis de Hanson aún más lejos. Argumentó que cuando ocurre una revolución
+                    científica y cambia el paradigma, los científicos antes y después de la revolución literalmente
+                    <strong>habitan mundos diferentes</strong>.
+                </p>
+                <p>
+                    La <strong>inconmensurabilidad</strong> kuhniana no es solo que usen vocabulario distinto, sino que
+                    los términos clave cambian de significado de forma tan radical que las afirmaciones de un paradigma
+                    no pueden traducirse directamente al otro sin pérdida o distorsión.
+                </p>
+                <ul>
+                    <li>La "masa" newtoniana (invariante) ≠ la "masa" einsteiniana (dependiente de velocidad)</li>
+                    <li>El "espacio" euclidiano ≠ el "espacio-tiempo" curvo de Relatividad General</li>
+                    <li>La "especie" pre-darwiniana (fija) ≠ la "especie" post-darwiniana (población evolutiva)</li>
+                </ul>
+                <p>
+                    Hanson mostró que la observación tiene carga teórica. Kuhn mostró que cuando la teoría cambia
+                    radicalmente (revolución), el mundo observacional cambia con ella. Por eso las revoluciones
+                    científicas son tan difíciles: no es solo cambiar de opinión sobre teorías abstractas, es cambiar la
+                    manera en que uno ve y estructura la realidad perceptual misma.
+                </p>
+
+                <div class="graffiti-divider" style="margin: var(--space-xl) 0; text-align: center;">
+                    <span
+                        style="font-family: 'Caveat', cursive; font-size: 2.5em; color: var(--color-accent); text-shadow: 2px 2px 4px rgba(0,0,0,0.1);">
+                        ⚡ Breve Incursión: Física Cuántica ⚡
+                    </span>
+                </div>
+
+                <h3>Física Cuántica: Cuando el Observador No Solo Interpreta, Sino que Interviene</h3>
+                <p>
+                    En mecánica cuántica, la carga teórica de la observación toma una forma aún más radical: el acto de
+                    observar <em>altera físicamente</em> el sistema observado. Una partícula cuántica existe en una
+                    superposición de estados hasta que es medida; la medición "colapsa" la función de onda y fuerza al
+                    sistema a tomar un estado definido.
+                </p>
+                <p>
+                    Esto será explorado con detalle en la Unidad 2. Por ahora, basta saber que la física moderna refuerza
+                    dramáticamente la tesis filosófica de Hanson: la observación nunca es pasiva. (Esto lo veremos en
+                    profundidad cuando estudiemos el experimento de la doble rendija y el principio de complementariedad
+                    de Bohr en clases futuras.)
+                </p>
+            </section>
+
+            <!-- Vista previa rápida de mecánica cuántica - desarrollo completo en Unidad 2 -->
+            <section class="class-section">
+                <div class="section-label">Vista Previa: Física Cuántica</div>
+                <h2>El Experimento de la Doble Rendija: Observación e Intervención</h2>
+                <p>
+                    La tesis de Hanson (la observación tiene carga teórica) encuentra su expresión más dramática en
+                    mecánica cuántica, donde el acto de observar no solo <em>interpreta</em> la realidad de manera
+                    teórica, sino que <em>interviene</em> físicamente en ella.
+                </p>
+                <p>
+                    En el experimento de la doble rendija, cuando se disparan electrones uno por uno hacia dos rendijas,
+                    ocurre algo extraordinario:
+                </p>
+                <ul>
+                    <li><strong>Sin detector:</strong> Los electrones producen un patrón de interferencia (como ondas).
+                    </li>
+                    <li><strong>Con detector:</strong> El patrón de interferencia desaparece y se comportan como
+                        partículas.</li>
+                </ul>
+                <p>
+                    Niels Bohr propuso el <strong>Principio de Complementariedad</strong>: onda y partícula no son
+                    contradicciones, sino aspectos complementarios de una misma realidad cuántica. No podemos acceder a
+                    una "descripción completa" independiente de nuestro método de observación.
+                </p>
+                <p>
+                    <em>(Este fenómeno será explorado en profundidad en la Unidad 2 cuando estudiemos la física del
+                        siglo XX. Por ahora, lo mencionamos como la forma más radical de carga teórica de la
+                        observación.)</em>
+                </p>
+            </section>
+
+            <!-- ACTIVIDADES -->
+            <section class="class-section">
+                <h2>Actividades de Desarrollo</h2>
+                <div class="activity-container">
+                    <div class="question-card">
+                        <h3>1. Experimento Mental: Aristóteles y Galileo en la Torre de Pisa</h3>
+                        <p>
+                            Lee nuevamente el caso de Aristóteles y Galileo observando caer la piedra. Luego responde:
+                        </p>
+                        <ul>
+                            <li>Describe en 100 palabras qué "ve" cada uno usando su propio vocabulario teórico.</li>
+                            <li>¿Podría uno de ellos convencer al otro simplemente mostrándole "los hechos"? ¿Por qué sí
+                                o por qué no?</li>
+                            <li>¿Qué nos dice este caso sobre la posibilidad de observación neutral en ciencia?</li>
+                        </ul>
+                    </div>
+
+                    <div class="question-card">
+                        <h3>2. El Problema de la Contrastación Empírica</h3>
+                        <p>
+                            Si toda observación está cargada de teoría, surge un problema lógico: para poner a prueba
+                            una teoría T, necesito hacer observaciones O. Pero las observaciones O dependen de asumir
+                            que T es correcta para interpretarlas.
+                        </p>
+                        <p><strong>Ejemplo:</strong> Para poner a prueba la teoría atómica usando un microscopio
+                            electrónico, debo confiar en que la teoría atómica de la óptica electrónica es correcta.
+                            ¿No es esto circular?
+                        </p>
+                        <p><strong>Pregunta:</strong> ¿Invalida esto el método científico? ¿O hay alguna forma de
+                            escapar de esta circularidad? Argumenta tu posición en 200 palabras.
+                        </p>
+                    </div>
+
+                    <div class="question-card">
+                        <h3>3. Inconmensurabilidad y Comunicación</h3>
+                        <p>
+                            Si los científicos de paradigmas diferentes literalmente ven cosas diferentes (como
+                            Ptolomeo vs Copérnico), ¿cómo pueden siquiera debatir? Kuhn sugirió que los paradigmas son
+                            <strong>inconmensurables</strong>: no hay un lenguaje neutral compartido para compararlos.
+                        </p>
+                        <p><strong>Tarea:</strong> Imagina un debate entre un ptolemaico y un copernicano sobre "lo que
+                            vemos al amanecer". Escribe un diálogo breve (5-6 intercambios) donde se evidencie que usan
+                            los mismos términos ("moverse", "subir", "rotar") con significados diferentes.
+                        </p>
+                    </div>
+
+                    <div class="question-card">
+                        <h3>4. Reflexión Crítica: ¿Hay Progreso Científico?</h3>
+                        <p>
+                            Si la observación está cargada de teoría y los paradigmas son inconmensurables, ¿podemos
+                            decir que la ciencia "progresa" hacia la verdad? ¿O simplemente cambia de un paradigma a
+                            otro sin criterio objetivo de mejora?
+                        </p>
+                        <p><strong>Consigna:</strong> Escribe un ensayo breve (250-300 palabras) defendiendo UNA de
+                            estas posiciones:
+                        </p>
+                        <ul>
+                            <li><strong>A. Realismo Progresivo:</strong> A pesar de la carga teórica, la ciencia sí
+                                converge hacia una descripción cada vez más verdadera de la realidad objetiva. Los
+                                paradigmas posteriores son objetivamente superiores.</li>
+                            <li><strong>B. Relativismo Kuhniano:</strong> Los paradigmas son sistemas cerrados
+                                inconmensurables. No hay criterio neutro para decir que Einstein es "más verdadero" que
+                                Newton; solo resuelve problemas diferentes. El cambio no es progreso, es transformación.
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section class="class-section">
+                <h2>Conceptos Clave</h2>
+                <div class="concept-highlight">
+                    <ul>
+                        <li><strong>Carga Teórica de la Observación:</strong> Tesis de que toda observación científica
+                            está influenciada e interpretada por los marcos teóricos previos del observador. No existe
+                            observación completamente neutral o libre de teoría.</li>
+                        <li><strong>Norwood Russell Hanson:</strong> Filósofo de la ciencia (1924-1967) que desarrolló
+                            la tesis de la carga teórica en su libro <em>Patterns of Discovery</em> (1958).</li>
+                        <li><strong>"Ver Que" vs "Ver Como":</strong> Distinción de Hanson. "Ver que" sería percepción
+                            pura de datos sensoriales (que Hanson niega que exista). "Ver como" es percepción
+                            conceptualmente interpretada (que Hanson dice que es la única forma real de observación).
+                        </li>
+                        <li><strong>Gestalt Switch (Cambio Gestáltico):</strong> Cambio súbito en la percepción de una
+                            imagen ambigua (como el pato-conejo) donde los mismos datos sensoriales producen dos
+                            experiencias perceptuales radicalmente diferentes. Metáfora de las revoluciones científicas
+                            según Kuhn.</li>
+                        <li><strong>Inconmensurabilidad (Kuhn):</strong> Imposibilidad de traducir completamente los
+                            conceptos y afirmaciones de un paradigma a otro sin pérdida o distorsión de significado. Los
+                            paradigmas rivales no solo difieren en sus respuestas, sino en sus preguntas y conceptos
+                            básicos.</li>
+                        <li><strong>Paradigma:</strong> Marco conceptual, metodológico e institucional compartido por
+                            una comunidad científica que determina qué problemas son legítimos, qué métodos son válidos
+                            y qué soluciones son aceptables.</li>
+                        <li><strong>Observación Neutral:</strong> Ideal empirista (rechazado por Hanson) de que es
+                            posible hacer observaciones libres de presupuestos teóricos que sirvan como base objetiva
+                            para juzgar teorías.</li>
+                        <li><strong>Función de Onda (ψ):</strong> En mecánica cuántica, descripción matemática del
+                            estado de un sistema que evoluciona según la ecuación de Schrödinger y que contiene
+                            información sobre las probabilidades de diferentes resultados de medición.</li>
+                        <li><strong>Colapso de la Función de Onda:</strong> Proceso por el cual un sistema cuántico en
+                            superposición de estados pasa a un estado definido al ser medido. Controvertido
+                            filosóficamente porque implica que la observación altera el sistema.</li>
+                        <li><strong>Principio de Complementariedad (Bohr):</strong> Tesis de que propiedades
+                            mutuamente excluyentes (como onda/partícula) son aspectos complementarios necesarios para
+                            una descripción completa de los sistemas cuánticos. No son contradictorias sino
+                            complementarias.</li>
+                        <li><strong>Experimento de la Doble Rendija:</strong> Experimento que demuestra la dualidad
+                            onda-partícula: partículas individuales (electrones, fotones) producen patrones de
+                            interferencia (ondas) cuando no son observadas, pero se comportan como partículas cuando se
+                            detecta por qué rendija pasan.</li>
+                        <li><strong>Realismo Científico:</strong> Postura filosófica que sostiene que las teorías
+                            científicas exitosas describen (aproximadamente) la realidad objetiva que existe
+                            independientemente del observador.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="class-section"
+                style="background: var(--color-bg-tertiary); padding: var(--space-lg); border-radius: 8px;">
+                <h2>Próxima Clase</h2>
+                <h3 style="color: var(--color-accent);">Clase 9: Criterios de Elección de Teorías</h3>
+                <p>
+                    Si los paradigmas son inconmensurables y la observación está cargada de teoría, ¿cómo eligen los
+                    científicos entre teorías rivales? Thomas Kuhn propuso que usan "valores" como precisión,
+                    coherencia, simplicidad, amplitud y fecundidad. Pero estos valores pueden entrar en conflicto...
+                    ¿Qué determina entonces la elección? ¿Es racional o es sociología?
+                </p>
+            </section>
+
+            <nav class="class-navigation">
+                <a href="clase-07.html" class="nav-button">← Clase Anterior</a>
+                <a href="index.html" class="nav-button nav-button-index">📚 Índice de Unidad</a>
+                <a href="clase-09.html" class="nav-button">Siguiente Clase →</a>
+            </nav>
+        </article>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Filosofía 6to</h4>
+                    <p>Unidad 1: Teorías Científicas - Clase 8 de 10</p>
+                    <p>Profesor: Javier Pereyra</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Filosofía 6to. Material educativo.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../../assets/js/dark-mode.js"></script>
+</body>
+
+</html>

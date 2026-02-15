@@ -127,7 +127,8 @@
 .nav-controls {
   display: flex;
   align-items: center;
-  gap: var(--space-md);
+  gap: var(--space-lg);
+  margin-left: var(--space-lg);
 }
 
 .nav-link {

@@ -97,7 +97,7 @@
                     </svg>
                     <span>Unidad 1</span>
                 </a>
-                <a href="../../index.html" class="nav-brand">Filosofía 6to</a>
+                <a href="../../home.html" class="nav-brand">Filosofía 6to</a>
             </div>
             <div class="nav-controls">
                 <button id="dark-mode-toggle" class="dark-mode-toggle" aria-label="Cambiar tema">
@@ -140,6 +140,15 @@
             <section class="class-section">
                 <h2>El Desafío de Mover la Tierra</h2>
 
+                <div style="text-align: center; margin: var(--space-xl) 0;">
+                    <div style="display: inline-block;">
+                        <img src="../../assets/images/class-04/galileo_physics.svg" alt="Física de Galileo" class="class-image-diagram">
+                    </div>
+                    <p style="margin-top: var(--space-sm); font-size: 0.9em; color: var(--color-text-secondary);">
+                        <em>Los cinco experimentos y conceptos fundamentales de la física galileana</em>
+                    </p>
+                </div>
+
                 <p>
                     Si Copérnico tenía razón y la Tierra se mueve a gran velocidad alrededor del Sol y gira sobre sí
                     misma, ¿por qué no sentimos ese movimiento? ¿Por qué los objetos no salen volando? ¿Por qué si salto
@@ -154,9 +163,10 @@
                 </p>
 
                 <div style="text-align: center; margin: var(--space-xl) 0;">
-                    <img src="https://images.unsplash.com/photo-1541829672624-9b2c5c50293f?w=800&h=600&fit=crop"
-                        alt="Torre de Pisa inclinada"
-                        style="max-width: 100%; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+                    <div style="display: inline-block;">
+                        <img src="../../assets/images/class-04/tower_experiment.jpg"
+                            alt="Torre de Pisa inclinada" class="class-image-small">
+                    </div>
                     <p style="margin-top: var(--space-sm); font-size: 0.9em; color: var(--color-text-secondary);">
                         <em>La Torre de Pisa, escenario del famoso (quizás mítico) experimento de Galileo sobre la caída
                             de los cuerpos</em>
@@ -207,6 +217,16 @@
                     <span>(m₁ ≠ m₂)</span>
                 </div>
 
+                <div style="text-align: center; margin: var(--space-xl) 0;">
+                    <div style="display: inline-block; background: white; padding: 10px; border-radius: 8px;">
+                        <img src="../../assets/images/class-04/falling_bodies_paradox.svg"
+                            alt="Paradoja de las piedras atadas" class="class-image-small">
+                    </div>
+                    <p style="margin-top: var(--space-sm); font-size: 0.9em; color: var(--color-text-secondary);">
+                        <em>Experimento mental de Galileo: atar dos piedras crea una paradoja en la física aristotélica</em>
+                    </p>
+                </div>
+
                 <div class="key-concepts">
                     <h3>La Ley de Caída Libre</h3>
                     <ul>
@@ -217,6 +237,32 @@
                         <li>Esto significaba que la naturaleza seguía leyes matemáticas precisas, no solo tendencias
                             cualitativas ("quiere ir abajo").</li>
                     </ul>
+                </div>
+
+                <h3>El Plano Inclinado: El Experimento Real</h3>
+
+                <p>
+                    Galileo no podía cronometrar con precisión la caída libre directa (los objetos caen demasiado rápido
+                    para los relojes de agua de su época). Así que tuvo una idea brillante: <strong>ralentizar el
+                        movimiento usando planos inclinados</strong>.
+                </p>
+
+                <ul>
+                    <li>Construyó un canal liso de madera con una ranura recta.</li>
+                    <li>Dejó rodar esferas de bronce pulidas por el canal.</li>
+                    <li>Midió las distancias recorridas en tiempos iguales usando un reloj de agua.</li>
+                    <li>Descubrió que las distancias seguían la proporción 1:4:9:16... (cuadrados perfectos).</li>
+                </ul>
+
+                <div style="text-align: center; margin: var(--space-xl) 0;">
+                    <div style="display: inline-block;">
+                        <img src="../../assets/images/class-04/inclined_plane.jpg" alt="Plano inclinado de Galileo"
+                            class="class-image-small">
+                    </div>
+                    <p style="margin-top: var(--space-sm); font-size: 0.9em; color: var(--color-text-secondary);">
+                        <em>Plano inclinado usado por Galileo para ralentizar el movimiento y estudiar la caída de los
+                            cuerpos</em>
+                    </p>
                 </div>
             </section>
 
@@ -250,20 +296,264 @@
                     </p>
                 </div>
 
+                <div style="text-align: center; margin: var(--space-xl) 0;">
+                    <div style="display: inline-block; background: white; padding: 10px; border-radius: 8px;">
+                        <img src="../../assets/images/class-04/inertia_experiment.svg"
+                            alt="Experimento mental de inercia" class="class-image-small">
+                    </div>
+                    <p style="margin-top: var(--space-sm); font-size: 0.9em; color: var(--color-text-secondary);">
+                        <em>Experimento mental de Galileo: en un plano horizontal sin fricción, el movimiento continúa
+                            indefinidamente</em>
+                    </p>
+                </div>
+
+                <h3>Respondiendo a las Objeciones</h3>
+
+                <p>
+                    Con el principio de inercia, Galileo pudo responder a las objeciones físicas contra el heliocentrismo:
+                </p>
+
+                <div class="concept-highlight">
+                    <h4>Objeción 1: El Argumento de la Torre</h4>
+                    <p>
+                        <strong>Problema:</strong> Si la Tierra se mueve hacia el este mientras cae una piedra desde una
+                        torre, la piedra debería caer al oeste de la base de la torre.
+                    </p>
+                    <p style="margin-top: var(--space-sm);">
+                        <strong>Respuesta de Galileo:</strong> La piedra ya tiene el movimiento horizontal de la Tierra
+                        <em>por inercia</em> antes de ser soltada. Mantiene ese movimiento horizontal mientras cae, por lo
+                        que cae directamente hacia abajo respecto a la torre.
+                    </p>
+
+                    <h4 style="margin-top: var(--space-md);">Objeción 2: Pájaros y Nubes</h4>
+                    <p>
+                        <strong>Problema:</strong> Si la Tierra rota, los pájaros y las nubes deberían quedarse atrás.
+                    </p>
+                    <p style="margin-top: var(--space-sm);">
+                        <strong>Respuesta de Galileo:</strong> El aire, los pájaros, las nubes y todo en la superficie
+                        comparten el movimiento de rotación de la Tierra por inercia. Es como estar dentro de un barco que
+                        se mueve suavemente: todo dentro del barco se mueve junto con él.
+                    </p>
+                </div>
+
+                <h3>La Relatividad Galileana: Un Concepto Revolucionario</h3>
+
+                <p>
+                    Uno de los aportes conceptuales más profundos de Galileo fue el desarrollo del <strong>principio de
+                        relatividad</strong>, que anticipó aspectos fundamentales de la física moderna. Este principio era
+                    crucial para responder a las objeciones contra el movimiento de la Tierra.
+                </p>
+
+                <div class="concept-highlight">
+                    <h4>El Principio de Relatividad Galileana</h4>
+                    <p>
+                        <strong>No existe forma de detectar movimiento rectilíneo uniforme mediante experimentos mecánicos
+                            realizados dentro de un sistema en movimiento.</strong>
+                    </p>
+                    <p style="margin-top: var(--space-sm);">
+                        En otras palabras: si te encuentras en un sistema que se mueve con velocidad constante (sin
+                        aceleración), todos los fenómenos físicos ocurren exactamente igual que si estuvieras en reposo. No
+                        hay experimento mecánico que pueda distinguir entre "reposo absoluto" y "movimiento uniforme".
+                    </p>
+                </div>
+
+                <h4>El Experimento Mental del Barco</h4>
+
+                <p>
+                    Galileo ilustró este principio con su famoso experimento mental del barco (descrito en <em>Diálogo
+                        sobre los dos máximos sistemas del mundo</em>, 1632):
+                </p>
+
+                <div class="philosophical-quote">
+                    <p>
+                        "Enciérrese con algún amigo en la cabina principal bajo cubierta de algún barco grande, y lleve
+                        consigo moscas, mariposas y otros pequeños animales voladores... haga que el barco se mueva con la
+                        velocidad que quiera; siempre que el movimiento sea uniforme y no fluctuante de un lado a otro,
+                        no podrá discernir por ninguna de las observaciones el más mínimo cambio, ni determinar si el
+                        barco está en movimiento o parado."
+                    </p>
+                    <cite>— Galileo Galilei, Diálogo (1632)</cite>
+                </div>
+
+                <p>
+                    Galileo describe varios experimentos:
+                </p>
+                <ul>
+                    <li>Las gotas de agua caen verticalmente en un recipiente, no diagonalmente.</li>
+                    <li>Si saltas, caes en el mismo lugar, no retrocedes respecto al barco.</li>
+                    <li>Los peces nadan igualmente en todas direcciones en su pecera.</li>
+                    <li>Las mariposas vuelan en todas direcciones sin compensar el movimiento del barco.</li>
+                </ul>
+
+                <div class="concept-highlight">
+                    <h4>Implicaciones para el Heliocentrismo</h4>
+                    <p>
+                        Este principio resuelve definitivamente las objeciones mecánicas contra el movimiento de la Tierra:
+                    </p>
+                    <ul>
+                        <li><strong>No sentimos el movimiento de la Tierra</strong> porque nos movemos con ella. Es como
+                            estar en el barco: no sientes movimiento uniforme.</li>
+                        <li><strong>Los objetos caen verticalmente</strong> porque comparten el movimiento horizontal de la
+                            Tierra por inercia, igual que las gotas en el barco.</li>
+                        <li><strong>Las nubes y pájaros no se quedan atrás</strong> porque el aire se mueve con la Tierra,
+                            como el aire dentro del barco se mueve con él.</li>
+                    </ul>
+
+                    <p style="margin-top: var(--space-md);">
+                        <strong>Consecuencia filosófica:</strong> El movimiento uniforme es <strong>relativo</strong>, no
+                        absoluto. No hay un "marco de referencia privilegiado" desde el cual el universo "realmente"
+                        observa el movimiento. Cada observador en movimiento uniforme tiene igual derecho a considerarse
+                        "en reposo".
+                    </p>
+                </div>
+
+                <h4>Limitaciones de la Relatividad Galileana</h4>
+
+                <p>
+                    Es importante notar que la relatividad de Galileo tiene limitaciones:
+                </p>
+                <ul>
+                    <li><strong>Solo aplica a movimiento uniforme</strong> (velocidad constante en línea recta). Los
+                        movimientos acelerados SÍ se detectan (sentimos frenazos, giros, etc.).</li>
+                    <li><strong>Solo aplica a fenómenos mecánicos</strong>. Galileo no consideró fenómenos
+                        electromagnéticos ni ópticos (que requirieron la relatividad especial de Einstein en 1905).</li>
+                    <li><strong>Asume tiempo y espacio absolutos</strong>. La relatividad de Einstein mostraría que el
+                        tiempo y el espacio también son relativos a altas velocidades.</li>
+                </ul>
+
+                <div class="graffiti-divider">
+                    <span style="font-size: 1.4em;">v' = v - u</span>
+                    <span>(Transformación Galileana)</span>
+                </div>
+
                 <h3>El Movimiento de Proyectiles</h3>
 
                 <p>
-                    Galileo también demostró que el movimiento de un proyectil (una bala de cañón, una piedra lanzada)
-                    es la suma de dos movimientos independientes:
+                    Aplicando sus principios de inercia y relatividad, Galileo demostró que el movimiento de un proyectil
+                    (una bala de cañón, una piedra lanzada) es la suma de dos movimientos independientes:
                 </p>
                 <ol>
-                    <li>Movimiento horizontal constante (por inercia).</li>
-                    <li>Movimiento vertical acelerado (por gravedad).</li>
+                    <li><strong>Movimiento horizontal:</strong> Uniforme (velocidad constante) por inercia.</li>
+                    <li><strong>Movimiento vertical:</strong> Acelerado hacia abajo por gravedad (d = ½gt²).</li>
                 </ol>
                 <p>
                     La combinación de estos dos movimientos crea una curva geométrica precisa: la
-                    <strong>parábola</strong>. Nuevamente, las matemáticas gobernaban el mundo físico.
+                    <strong>parábola</strong>. Esto era revolucionario: fenómenos complejos podían entenderse
+                    descomponiéndolos en componentes simples que obedecen leyes matemáticas.
                 </p>
+
+                <div style="text-align: center; margin: var(--space-xl) 0;">
+                    <div style="display: inline-block; background: white; padding: 10px; border-radius: 8px;">
+                        <img src="../../assets/images/class-04/projectile_motion.svg" alt="Movimiento parabólico"
+                            class="class-image-small">
+                    </div>
+                    <p style="margin-top: var(--space-sm); font-size: 0.9em; color: var(--color-text-secondary);">
+                        <em>Trayectoria parabólica de un proyectil: composición de movimiento horizontal uniforme y caída
+                            libre vertical</em>
+                    </p>
+                </div>
+            </section>
+
+            <!-- Galilean Method -->
+            <section class="class-section">
+                <h2>El Método Científico Galileano</h2>
+
+                <p>
+                    Más allá de sus descubrimientos específicos, Galileo revolucionó la <strong>metodología</strong> de la
+                    ciencia. Su enfoque combinaba elementos que hoy reconocemos como fundamentales del método científico
+                    moderno:
+                </p>
+
+                <div class="concept-highlight">
+                    <h3>Componentes del Método Galileano</h3>
+
+                    <h4>1. Observación Sistemática y Medición</h4>
+                    <p>
+                        No solo observar fenómenos, sino <strong>medirlos cuantitativamente</strong>. Galileo cronometró
+                        caídas, midió distancias, calculó alturas de montañas lunares mediante geometría.
+                    </p>
+
+                    <h4>2. Experimentación Controlada</h4>
+                    <p>
+                        Diseñar situaciones artificiales donde variables puedan aislarse. El plano inclinado no era un
+                        fenómeno natural, sino un <strong>experimento diseñado</strong> para estudiar la caída en
+                        condiciones controladas.
+                    </p>
+
+                    <h4>3. Idealización</h4>
+                    <p>
+                        Considerar casos ideales (sin fricción, en el vacío) para revelar las leyes fundamentales, luego
+                        agregar complicaciones realistas (aire, fricción) como perturbaciones. Esto era revolucionario:
+                        Aristóteles creía que debemos estudiar el mundo "tal como es", con todas sus imperfecciones.
+                    </p>
+
+                    <h4>4. Matematización</h4>
+                    <p>
+                        Expresar las leyes de la naturaleza como <strong>relaciones matemáticas precisas</strong> (d = ½gt²),
+                        no solo descripciones cualitativas ("lo pesado tiende hacia abajo").
+                    </p>
+
+                    <h4>5. Experimentos Mentales (Gedankenexperiment)</h4>
+                    <p>
+                        Usar razonamiento lógico sobre situaciones hipotéticas (piedras atadas, barco en movimiento) para
+                        revelar contradicciones en teorías rivales o deducir consecuencias de principios.
+                    </p>
+
+                    <h4>6. Rechazo de la Autoridad</h4>
+                    <p>
+                        La naturaleza es la autoridad final, no Aristóteles ni textos sagrados interpretados literalmente.
+                        "La filosofía está escrita en el libro de la naturaleza", no en libros humanos.
+                    </p>
+                </div>
+
+                <div class="philosophical-quote">
+                    <p>
+                        "En las discusiones sobre problemas naturales, no deberíamos comenzar por la autoridad de pasajes
+                        de las Escrituras, sino por experimentos sensoriales y demostraciones necesarias."
+                    </p>
+                    <cite>— Galileo Galilei, Carta a la Gran Duquesa Cristina (1615)</cite>
+                </div>
+
+                <h3>Galileo y la Mecánica Copernicana</h3>
+
+                <p>
+                    La pregunta original de esta clase era: ¿cómo la física de Galileo fue decisiva para la aceptación del
+                    heliocentrismo? Ahora podemos responder comprehensivamente:
+                </p>
+
+                <div class="concept-highlight">
+                    <h4>Contribuciones Decisivas de Galileo al Copernicanismo</h4>
+
+                    <ol>
+                        <li>
+                            <strong>Desmanteló las objeciones físicas:</strong> Mediante la inercia y la relatividad,
+                            explicó por qué no sentimos el movimiento de la Tierra y por qué los objetos no se comportan
+                            como los aristotélicos predecían.
+                        </li>
+
+                        <li>
+                            <strong>Proporcionó una física alternativa:</strong> No bastaba rechazar a Aristóteles; había
+                            que reemplazarlo. Galileo creó los cimientos de una nueva mecánica compatible con la Tierra
+                            móvil.
+                        </li>
+
+                        <li>
+                            <strong>Demostró el poder del método experimental-matemático:</strong> Mostró que la física
+                            matemática, no la filosofía cualitativa, era el camino hacia la verdad sobre la naturaleza.
+                        </li>
+
+                        <li>
+                            <strong>Estableció el empirismo moderno:</strong> La evidencia observacional y experimental
+                            debe prevalecer sobre la especulación filosófica o la autoridad textual.
+                        </li>
+                    </ol>
+
+                    <p style="margin-top: var(--space-md);">
+                        Sin Galileo, el heliocentrismo habría quedado como una curiosidad matemática. Con Galileo, se
+                        convirtió en el fundamento de una nueva física que eventualmente (con Newton) unificaría los cielos
+                        y la Tierra bajo leyes universales.
+                    </p>
+                </div>
             </section>
 
             <!-- Quiz Section -->
@@ -294,13 +584,59 @@
                     </div>
 
                     <div class="question-card">
-                        <h3>Pregunta 3: Matemáticas</h3>
+                        <h3>Pregunta 3: Relatividad Galileana</h3>
                         <p>
-                            ¿Cuál es la diferencia fundamental entre decir "los objetos pesados tienen una tendencia
-                            natural a ir abajo" (Aristóteles) y decir "la distancia de caída es d = ½ g t²" (Galileo)?
-                            ¿Cómo cambia esto nuestra forma de entender la ciencia?
+                            Explique el principio de relatividad galileana usando el experimento mental del barco.
+                            <strong>¿Cómo este principio resuelve las objeciones aristotélicas contra el movimiento de la
+                                Tierra?</strong> Desarrolle las implicaciones filosóficas sobre la naturaleza del movimiento.
                         </p>
                     </div>
+
+                    <div class="question-card">
+                        <h3>Pregunta 4: Método Científico</h3>
+                        <p>
+                            <strong>Compare el método científico de Galileo con la filosofía natural aristotélica.</strong>
+                            Identifique al menos cuatro diferencias en cuanto a: (a) rol de la experimentación, (b)
+                            matematización, (c) idealización, (d) actitud hacia la autoridad. ¿Por qué el método galileano
+                            fue decisivo para la aceptación del copernicanismo?
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Key Concepts -->
+            <section class="class-section">
+                <h2>Conceptos Clave de Esta Clase</h2>
+
+                <div class="concept-highlight">
+                    <ul>
+                        <li><strong>Inercia:</strong> Tendencia de un objeto en movimiento a mantener su movimiento
+                            uniforme en línea recta, o de un objeto en reposo a permanecer en reposo, a menos que actúe
+                            una fuerza sobre él.</li>
+                        <li><strong>Relatividad galileana:</strong> Principio que sostiene que no existe forma de detectar
+                            movimiento rectilíneo uniforme mediante experimentos mecánicos realizados dentro de un sistema
+                            en movimiento. El movimiento uniforme es relativo, no absoluto.</li>
+                        <li><strong>Marco de referencia inercial:</strong> Sistema de coordenadas que se mueve con
+                            velocidad constante (o está en reposo). Las leyes de la física son idénticas en todos los
+                            marcos inerciales.</li>
+                        <li><strong>Aceleración:</strong> Cambio en la velocidad con respecto al tiempo. En caída libre,
+                            todos los objetos tienen la misma aceleración (g ≈ 9.8 m/s²), independientemente de su masa.
+                        </li>
+                        <li><strong>Experimento mental (Gedankenexperiment):</strong> Razonamiento lógico sobre una
+                            situación hipotética para revelar implicaciones de una teoría o inconsistencias lógicas.</li>
+                        <li><strong>Idealización científica:</strong> Considerar casos simplificados (sin fricción, en el
+                            vacío) para revelar leyes fundamentales, tratando las complicaciones realistas como
+                            perturbaciones.</li>
+                        <li><strong>Experimentación controlada:</strong> Diseño intencional de situaciones experimentales
+                            donde variables pueden aislarse y medirse sistemáticamente.</li>
+                        <li><strong>Matematización de la naturaleza:</strong> Expresión de las leyes naturales como
+                            relaciones matemáticas cuantitativas precisas (ej: d = ½gt²).</li>
+                        <li><strong>Empirismo científico:</strong> Posición metodológica que sostiene que la evidencia
+                            observacional y experimental debe prevalecer sobre la autoridad textual o la especulación
+                            filosófica.</li>
+                        <li><strong>Movimiento relativo:</strong> El movimiento depende del marco de referencia del
+                            observador. No hay reposo o movimiento absoluto, solo relativo a otros objetos.</li>
+                    </ul>
                 </div>
             </section>
 

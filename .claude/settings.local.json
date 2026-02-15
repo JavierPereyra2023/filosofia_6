@@ -11,7 +11,14 @@
       "Bash(for i in {4..10})",
       "Bash(do echo \"Clase $i pendiente\")",
       "Bash(done)",
-      "Bash(grep:*)"
+      "Bash(grep:*)",
+      "Bash(findstr:*)",
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Bash(git push)",
+      "Bash(git rm:*)",
+      "Bash(ls:*)",
+      "Bash(find:*)"
     ]
   }
 }

@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clase 10: Integración y Cierre | Filosofía 6to</title>
+    <link rel="stylesheet" href="../../assets/css/variables.css">
+    <link rel="stylesheet" href="../../assets/css/reset.css">
+    <link rel="stylesheet" href="../../assets/css/base.css">
+    <link rel="stylesheet" href="../../assets/css/typography.css">
+    <link rel="stylesheet" href="../../assets/css/layout.css">
+    <link rel="stylesheet" href="../../assets/css/navigation.css">
+    <link rel="stylesheet" href="../../assets/css/components.css">
+    <link rel="stylesheet" href="../../assets/css/unit-page.css">
+    <link rel="stylesheet" href="../../assets/css/book-layout.css">
+
+    <style>
+        .class-container::before {
+            content: '    Revolución\A    Científica\A    Completada';
+            position: fixed;
+            top: 20%;
+            right: 5%;
+            font-family: 'Caveat', 'Comic Sans MS', cursive;
+            font-size: 28px;
+            font-weight: 700;
+            white-space: pre;
+            color: rgba(255, 255, 255, 0.35);
+            transform: rotate(-3deg);
+        }
+
+        .class-container::after {
+            content: '    1543-1687\A    De Copérnico\A    a Newton';
+            position: fixed;
+            bottom: 20%;
+            left: 5%;
+            font-family: 'Caveat', 'Comic Sans MS', cursive;
+            font-size: 26px;
+            font-weight: 700;
+            white-space: pre;
+            color: rgba(255, 255, 255, 0.32);
+            transform: rotate(5deg);
+        }
+
+        @media (max-width: 1024px) {
+
+            .class-container::before,
+            .class-container::after {
+                position: relative;
+                transform: none;
+                display: block;
+                margin: 20px 0;
+                width: 100%;
+                text-align: center;
+            }
+
+            .class-container::before {
+                content: 'Gran Repaso: La Revolución Científica';
+            }
+
+            .class-container::after {
+                content: 'Unidad 1 Completada';
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="main-nav">
+        <div class="nav-container">
+            <div class="nav-left">
+                <a href="index.html" class="nav-back-button" title="Volver al índice de la unidad">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M15 19l-7-7 7-7" />
+                    </svg>
+                    <span>Unidad 1</span>
+                </a>
+                <a href="../../home.html" class="nav-brand">Filosofía 6to</a>
+            </div>
+            <div class="nav-controls">
+                <button id="dark-mode-toggle" class="dark-mode-toggle" aria-label="Cambiar tema">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="class-progress">
+        <div class="container">
+            <div class="progress-info">
+                <span class="progress-label">Unidad 1: Teorías Científicas</span>
+                <span class="progress-count">Clase 10 de 10</span>
+            </div>
+            <div class="progress-bar">
+                <div class="progress-fill" style="width: 100%"></div>
+            </div>
+        </div>
+    </div>
+
+    <main class="class-container">
+        <article class="class-content">
+            <header class="class-header">
+                <div class="class-badge">Clase 10</div>
+                <h1 class="class-title">Integración Final: La Revolución Copernicana</h1>
+                <p class="class-subtitle">Sintetizando 150 años de historia y filosofía de la ciencia.</p>
+            </header>
+
+            <div style="text-align: center; margin: var(--space-xl) 0;">
+                <div
+                    style="display: inline-block; background: white; padding: 20px; border-radius: 8px; border: 1px solid var(--color-border);">
+                    <object data="../../assets/images/class-10/unit_concept_map.svg" type="image/svg+xml"
+                        class="class-image-diagram" style="width: 100%; max-width: 900px;">
+                        Tu navegador no soporta SVG.
+                    </object>
+                </div>
+                <p style="margin-top: var(--space-sm); font-size: 0.9em; color: var(--color-text-secondary);">
+                    <em>Mapa conceptual de toda la Unidad 1: conexiones entre paradigmas, revoluciones, método científico,
+                        y epistemología.</em>
+                </p>
+            </div>
+
+            <!-- 1. ALFABETIZACIÓN CIENTÍFICA -->
+            <section class="class-section">
+                <div class="section-label">Alfabetización Científica</div>
+                <h2>Progreso: ¿Acumulación o Ruptura?</h2>
+                <p>
+                    Una concepción ingenua de la ciencia la ve como un edificio de ladrillos donde cada generación añade
+                    una verdad más. Sin embargo, la historia de la Unidad 1 nos muestra una realidad más compleja: el
+                    conocimiento avanza a través de <strong>rupturas epistemológicas</strong>.
+                </p>
+                <p>
+                    Debemos distinguir entre el <strong>Contexto de Descubrimiento</strong> (factores históricos,
+                    psicológicos y sociales, como la mística de Kepler) y el <strong>Contexto de Justificación</strong>
+                    (la validación lógica y empírica). La ciencia es una actividad humana sujeta a revisión, no un dogma
+                    estático.
+                </p>
+            </section>
+
+            <!-- 2. ASPECTOS TEÓRICOS -->
+            <section class="class-section">
+                <div class="section-label">Aspectos Teóricos</div>
+                <h2>Tres Modelos de Cambio Científico</h2>
+                <p>
+                    Hemos visto cómo cambia la ciencia. Ahora, formalicemos las tres grandes posturas del siglo XX que
+                    intentan explicarlo:
+                </p>
+                <div class="epistemology-grid"
+                    style="display: grid; gap: 20px; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); margin-top: 30px;">
+                    <!-- POPPER -->
+                    <div class="card concept-card"
+                        style="border-left: 4px solid #3498db; background: rgba(52, 152, 219, 0.05); padding: 20px; border-radius: 8px;">
+                        <h3 style="color: #2980b9; margin-top: 0;">1. Karl Popper: El Falsacionismo</h3>
+                        <p><strong>La Tesis:</strong> La ciencia no avanza confirmando verdades, sino descartando
+                            errores. Una teoría es científica solo si es <em>falsable</em> (arriesgada).</p>
+                        <p><strong>Diferencia:</strong> Rechaza la inducción. La ciencia empieza con problemas, no con
+                            observaciones.</p>
+                        <div style="background: rgba(0,0,0,0.05); padding: 10px; border-radius: 5px; margin-top: 10px;">
+                            <strong>Ejemplo:</strong> "Todos los cisnes son blancos". No importa cuántos cisnes blancos
+                            veas, nunca confirmarás la teoría. Pero basta <strong>un solo</strong> cisne negro para
+                            derribarla.
+                        </div>
+                    </div>
+
+                    <!-- KUHN -->
+                    <div class="card concept-card"
+                        style="border-left: 4px solid #e74c3c; background: rgba(231, 76, 60, 0.05); padding: 20px; border-radius: 8px;">
+                        <h3 style="color: #c0392b; margin-top: 0;">2. Thomas Kuhn: Las Revoluciones</h3>
+                        <p><strong>La Tesis:</strong> La ciencia es una actividad comunitaria. Avanza a saltos:
+                            <em>Ciencia Normal</em> (resolver puzzles) &rarr; <em>Anomalías</em> &rarr; <em>Crisis</em>
+                            &rarr; <em>Revolución</em>.</p>
+                        <p><strong>Diferencia:</strong> Introduce la historia y la sociología. Los paradigmas son
+                            <em>inconmensurables</em> (no se pueden comparar objetivamente).</p>
+                        <div style="background: rgba(0,0,0,0.05); padding: 10px; border-radius: 5px; margin-top: 10px;">
+                            <strong>Ejemplo:</strong> El paso del Geocentrismo al Heliocentrismo. No fue solo nuevos
+                            datos, fue un "cambio de gafas" para ver el universo.
+                        </div>
+                    </div>
+
+                    <!-- LAKATOS -->
+                    <div class="card concept-card"
+                        style="border-left: 4px solid #9b59b6; background: rgba(155, 89, 182, 0.05); padding: 20px; border-radius: 8px;">
+                        <h3 style="color: #8e44ad; margin-top: 0;">3. Imre Lakatos: Programas de Investigación</h3>
+                        <p><strong>La Tesis:</strong> Intenta salvar la racionalidad de Popper frente a la historia de
+                            Kuhn. La unidad no es la teoría, sino el <em>Programa de Investigación</em> (PIC).</p>
+                        <p><strong>Estructura:</strong>
+                        <ul style="margin-left: 20px; list-style-type: disc;">
+                            <li><strong>Núcleo Duro:</strong> Intocable (ej. leyes de Newton).</li>
+                            <li><strong>Cinturón Protector:</strong> Hipótesis auxiliares que se modifican para absorber
+                                anomalías.</li>
+                        </ul>
+                        </p>
+                        <div style="background: rgba(0,0,0,0.05); padding: 10px; border-radius: 5px; margin-top: 10px;">
+                            <strong>Ejemplo:</strong> Cuando Urano no orbitaba como debía, los newtonianos no tiraron a
+                            Newton (Núcleo). Postularon un planeta invisible (Cinturón). ¡Y encontraron Neptuno!
+                        </div>
+                    </div>
+                </div>
+
+                <div style="margin-top: 40px; overflow-x: auto;">
+                    <h3>Cuadro Comparativo</h3>
+                    <table style="width: 100%; border-collapse: collapse; margin-top: 10px; min-width: 600px;">
+                        <thead>
+                            <tr
+                                style="background: var(--color-bg-secondary); border-bottom: 2px solid var(--color-border);">
+                                <th style="padding: 12px; text-align: left;">Criterio</th>
+                                <th style="padding: 12px; text-align: left;">Popper</th>
+                                <th style="padding: 12px; text-align: left;">Kuhn</th>
+                                <th style="padding: 12px; text-align: left;">Lakatos</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr style="border-bottom: 1px solid var(--color-border);">
+                                <td style="padding: 12px; font-weight: bold;">Motor del Cambio</td>
+                                <td style="padding: 12px;">La refutación lógica.</td>
+                                <td style="padding: 12px;">La crisis de confianza de la comunidad.</td>
+                                <td style="padding: 12px;">La degeneración del programa (no predice nada nuevo).</td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid var(--color-border);">
+                                <td style="padding: 12px; font-weight: bold;">Progreso</td>
+                                <td style="padding: 12px;">Lineal (hacia la verdad).</td>
+                                <td style="padding: 12px;">Discontinuo (cambio de visión).</td>
+                                <td style="padding: 12px;">Competencia entre programas.</td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 12px; font-weight: bold;">Actitud ante Anomalía</td>
+                                <td style="padding: 12px;">Se debe rechazar la teoría.</td>
+                                <td style="padding: 12px;">Se ignora o se parchea hasta la crisis.</td>
+                                <td style="padding: 12px;">Se modifica el cinturón protector para proteger el núcleo.
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <div style="margin-top: 30px; padding: 20px; background: var(--color-bg-tertiary); border-radius: 8px;">
+                        <h4>Síntesis: ¿Quién Tiene Razón?</h4>
+                        <p>
+                            Cada uno de estos tres filósofos captura aspectos importantes de cómo funciona realmente la
+                            ciencia:
+                        </p>
+                        <ul>
+                            <li><strong>Popper</strong> tiene razón en que la lógica de la falsación es válida y que las
+                                teorías deben ser arriesgadas para ser científicas. Pero subestima el conservadurismo
+                                racional de los científicos frente a anomalías.</li>
+                            <li><strong>Kuhn</strong> tiene razón en que los cambios científicos son revolucionarios,
+                                no acumulativos, y que factores socio-históricos importan. Pero su concepto de
+                                inconmensurabilidad radical amenaza con hacer irracionales las elecciones científicas.
+                            </li>
+                            <li><strong>Lakatos</strong> intenta un compromiso: captura el conservadurismo de Kuhn pero
+                                mantiene criterios racionales (progresividad vs degeneración) de Popper. Su modelo es
+                                históricamente más realista que el de Popper pero menos relativista que el de Kuhn.</li>
+                        </ul>
+                        <p>
+                            La filosofía de la ciencia contemporánea reconoce que no hay UNA descripción correcta del
+                            método científico. La ciencia es una empresa compleja, y diferentes modelos iluminan
+                            diferentes aspectos de ella.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <div class="concept-highlight">
+                <h3>Síntesis de la Revolución Copernicana</h3>
+                <p>
+                    La transición del paradigma aristotélico-ptolemaico al paradigma newtoniano tomó casi 150 años
+                    (1543-1687) y ejemplifica perfectamente el esquema kuhniano:
+                </p>
+                <ul>
+                    <li><strong>Ciencia Normal (Ptolomeo):</strong> Resolver enigmas astronómicos dentro del paradigma
+                        geocéntrico dominante.</li>
+                    <li><strong>Anomalías:</strong> Complejidad creciente del sistema de epiciclos, retrogradaciones
+                        inexplicables.</li>
+                    <li><strong>Propuesta Revolucionaria (Copérnico 1543):</strong> Heliocentrismo como alternativa más
+                        simple.</li>
+                    <li><strong>Crisis:</strong> Confirmación observacional (Galileo 1610: fases de Venus, lunas de
+                        Júpiter) y problemas físicos sin resolver (¿por qué no sentimos el movimiento de la Tierra?).</li>
+                    <li><strong>Nuevo Paradigma (Newton 1687):</strong> Gravitación Universal resuelve la física del
+                        heliocentrismo y unifica cielo y tierra.</li>
+                </ul>
+            </div>
+
+            <div class="graffiti-divider" style="margin: var(--space-xl) 0; text-align: center;">
+                <span
+                    style="font-family: 'Caveat', cursive; font-size: 2.5em; color: var(--color-accent); text-shadow: 2px 2px 4px rgba(0,0,0,0.1);">
+                    ⚡ Vista Previa: Unidad 2 - Einstein ⚡
+                </span>
+            </div>
+
+            <section class="class-section">
+                <h2>El Próximo Cambio de Paradigma: Einstein (Adelanto)</h2>
+                <p>
+                    La Unidad 2 explorará la siguiente gran revolución: la transición de Newton a Einstein. Así como
+                    Copérnico revolucionó la astronomía al cambiar el centro del universo, Einstein revolucionó la física
+                    al cambiar la naturaleza misma del espacio y el tiempo.
+                </p>
+                <p><strong>Cambio fundamental:</strong> Newton asumía que el tiempo es absoluto (t' = t). Einstein
+                    demostró que el tiempo es relativo al observador, dependiendo de su velocidad. Esto será explorado en
+                    profundidad en las clases futuras cuando estudiemos Relatividad Especial y General.
+                </p>
+                <p>
+                    <em>(Por ahora, basta saber que la historia se repite: anomalías → crisis → revolución. El patrón
+                        kuhniano continúa en el siglo XX.)</em>
+                </p>
+            </section>
+
+            <section class="class-section">
+                <h2>Conceptos Clave de Toda la Unidad 1</h2>
+                <p style="text-align: center; margin-bottom: 30px;">
+                    <em>Esta lista organiza todos los conceptos fundamentales estudiados en las 10 clases, agrupados por
+                        áreas temáticas.</em>
+                </p>
+
+                <div class="concept-highlight">
+                    <h3 style="color: var(--color-accent); border-bottom: 2px solid var(--color-accent); padding-bottom: 10px;">
+                        I. Paradigmas y Revoluciones Científicas (Kuhn)</h3>
+                    <ul>
+                        <li><strong>Paradigma:</strong> Marco conceptual, metodológico e institucional compartido por
+                            una comunidad científica que determina problemas legítimos, métodos válidos y soluciones
+                            aceptables. Ejemplo: el paradigma newtoniano (1687-1905).</li>
+                        <li><strong>Ciencia Normal:</strong> Periodo de resolución de enigmas (puzzles) dentro de un
+                            paradigma establecido. Los científicos refinan el paradigma sin cuestionar sus fundamentos.
+                        </li>
+                        <li><strong>Enigma (Puzzle):</strong> Problema que la comunidad confía poder resolver dentro del
+                            paradigma vigente usando herramientas conceptuales y experimentales disponibles. Desafío a
+                            la habilidad, no al paradigma.</li>
+                        <li><strong>Anomalía:</strong> Problema persistente que resiste todos los intentos de solución
+                            dentro del paradigma y ataca aspectos fundamentales. Puede desencadenar crisis. Ejemplo: la
+                            precesión del perihelio de Mercurio.</li>
+                        <li><strong>Crisis Científica:</strong> Estado de un paradigma cuando la acumulación de anomalías
+                            persistentes genera inseguridad generalizada en la comunidad sobre la viabilidad de los
+                            fundamentos del paradigma.</li>
+                        <li><strong>Revolución Científica:</strong> Cambio discontinuo de paradigma. No es acumulación
+                            de conocimiento sino transformación radical del marco conceptual. Implica cambio de visión
+                            del mundo (Weltanschauung).</li>
+                        <li><strong>Inconmensurabilidad:</strong> Imposibilidad de traducir completamente conceptos y
+                            afirmaciones de un paradigma a otro sin pérdida o distorsión. Los paradigmas rivales no solo
+                            difieren en respuestas, sino en preguntas y conceptos básicos. Ejemplo: "masa" newtoniana vs
+                            "masa" einsteiniana.</li>
+                        <li><strong>Gestalt Switch (Cambio Gestáltico):</strong> Cambio súbito en la percepción de una
+                            imagen ambigua (pato-conejo) donde los mismos datos sensoriales producen experiencias
+                            radicalmente diferentes. Metáfora kuhniana de las revoluciones científicas.</li>
+                    </ul>
+
+                    <h3 style="color: var(--color-accent); border-bottom: 2px solid var(--color-accent); padding-bottom: 10px; margin-top: 30px;">
+                        II. Método Científico y Lógica</h3>
+                    <ul>
+                        <li><strong>Método Hipotético-Deductivo:</strong> Proceso científico moderno: (1) Plantear
+                            problema, (2) Formular hipótesis, (3) Deducir consecuencias observables, (4) Contrastar
+                            experimentalmente, (5) Concluir (refutación o corroboración).</li>
+                        <li><strong>Hipótesis Científica:</strong> Enunciado conjetural que explica un fenómeno y del
+                            cual se deducen consecuencias observables. Debe ser falsable (Popper).</li>
+                        <li><strong>Consecuencia Observacional (Predicción):</strong> Hecho que deberíamos observar si
+                            la hipótesis fuera correcta. Puente entre teoría y experimento.</li>
+                        <li><strong>Contrastación:</strong> Comparación de predicción con realidad mediante experimento u
+                            observación controlada.</li>
+                        <li><strong>Modus Tollens:</strong> Regla lógica válida de refutación: Si H→P, y ¬P, entonces
+                            ¬H. Una observación contraria basta para derribar una teoría universal. Base lógica de la
+                            falsación popperiana.</li>
+                        <li><strong>Falacia de Afirmación del Consecuente:</strong> Error lógico: Si H→P y P es
+                            verdadero, NO podemos concluir que H es verdadero. Por eso la ciencia no "prueba" teorías
+                            definitivamente, solo las corrobora.</li>
+                        <li><strong>Refutación (Falsación):</strong> Demostración lógica de que una hipótesis es falsa
+                            porque sus predicciones fallaron. Deductivamente válida.</li>
+                        <li><strong>Corroboración:</strong> Aceptación provisional de hipótesis que ha pasado pruebas
+                            exitosamente. No implica verdad absoluta (problema de la inducción). Popper prefiere este
+                            término a "verificación".</li>
+                        <li><strong>Asimetría Lógica (Popper):</strong> Es lógicamente posible refutar teorías
+                            definitivamente (deducción) pero imposible verificarlas definitivamente (requeriría
+                            inducción). Base del falsacionismo.</li>
+                    </ul>
+
+                    <h3 style="color: var(--color-accent); border-bottom: 2px solid var(--color-accent); padding-bottom: 10px; margin-top: 30px;">
+                        III. Epistemología Avanzada</h3>
+                    <ul>
+                        <li><strong>Inducción:</strong> Razonamiento de casos particulares a conclusión general (ej: ver
+                            1000 cisnes blancos → "todos los cisnes son blancos"). No es lógicamente válido según Hume.
+                        </li>
+                        <li><strong>Deducción:</strong> Razonamiento de premisas generales a conclusiones particulares.
+                            Lógicamente válido: si premisas son verdaderas, conclusión es necesariamente verdadera.</li>
+                        <li><strong>Problema de la Inducción (Hume):</strong> No existe justificación lógica para asumir
+                            que el futuro será similar al pasado. La uniformidad de la naturaleza es suposición, no
+                            certeza. Fundamenta el escepticismo sobre la verificación en ciencia.</li>
+                        <li><strong>Tesis Duhem-Quine:</strong> Imposibilidad de falsar hipótesis aislada. Toda
+                            contrastación involucra conjunto de hipótesis (principal + auxiliares + condiciones). Si
+                            predicción falla, la lógica no dice cuál elemento está equivocado.</li>
+                        <li><strong>Hipótesis Auxiliar:</strong> Suposición adicional necesaria para derivar predicciones
+                            contrastables (ej: "el telescopio funciona correctamente", "no hay polvo interplanetario").
+                        </li>
+                        <li><strong>Hipótesis Ad Hoc:</strong> Modificación introducida específicamente para salvar
+                            teoría de refutación. Valor depende de si aumenta contenido empírico.</li>
+                        <li><strong>Hipótesis Ad Hoc Progresiva:</strong> Predice hechos nuevos verificables
+                            independientemente. Ejemplo: Neptuno predijo existencia de objeto observable en coordenadas
+                            específicas.</li>
+                        <li><strong>Hipótesis Ad Hoc Degenerativa:</strong> Solo acomoda datos ya conocidos sin predecir
+                            nada nuevo. Ejemplo: epiciclos adicionales de Ptolomeo, hipótesis de Vulcano.</li>
+                        <li><strong>Carga Teórica de la Observación (Hanson):</strong> Tesis de que toda observación
+                            científica está influenciada e interpretada por marcos teóricos previos del observador. No
+                            existe observación completamente neutral.</li>
+                        <li><strong>"Ver Que" vs "Ver Como" (Hanson):</strong> "Ver que" sería percepción pura de datos
+                            (que Hanson niega). "Ver como" es percepción conceptualmente interpretada (única forma real
+                            de observación).</li>
+                        <li><strong>Subdeterminación de la Teoría:</strong> Múltiples teorías incompatibles pueden ser
+                            igualmente compatibles con todos los datos empíricos disponibles. Requiere criterios
+                            super-empíricos para decidir.</li>
+                    </ul>
+
+                    <h3 style="color: var(--color-accent); border-bottom: 2px solid var(--color-accent); padding-bottom: 10px; margin-top: 30px;">
+                        IV. Programas de Investigación (Lakatos)</h3>
+                    <ul>
+                        <li><strong>Programa de Investigación Científica (PIC):</strong> Secuencia de teorías conectadas
+                            por núcleo duro común y heurística compartida. Unidad de análisis lakatosiana (no teorías
+                            aisladas).</li>
+                        <li><strong>Núcleo Duro (Hard Core):</strong> Conjunto de supuestos fundamentales intocables por
+                            decisión metodológica. Ejemplo: leyes de Newton en programa newtoniano. Si se ataca el
+                            núcleo, se abandona el programa completo.</li>
+                        <li><strong>Cinturón Protector (Protective Belt):</strong> Hipótesis auxiliares que rodean el
+                            núcleo y absorben anomalías. Se modifican, ajustan o reemplazan para proteger el núcleo.
+                            Ejemplo: hipótesis de planetas desconocidos para explicar órbitas anómalas.</li>
+                        <li><strong>Programa Progresivo:</strong> Secuencia donde modificaciones llevan a descubrir
+                            nuevos hechos. La teoría crece en contenido empírico y poder predictivo. Ejemplo:
+                            newtonianismo con descubrimiento de Neptuno.</li>
+                        <li><strong>Programa Degenerativo:</strong> Secuencia donde modificaciones solo acomodan
+                            anomalías conocidas sin crecimiento genuino. Teoría se vuelve sistema de parches. Ejemplo:
+                            ptolemaísmo tardío, newtonianismo con Vulcano.</li>
+                        <li><strong>Heurística Positiva:</strong> Conjunto de indicaciones metodológicas sobre qué
+                            caminos de investigación seguir, qué problemas atacar primero.</li>
+                        <li><strong>Heurística Negativa:</strong> Prohibición metodológica de dirigir Modus Tollens
+                            contra el núcleo duro. Las refutaciones se dirigen al cinturón protector.</li>
+                    </ul>
+
+                    <h3 style="color: var(--color-accent); border-bottom: 2px solid var(--color-accent); padding-bottom: 10px; margin-top: 30px;">
+                        V. Valores Epistémicos y Elección de Teorías (Kuhn)</h3>
+                    <ul>
+                        <li><strong>Valores Epistémicos:</strong> Criterios compartidos para evaluar teorías: precisión,
+                            coherencia, amplitud, simplicidad, fecundidad. No son reglas algorítmicas sino guías para
+                            juicio racional.</li>
+                        <li><strong>Precisión (Accuracy):</strong> Concordancia cuantitativa entre predicciones y datos
+                            observacionales. Requisito mínimo pero no suficiente.</li>
+                        <li><strong>Coherencia Interna:</strong> Ausencia de contradicciones lógicas dentro de teoría.
+                            Teoría incoherente debe rechazarse.</li>
+                        <li><strong>Coherencia Externa (Consistency):</strong> Compatibilidad con otras teorías bien
+                            establecidas en campos relacionados. Revoluciones a menudo rompen temporalmente coherencia
+                            externa.</li>
+                        <li><strong>Amplitud (Scope):</strong> Capacidad de explicar gama amplia de fenómenos,
+                            especialmente si unifica dominios previamente separados. Ejemplo: Newton unificó física
+                            terrestre y celeste.</li>
+                        <li><strong>Simplicidad (Parsimonia):</strong> Preferencia por teorías con menos suposiciones,
+                            entidades hipotéticas o mecanismos ad hoc. Conectada con Navaja de Ockham.</li>
+                        <li><strong>Navaja de Ockham:</strong> "No se deben multiplicar entidades sin necesidad". Entre
+                            explicaciones igualmente satisfactorias, preferir la más simple.</li>
+                        <li><strong>Fecundidad (Fruitfulness):</strong> Capacidad de conducir a nuevos descubrimientos,
+                            abrir líneas de investigación, generar problemas interesantes. Crucial para progreso a largo
+                            plazo.</li>
+                        <li><strong>Juicio Científico:</strong> Elección de teorías no es cálculo mecánico sino ejercicio
+                            de juicio racional. Diferentes científicos pueden ponderar valores de manera distinta y
+                            llegar a conclusiones diferentes, ambas racionales.</li>
+                    </ul>
+
+                    <h3 style="color: var(--color-accent); border-bottom: 2px solid var(--color-accent); padding-bottom: 10px; margin-top: 30px;">
+                        VI. Teorías vs Leyes</h3>
+                    <ul>
+                        <li><strong>Ley Científica:</strong> Generalización empírica que describe CÓMO ocurren
+                            fenómenos, típicamente en forma matemática. No explica POR QUÉ. Ejemplo: Leyes de Kepler
+                            describen movimiento planetario pero no explican causa.</li>
+                        <li><strong>Teoría Científica:</strong> Sistema explicativo amplio que unifica múltiples leyes y
+                            fenómenos bajo marco conceptual común. Explica POR QUÉ de fenómenos. Ejemplo: Gravitación
+                            Universal explica por qué se cumplen leyes de Kepler.</li>
+                        <li><strong>Poder Explicativo:</strong> Capacidad de teoría para dar cuenta de POR QUÉ ocurren
+                            fenómenos, no solo describirlos. Explicación va más allá de correlación a causación.</li>
+                        <li><strong>Poder Predictivo:</strong> Capacidad de anticipar observaciones futuras o hechos
+                            desconocidos. Teorías fecundas predicen fenómenos que serán descubiertos posteriormente.</li>
+                    </ul>
+
+                    <h3 style="color: var(--color-accent); border-bottom: 2px solid var(--color-accent); padding-bottom: 10px; margin-top: 30px;">
+                        VII. Posturas Filosóficas sobre la Ciencia</h3>
+                    <ul>
+                        <li><strong>Realismo Científico:</strong> Postura de que teorías científicas exitosas describen
+                            (aproximadamente) realidad objetiva que existe independientemente del observador. Átomos,
+                            electrones existen realmente.</li>
+                        <li><strong>Instrumentalismo:</strong> Teorías son herramientas útiles para predecir, sin
+                            compromiso con su verdad literal sobre realidad. Solo importa si modelo es útil para predecir
+                            resultados experimentales.</li>
+                        <li><strong>Falsacionismo (Popper):</strong> Criterio de demarcación entre ciencia y
+                            pseudociencia: teoría es científica si es falsable. Ciencia progresa por conjeturas audaces
+                            y refutaciones rigurosas.</li>
+                        <li><strong>Falsabilidad:</strong> Propiedad de enunciado que permite concebir experimento u
+                            observación que lo refutaría si fuera realizado. Requisito popperiano de cientificidad.</li>
+                        <li><strong>Contenido Empírico:</strong> Conjunto de predicciones observables que teoría hace
+                            sobre el mundo. Teoría con mayor contenido es más informativa y más fácilmente falsable.</li>
+                    </ul>
+
+                    <h3 style="color: var(--color-accent); border-bottom: 2px solid var(--color-accent); padding-bottom: 10px; margin-top: 30px;">
+                        VIII. Conceptos Históricos y Personajes</h3>
+                    <ul>
+                        <li><strong>Claudio Ptolomeo (c. 100-170 d.C.):</strong> Astrónomo alejandrino. Modelo
+                            geocéntrico con epiciclos, deferentes y ecuantes. Dominó astronomía por 1400 años.</li>
+                        <li><strong>Nicolás Copérnico (1473-1543):</strong> Propuso heliocentrismo en <em>De
+                                Revolutionibus</em> (1543). Revolucionó cosmología aunque inicialmente sin ventaja
+                            empírica clara. Valor: simplicidad matemática.</li>
+                        <li><strong>Galileo Galilei (1564-1642):</strong> Telescopio (1609). Descubrió fases de Venus,
+                            lunas de Júpiter, montañas lunares. Refutó aspectos clave del aristotelismo y apoyó
+                            empíricamente a Copérnico.</li>
+                        <li><strong>Johannes Kepler (1571-1630):</strong> Tres leyes del movimiento planetario (órbitas
+                            elípticas, áreas iguales, relación periodo-distancia). Precisión sin precedentes. Motivación
+                            mística (sólidos platónicos).</li>
+                        <li><strong>Isaac Newton (1643-1727):</strong> <em>Principia Mathematica</em> (1687).
+                            Gravitación Universal unificó cielo y tierra. Paradigma dominante por 200 años hasta
+                            Einstein.</li>
+                        <li><strong>Albert Einstein (1879-1955):</strong> Relatividad Especial (1905) y General (1915).
+                            Resolvió anomalía de Mercurio sin hipótesis ad hoc. Revolucionó conceptos de espacio, tiempo
+                            y gravedad.</li>
+                        <li><strong>Thomas Kuhn (1922-1996):</strong> <em>La Estructura de las Revoluciones
+                                Científicas</em> (1962). Introdujo paradigmas, ciencia normal, crisis, revoluciones,
+                            inconmensurabilidad. Historicista.</li>
+                        <li><strong>Karl Popper (1902-1994):</strong> Falsacionismo como criterio de demarcación.
+                            Enfatizó lógica de la ciencia sobre historia. Realista y racionalista.</li>
+                        <li><strong>Imre Lakatos (1922-1974):</strong> Programas de investigación científica. Intentó
+                            reconciliar racionalismo popperiano con historicismo kuhniano mediante núcleo duro/cinturón
+                            protector.</li>
+                        <li><strong>Norwood Russell Hanson (1924-1967):</strong> <em>Patterns of Discovery</em> (1958).
+                            Desarrolló tesis de carga teórica de observación. "Hay más en la visión que lo que llega al
+                            globo ocular".</li>
+                        <li><strong>David Hume (1711-1776):</strong> Filósofo escocés. Problema de la inducción: no hay
+                            justificación lógica para asumir uniformidad de naturaleza. Fundamentó escepticismo empírico.
+                        </li>
+                    </ul>
+
+                    <h3 style="color: var(--color-accent); border-bottom: 2px solid var(--color-accent); padding-bottom: 10px; margin-top: 30px;">
+                        IX. Casos Históricos Emblemáticos</h3>
+                    <ul>
+                        <li><strong>Descubrimiento de Neptuno (1846):</strong> Urbain Le Verrier y John Adams predijeron
+                            existencia y posición de planeta desconocido para explicar anomalías en órbita de Urano.
+                            Encontrado en primera noche de búsqueda. Triunfo de hipótesis ad hoc progresiva.</li>
+                        <li><strong>Hipótesis de Vulcano (1859-1915):</strong> Le Verrier postuló planeta entre Mercurio
+                            y Sol para explicar precesión anómala del perihelio (43"/siglo). Nunca encontrado. Hipótesis
+                            ad hoc degenerativa. Resuelto por Einstein sin ad hoc.</li>
+                        <li><strong>Fases de Venus (Galileo, 1610):</strong> Observación telescópica de fases completas
+                            de Venus refutó modelo ptolemaico estricto (Venus siempre entre Tierra y Sol). Corroboró
+                            modelos con Venus orbitando Sol (Copérnico, Tycho).</li>
+                        <li><strong>Epiciclos y Ecuantes:</strong> Mecanismos geométricos ptolemaicos para "salvar las
+                            apariencias" de movimientos planetarios complejos. Crecientemente complicados con mejores
+                            datos. Ejemplo de programa degenerativo.</li>
+                        <li><strong>Precesión del Perihelio de Mercurio:</strong> Exceso de 43 segundos de arco por
+                            siglo no explicable por perturbaciones planetarias newtonianas. Anomalía que persistió 56
+                            años (1859-1915). Resuelta automáticamente por Relatividad General de Einstein.</li>
+                    </ul>
+
+                    <h3 style="color: var(--color-accent); border-bottom: 2px solid var(--color-accent); padding-bottom: 10px; margin-top: 30px;">
+                        X. Conceptos Avanzados Adicionales</h3>
+                    <ul>
+                        <li><strong>Contexto de Descubrimiento vs Contexto de Justificación:</strong> Descubrimiento
+                            involucra factores psicológicos, históricos, sociales (cómo se genera hipótesis).
+                            Justificación involucra validación lógica y empírica (cómo se pone a prueba). Distinción de
+                            Hans Reichenbach.</li>
+                        <li><strong>Matriz Disciplinar (Kuhn):</strong> Conjunto de compromisos compartidos por
+                            comunidad científica: valores epistémicos, ejemplares (casos modelo), generalizaciones
+                            simbólicas (leyes).</li>
+                        <li><strong>Ejemplar (Kuhn):</strong> Caso modelo de buena ciencia que guía investigación futura.
+                            Ejemplo: resolución de Newton del problema de Kepler es ejemplar para física clásica.</li>
+                        <li><strong>Empate Empírico:</strong> Situación donde dos teorías rivales predicen exactamente
+                            los mismos fenómenos observables. Valores super-empíricos (simplicidad, fecundidad) se
+                            vuelven decisivos.</li>
+                        <li><strong>Observación Neutral (Ideal Empirista Rechazado):</strong> Ideal de que es posible
+                            hacer observaciones libres de presupuestos teóricos que sirvan como base objetiva para
+                            juzgar teorías. Hanson y Kuhn lo rechazan.</li>
+                        <li><strong>Principio de Complementariedad (Bohr):</strong> En mecánica cuántica, propiedades
+                            mutuamente excluyentes (onda/partícula) son aspectos complementarios necesarios para
+                            descripción completa. No son contradictorias sino complementarias.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- ACTIVIDAD INTEGRADORA -->
+            <section class="class-section">
+                <div class="section-label">Actividad Integradora Final</div>
+                <h2>Ensayo de Síntesis de Unidad</h2>
+                <div class="activity-container">
+                    <div class="question-card">
+                        <h3>La Revolución Copernicana: Análisis Filosófico Completo</h3>
+                        <p>
+                            Redacta un ensayo de <strong>500-800 palabras</strong> que sintetice todo lo aprendido en la
+                            Unidad 1. Tu ensayo debe abordar los siguientes puntos:
+                        </p>
+
+                        <h4 style="margin-top: 20px;">Requisitos del Ensayo:</h4>
+                        <ol style="margin-left: 20px;">
+                            <li><strong>Narración Histórica (30%):</strong> Describe brevemente el proceso histórico del
+                                cambio de paradigma desde Ptolomeo (siglo II) hasta Newton (1687), pasando por Copérnico,
+                                Galileo y Kepler. Identifica las anomalías clave, las crisis, y las soluciones
+                                propuestas.</li>
+
+                            <li><strong>Análisis Epistemológico (40%):</strong> Analiza la Revolución Copernicana usando
+                                al menos DOS de los tres modelos filosóficos estudiados (Popper, Kuhn, Lakatos). ¿Fue un
+                                proceso de falsación racional? ¿Fue un cambio de paradigma inconmensurable? ¿Fue la
+                                competencia entre programas de investigación progresivos y degenerativos?</li>
+
+                            <li><strong>Método Científico (20%):</strong> Explica cómo se aplicó el método
+                                hipotético-deductivo en algún caso concreto (ej: Galileo y las fases de Venus, Kepler y
+                                las órbitas elípticas). Menciona explícitamente: hipótesis, deducción de consecuencias
+                                observables, contrastación, y conclusión.</li>
+
+                            <li><strong>Reflexión Personal (10%):</strong> ¿Crees que la ciencia progresa hacia la verdad
+                                objetiva (realismo), o simplemente cambia de un paradigma a otro sin criterio absoluto de
+                                mejora (relativismo kuhniano)? Argumenta tu posición.</li>
+                        </ol>
+
+                        <h4 style="margin-top: 20px;">Conceptos que DEBES incluir (mínimo 8):</h4>
+                        <ul style="margin-left: 20px;">
+                            <li>Paradigma</li>
+                            <li>Anomalía</li>
+                            <li>Hipótesis ad hoc (progresiva o degenerativa)</li>
+                            <li>Tesis Duhem-Quine</li>
+                            <li>Carga teórica de la observación</li>
+                            <li>Inconmensurabilidad</li>
+                            <li>Modus Tollens (lógica de refutación)</li>
+                            <li>Valores epistémicos (precisión, coherencia, simplicidad, amplitud, fecundidad)</li>
+                        </ul>
+
+                        <h4 style="margin-top: 20px;">Criterios de Evaluación:</h4>
+                        <ul style="margin-left: 20px;">
+                            <li>Precisión conceptual: Uso correcto de la terminología técnica</li>
+                            <li>Integración: Conectar conceptos de diferentes clases de manera coherente</li>
+                            <li>Profundidad: No solo describir, sino analizar y argumentar</li>
+                            <li>Claridad expositiva: Estructura lógica y redacción clara</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section class="class-section"
+                style="background: var(--color-bg-tertiary); padding: var(--space-lg); border-radius: 8px; text-align: center;">
+                <h2>¡Felicidades!</h2>
+                <p>Has completado la Unidad 1.</p>
+                <a href="index.html" class="button button-primary"
+                    style="margin-top: 20px; display: inline-block;">Volver al Índice</a>
+            </section>
+
+            <nav class="class-navigation">
+                <a href="clase-09.html" class="nav-button">← Clase Anterior</a>
+                <a href="index.html" class="nav-button nav-button-index">📚 Índice de Unidad</a>
+                <span class="nav-button deshabilitado">Unidad Completa ✓</span>
+            </nav>
+        </article>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Filosofía 6to</h4>
+                    <p>Unidad 1: Teorías Científicas - Fin de la Unidad</p>
+                    <p>Profesor: Javier Pereyra</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Filosofía 6to. Material educativo.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../../assets/js/dark-mode.js"></script>
+</body>
+
+</html>

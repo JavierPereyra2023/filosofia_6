@@ -1,0 +1,104 @@
+<svg width="800" height="400" viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <filter id="glow">
+            <feGaussianBlur stdDeviation="2.5" result="coloredBlur"/>
+            <feMerge>
+                <feMergeNode in="coloredBlur"/>
+                <feMergeNode in="SourceGraphic"/>
+            </feMerge>
+        </filter>
+        <style>
+            .label { font-family: 'Segoe UI', Arial, sans-serif; fill: #fff; font-size: 14px; text-anchor: middle; }
+            .mirror { fill: #aaa; stroke: #fff; stroke-width: 2; }
+            .photon { fill: #ffeb3b; filter: url(#glow); r: 6; }
+            
+            /* Stationary Clock */
+            .photon-static { animation: bounceStatic 2s infinite linear; }
+            @keyframes bounceStatic {
+                0% { cy: 300; }
+                50% { cy: 100; }
+                100% { cy: 300; }
+            }
+
+            /* Moving Clock Container */
+            .moving-clock-group { animation: moveClock 4s infinite linear; }
+            @keyframes moveClock {
+                0% { transform: translateX(350px); }
+                100% { transform: translateX(650px); }
+            }
+
+            /* Photon in Moving Clock (Local Frame: just bouncing up/down) */
+            /* But to viewer it looks diagonal because group is moving */
+            /* Actually, if I animate the group, the photon moves with it. */
+            /* So I just need to animate the photon up/down LOCAL to the group. */
+            /* WAIT: If I animate local Y, and group moves X, result is ZigZag. Perfect. */
+            
+            .photon-moving { cy: 300; animation: bounceMoving 4s infinite linear; }
+            @keyframes bounceMoving {
+                0% { cy: 300; }      /* Start Bottom */
+                25% { cy: 100; }     /* Hit Top (at 1/4 path) */
+                50% { cy: 300; }     /* Hit Bottom (at 1/2 path) */
+                75% { cy: 100; }     /* Hit Top again */
+                100% { cy: 300; }    /* End */
+            }
+
+            /* Trace Line */
+            /* This needs to match the path of the photon */
+            .trace-path { 
+                fill: none; 
+                stroke: #ffeb3b; 
+                stroke-width: 2; 
+                stroke-dasharray: 1000; 
+                stroke-dashoffset: 1000; 
+                opacity: 0.5;
+                animation: drawTrace 4s infinite linear;
+            }
+            @keyframes drawTrace {
+                0% { stroke-dashoffset: 1000; }
+                100% { stroke-dashoffset: 0; }
+            }
+        </style>
+    </defs>
+
+    <!-- Background -->
+    <rect width="100%" height="100%" fill="#111" rx="10" />
+    <grid x="0" y="0" width="800" height="400" fill="url(#gridPattern)" />
+
+    <!-- LEFT: Stationary Observer -->
+    <g transform="translate(150, 0)">
+        <text x="0" y="40" class="label" style="fill:#00f2fe; font-size: 18px;">RELOJ EN REPOSO</text>
+        <rect x="-40" y="90" width="80" height="10" class="mirror" />  <!-- Top Mirror -->
+        <rect x="-40" y="300" width="80" height="10" class="mirror" /> <!-- Bottom Mirror -->
+        <circle cx="0" class="photon photon-static" />
+        <line x1="0" y1="100" x2="0" y2="300" stroke="#00f2fe" stroke-width="1" stroke-dasharray="5,5" opacity="0.3" />
+    </g>
+
+    <!-- RIGHT: Moving Observer -->
+    <!-- The Group moves from X=350 to X=650 approx -->
+    
+    <!-- Title fixed -->
+    <text x="500" y="40" class="label" style="fill:#ff4757; font-size: 18px;">RELOJ EN MOVIMIENTO (v ->)</text>
+
+    <!-- The Trace (Static polyline that gets revealed) -->
+    <!-- Coordinates must match the animation keyframes -->
+    <!-- Group moves 300px in 4s. -->
+    <!-- 0s: X=350, Y=300 -->
+    <!-- 1s (25%): X=350 + 75 = 425, Y=100 -->
+    <!-- 2s (50%): X=425 + 75 = 500, Y=300 -->
+    <!-- 3s (75%): X=500 + 75 = 575, Y=100 -->
+    <!-- 4s (100%): X=575 + 75 = 650, Y=300 -->
+    
+    <polyline points="350,300 425,100 500,300 575,100 650,300" class="trace-path" />
+
+    <!-- The Moving Clock System -->
+    <g class="moving-clock-group">
+        <rect x="-40" y="90" width="80" height="10" class="mirror" />
+        <rect x="-40" y="300" width="80" height="10" class="mirror" />
+        <line x1="0" y1="100" x2="0" y2="300" stroke="#fff" stroke-width="1" stroke-dasharray="5,5" opacity="0.2" /> <!-- Vertical axis reference -->
+        <circle cx="0" class="photon photon-moving" />
+    </g>
+
+    <!-- Explanation Text -->
+    <text x="400" y="380" class="label" style="fill: #aaa;">Observa que la luz a la derecha debe recorrer una DIAGONAL (más distancia) a la misma velocidad.</text>
+
+</svg>
