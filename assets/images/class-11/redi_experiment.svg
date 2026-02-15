@@ -1,0 +1,200 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 600" width="1000" height="600">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&amp;display=swap');
+
+      .title-text {
+        font-family: 'Merriweather', serif;
+        font-size: 24px;
+        font-weight: 700;
+        fill: #1a1a2e;
+      }
+
+      .label-text {
+        font-family: 'Merriweather', serif;
+        font-size: 16px;
+        font-weight: 600;
+        fill: #2d3436;
+      }
+
+      .small-text {
+        font-family: 'Merriweather', serif;
+        font-size: 14px;
+        fill: #636e72;
+      }
+
+      .result-text {
+        font-family: 'Merriweather', serif;
+        font-size: 15px;
+        font-weight: 700;
+      }
+
+      /* Animations */
+      @keyframes fly-in {
+        0% {
+          opacity: 0;
+          transform: translate(-30px, -30px);
+        }
+        100% {
+          opacity: 1;
+          transform: translate(0, 0);
+        }
+      }
+
+      @keyframes appear-maggots {
+        0% {
+          opacity: 0;
+          transform: scale(0);
+        }
+        100% {
+          opacity: 1;
+          transform: scale(1);
+        }
+      }
+
+      @keyframes pulse {
+        0%, 100% {
+          opacity: 1;
+        }
+        50% {
+          opacity: 0.6;
+        }
+      }
+
+      .fly {
+        animation: fly-in 2s ease-in-out infinite alternate;
+      }
+
+      .maggot {
+        animation: appear-maggots 1.5s ease-out 1s forwards;
+        opacity: 0;
+      }
+
+      .cross-mark {
+        animation: pulse 2s ease-in-out infinite;
+      }
+    </style>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1000" height="600" fill="#f8f9fa"/>
+
+  <!-- Title -->
+  <text x="500" y="40" text-anchor="middle" class="title-text">
+    Experimento de Francesco Redi (1668)
+  </text>
+
+  <!-- Left Side: CONTROL (Frasco Abierto) -->
+  <g id="control-group">
+    <text x="250" y="90" text-anchor="middle" class="label-text" fill="#e74c3c">
+      GRUPO CONTROL: Frasco Abierto
+    </text>
+
+    <!-- Jar (open) -->
+    <rect x="150" y="120" width="200" height="280" fill="#e8f4f8" stroke="#2980b9" stroke-width="3" rx="10"/>
+    <rect x="150" y="120" width="200" height="40" fill="none" stroke="#2980b9" stroke-width="3"/>
+
+    <!-- Meat inside -->
+    <ellipse cx="250" cy="300" rx="60" ry="40" fill="#c0392b" opacity="0.7"/>
+    <text x="250" y="310" text-anchor="middle" class="small-text" fill="white">Carne</text>
+
+    <!-- Flies flying around -->
+    <g class="fly">
+      <ellipse cx="200" cy="150" rx="8" ry="4" fill="#2d3436"/>
+      <ellipse cx="195" cy="150" rx="4" ry="2" fill="#636e72"/>
+      <ellipse cx="205" cy="150" rx="4" ry="2" fill="#636e72"/>
+    </g>
+
+    <g class="fly" style="animation-delay: 0.5s;">
+      <ellipse cx="300" cy="140" rx="8" ry="4" fill="#2d3436"/>
+      <ellipse cx="295" cy="140" rx="4" ry="2" fill="#636e72"/>
+      <ellipse cx="305" cy="140" rx="4" ry="2" fill="#636e72"/>
+    </g>
+
+    <!-- Maggots on meat -->
+    <circle cx="230" cy="290" r="4" fill="#f1c40f" class="maggot"/>
+    <circle cx="245" cy="295" r="4" fill="#f1c40f" class="maggot" style="animation-delay: 1.2s;"/>
+    <circle cx="260" cy="285" r="4" fill="#f1c40f" class="maggot" style="animation-delay: 1.4s;"/>
+    <circle cx="250" cy="305" r="4" fill="#f1c40f" class="maggot" style="animation-delay: 1.6s;"/>
+
+    <!-- Arrow -->
+    <path d="M 250 430 L 250 470" stroke="#2d3436" stroke-width="3" fill="none" marker-end="url(#arrowhead)"/>
+
+    <!-- Result box -->
+    <rect x="140" y="480" width="220" height="80" fill="#ffe6e6" stroke="#e74c3c" stroke-width="3" rx="8"/>
+    <text x="250" y="510" text-anchor="middle" class="result-text" fill="#c0392b">
+      ✓ Aparecen Gusanos
+    </text>
+    <text x="250" y="535" text-anchor="middle" class="small-text">
+      (Larvas de moscas)
+    </text>
+  </g>
+
+  <!-- Right Side: EXPERIMENTAL (Frasco con Gasa) -->
+  <g id="experimental-group">
+    <text x="750" y="90" text-anchor="middle" class="label-text" fill="#27ae60">
+      GRUPO EXPERIMENTAL: Frasco con Gasa
+    </text>
+
+    <!-- Jar (with gauze cover) -->
+    <rect x="650" y="120" width="200" height="280" fill="#e8f4f8" stroke="#2980b9" stroke-width="3" rx="10"/>
+
+    <!-- Gauze covering -->
+    <rect x="650" y="120" width="200" height="40" fill="#ecf0f1" stroke="#34495e" stroke-width="2" opacity="0.8"/>
+    <line x1="655" y1="125" x2="845" y2="155" stroke="#95a5a6" stroke-width="1" opacity="0.5"/>
+    <line x1="655" y1="135" x2="845" y2="165" stroke="#95a5a6" stroke-width="1" opacity="0.5"/>
+    <line x1="655" y1="145" x2="845" y2="175" stroke="#95a5a6" stroke-width="1" opacity="0.5"/>
+
+    <text x="750" y="145" text-anchor="middle" class="small-text" font-size="12px">
+      GASA
+    </text>
+
+    <!-- Meat inside -->
+    <ellipse cx="750" cy="300" rx="60" ry="40" fill="#c0392b" opacity="0.7"/>
+    <text x="750" y="310" text-anchor="middle" class="small-text" fill="white">Carne</text>
+
+    <!-- Flies trying to get in (blocked) -->
+    <g class="fly">
+      <ellipse cx="700" cy="100" rx="8" ry="4" fill="#2d3436"/>
+      <ellipse cx="695" cy="100" rx="4" ry="2" fill="#636e72"/>
+      <ellipse cx="705" cy="100" rx="4" ry="2" fill="#636e72"/>
+    </g>
+
+    <g class="fly" style="animation-delay: 0.7s;">
+      <ellipse cx="800" cy="95" rx="8" ry="4" fill="#2d3436"/>
+      <ellipse cx="795" cy="95" rx="4" ry="2" fill="#636e72"/>
+      <ellipse cx="805" cy="95" rx="4" ry="2" fill="#636e72"/>
+    </g>
+
+    <!-- NO maggots inside -->
+    <text x="750" y="350" text-anchor="middle" class="small-text" fill="#95a5a6" font-style="italic">
+      (Sin gusanos)
+    </text>
+
+    <!-- Arrow -->
+    <path d="M 750 430 L 750 470" stroke="#2d3436" stroke-width="3" fill="none" marker-end="url(#arrowhead)"/>
+
+    <!-- Result box -->
+    <rect x="640" y="480" width="220" height="80" fill="#d5f4e6" stroke="#27ae60" stroke-width="3" rx="8"/>
+    <text x="750" y="510" text-anchor="middle" class="result-text" fill="#27ae60">
+      ✗ NO Aparecen Gusanos
+    </text>
+    <text x="750" y="535" text-anchor="middle" class="small-text">
+      La gasa bloquea a las moscas
+    </text>
+  </g>
+
+  <!-- Arrow marker -->
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <polygon points="0 0, 10 3, 0 6" fill="#2d3436" />
+    </marker>
+  </defs>
+
+  <!-- Conclusion -->
+  <rect x="50" y="570" width="900" height="25" fill="#fff3e0" stroke="#f39c12" stroke-width="2" rx="5"/>
+  <text x="500" y="587" text-anchor="middle" class="small-text" font-weight="700" fill="#d68910">
+    CONCLUSIÓN: Las moscas provienen de huevos depositados por otras moscas, NO de generación espontánea
+  </text>
+
+</svg>

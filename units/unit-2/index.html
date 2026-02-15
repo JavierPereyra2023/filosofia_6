@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Unidad 2: Epistemología y Método Científico en Biología | Filosofía 6to</title>
+  <link rel="stylesheet" href="../../assets/css/variables.css">
+  <link rel="stylesheet" href="../../assets/css/reset.css">
+  <link rel="stylesheet" href="../../assets/css/base.css">
+  <link rel="stylesheet" href="../../assets/css/typography.css">
+  <link rel="stylesheet" href="../../assets/css/layout.css">
+  <link rel="stylesheet" href="../../assets/css/navigation.css">
+  <link rel="stylesheet" href="../../assets/css/components.css">
+  <style>
+    .unit-hero {
+      background: linear-gradient(135deg, #10b981 0%, #34d399 50%, #10b981 100%);
+      color: white;
+      padding: var(--space-2xl) 0;
+      text-align: center;
+    }
+
+    [data-theme="dark"] .unit-hero {
+      background: linear-gradient(135deg, #047857 0%, #059669 50%, #047857 100%);
+    }
+
+    .unit-hero h1 {
+      font-size: 2.5rem;
+      margin-bottom: var(--space-md);
+    }
+
+    .unit-hero p {
+      font-size: 1.2rem;
+      opacity: 0.95;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    .class-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: var(--space-lg);
+      padding: var(--space-2xl) var(--space-md);
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .class-card {
+      background: var(--color-bg-secondary);
+      border: 2px solid var(--color-border);
+      border-radius: 12px;
+      padding: var(--space-lg);
+      transition: all 0.3s ease;
+      cursor: pointer;
+      text-decoration: none;
+      color: var(--color-text);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .class-card:hover {
+      transform: translateY(-4px);
+      border-color: #10b981;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    }
+
+    [data-theme="dark"] .class-card {
+      border-color: #047857;
+      box-shadow: 0 0 10px rgba(16, 185, 129, 0.2);
+    }
+
+    [data-theme="dark"] .class-card:hover {
+      border-color: #10b981;
+      box-shadow: 0 0 20px rgba(16, 185, 129, 0.4), 0 4px 20px rgba(0, 0, 0, 0.3);
+    }
+
+    .class-number {
+      display: block;
+      background: #10b981;
+      color: white;
+      padding: var(--space-xs) var(--space-sm);
+      border-radius: 6px;
+      font-size: 0.875rem;
+      font-weight: 600;
+      margin-bottom: var(--space-sm);
+      text-align: center;
+      width: fit-content;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .class-title {
+      font-size: 1.25rem;
+      font-weight: 600;
+      margin-bottom: var(--space-sm);
+      line-height: 1.4;
+    }
+
+    .class-description {
+      font-size: 0.95rem;
+      color: var(--color-text-secondary);
+      line-height: 1.6;
+      flex-grow: 1;
+    }
+
+    .class-status {
+      margin-top: var(--space-md);
+      padding-top: var(--space-sm);
+      border-top: 1px solid var(--color-border);
+      font-size: 0.875rem;
+      color: var(--color-text-secondary);
+    }
+
+    .status-complete {
+      color: #10b981;
+      font-weight: 600;
+    }
+
+    .status-available {
+      color: #10b981;
+      font-weight: 600;
+    }
+
+    .status-upcoming {
+      color: #6b7280;
+      font-style: italic;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Navigation Bar -->
+  <nav class="main-nav">
+    <div class="nav-container">
+      <div class="nav-left">
+        <a href="../../index.html" class="nav-back-button" title="Volver al inicio">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24"
+            stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M15 19l-7-7 7-7" />
+          </svg>
+          <span>Inicio</span>
+        </a>
+        <a href="../../index.html" class="nav-brand">Filosofía 6to</a>
+      </div>
+      <div class="nav-controls">
+        <button id="dark-mode-toggle" class="dark-mode-toggle" aria-label="Cambiar tema">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24"
+            stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Unit Hero -->
+  <section class="unit-hero">
+    <div class="container">
+      <h1>Unidad 2: Epistemología y Método Científico en Biología</h1>
+      <p>
+        Cómo se construye conocimiento en ciencias de la vida: experimentación, modelado teórico y avances tecnológicos
+      </p>
+    </div>
+  </section>
+
+  <!-- Class Grid -->
+  <main>
+    <div class="class-grid">
+      <!-- Clase 11 -->
+      <a href="clase-11.html" class="class-card">
+        <span class="class-number">Clase 11</span>
+        <h3 class="class-title">Generación Espontánea: De Aristóteles a Pasteur</h3>
+        <p class="class-description">
+          ¿La vida surge de la materia inerte? Exploramos los experimentos clásicos de Redi, Spallanzani y Pasteur que
+          refutaron la generación espontánea. El método experimental en acción.
+        </p>
+        <div class="class-status status-available">✓ Disponible</div>
+      </a>
+
+      <!-- Clase 12 -->
+      <a href="clase-12.html" class="class-card">
+        <span class="class-number">Clase 12</span>
+        <h3 class="class-title">Rosalind Franklin y la Foto 51</h3>
+        <p class="class-description">
+          La cristalografía de rayos X revela la estructura del ADN. El papel crucial de Rosalind Franklin, Watson y
+          Crick, y las controversias sobre reconocimiento científico.
+        </p>
+        <div class="class-status status-upcoming">Próximamente</div>
+      </a>
+
+      <!-- Clase 13 -->
+      <a href="clase-13.html" class="class-card">
+        <span class="class-number">Clase 13</span>
+        <h3 class="class-title">El ADN como Molécula de la Herencia</h3>
+        <p class="class-description">
+          ¿Proteínas o ácidos nucleicos? Los experimentos de Griffith, Avery-MacLeod-McCarty y Hershey-Chase que
+          demostraron que el ADN transmite información genética.
+        </p>
+        <div class="class-status status-upcoming">Próximamente</div>
+      </a>
+
+      <!-- Clase 14 -->
+      <a href="clase-14.html" class="class-card">
+        <span class="class-number">Clase 14</span>
+        <h3 class="class-title">Replicación del ADN: El Experimento de Meselson-Stahl</h3>
+        <p class="class-description">
+          ¿Cómo se copia el ADN? Tres modelos (conservativo, semiconservativo, dispersivo) y el elegante experimento
+          con isótopos que resolvió el enigma.
+        </p>
+        <div class="class-status status-upcoming">Próximamente</div>
+      </a>
+
+      <!-- Clase 15 -->
+      <a href="clase-15.html" class="class-card">
+        <span class="class-number">Clase 15</span>
+        <h3 class="class-title">Tecnología y Ética: Clonación y CRISPR</h3>
+        <p class="class-description">
+          Desde la oveja Dolly hasta la edición genética CRISPR. Aplicaciones médicas, agrícolas y dilemas éticos de la
+          biotecnología moderna.
+        </p>
+        <div class="class-status status-upcoming">Próximamente</div>
+      </a>
+
+      <!-- Clase 16 -->
+      <a href="clase-16.html" class="class-card">
+        <span class="class-number">Clase 16</span>
+        <h3 class="class-title">Modelos Científicos: Del ADN al Origen de la Vida</h3>
+        <p class="class-description">
+          ¿Qué es un modelo científico? La doble hélice del ADN como modelo estructural. Hipótesis sobre el origen de la
+          vida: experimento de Miller-Urey, mundo de ARN, panspermia.
+        </p>
+        <div class="class-status status-upcoming">Próximamente</div>
+      </a>
+
+      <!-- Clase 17 -->
+      <a href="clase-17.html" class="class-card">
+        <span class="class-number">Clase 17</span>
+        <h3 class="class-title">Teoría, Experimentación y Tecnología</h3>
+        <p class="class-description">
+          Las tres dimensiones del trabajo científico. Cómo la teoría guía los experimentos, cómo los experimentos
+          validan teorías, y cómo la tecnología amplía nuestras capacidades de observación.
+        </p>
+        <div class="class-status status-upcoming">Próximamente</div>
+      </a>
+
+      <!-- Clase 18 -->
+      <a href="clase-18.html" class="class-card">
+        <span class="class-number">Clase 18</span>
+        <h3 class="class-title">Ciencia, Sociedad y Valores</h3>
+        <p class="class-description">
+          ¿La ciencia es neutral? Contexto social de la investigación, financiamiento, intereses económicos. El caso
+          Rosalind Franklin y la invisibilización de mujeres en ciencia.
+        </p>
+        <div class="class-status status-upcoming">Próximamente</div>
+      </a>
+
+      <!-- Clase 19 -->
+      <a href="clase-19.html" class="class-card">
+        <span class="class-number">Clase 19</span>
+        <h3 class="class-title">Límites y Alcances del Conocimiento Científico</h3>
+        <p class="class-description">
+          ¿Qué puede y qué no puede responder la ciencia? Diferencias entre preguntas científicas y preguntas
+          filosóficas. El caso del origen de la vida: ciencia vs. especulación.
+        </p>
+        <div class="class-status status-upcoming">Próximamente</div>
+      </a>
+
+      <!-- Clase 20 -->
+      <a href="clase-20.html" class="class-card">
+        <span class="class-number">Clase 20</span>
+        <h3 class="class-title">Integración y Evaluación Final</h3>
+        <p class="class-description">
+          Síntesis de la Unidad 2. Comparación entre paradigmas en física (Unidad 1) y biología (Unidad 2). Actividad
+          integradora y evaluación final.
+        </p>
+        <div class="class-status status-upcoming">Próximamente</div>
+      </a>
+    </div>
+
+    <!-- Back to Home -->
+    <div style="text-align: center; padding: var(--space-2xl) 0;">
+      <a href="../../index.html" class="btn btn-outline">← Volver al Inicio</a>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="main-footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h4>Unidad 2: Epistemología y Método Científico en Biología</h4>
+          <p>10 clases explorando cómo se construye conocimiento en ciencias de la vida: experimentación, modelado teórico, tecnología y valores</p>
+          <p style="margin-top: var(--space-md); font-weight: 600;">Profesor: Javier Pereyra</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Filosofía 6to. Material educativo.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JavaScript -->
+  <script src="../../assets/js/dark-mode.js"></script>
+</body>
+
+</html>

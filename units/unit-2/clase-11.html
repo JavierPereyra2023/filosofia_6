@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clase 11: Generación Espontánea | Filosofía 6to</title>
+  <link rel="stylesheet" href="../../assets/css/variables.css">
+  <link rel="stylesheet" href="../../assets/css/reset.css">
+  <link rel="stylesheet" href="../../assets/css/base.css">
+  <link rel="stylesheet" href="../../assets/css/typography.css">
+  <link rel="stylesheet" href="../../assets/css/layout.css">
+  <link rel="stylesheet" href="../../assets/css/navigation.css">
+  <link rel="stylesheet" href="../../assets/css/components.css">
+  <link rel="stylesheet" href="../../assets/css/unit-page.css">
+  <link rel="stylesheet" href="../../assets/css/book-layout.css">
+
+  <style>
+    .class-container::before {
+      content: '    Omne vivum\A       ex vivo\A\A    (Todo ser vivo\A     proviene de\A     otro ser vivo)';
+      position: fixed;
+      top: 15%;
+      right: 5%;
+      font-family: 'Caveat', 'Comic Sans MS', cursive;
+      font-size: 26px;
+      font-weight: 700;
+      white-space: pre;
+      color: rgba(255, 255, 255, 0.35);
+      transform: rotate(-6deg);
+    }
+
+    .class-container::after {
+      content: '    Hipótesis\A       ↓\A    Experimento\A       ↓\A    Refutación';
+      position: fixed;
+      bottom: 20%;
+      left: 5%;
+      font-family: 'Caveat', 'Comic Sans MS', cursive;
+      font-size: 24px;
+      font-weight: 700;
+      white-space: pre;
+      color: rgba(255, 255, 255, 0.32);
+      transform: rotate(5deg);
+    }
+
+    @media (max-width: 1024px) {
+
+      .class-container::before,
+      .class-container::after {
+        position: relative;
+        width: 100%;
+        text-align: center;
+        top: auto;
+        bottom: auto;
+        left: auto;
+        right: auto;
+        transform: rotate(0deg);
+        margin: var(--space-xl) 0;
+        font-size: 20px;
+        display: block;
+      }
+
+      .class-container::before {
+        content: 'Pasteur | Biogénesis | Experimento Controlado';
+      }
+
+      .class-container::after {
+        content: 'REFUTACIÓN | Redi - Spallanzani - Pasteur';
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <nav class="main-nav">
+    <div class="nav-container">
+      <div class="nav-left">
+        <a href="index.html" class="nav-back-button" title="Volver al índice de la unidad">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24"
+            stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M15 19l-7-7 7-7" />
+          </svg>
+          <span>Unidad 2</span>
+        </a>
+        <a href="../../index.html" class="nav-brand">Filosofía 6to</a>
+      </div>
+      <div class="nav-controls">
+        <button id="dark-mode-toggle" class="dark-mode-toggle" aria-label="Cambiar tema">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24"
+            stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <div class="class-progress">
+    <div class="container">
+      <div class="progress-info">
+        <span class="progress-label">Unidad 2: Epistemología y Método Científico en Biología</span>
+        <span class="progress-count">Clase 11 de 20</span>
+      </div>
+      <div class="progress-bar">
+        <div class="progress-fill" style="width: 10%"></div>
+      </div>
+    </div>
+  </div>
+
+  <main class="class-container">
+    <article class="class-content">
+      <header class="class-header">
+        <div class="class-badge">Clase 11</div>
+        <h1 class="class-title">Generación Espontánea: De Aristóteles a Pasteur</h1>
+        <p class="class-subtitle">Cómo la experimentación controlada refutó una creencia milenaria</p>
+      </header>
+
+      <section class="class-section">
+        <h2>El Problema: ¿De Dónde Viene la Vida?</h2>
+        <p>
+          Durante más de 2.000 años, desde Aristóteles hasta el siglo XIX, se creyó que ciertos organismos podían
+          surgir espontáneamente de materia inerte. Esta idea se conocía como <strong>generación espontánea</strong> o
+          <strong>abiogénesis</strong>.
+        </p>
+
+        <div class="concept-highlight">
+          <h3>Ejemplos de Generación Espontánea (Creencia Aristotélica)</h3>
+          <ul>
+            <li>🪰 Las moscas surgen de la carne podrida</li>
+            <li>🐁 Los ratones nacen de trapos sucios con granos de trigo</li>
+            <li>🦗 Los gusanos aparecen en el lodo</li>
+            <li>🐸 Las ranas emergen del barro húmedo</li>
+          </ul>
+          <p style="margin-top: var(--space-md); font-style: italic; color: var(--color-text-secondary);">
+            ¿Por qué esta creencia perduró tanto tiempo? Porque parecía evidente a simple vista: donde había materia
+            orgánica en descomposición, aparecían seres vivos.
+          </p>
+        </div>
+      </section>
+
+      <section class="class-section">
+        <h2>Francesco Redi (1668): El Primer Experimento Controlado</h2>
+        <p>
+          <strong>Francesco Redi (1626-1697)</strong> fue un médico, naturalista y poeta italiano que trabajó en la corte de los Médici en Florencia. En 1668, publicó su obra <em>Esperienze Intorno alla Generazione degl'Insetti</em> (Experimentos sobre la generación de los insectos), donde documentó sus experimentos controlados que desafiaban la teoría aristotélica de la generación espontánea.
+        </p>
+        <p>
+          Su pregunta fundamental era: <strong>¿Las moscas surgen espontáneamente de la carne en descomposición, o provienen de huevos depositados por otras moscas?</strong>
+        </p>
+
+        <div class="image-container">
+          <img src="../../assets/images/class-11/redi_experiment.jpg" alt="Experimento de Francesco Redi (1668)"
+            style="max-width: 100%; height: auto;">
+          <p class="image-caption">Experimento de Francesco Redi (1668): frascos con carne abiertos vs. cubiertos con gasa fina</p>
+        </div>
+
+        <div class="concept-highlight">
+          <h3>Diseño Experimental de Redi (1668)</h3>
+          <p><strong>Hipótesis:</strong> Las moscas NO surgen espontáneamente de la carne, sino de huevos depositados
+            por otras moscas adultas que se posan sobre la carne.</p>
+
+          <p style="margin-top: var(--space-md);"><strong>Procedimiento Experimental Detallado:</strong></p>
+          <ol>
+            <li><strong>Materiales:</strong> Utilizó 8 frascos de vidrio y diferentes tipos de carne (serpiente, pescado, anguila, carne de ternera)</li>
+            <li><strong>Grupo Control (4 frascos):</strong> Colocó carne en frascos abiertos, expuestos al aire libre</li>
+            <li><strong>Grupo Experimental (4 frascos):</strong> Colocó la misma cantidad y tipo de carne en frascos cubiertos con una gasa fina que permitía el paso del aire pero no de las moscas</li>
+            <li><strong>Observación durante varios días:</strong> Monitoreó diariamente la aparición de gusanos (larvas de mosca)</li>
+            <li><strong>Resultados:</strong>
+              <ul style="margin-top: var(--space-sm);">
+                <li>Frascos abiertos: Aparecieron gusanos en la carne después de algunos días ✓</li>
+                <li>Frascos con gasa: NO aparecieron gusanos en la carne, pero SÍ aparecieron sobre la gasa (donde las moscas intentaban depositar huevos) ✗</li>
+              </ul>
+            </li>
+          </ol>
+
+          <p style="margin-top: var(--space-md);"><strong>Conclusión de Redi:</strong> Los gusanos no surgen espontáneamente de la carne podrida, sino que son larvas que provienen de huevos depositados por moscas adultas. <em>"Omne vivum ex ovo"</em> (Todo ser vivo proviene de un huevo).</p>
+
+          <p style="margin-top: var(--space-sm); font-style: italic; color: var(--color-text-secondary);">
+            Nota importante: Redi no refutó completamente la generación espontánea, ya que todavía creía que algunos parásitos intestinales podían surgir espontáneamente. Sin embargo, su método experimental sentó las bases del pensamiento científico moderno.
+          </p>
+        </div>
+
+        <div class="reflection-box">
+          <h4>🔬 Aspectos Epistemológicos del Experimento de Redi</h4>
+          <ul>
+            <li><strong>Variable independiente:</strong> Acceso de moscas a la carne (tapado vs. destapado)</li>
+            <li><strong>Variable dependiente:</strong> Aparición de gusanos/moscas</li>
+            <li><strong>Grupo control:</strong> Frascos abiertos (condición tradicional)</li>
+            <li><strong>Grupo experimental:</strong> Frascos con gasa (condición modificada)</li>
+            <li><strong>Falsabilidad:</strong> Si aparecieran moscas en los frascos tapados, la hipótesis quedaría
+              refutada</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="class-section">
+        <h2>Lazzaro Spallanzani (1765): El Desafío de los Microorganismos</h2>
+        <p>
+          A pesar del trabajo de Redi con organismos visibles, la generación espontánea seguía vigente para organismos microscópicos. Con la invención del microscopio por Antoni van Leeuwenhoek (1676), se descubrieron "animalículos" (bacterias y protozoos) que parecían surgir espontáneamente en infusiones (caldos de carne o vegetales) y agua estancada.
+        </p>
+
+        <p>
+          <strong>Lazzaro Spallanzani (1729-1799)</strong> fue un biólogo y fisiólogo italiano, profesor en las universidades de Reggio, Módena y Pavía. Además de sus experimentos sobre generación espontánea, estudió la reproducción, la digestión y la fecundación artificial. En 1765, Spallanzani diseñó un experimento para refutar la generación espontánea de microorganismos, respondiendo a los experimentos de John Needham (1713-1781) que supuestamente "confirmaban" la generación espontánea.
+        </p>
+
+        <div class="image-container">
+          <img src="../../assets/images/class-11/spallanzani_experiment.jpg"
+            alt="Experimento de Lazzaro Spallanzani (1765)" style="max-width: 100%; height: auto;">
+          <p class="image-caption">Experimento de Lazzaro Spallanzani (1765): infusiones hervidas en frascos sellados herméticamente</p>
+        </div>
+
+        <div class="concept-highlight">
+          <h3>Diseño Experimental de Spallanzani (1765)</h3>
+          <p><strong>Contexto:</strong> El inglés John Needham (1745) había realizado experimentos calentando caldos en frascos cerrados, y luego de algunos días observaba microorganismos. Needham concluyó que los microorganismos surgían espontáneamente. Spallanzani cuestionó la rigurosidad del procedimiento de Needham.</p>
+
+          <p style="margin-top: var(--space-md);"><strong>Hipótesis de Spallanzani:</strong> Los microorganismos NO surgen espontáneamente, sino que provienen de microorganismos preexistentes en el aire o en el líquido. Needham no calentó suficientemente los caldos ni selló bien los frascos.</p>
+
+          <p style="margin-top: var(--space-md);"><strong>Procedimiento Experimental Detallado:</strong></p>
+          <ol>
+            <li><strong>Preparación:</strong> Preparó infusiones (caldos) de diferentes materiales orgánicos (carne, semillas, vegetales)</li>
+            <li><strong>Esterilización rigurosa:</strong> Hirvió los caldos durante <strong>1 hora</strong> (mucho más tiempo que Needham) para asegurar la muerte de todos los microorganismos</li>
+            <li><strong>Sellado hermético:</strong> Selló los frascos <strong>fundiéndolos al fuego</strong> (no solo tapándolos), creando un cierre hermético que impedía completamente la entrada de aire</li>
+            <li><strong>Grupo Control:</strong> Frascos con caldo hervido pero expuestos al aire → Aparecen microorganismos después de pocos días ✓</li>
+            <li><strong>Grupo Experimental:</strong> Frascos sellados herméticamente después de hervir → NO aparecen microorganismos incluso después de meses ✗</li>
+            <li><strong>Observación microscópica:</strong> Examinó los caldos con microscopio durante semanas para verificar la ausencia total de microorganismos</li>
+          </ol>
+
+          <p style="margin-top: var(--space-md);"><strong>Conclusión de Spallanzani:</strong> Los microorganismos no surgen espontáneamente del caldo. Provienen del aire, y si se elimina el contacto con el aire (sellando) y se matan los preexistentes (hirviendo), no aparecen nuevos microorganismos.</p>
+        </div>
+
+        <div class="reflection-box">
+          <h4>⚠️ Objeción de los Defensores de la Generación Espontánea</h4>
+          <p>
+            Los defensores de la generación espontánea, especialmente los <strong>vitalistas</strong> como John Needham y Félix Archimède Pouchet, argumentaron que <strong>sellar herméticamente y hervir prolongadamente los frascos destruye la "fuerza vital" o "principio activo"</strong> presente en el aire, necesario para la generación espontánea de vida. Según esta teoría, Spallanzani había "torturado" el aire y el caldo, destruyendo la capacidad de generar vida.
+          </p>
+          <p style="margin-top: var(--space-sm);">
+            Needham afirmó: <em>"El aire debe estar fresco y libre para que la fuerza vegetativa pueda actuar"</em>. Esta objeción era difícil de refutar porque introducía un concepto no observable (la "fuerza vital") que no podía ser medido ni controlado experimentalmente.
+          </p>
+          <p style="margin-top: var(--space-md); font-style: italic; font-weight: 600; color: var(--color-accent);">
+            Pregunta crítica: ¿Cómo se podría diseñar un experimento que permita la entrada de aire "fresco" pero impida la entrada de microorganismos? 🤔
+          </p>
+          <p style="margin-top: var(--space-sm); font-style: italic; color: var(--color-text-secondary);">
+            Esta pregunta no sería respondida hasta casi un siglo después, con el ingenioso diseño de Louis Pasteur.
+          </p>
+        </div>
+      </section>
+
+      <section class="class-section">
+        <h2>Louis Pasteur (1861): El Experimento Definitivo</h2>
+        <p>
+          <strong>Louis Pasteur (1822-1895)</strong> fue un químico y microbiólogo francés, una de las figuras más importantes de la historia de la ciencia. Profesor de química en la Universidad de Lille y posteriormente en la Sorbona (París), Pasteur realizó contribuciones fundamentales en múltiples áreas: fermentación, vacunas, pasteurización y teoría microbiana de las enfermedades.
+        </p>
+        <p>
+          En 1858, la <strong>Academia de Ciencias de París</strong> estableció un premio para quien pudiera resolver definitivamente la controversia sobre la generación espontánea. El principal defensor de la generación espontánea era <strong>Félix Archimède Pouchet</strong> (1800-1872), naturalista francés que había publicado experimentos que supuestamente demostraban la generación espontánea de microorganismos.
+        </p>
+        <p>
+          Pasteur aceptó el desafío y diseñó un experimento elegante que resolvió la controversia de manera definitiva. Su diseño experimental era brillante porque <strong>permitía la entrada de aire "fresco" pero impedía la entrada de microorganismos</strong>, eliminando así la objeción vitalista planteada contra Spallanzani.
+        </p>
+
+        <div class="image-container">
+          <img src="../../assets/images/class-11/pasteur_experiment.jpg" alt="Experimento de Louis Pasteur (1861)"
+            style="max-width: 100%; height: auto;">
+          <p class="image-caption">Experimento de Louis Pasteur (1861): matraz de cuello de cisne que permite entrada de aire pero filtra microorganismos</p>
+        </div>
+
+        <div class="concept-highlight">
+          <h3>Diseño Experimental de Pasteur: El Matraz de Cuello de Cisne (1861)</h3>
+          <p><strong>Hipótesis:</strong> Los microorganismos no surgen espontáneamente del caldo nutritivo. Provienen de microorganismos presentes en las partículas de polvo del aire, y pueden ser filtrados mecánicamente sin necesidad de sellar herméticamente el recipiente (lo que preservaría la supuesta "fuerza vital" del aire).</p>
+
+          <p style="margin-top: var(--space-md);"><strong>Procedimiento Experimental Detallado:</strong></p>
+          <ol>
+            <li><strong>Diseño del matraz:</strong> Pasteur diseñó matraces de vidrio con cuellos largos y curvos en forma de "S" o cuello de cisne. El cuello permanecía <strong>abierto al aire</strong>, permitiendo el intercambio gaseoso.</li>
+
+            <li><strong>Preparación del caldo:</strong> Colocó caldo nutritivo (infusión de levadura) en los matraces</li>
+
+            <li><strong>Esterilización:</strong> Calentó el caldo hasta la ebullición para eliminar todos los microorganismos presentes. El vapor escapaba por el cuello abierto.</li>
+
+            <li><strong>Enfriamiento:</strong> Dejó enfriar los matraces. El aire podía entrar libremente, pero las partículas de polvo (que transportan microorganismos) quedaban atrapadas en las curvas del cuello por <strong>gravedad y humedad</strong>. El aire que llegaba al caldo estaba filtrado mecánicamente.</li>
+
+            <li><strong>Observación prolongada:</strong> Los matraces permanecieron <strong>estériles durante meses y años</strong>. Algunos de estos matraces originales de Pasteur se conservan hasta hoy en el Instituto Pasteur de París, ¡y siguen estériles después de más de 150 años!</li>
+
+            <li><strong>Experimento de control crítico:</strong> Pasteur realizó varias variantes:
+              <ul style="margin-top: var(--space-sm);">
+                <li><strong>Romper el cuello:</strong> Si se rompía el cuello del matraz, eliminando la trampa de partículas, los microorganismos aparecían en pocos días ✓</li>
+                <li><strong>Inclinar el matraz:</strong> Si se inclinaba el matraz para que el caldo tocara el cuello (donde estaban las partículas atrapadas), los microorganismos crecían rápidamente ✓</li>
+                <li><strong>Matraces en diferentes lugares:</strong> Llevó matraces sellados temporalmente a diferentes altitudes (montañas, sótanos, ciudad) y los abrió brevemente. Los matraces abiertos en lugares con más polvo (ciudad) se contaminaban más que los abiertos en lugares limpios (alta montaña).</li>
+              </ul>
+            </li>
+          </ol>
+
+          <p style="margin-top: var(--space-md);"><strong>Conclusión de Pasteur:</strong> Los microorganismos provienen del aire, específicamente de las partículas de polvo que flotan en él. NO surgen espontáneamente del caldo nutritivo. El aire puede estar "fresco y libre" (refutando la objeción vitalista), y aun así no se produce generación espontánea. La biogénesis queda demostrada de manera concluyente: <em><strong>Omne vivum ex vivo</strong></em> (Todo ser vivo proviene de otro ser vivo).</p>
+
+          <p style="margin-top: var(--space-sm); font-style: italic; color: var(--color-text-secondary);">
+            En 1862, Pasteur recibió el premio de la Academia de Ciencias de París por resolver definitivamente la controversia de la generación espontánea.
+          </p>
+        </div>
+
+        <div class="reflection-box">
+          <h4>🏆 Importancia Histórica y Consecuencias del Experimento de Pasteur</h4>
+
+          <h5 style="margin-top: var(--space-md);">Impacto Científico</h5>
+          <ul>
+            <li><strong>Refutación definitiva de la generación espontánea:</strong> Demostró que toda vida proviene de vida preexistente (<em>biogénesis</em>)</li>
+            <li><strong>Fundamento de la microbiología moderna:</strong> Estableció que los microorganismos son seres vivos que se reproducen, no fenómenos químicos espontáneos</li>
+            <li><strong>Teoría microbiana de las enfermedades:</strong> Si los microorganismos no surgen espontáneamente, entonces las enfermedades infecciosas son causadas por microorganismos que se transmiten de unos organismos a otros (contagio)</li>
+            <li><strong>Base para la teoría evolutiva:</strong> Si la vida no surge espontáneamente hoy, ¿cómo surgió la primera vida en la Tierra? Esto impulsó investigaciones sobre el origen de la vida y la evolución química</li>
+          </ul>
+
+          <h5 style="margin-top: var(--space-md);">Aplicaciones Tecnológicas y Médicas</h5>
+          <ul>
+            <li><strong>Pasteurización (1864):</strong> Método de conservación de alimentos (leche, vino, cerveza) mediante calentamiento controlado que mata microorganismos patógenos sin alterar significativamente el sabor</li>
+            <li><strong>Esterilización quirúrgica:</strong> Joseph Lister aplicó los principios de Pasteur para desarrollar la cirugía aséptica (uso de antisépticos, esterilización de instrumentos), reduciendo drásticamente las infecciones postoperatorias</li>
+            <li><strong>Conservación de alimentos:</strong> Enlatado, embotellado estéril, refrigeración</li>
+            <li><strong>Vacunas:</strong> Pasteur desarrolló vacunas contra el ántrax (1881) y la rabia (1885), basándose en el principio de que los microorganismos debilitados pueden generar inmunidad sin causar enfermedad</li>
+            <li><strong>Industria alimentaria y farmacéutica:</strong> Producción en ambientes controlados y estériles</li>
+          </ul>
+
+          <h5 style="margin-top: var(--space-md);">Reconocimientos</h5>
+          <ul>
+            <li><strong>Premio Alhumbert de la Academia de Ciencias de París (1862)</strong></li>
+            <li><strong>Medalla Copley de la Royal Society de Londres (1874)</strong></li>
+            <li><strong>El Instituto Pasteur (fundado en 1887)</strong> en París, centro mundial de investigación en microbiología</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="class-section">
+        <h2>El Método Científico Aplicado: De la Observación a la Refutación</h2>
+        <p>
+          La refutación de la generación espontánea ilustra perfectamente cómo funciona el método científico en la práctica. Veamos cómo se aplicaron sus pasos en este caso histórico:
+        </p>
+
+        <div class="image-container" style="margin: var(--space-xl) 0;">
+          <img src="../../assets/images/class-11/scientific_method.svg" alt="El método científico aplicado a la refutación de la generación espontánea" style="max-width: 100%; height: auto;">
+          <p class="image-caption">Diagrama del método científico aplicado al caso de la generación espontánea (1668-1861)</p>
+        </div>
+
+        <div class="concept-highlight" style="background: var(--color-bg-tertiary);">
+          <h3>Pasos del Método Científico en el Caso Histórico</h3>
+
+          <h4 style="margin-top: var(--space-lg); color: var(--color-accent);">1. Observación del Fenómeno</h4>
+          <p><strong>Observación empírica:</strong> Desde la antigüedad, las personas observaban que en la carne podrida aparecían moscas y gusanos, en el agua estancada aparecían microorganismos, y en trapos sucios con granos aparecían ratones.</p>
+          <p><em>Ejemplo:</em> "Cada vez que dejo carne al aire libre, después de algunos días aparecen gusanos"</p>
+
+          <h4 style="margin-top: var(--space-lg); color: var(--color-accent);">2. Formulación del Problema (Pregunta de Investigación)</h4>
+          <p><strong>Aristóteles y tradición:</strong> Estos organismos surgen espontáneamente de la materia inerte.</p>
+          <p><strong>Pregunta crítica de Redi (1668):</strong> ¿Las moscas realmente surgen de la carne, o provienen de huevos depositados por moscas adultas?</p>
+
+          <h4 style="margin-top: var(--space-lg); color: var(--color-accent);">3. Formulación de Hipótesis (Explicación Tentativa)</h4>
+          <p><strong>Hipótesis de Redi:</strong> Las moscas NO surgen espontáneamente de la carne. Los gusanos son larvas que provienen de huevos depositados por moscas adultas que se posan en la carne.</p>
+          <p><strong>Hipótesis de Spallanzani:</strong> Los microorganismos NO surgen espontáneamente del caldo. Provienen de microorganismos presentes en el aire.</p>
+          <p><strong>Hipótesis de Pasteur:</strong> Los microorganismos están en las partículas de polvo del aire y pueden ser filtrados mecánicamente.</p>
+
+          <h4 style="margin-top: var(--space-lg); color: var(--color-accent);">4. Diseño Experimental (Predicción y Control)</h4>
+          <p><strong>Predicción testeable:</strong> "Si las moscas provienen de huevos depositados por moscas adultas, entonces al impedir que las moscas accedan a la carne, NO deberían aparecer gusanos"</p>
+          <p><strong>Variables:</strong></p>
+          <ul style="margin-top: var(--space-sm);">
+            <li><strong>Variable independiente (manipulada):</strong> Acceso de moscas/aire a la carne o caldo</li>
+            <li><strong>Variable dependiente (medida):</strong> Presencia o ausencia de organismos</li>
+            <li><strong>Variables controladas:</strong> Tipo de carne, cantidad, temperatura, tiempo de observación</li>
+          </ul>
+          <p><strong>Grupo control vs. experimental:</strong> Comparación entre condiciones (abierto vs. tapado/sellado)</p>
+
+          <h4 style="margin-top: var(--space-lg); color: var(--color-accent);">5. Experimentación y Recolección de Datos</h4>
+          <p>Realización de los experimentos con observación sistemática y registro de resultados durante días, semanas o meses.</p>
+
+          <h4 style="margin-top: var(--space-lg); color: var(--color-accent);">6. Análisis de Resultados</h4>
+          <p>Comparación entre grupo control (con organismos) y grupo experimental (sin organismos). Los resultados son consistentes con la hipótesis de biogénesis y contradicen la generación espontánea.</p>
+
+          <h4 style="margin-top: var(--space-lg); color: var(--color-accent);">7. Conclusión</h4>
+          <p>La hipótesis de la biogénesis es aceptada. La generación espontánea queda refutada. Se establece el principio: <em>Omne vivum ex vivo</em>.</p>
+
+          <h4 style="margin-top: var(--space-lg); color: var(--color-accent);">8. Comunicación de Resultados</h4>
+          <p>Publicación en revistas científicas, presentación en academias, replicación por otros científicos:</p>
+          <ul style="margin-top: var(--space-sm);">
+            <li>Redi: <em>Esperienze Intorno alla Generazione degl'Insetti</em> (1668)</li>
+            <li>Spallanzani: <em>Saggio di osservazioni microscopiche</em> (1765)</li>
+            <li>Pasteur: Presentación en la Sorbona y Academia de Ciencias (1861-1864)</li>
+          </ul>
+
+          <h4 style="margin-top: var(--space-lg); color: var(--color-accent);">9. Replicación y Validación</h4>
+          <p>Otros científicos repiten los experimentos y obtienen los mismos resultados, confirmando la validez de las conclusiones.</p>
+        </div>
+      </section>
+
+      <section class="class-section">
+        <h2>Reflexión Epistemológica: El Método Experimental en Acción</h2>
+        <p>
+          La refutación de la generación espontánea es un caso paradigmático de cómo funciona el método científico:
+        </p>
+
+        <div class="concept-highlight" style="border-left: 5px solid var(--color-accent);">
+          <h3>Aspectos Epistemológicos Clave</h3>
+
+          <h4 style="margin-top: var(--space-lg);">1. Experimentación Controlada</h4>
+          <p>
+            Los tres científicos (Redi, Spallanzani, Pasteur) usaron <strong>grupos control</strong> y <strong>grupos
+              experimentales</strong> para aislar variables. Esto permite determinar si el efecto observado se debe a
+            la variable manipulada o a otros factores.
+          </p>
+
+          <h4 style="margin-top: var(--space-lg);">2. Falsabilidad (Popper)</h4>
+          <p>
+            Las hipótesis eran falsables: si aparecían organismos en los frascos sellados/tapados, la hipótesis de la
+            biogénesis quedaría refutada. La ciencia avanza mediante <strong>refutaciones</strong>, no mediante
+            confirmaciones.
+          </p>
+
+          <h4 style="margin-top: var(--space-lg);">3. Hipótesis Ad Hoc y Resistencia al Cambio</h4>
+          <p>
+            Los defensores de la generación espontánea respondieron a Spallanzani con hipótesis ad hoc ("el aire tiene
+            fuerza vital"). Pasteur diseñó un experimento que eliminaba esta objeción al permitir entrada de aire.
+          </p>
+
+          <h4 style="margin-top: var(--space-lg);">4. Replicabilidad</h4>
+          <p>
+            Los experimentos de Pasteur podían ser replicados por cualquier científico. La replicabilidad es un
+            criterio fundamental de validación científica.
+          </p>
+
+          <h4 style="margin-top: var(--space-lg);">5. Consecuencias Tecnológicas</h4>
+          <p>
+            La refutación de la generación espontánea no fue solo un avance teórico, sino que tuvo aplicaciones
+            prácticas inmediatas: conservación de alimentos (pasteurización), medicina (asepsia), agricultura
+            (control de plagas).
+          </p>
+        </div>
+      </section>
+
+      <section class="class-section">
+        <h2>Actividad de Cierre</h2>
+        <div class="activity-box">
+          <h3>🧪 Análisis Experimental</h3>
+          <p>Imagina que eres un científico en el siglo XVII y quieres refutar la creencia de que los ratones surgen
+            espontáneamente de trapos sucios con granos de trigo.</p>
+
+          <p style="margin-top: var(--space-md);"><strong>Diseña un experimento controlado siguiendo el modelo de Redi o
+              Pasteur:</strong></p>
+          <ol>
+            <li>¿Cuál es tu hipótesis?</li>
+            <li>¿Cuál es la variable independiente (lo que manipulas)?</li>
+            <li>¿Cuál es la variable dependiente (lo que observas)?</li>
+            <li>¿Cómo es tu grupo control?</li>
+            <li>¿Cómo es tu grupo experimental?</li>
+            <li>¿Qué resultado esperarías si tu hipótesis es correcta?</li>
+            <li>¿Qué resultado refutaría tu hipótesis?</li>
+          </ol>
+        </div>
+      </section>
+
+      <nav class="class-navigation">
+        <a href="index.html" class="btn btn-outline">← Índice de la Unidad</a>
+        <a href="clase-12.html" class="btn btn-primary">Siguiente Clase →</a>
+      </nav>
+    </article>
+
+    <aside class="sidebar">
+      <div class="sidebar-section">
+        <h3>En esta clase</h3>
+        <ul class="sidebar-nav">
+          <li><a href="#" class="active">Generación Espontánea</a></li>
+          <li><a href="#">Francesco Redi (1668)</a></li>
+          <li><a href="#">Lazzaro Spallanzani (1765)</a></li>
+          <li><a href="#">Louis Pasteur (1861)</a></li>
+          <li><a href="#">Reflexión Epistemológica</a></li>
+        </ul>
+      </div>
+
+      <div class="sidebar-section">
+        <h3>Conceptos Clave</h3>
+        <ul class="concept-list">
+          <li>Generación Espontánea</li>
+          <li>Biogénesis</li>
+          <li>Experimento Controlado</li>
+          <li>Grupo Control</li>
+          <li>Variable Independiente</li>
+          <li>Variable Dependiente</li>
+          <li>Falsabilidad</li>
+          <li>Replicabilidad</li>
+        </ul>
+      </div>
+
+      <div class="sidebar-section">
+        <h3>Científicos</h3>
+        <div class="scientist-card">
+          <h4>Francesco Redi</h4>
+          <p class="small">1626-1697</p>
+          <p>Médico italiano, refutó la generación espontánea de moscas</p>
+        </div>
+        <div class="scientist-card">
+          <h4>Lazzaro Spallanzani</h4>
+          <p class="small">1729-1799</p>
+          <p>Biólogo italiano, refutó la generación espontánea de microorganismos</p>
+        </div>
+        <div class="scientist-card">
+          <h4>Louis Pasteur</h4>
+          <p class="small">1822-1895</p>
+          <p>Químico francés, experimento definitivo del matraz de cuello de cisne</p>
+        </div>
+      </div>
+    </aside>
+  </main>
+
+  <script src="../../assets/js/dark-mode.js"></script>
+</body>
+
+</html>
