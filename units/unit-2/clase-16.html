@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clase 16: Modelos Científicos y el Origen de la Vida | Filosofía 6to</title>
+  <link rel="stylesheet" href="../../assets/css/variables.css">
+  <link rel="stylesheet" href="../../assets/css/reset.css">
+  <link rel="stylesheet" href="../../assets/css/base.css">
+  <link rel="stylesheet" href="../../assets/css/typography.css">
+  <link rel="stylesheet" href="../../assets/css/layout.css">
+  <link rel="stylesheet" href="../../assets/css/navigation.css">
+  <link rel="stylesheet" href="../../assets/css/components.css">
+  <link rel="stylesheet" href="../../assets/css/unit-page.css">
+  <link rel="stylesheet" href="../../assets/css/book-layout.css">
+
+  <style>
+    .class-container::before {
+      content: '  CH₄ + NH₃\A   + H₂O + ⚡\A      ↓\A  Aminoácidos!\A\A  (Miller, 1953)';
+      position: fixed;
+      top: 15%;
+      right: 5%;
+      font-family: 'Caveat', 'Comic Sans MS', cursive;
+      font-size: 24px;
+      font-weight: 700;
+      white-space: pre;
+      color: rgba(255, 255, 255, 0.35);
+      transform: rotate(-6deg);
+    }
+
+    .class-container::after {
+      content: '  Modelo ≠ Realidad\A      ↓\A  representación\A  simplificada\A       +\A  poder predictivo';
+      position: fixed;
+      bottom: 20%;
+      left: 5%;
+      font-family: 'Caveat', 'Comic Sans MS', cursive;
+      font-size: 22px;
+      font-weight: 700;
+      white-space: pre;
+      color: rgba(255, 255, 255, 0.32);
+      transform: rotate(5deg);
+    }
+
+    @media (max-width: 1024px) {
+      .class-container::before,
+      .class-container::after {
+        position: relative;
+        width: 100%;
+        text-align: center;
+        top: auto; bottom: auto; left: auto; right: auto;
+        transform: rotate(0deg);
+        margin: var(--space-xl) 0;
+        font-size: 18px;
+        display: block;
+      }
+      .class-container::before { content: 'Modelos Científicos | Miller-Urey | Origen de la Vida'; }
+      .class-container::after { content: 'Modelo ARN | Panspermia | Límites del Conocimiento'; }
+    }
+  </style>
+</head>
+
+<body>
+  <nav class="main-nav">
+    <div class="nav-container">
+      <div class="nav-left">
+        <a href="index.html" class="nav-back-button" title="Volver al índice de la unidad">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24"
+            stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M15 19l-7-7 7-7" />
+          </svg>
+          <span>Unidad 2</span>
+        </a>
+        <a href="../../home.html" class="nav-brand">Filosofía 6to</a>
+      </div>
+      <div class="nav-controls">
+        <button id="dark-mode-toggle" class="dark-mode-toggle" aria-label="Cambiar tema">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24"
+            stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <div class="class-progress">
+    <div class="container">
+      <div class="progress-info">
+        <span class="progress-text">Clase 16 de 20</span>
+        <span class="progress-text">35% de la unidad</span>
+      </div>
+      <div class="progress-bar">
+        <div class="progress-fill" style="width: 35%"></div>
+      </div>
+    </div>
+  </div>
+
+  <main class="class-container">
+    <aside class="sidebar">
+      <div class="sidebar-section">
+        <h3>En esta clase</h3>
+        <ul>
+          <li><a href="#modelos">¿Qué es un Modelo Científico?</a></li>
+          <li><a href="#doble-helice">El Modelo de la Doble Hélice</a></li>
+          <li><a href="#origen">El Origen de la Vida</a></li>
+          <li><a href="#miller-urey">Miller y Urey (1953)</a></li>
+          <li><a href="#hipotesis">Otras Hipótesis</a></li>
+          <li><a href="#limites">Límites del Conocimiento</a></li>
+          <li><a href="#actividades">Actividades</a></li>
+        </ul>
+      </div>
+
+      <div class="sidebar-section">
+        <h3>Conceptos Clave</h3>
+        <ul class="concept-list">
+          <li>Modelo científico</li>
+          <li>Representación simplificada</li>
+          <li>Poder predictivo</li>
+          <li>Mundo de ARN</li>
+          <li>Panspermia</li>
+          <li>Abducción</li>
+          <li>Falsabilidad</li>
+        </ul>
+      </div>
+
+      <div class="sidebar-section">
+        <h3>Científicos</h3>
+        <div class="scientist-card">
+          <h4>Stanley Miller</h4>
+          <p><strong>1930–2007</strong> | Estados Unidos</p>
+          <p>Bioquímico que, con solo 23 años y como estudiante de doctorado de Harold Urey, realizó el experimento que llevaría su nombre. Demostró que compuestos orgánicos básicos podían sintetizarse en condiciones prebióticas simuladas.</p>
+        </div>
+        <div class="scientist-card">
+          <h4>Harold Urey</h4>
+          <p><strong>1893–1981</strong> | Estados Unidos</p>
+          <p>Premio Nobel de Química (1934) por descubrir el deuterio. Supervisor de Miller, propuso la composición de la atmósfera primitiva utilizada en el experimento.</p>
+        </div>
+      </div>
+    </aside>
+
+    <article class="class-content">
+      <header class="class-header">
+        <div class="class-badge">Clase 16</div>
+        <h1 class="class-title">Modelos Científicos y el Origen de la Vida</h1>
+        <p class="class-subtitle">Representaciones, Límites y el Mayor Misterio Científico</p>
+      </header>
+
+      <section class="class-section" id="modelos">
+        <h2>¿Qué es un Modelo Científico?</h2>
+
+        <p>A lo largo de las últimas clases, hemos encontrado varios "modelos": el modelo geocéntrico de Ptolomeo, el modelo heliocéntrico de Copérnico, el modelo de doble hélice del ADN. Pero, ¿qué significa exactamente que algo sea un <em>modelo</em> científico?</p>
+
+        <p>Un <strong>modelo científico</strong> es una representación simplificada de un fenómeno o sistema, construida para explicarlo, comprenderlo y hacer predicciones sobre él. Los modelos no son copias exactas de la realidad, sino <em>herramientas conceptuales</em> que capturan los aspectos más relevantes del fenómeno para los propósitos que nos interesan.</p>
+
+        <div class="concept-highlight">
+          <h3>Tipos de Modelos Científicos</h3>
+          <ul>
+            <li><strong>Modelos físicos o icónicos:</strong> Representaciones materiales a escala. Ejemplo: el modelo de alambre y cartón de la doble hélice construido por Watson y Crick.</li>
+            <li><strong>Modelos matemáticos:</strong> Ecuaciones y fórmulas que describen relaciones cuantitativas. Ejemplo: las leyes de Kepler sobre las órbitas planetarias.</li>
+            <li><strong>Modelos conceptuales o diagramáticos:</strong> Diagramas, esquemas o descripciones verbales que capturan la estructura de un sistema. Ejemplo: el diagrama de la fotosíntesis.</li>
+            <li><strong>Modelos computacionales:</strong> Simulaciones digitales que reproducen comportamientos complejos. Ejemplo: modelos climáticos o simulaciones de plegamiento proteico.</li>
+          </ul>
+        </div>
+
+        <h3>¿Para qué sirven los modelos?</h3>
+        <p>Los modelos científicos cumplen varias funciones:</p>
+        <ul>
+          <li><strong>Representar:</strong> Mostrar la estructura o el funcionamiento de algo que no podemos ver directamente (como la doble hélice del ADN).</li>
+          <li><strong>Explicar:</strong> Dar cuenta de por qué ocurre un fenómeno (por qué el ADN puede copiarse fielmente).</li>
+          <li><strong>Predecir:</strong> Anticipar fenómenos que aún no hemos observado. El modelo de doble hélice predijo correctamente que la replicación sería semiconservativa.</li>
+          <li><strong>Comunicar:</strong> Transmitir ideas complejas de manera comprensible.</li>
+        </ul>
+
+        <div class="reflection-box">
+          <h3>El Mapa y el Territorio</h3>
+          <p>El filósofo Alfred Korzybski escribió que <em>"el mapa no es el territorio"</em>. Esta idea captura perfectamente la relación entre modelos y realidad:</p>
+          <ul>
+            <li>Un mapa de Buenos Aires es muy útil para navegar la ciudad, pero no es Buenos Aires. No muestra cada árbol, cada edificio, cada persona.</li>
+            <li>De la misma manera, el modelo de doble hélice del ADN es muy útil para entender la genética, pero no captura cada detalle molecular: no muestra las proteínas que estabilizan la hélice, los superenrollamientos, la dinámica de apertura.</li>
+          </ul>
+          <p><strong>Todos los modelos son "incorrectos" en algún sentido</strong> (simplifican), pero los buenos modelos son <em>útiles</em>: capturan lo esencial para el propósito en cuestión.</p>
+        </div>
+      </section>
+
+      <section class="class-section" id="doble-helice">
+        <h2>El Modelo de Doble Hélice: Un Caso de Estudio en Modelado Científico</h2>
+
+        <p>El modelo de la doble hélice del ADN, propuesto por Watson y Crick en 1953, es uno de los mejores ejemplos históricos de modelado científico exitoso. Revisémoslo desde esta perspectiva filosófica:</p>
+
+        <h3>¿Qué representó correctamente?</h3>
+        <ul>
+          <li><strong>La geometría básica:</strong> Dos cadenas antiparalelas enrolladas en hélice.</li>
+          <li><strong>El emparejamiento de bases:</strong> A siempre con T, G siempre con C (regla de Chargaff).</li>
+          <li><strong>Las dimensiones:</strong> Diámetro de 2 nm, paso de 3.4 nm, 10 pares de bases por vuelta.</li>
+          <li><strong>El mecanismo de replicación:</strong> La complementariedad de bases predice la replicación semiconservativa.</li>
+        </ul>
+
+        <h3>¿Qué simplificó o no capturó?</h3>
+        <ul>
+          <li>El ADN real no es una hélice perfectamente regular: tiene variaciones locales de estructura (formas A, B y Z).</li>
+          <li>El modelo estático no muestra cómo el ADN se abre dinámicamente durante la replicación o transcripción.</li>
+          <li>No captura el superenrollamiento del ADN en cromosomas ni las proteínas histonas que lo organizan.</li>
+          <li>No representa los mecanismos de reparación de errores.</li>
+        </ul>
+
+        <p>A pesar de estas simplificaciones, el modelo fue <strong>revolucionariamente útil</strong> porque capturó exactamente lo que se necesitaba saber para entender la herencia y la replicación genética.</p>
+      </section>
+
+      <section class="class-section" id="origen">
+        <h2>El Origen de la Vida: El Mayor Misterio Científico</h2>
+
+        <p>Llegamos ahora a una de las preguntas más profundas que puede hacerse la ciencia: <strong>¿Cómo surgió la vida en la Tierra?</strong> O más específicamente: <em>¿Cómo pasó de materia no viva a los primeros organismos vivos hace aproximadamente 3.800 millones de años?</em></p>
+
+        <p>Esta pregunta es fascinante filosóficamente porque está en el límite entre lo que la ciencia puede responder y lo que se vuelve especulativo. Veamos por qué.</p>
+
+        <div class="concept-highlight">
+          <h3>¿Por qué el origen de la vida es tan difícil de estudiar?</h3>
+          <ul>
+            <li><strong>Ocurrió una sola vez,</strong> hace ~3.800 millones de años. No podemos repetirlo ni observarlo directamente.</li>
+            <li><strong>Las moléculas orgánicas no se fosilizan.</strong> Los fósiles más antiguos son de estructuras celulares, no de los primeros pasos moleculares.</li>
+            <li><strong>Las condiciones de la Tierra primitiva son difíciles de reconstruir.</strong> No sabemos con exactitud qué gases componían la atmósfera, qué temperatura tenía el océano, etc.</li>
+            <li><strong>La frontera entre "vida" y "no vida" es conceptualmente difusa.</strong> ¿Cuándo exactamente algo pasa de ser química a ser "vivo"?</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="class-section" id="miller-urey">
+        <h2>Miller y Urey (1953): El Laboratorio como Máquina del Tiempo</h2>
+
+        <p>En 1953 —el mismo año que Watson y Crick publicaron la estructura del ADN— un joven estudiante de doctorado llamado <strong>Stanley Miller</strong>, en el laboratorio de <strong>Harold Urey</strong> en la Universidad de Chicago, realizó un experimento audaz: intentó recrear las condiciones químicas de la Tierra primitiva en un tubo de vidrio.</p>
+
+        <p>El diseño fue elegante: recrear en el laboratorio una versión simplificada de lo que los geólogos y astrónomos pensaban que era la atmósfera primitiva de la Tierra, hace más de 3.500 millones de años.</p>
+
+        <h3>Las condiciones supuestas de la Tierra primitiva</h3>
+        <ul>
+          <li>Atmósfera reductora (sin oxígeno libre): principalmente hidrógeno (H₂), metano (CH₄), amoniaco (NH₃) y vapor de agua (H₂O).</li>
+          <li>Océanos primitivos calientes, posiblemente con compuestos inorgánicos disueltos.</li>
+          <li>Abundantes descargas eléctricas (rayos) en la atmósfera.</li>
+          <li>Intensa radiación ultravioleta (sin capa de ozono protectora).</li>
+        </ul>
+
+        <div class="image-container">
+          <img src="../../assets/images/class-16/miller_urey_apparatus.svg" alt="Diagrama del aparato experimental de Miller y Urey">
+          <p class="image-caption">El aparato de Miller-Urey simulaba la atmósfera primitiva de la Tierra. Las descargas eléctricas actuaban como los rayos del primitivo cielo terrestre.</p>
+        </div>
+
+        <h3>Los resultados: una sorpresa revolucionaria</h3>
+        <p>Después de una semana de funcionamiento, el agua en la trampa inferior se había vuelto de color marrón-rojizo. Cuando Miller analizó su contenido, encontró algo asombroso: <strong>se habían formado aminoácidos</strong>, específicamente glicina, alanina y varios otros. Los aminoácidos son los bloques de construcción de las proteínas, que son la base química de la vida.</p>
+
+        <p>Esto fue una demostración poderosa: en condiciones prebióticas simuladas, sin ninguna intervención biológica, <strong>la química inorgánica puede generar moléculas orgánicas complejas</strong> que son precursoras de la vida.</p>
+
+        <div class="reflection-box">
+          <h3>Las Limitaciones del Experimento</h3>
+          <p>El experimento de Miller-Urey fue revolucionario, pero tiene limitaciones importantes:</p>
+          <ul>
+            <li><strong>La composición exacta de la atmósfera primitiva es incierta.</strong> Estudios posteriores sugieren que la atmósfera primitiva podría haber sido diferente (quizás más dióxido de carbono y menos metano).</li>
+            <li><strong>Producir aminoácidos no es lo mismo que producir vida.</strong> El camino desde aminoácidos hasta la primera célula funcional sigue siendo un misterio.</li>
+            <li><strong>El experimento requiere condiciones específicas</strong> que tal vez no estaban presentes de manera uniforme en toda la Tierra primitiva.</li>
+          </ul>
+          <p>Sin embargo, su valor epistemológico es inmenso: demostró que <em>el origen prebiótico de compuestos orgánicos es posible por principio</em>. La hipótesis no era absurda.</p>
+        </div>
+      </section>
+
+      <section class="class-section" id="hipotesis">
+        <h2>Otras Hipótesis sobre el Origen de la Vida</h2>
+
+        <p>El experimento de Miller-Urey no resolvió el origen de la vida; abrió un campo de investigación. Hoy existen varias hipótesis complementarias o alternativas:</p>
+
+        <h3>Hipótesis 1: El "Mundo de ARN"</h3>
+        <p>Un problema central en el origen de la vida es el llamado <strong>"problema del huevo y la gallina"</strong>: las proteínas (enzimas) son necesarias para copiar el ADN, pero el ADN contiene las instrucciones para hacer las proteínas. ¿Qué fue primero?</p>
+        <p>La hipótesis del <strong>mundo de ARN</strong> propone una solución elegante: <em>el ARN pudo haber sido primero</em>. El ARN es especial porque puede hacer las dos cosas: almacenar información genética (como el ADN) <em>y</em> catalizar reacciones químicas (como las proteínas). Los ARN con actividad catalítica se llaman <strong>ribozimas</strong>. En este escenario, el ARN fue la primera "molécula de la vida", capaz de replicarse a sí misma.</p>
+
+        <h3>Hipótesis 2: Panspermia</h3>
+        <p>La <strong>panspermia</strong> propone que las moléculas orgánicas básicas (o incluso organismos primitivos) llegaron a la Tierra desde el espacio, transportadas por meteoritos, cometas o polvo cósmico. Se han encontrado aminoácidos y otras moléculas orgánicas en meteoritos, como el famoso meteorito de Murchison (1969). Esto no resuelve el origen último de la vida, sino que sugiere que las moléculas precursoras pudieron tener origen extraterrestre.</p>
+
+        <h3>Hipótesis 3: Fuentes hidrotermales submarinas</h3>
+        <p>Una hipótesis alternativa propone que la vida no surgió en la superficie del océano (como sugería Miller-Urey) sino en las <strong>chimeneas hidrotermales</strong> del fondo del mar: fisuras donde el agua caliente rica en minerales emerge del interior de la Tierra. Estas chimeneas proporcionan energía química, gradientes de temperatura, y superficies minerales donde las moléculas podrían concentrarse y organizarse.</p>
+
+        <div class="concept-highlight">
+          <h3>Comparación Epistemológica de las Hipótesis</h3>
+          <p>¿Cómo evalúan los científicos estas hipótesis? Las preguntas clave son:</p>
+          <ul>
+            <li><strong>¿Es falsable?</strong> ¿Podemos diseñar un experimento que la refute si es falsa?</li>
+            <li><strong>¿Tiene poder explicativo?</strong> ¿Explica los datos disponibles (fósiles, meteoritos, química prebiótica)?</li>
+            <li><strong>¿Es coherente con otras teorías bien establecidas?</strong> (Química, física, geología)</li>
+            <li><strong>¿Hace predicciones testables?</strong> ¿Predice algo que podamos verificar?</li>
+          </ul>
+          <p>Ninguna de las hipótesis actuales sobre el origen de la vida es completa ni plenamente confirmada. Esta es una área activa de investigación donde la incertidumbre científica honesta es la norma.</p>
+        </div>
+      </section>
+
+      <section class="class-section" id="limites">
+        <h2>Los Límites del Conocimiento Científico</h2>
+
+        <p>El origen de la vida es un ejemplo perfecto para reflexionar sobre los <strong>límites del conocimiento científico</strong>. No toda pregunta tiene una respuesta científica completa, al menos con la tecnología y los métodos actuales.</p>
+
+        <h3>¿Cuándo una pregunta es científica?</h3>
+        <p>El filósofo Karl Popper propuso que una pregunta es científica si <strong>las teorías que propone son falsables</strong>: si hay una observación o experimento que podría refutarlas en principio. El origen de la vida cumple parcialmente este criterio: podemos probar hipótesis específicas sobre qué condiciones permiten la síntesis de aminoácidos, o qué estructuras moleculares son más probables que emergieran primero. Pero no podemos reproducir el evento único del origen de la vida tal como ocurrió.</p>
+
+        <h3>La Diferencia entre "¿Cómo?" y "¿Por qué?"</h3>
+        <p>La ciencia es muy buena respondiendo <em>¿cómo?</em>: ¿cómo se forman los aminoácidos en condiciones prebióticas? ¿Cómo podría el ARN haberse replicado sin proteínas? Pero cuando la pregunta se convierte en <em>¿por qué existe la vida?</em> o <em>¿cuál es el propósito de la vida?</em>, estamos fuera del dominio científico y en el territorio de la filosofía, la religión o la ética.</p>
+
+        <div class="reflection-box">
+          <h3>Honestidad Intelectual: Decir "No Sabemos"</h3>
+          <p>Una virtud científica fundamental es la <strong>honestidad intelectual</strong>: reconocer cuando no tenemos la respuesta. El origen de la vida es un caso donde la respuesta honesta es: <em>"Tenemos hipótesis plausibles y evidencia parcial, pero no sabemos con certeza cómo ocurrió"</em>.</p>
+          <p>Esto no es una debilidad de la ciencia; es una fortaleza. La ciencia avanza precisamente porque reconoce sus propios límites y sigue buscando, a diferencia de sistemas de conocimiento que afirman tener respuestas definitivas para todo.</p>
+        </div>
+      </section>
+
+      <section class="class-section" id="actividades">
+        <h2>Actividades</h2>
+
+        <div class="activity-box">
+          <h3>🔬 Actividad 1: Evaluación de Hipótesis</h3>
+          <div class="question-card">
+            <p><strong>Consigna:</strong> Completa la tabla evaluando las tres hipótesis sobre el origen de la vida según criterios epistemológicos:</p>
+            <table border="1" style="width: 100%; text-align: center;">
+              <thead>
+                <tr>
+                  <th>Hipótesis</th>
+                  <th>Evidencia a favor</th>
+                  <th>Limitaciones/evidencia en contra</th>
+                  <th>¿Es falsable?</th>
+                  <th>Fortaleza (1-5)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td>Miller-Urey (síntesis prebiótica)</td><td>...</td><td>...</td><td>...</td><td>...</td></tr>
+                <tr><td>Mundo de ARN</td><td>...</td><td>...</td><td>...</td><td>...</td></tr>
+                <tr><td>Panspermia</td><td>...</td><td>...</td><td>...</td><td>...</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="activity-box">
+          <h3>💭 Actividad 2: Reflexión sobre Modelos</h3>
+          <div class="question-card">
+            <p><strong>Consigna:</strong> Elige un modelo científico que hayas estudiado en este curso (puede ser el modelo geocéntrico, el heliocéntrico, la doble hélice, la replicación semiconservativa, u otro). Analízalo respondiendo:</p>
+            <ol>
+              <li>¿Qué aspectos de la realidad representa correctamente?</li>
+              <li>¿Qué simplifica o ignora?</li>
+              <li>¿Qué predicciones permite hacer?</li>
+              <li>¿Fue refutado o superado por un modelo mejor? ¿Cómo?</li>
+            </ol>
+          </div>
+        </div>
+
+        <div class="activity-box">
+          <h3>🌌 Actividad 3: ¿Ciencia o Filosofía?</h3>
+          <div class="question-card">
+            <p><strong>Consigna:</strong> Clasifica las siguientes preguntas como "científicas" (con respuesta potencialmente empírica), "filosóficas" (normativas o metafísicas), o "mixtas" (tienen dimensiones de ambas). Justifica cada clasificación:</p>
+            <ol>
+              <li>¿Qué condiciones químicas estaban presentes en los océanos hace 4.000 millones de años?</li>
+              <li>¿Tiene la vida un propósito o sentido?</li>
+              <li>¿Hay vida en otros planetas?</li>
+              <li>¿Deberíamos crear vida artificial en el laboratorio?</li>
+              <li>¿El ARN o las proteínas surgieron primero?</li>
+              <li>¿Los seres vivos somos "solo" química compleja?</li>
+            </ol>
+          </div>
+        </div>
+      </section>
+
+      <section class="class-section">
+        <h2>Conceptos Clave de Esta Clase</h2>
+        <div class="concept-highlight">
+          <ul>
+            <li><strong>Modelo científico:</strong> Representación simplificada de un fenómeno que permite explicarlo y predecir su comportamiento.</li>
+            <li><strong>Poder predictivo:</strong> Capacidad de un modelo para anticipar observaciones futuras que aún no se han realizado.</li>
+            <li><strong>Mundo de ARN:</strong> Hipótesis que propone que el ARN fue la primera molécula con capacidad de almacenar información y catalizar reacciones, antes del ADN y las proteínas.</li>
+            <li><strong>Panspermia:</strong> Hipótesis que propone que moléculas orgánicas o microorganismos llegaron a la Tierra desde el espacio exterior.</li>
+            <li><strong>Abducción:</strong> Tipo de inferencia que busca la "mejor explicación" disponible para los datos, incluso sin certeza deductiva.</li>
+            <li><strong>Falsabilidad:</strong> Criterio de demarcación científica de Popper: una hipótesis es científica si puede, en principio, ser refutada por evidencia empírica.</li>
+            <li><strong>Honestidad intelectual:</strong> Reconocer los límites del propio conocimiento, incluyendo los límites de lo que la ciencia puede responder actualmente.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="class-section">
+        <h2>Próxima Clase</h2>
+        <div class="concept-highlight">
+          <p><strong>Clase 17: Teoría, Experimentación y Tecnología</strong></p>
+          <p>Hemos completado el recorrido por los grandes descubrimientos de la biología molecular. A partir de la próxima clase, entramos en la <strong>fase de meta-reflexión</strong>: miraremos hacia atrás, a todo lo que estudiamos en las Unidades 1 y 2, y extraeremos lecciones epistemológicas más amplias.</p>
+          <p>En la Clase 17, exploraremos el triángulo entre <strong>teoría, experimentación y tecnología</strong>: ¿cómo se relacionan estas tres dimensiones del trabajo científico? ¿Puede haber ciencia sin instrumentos? ¿Sin hipótesis? ¿Sin experimentos?</p>
+        </div>
+      </section>
+
+      <nav class="class-navigation">
+        <a href="clase-15.html" class="nav-button">← Clase Anterior</a>
+        <a href="index.html" class="nav-button nav-button-index">📚 Índice de la Unidad</a>
+        <a href="clase-17.html" class="nav-button">Siguiente Clase →</a>
+      </nav>
+    </article>
+  </main>
+
+  <footer class="main-footer">
+    <div class="container">
+      <p>&copy; 2024 Filosofía 6to. Material educativo libre.</p>
+    </div>
+  </footer>
+
+  <script src="../../assets/js/dark-mode.js"></script>
+</body>
+
+</html>
