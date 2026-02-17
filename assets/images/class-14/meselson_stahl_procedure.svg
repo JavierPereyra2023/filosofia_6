@@ -1,0 +1,113 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 380">
+  <defs>
+    <marker id="arr2" markerWidth="8" markerHeight="8" refX="7" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#10b981"/>
+    </marker>
+  </defs>
+
+  <!-- Title -->
+  <text x="450" y="28" text-anchor="middle" font-size="18" font-weight="bold" fill="#10b981">
+    Procedimiento Experimental de Meselson y Stahl (1958)
+  </text>
+
+  <!-- Step 1: Grow in N15 -->
+  <g id="step1">
+    <rect x="30" y="60" width="160" height="240" rx="10" fill="#8b5cf6" opacity="0.1" stroke="#8b5cf6" stroke-width="2"/>
+    <circle cx="30" cy="60" r="14" fill="#8b5cf6"/>
+    <text x="30" y="65" text-anchor="middle" font-size="11" fill="white" font-weight="bold">1</text>
+    <text x="110" y="85" text-anchor="middle" font-size="12" font-weight="bold" fill="#8b5cf6">Cultivar en ¹⁵N</text>
+    <text x="110" y="100" text-anchor="middle" font-size="10" fill="#6b7280">Nitrógeno pesado</text>
+    <text x="110" y="115" text-anchor="middle" font-size="10" fill="#6b7280">durante varias</text>
+    <text x="110" y="128" text-anchor="middle" font-size="10" fill="#6b7280">generaciones</text>
+    <!-- Bacteria with heavy DNA -->
+    <ellipse cx="110" cy="175" rx="40" ry="22" fill="#d1fae5" stroke="#8b5cf6" stroke-width="1.5"/>
+    <rect x="90" y="168" width="40" height="10" rx="2" fill="#8b5cf6" opacity="0.7"/>
+    <text x="110" y="210" text-anchor="middle" font-size="10" fill="#8b5cf6">ADN todo ¹⁵N</text>
+    <text x="110" y="222" text-anchor="middle" font-size="9" fill="#6b7280">(pesado)</text>
+    <text x="110" y="275" text-anchor="middle" font-size="10" fill="#1f2937">Todas las bases</text>
+    <text x="110" y="287" text-anchor="middle" font-size="10" fill="#1f2937">de ADN marcan</text>
+    <text x="110" y="299" text-anchor="middle" font-size="10" fill="#8b5cf6" font-weight="bold">¹⁵N pesado</text>
+  </g>
+
+  <!-- Arrow 1→2 -->
+  <line x1="195" y1="180" x2="225" y2="180" stroke="#10b981" stroke-width="2" marker-end="url(#arr2)"/>
+
+  <!-- Step 2: Transfer to N14 -->
+  <g id="step2">
+    <rect x="230" y="60" width="160" height="240" rx="10" fill="#60a5fa" opacity="0.1" stroke="#60a5fa" stroke-width="2"/>
+    <circle cx="230" cy="60" r="14" fill="#60a5fa"/>
+    <text x="230" y="65" text-anchor="middle" font-size="11" fill="white" font-weight="bold">2</text>
+    <text x="310" y="85" text-anchor="middle" font-size="12" font-weight="bold" fill="#3b82f6">Transferir a ¹⁴N</text>
+    <text x="310" y="100" text-anchor="middle" font-size="10" fill="#6b7280">Cambiar medio a</text>
+    <text x="310" y="113" text-anchor="middle" font-size="10" fill="#6b7280">nitrógeno liviano</text>
+    <!-- Bacteria transitioning -->
+    <ellipse cx="310" cy="168" rx="40" ry="22" fill="#dbeafe" stroke="#3b82f6" stroke-width="1.5"/>
+    <rect x="290" y="161" width="20" height="10" rx="2" fill="#8b5cf6" opacity="0.7"/>
+    <rect x="310" y="161" width="20" height="10" rx="2" fill="#60a5fa" opacity="0.7"/>
+    <text x="310" y="205" text-anchor="middle" font-size="10" fill="#3b82f6">Bacteria empieza</text>
+    <text x="310" y="217" text-anchor="middle" font-size="9" fill="#6b7280">a usar ¹⁴N nuevo</text>
+    <text x="310" y="275" text-anchor="middle" font-size="10" fill="#1f2937">Las nuevas bases</text>
+    <text x="310" y="287" text-anchor="middle" font-size="10" fill="#1f2937">serán de</text>
+    <text x="310" y="299" text-anchor="middle" font-size="10" fill="#3b82f6" font-weight="bold">¹⁴N liviano</text>
+  </g>
+
+  <!-- Arrow 2→3 -->
+  <line x1="395" y1="180" x2="425" y2="180" stroke="#10b981" stroke-width="2" marker-end="url(#arr2)"/>
+
+  <!-- Step 3: Sample at Gen 1 & 2 -->
+  <g id="step3">
+    <rect x="430" y="60" width="160" height="240" rx="10" fill="#10b981" opacity="0.1" stroke="#10b981" stroke-width="2"/>
+    <circle cx="430" cy="60" r="14" fill="#10b981"/>
+    <text x="430" y="65" text-anchor="middle" font-size="11" fill="white" font-weight="bold">3</text>
+    <text x="510" y="85" text-anchor="middle" font-size="12" font-weight="bold" fill="#10b981">Muestras por generación</text>
+    <text x="510" y="100" text-anchor="middle" font-size="10" fill="#6b7280">Tomar bacterias en</text>
+    <text x="510" y="113" text-anchor="middle" font-size="10" fill="#6b7280">Gen 1 y Gen 2</text>
+    <!-- Two sample containers -->
+    <rect x="465" y="130" width="40" height="55" rx="3" fill="#d1fae5" stroke="#10b981" stroke-width="1.5"/>
+    <text x="485" y="170" text-anchor="middle" font-size="9" fill="#10b981" font-weight="bold">Gen 1</text>
+    <rect x="520" y="130" width="40" height="55" rx="3" fill="#d1fae5" stroke="#10b981" stroke-width="1.5"/>
+    <text x="540" y="170" text-anchor="middle" font-size="9" fill="#10b981" font-weight="bold">Gen 2</text>
+    <text x="510" y="210" text-anchor="middle" font-size="10" fill="#1f2937">Extraer el ADN</text>
+    <text x="510" y="222" text-anchor="middle" font-size="9" fill="#6b7280">de cada muestra</text>
+    <text x="510" y="275" text-anchor="middle" font-size="10" fill="#1f2937">¿Dónde está</text>
+    <text x="510" y="287" text-anchor="middle" font-size="10" fill="#1f2937">el ¹⁵N pesado?</text>
+    <text x="510" y="299" text-anchor="middle" font-size="9" fill="#6b7280">(pregunta clave)</text>
+  </g>
+
+  <!-- Arrow 3→4 -->
+  <line x1="595" y1="180" x2="625" y2="180" stroke="#10b981" stroke-width="2" marker-end="url(#arr2)"/>
+
+  <!-- Step 4: Centrifuge CsCl -->
+  <g id="step4">
+    <rect x="630" y="60" width="240" height="240" rx="10" fill="#f59e0b" opacity="0.1" stroke="#f59e0b" stroke-width="2"/>
+    <circle cx="630" cy="60" r="14" fill="#f59e0b"/>
+    <text x="630" y="65" text-anchor="middle" font-size="11" fill="white" font-weight="bold">4</text>
+    <text x="750" y="85" text-anchor="middle" font-size="12" font-weight="bold" fill="#f59e0b">Centrifugación en CsCl</text>
+    <text x="750" y="100" text-anchor="middle" font-size="10" fill="#6b7280">El ADN se "hunde" según su peso</text>
+    <!-- Two tubes -->
+    <rect x="660" y="115" width="50" height="120" rx="4" fill="white" stroke="#6b7280" stroke-width="1.5"/>
+    <text x="685" y="112" text-anchor="middle" font-size="9" fill="#6b7280">Gen 1</text>
+    <!-- Single intermediate band -->
+    <rect x="663" y="185" width="44" height="14" fill="#34d399" opacity="0.9"/>
+    <text x="685" y="195" text-anchor="middle" font-size="8" fill="white">intermedio</text>
+    <text x="685" y="250" text-anchor="middle" font-size="9" fill="#34d399" font-weight="bold">1 banda</text>
+
+    <rect x="780" y="115" width="50" height="120" rx="4" fill="white" stroke="#6b7280" stroke-width="1.5"/>
+    <text x="805" y="112" text-anchor="middle" font-size="9" fill="#6b7280">Gen 2</text>
+    <!-- Intermediate + light bands -->
+    <rect x="783" y="170" width="44" height="12" fill="#34d399" opacity="0.9"/>
+    <text x="805" y="179" text-anchor="middle" font-size="7" fill="white">intermedio</text>
+    <rect x="783" y="200" width="44" height="12" fill="#60a5fa" opacity="0.9"/>
+    <text x="805" y="209" text-anchor="middle" font-size="7" fill="white">liviano</text>
+    <text x="805" y="250" text-anchor="middle" font-size="9" fill="#10b981" font-weight="bold">2 bandas ✓</text>
+  </g>
+
+  <!-- Bottom conclusion -->
+  <rect x="30" y="318" width="840" height="50" rx="8" fill="#10b981" opacity="0.15" stroke="#10b981" stroke-width="1.5"/>
+  <text x="450" y="340" text-anchor="middle" font-size="13" font-weight="bold" fill="#10b981">
+    Resultado: Solo el modelo semiconservativo predice exactamente este patrón
+  </text>
+  <text x="450" y="358" text-anchor="middle" font-size="11" fill="#1f2937">
+    Gen 1 = 1 banda intermedia | Gen 2 = 1 banda intermedia + 1 banda liviana
+  </text>
+</svg>

@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clase 14: Replicación del ADN - Meselson y Stahl | Filosofía 6to</title>
+  <link rel="stylesheet" href="../../assets/css/variables.css">
+  <link rel="stylesheet" href="../../assets/css/reset.css">
+  <link rel="stylesheet" href="../../assets/css/base.css">
+  <link rel="stylesheet" href="../../assets/css/typography.css">
+  <link rel="stylesheet" href="../../assets/css/layout.css">
+  <link rel="stylesheet" href="../../assets/css/navigation.css">
+  <link rel="stylesheet" href="../../assets/css/components.css">
+  <link rel="stylesheet" href="../../assets/css/unit-page.css">
+  <link rel="stylesheet" href="../../assets/css/book-layout.css">
+
+  <style>
+    .class-container::before {
+      content: '   ¹⁵N → ¹⁴N\A     ↓↓↓\A   Gen 1:\A  ━━━━━━━\A (intermedio)\A\A   Gen 2:\A  ━━━━━━━\A  ───────';
+      position: fixed;
+      top: 15%;
+      right: 5%;
+      font-family: 'Caveat', 'Comic Sans MS', cursive;
+      font-size: 24px;
+      font-weight: 700;
+      white-space: pre;
+      color: rgba(255, 255, 255, 0.35);
+      transform: rotate(-6deg);
+    }
+
+    .class-container::after {
+      content: '  Semiconservativa\A       ↓\A  cada hija tiene\A  1 cadena vieja\A       +\A  1 cadena nueva';
+      position: fixed;
+      bottom: 20%;
+      left: 5%;
+      font-family: 'Caveat', 'Comic Sans MS', cursive;
+      font-size: 23px;
+      font-weight: 700;
+      white-space: pre;
+      color: rgba(255, 255, 255, 0.32);
+      transform: rotate(5deg);
+    }
+
+    @media (max-width: 1024px) {
+      .class-container::before,
+      .class-container::after {
+        position: relative;
+        width: 100%;
+        text-align: center;
+        top: auto;
+        bottom: auto;
+        left: auto;
+        right: auto;
+        transform: rotate(0deg);
+        margin: var(--space-xl) 0;
+        font-size: 18px;
+        display: block;
+      }
+
+      .class-container::before {
+        content: 'Meselson & Stahl | ¹⁵N → ¹⁴N | Replicación Semiconservativa';
+      }
+
+      .class-container::after {
+        content: 'Experimentum crucis | Gen 1: Intermedio | Gen 2: Intermedio + Liviano';
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <nav class="main-nav">
+    <div class="nav-container">
+      <div class="nav-left">
+        <a href="index.html" class="nav-back-button" title="Volver al índice de la unidad">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24"
+            stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M15 19l-7-7 7-7" />
+          </svg>
+          <span>Unidad 2</span>
+        </a>
+        <a href="../../home.html" class="nav-brand">Filosofía 6to</a>
+      </div>
+      <div class="nav-controls">
+        <button id="dark-mode-toggle" class="dark-mode-toggle" aria-label="Cambiar tema">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24"
+            stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <div class="class-progress">
+    <div class="container">
+      <div class="progress-info">
+        <span class="progress-text">Clase 14 de 20</span>
+        <span class="progress-text">25% de la unidad</span>
+      </div>
+      <div class="progress-bar">
+        <div class="progress-fill" style="width: 25%"></div>
+      </div>
+    </div>
+  </div>
+
+  <main class="class-container">
+    <aside class="sidebar">
+      <div class="sidebar-section">
+        <h3>En esta clase</h3>
+        <ul>
+          <li><a href="#intro">El problema de la replicación</a></li>
+          <li><a href="#tres-modelos">Los Tres Modelos</a></li>
+          <li><a href="#meselson-stahl">Meselson y Stahl</a></li>
+          <li><a href="#experimento">El Experimento</a></li>
+          <li><a href="#resultados">Resultados y Conclusión</a></li>
+          <li><a href="#filosofia">Elegancia Experimental</a></li>
+          <li><a href="#actividades">Actividades</a></li>
+        </ul>
+      </div>
+
+      <div class="sidebar-section">
+        <h3>Conceptos Clave</h3>
+        <ul class="concept-list">
+          <li>Replicación del ADN</li>
+          <li>Modelo semiconservativo</li>
+          <li>Isótopos radiactivos</li>
+          <li>Ultracentrifugación</li>
+          <li>Experimentum crucis</li>
+          <li>Falsación múltiple</li>
+          <li>Predicciones cuantitativas</li>
+        </ul>
+      </div>
+
+      <div class="sidebar-section">
+        <h3>Científicos</h3>
+        <div class="scientist-card">
+          <h4>Matthew Meselson</h4>
+          <p><strong>1930–</strong> | Estados Unidos</p>
+          <p>Bioquímico del Caltech (California Institute of Technology). Especialista en genética molecular. Realizó el experimento junto con Stahl cuando era estudiante de posgrado de 28 años.</p>
+        </div>
+        <div class="scientist-card">
+          <h4>Franklin Stahl</h4>
+          <p><strong>1929–</strong> | Estados Unidos</p>
+          <p>Genetista y biólogo molecular del Caltech. Colaboró con Meselson en el diseño e interpretación del experimento. Más tarde fue conocido como "el genio de la levadura" por sus trabajos en recombinación genética.</p>
+        </div>
+      </div>
+    </aside>
+
+    <article class="class-content">
+      <header class="class-header">
+        <div class="class-badge">Clase 14</div>
+        <h1 class="class-title">Replicación del ADN: El Experimento de Meselson y Stahl</h1>
+        <p class="class-subtitle">El Experimento Más Elegante de la Biología Molecular</p>
+      </header>
+
+      <section class="class-section" id="intro">
+        <h2>El Gran Misterio de 1953: Sabemos la Estructura, ¿Pero Cómo Se Copia?</h2>
+
+        <p>Cuando Watson y Crick publicaron el modelo de doble hélice del ADN en abril de 1953, resolvieron una pregunta fundamental: <strong>¿cuál es la estructura del material genético?</strong> Pero casi de inmediato, esta respuesta generó una nueva pregunta igualmente importante.</p>
+
+        <p>Si el ADN es la molécula que contiene la información genética, entonces cada vez que una célula se divide, esa información debe copiarse fielmente para transmitirse a las células hijas. Y el ADN está formado por <em>dos</em> cadenas entrelazadas en hélice. Entonces surge la pregunta clave: <strong>¿Cómo se duplica una doble hélice?</strong></p>
+
+        <div class="concept-highlight">
+          <h3>El Problema Biológico</h3>
+          <p>Una célula bacteria se divide en dos células hijas, y cada célula hija debe recibir una copia exacta del ADN original. Si el ADN original tiene dos cadenas, y cada célula hija necesita dos cadenas, entonces de una molécula deben surgir dos moléculas idénticas.</p>
+          <p><strong>La pregunta concreta:</strong> ¿Qué pasa con las cadenas originales? ¿Se destruyen y se construyen dos nuevas? ¿Se conservan completas? ¿Se fragmentan y redistribuyen?</p>
+        </div>
+
+        <p>En el final de su famoso artículo de 1953, Watson y Crick habían escrito una frase que pasaría a la historia de la ciencia: <em>"No ha escapado a nuestra atención que el emparejamiento específico que hemos postulado sugiere inmediatamente un posible mecanismo de copia para el material genético."</em> Con esta oración, insinuaban que la estructura de doble hélice "sugería" cómo podría replicarse: separando las dos cadenas y usando cada una como molde para construir una cadena nueva.</p>
+
+        <p>Pero eso era solo una hipótesis. Hacían falta experimentos para confirmarlo, y tendrían que esperar cinco años.</p>
+      </section>
+
+      <section class="class-section" id="tres-modelos">
+        <h2>Los Tres Modelos Posibles de Replicación</h2>
+
+        <p>Para 1958, los biólogos moleculares habían propuesto tres modelos alternativos sobre cómo podría replicarse el ADN. Los tres eran internamente coherentes y difíciles de descartar sin evidencia experimental directa:</p>
+
+        <h3>Modelo 1: Replicación Conservativa</h3>
+        <p>La doble hélice original <strong>se conserva intacta</strong>. De algún modo, se crea una copia completamente nueva mientras el original permanece sin cambios. Resultado: una célula hija recibe el ADN "original" y la otra recibe el ADN "nuevo".</p>
+
+        <h3>Modelo 2: Replicación Semiconservativa</h3>
+        <p>La doble hélice se "abre" como una cremallera, y cada cadena sirve como plantilla para construir una nueva cadena complementaria. <strong>Cada molécula hija tiene una cadena "vieja" y una cadena "nueva".</strong> Este era el modelo sugerido por Watson y Crick.</p>
+
+        <h3>Modelo 3: Replicación Dispersiva</h3>
+        <p>Cada cadena original se fragmenta en pedazos, que se mezclan aleatoriamente con fragmentos de ADN nuevo. Las moléculas hijas son <strong>"mosaicos"</strong> de fragmentos viejos y nuevos, distribuidos al azar.</p>
+
+        <div class="image-container">
+          <img src="../../assets/images/class-14/three_replication_models.svg" alt="Diagrama comparativo de los tres modelos de replicación del ADN">
+          <p class="image-caption">Los tres modelos posibles de replicación del ADN. Cada uno hace predicciones diferentes sobre la composición del ADN en la primera y segunda generación.</p>
+        </div>
+
+        <div class="concept-highlight">
+          <h3>El Desafío Epistemológico: Hipótesis Rivales</h3>
+          <p>Cuando hay <strong>múltiples hipótesis igualmente plausibles</strong> para explicar un fenómeno, necesitamos un experimento que las pueda <em>distinguir</em>. El experimento ideal, llamado <em>experimentum crucis</em> ("experimento decisivo"), debe:</p>
+          <ul>
+            <li><strong>Hacer predicciones diferentes</strong> para cada hipótesis.</li>
+            <li><strong>Ser ejecutable con la tecnología disponible.</strong></li>
+            <li><strong>Dar resultados claros e inequívocos.</strong></li>
+          </ul>
+          <p>El experimento de Meselson y Stahl cumplió con los tres requisitos. Por eso se ha llamado <em>"el experimento más hermoso de la biología"</em>.</p>
+        </div>
+      </section>
+
+      <section class="class-section" id="meselson-stahl">
+        <h2>Matthew Meselson y Franklin Stahl: La Dupla del Caltech</h2>
+
+        <p>En 1957, dos jóvenes investigadores del <strong>California Institute of Technology (Caltech)</strong> decidieron abordar el problema de la replicación del ADN con un enfoque innovador. Tenían respectivamente 27 y 28 años.</p>
+
+        <p><strong>Matthew Meselson</strong> nació en Denver, Colorado en 1930. Era estudiante de doctorado en el laboratorio de Linus Pauling (el mismo Pauling que había competido con Watson y Crick por la estructura del ADN). Meselson tenía una habilidad especial para el pensamiento lógico y el diseño experimental cuidadoso.</p>
+
+        <p><strong>Franklin Stahl</strong> nació en Boston en 1929. Era genetista con formación en virus bacterianos (bacteriófagos). Su complementariedad con Meselson fue ideal: Meselson aportaba el pensamiento bioquímico y físico; Stahl aportaba la perspectiva genética.</p>
+
+        <p>Su punto de partida fue una idea elegante: usar <strong>isótopos de nitrógeno</strong> como marcadores del ADN. El nitrógeno forma parte de todas las bases del ADN (A, T, G, C). El nitrógeno normal es el isotopo liviano <strong>¹⁴N</strong>. Pero existe una versión más pesada y estable (no radiactiva) llamada <strong>¹⁵N</strong>. Si se hace crecer bacterias en un medio con ¹⁵N en lugar de ¹⁴N, todo el ADN de esas bacterias incorporará ¹⁵N y será un poco más <em>pesado</em> que el ADN normal.</p>
+
+        <p>Y lo crucial: <strong>en una centrifugadora de alta velocidad (ultracentrifugación), el ADN pesado (¹⁵N) se separa físicamente del ADN liviano (¹⁴N)</strong>, formando bandas a diferentes alturas en el tubo. Esto es exactamente lo que se necesitaba para distinguir el ADN "original" del ADN "nuevo".</p>
+      </section>
+
+      <section class="class-section" id="experimento">
+        <h2>El Diseño Experimental: Simple y Genial</h2>
+
+        <p>El procedimiento de Meselson y Stahl fue <strong>notable por su elegancia</strong>: pocas variables, pocas etapas, resultados claros:</p>
+
+        <ol>
+          <li><strong>Cultivar bacterias (<em>E. coli</em>) durante varias generaciones en un medio con ¹⁵N exclusivamente.</strong> Después de muchas generaciones, todo el ADN de las bacterias contiene ¹⁵N. Se puede verificar esto por centrifugación: todo el ADN forma una única banda "pesada".</li>
+
+          <li><strong>Transferir las bacterias a un medio con solo ¹⁴N.</strong> A partir de este momento, cualquier ADN que se sintetice usará ¹⁴N liviano.</li>
+
+          <li><strong>Permitir exactamente una generación de crecimiento</strong> en el medio con ¹⁴N. Luego extraer el ADN y centrifugarlo. <em>¿Qué bandas aparecen?</em></li>
+
+          <li><strong>Permitir una segunda generación de crecimiento</strong> y repetir la extracción y centrifugación. <em>¿Cambió el patrón de bandas?</em></li>
+        </ol>
+
+        <div class="image-container">
+          <img src="../../assets/images/class-14/meselson_stahl_procedure.svg" alt="Procedimiento paso a paso del experimento de Meselson y Stahl">
+          <p class="image-caption">El procedimiento experimental de Meselson y Stahl: de bacterias con ADN pesado (¹⁵N) a la detección de bandas intermedias en la primera generación.</p>
+        </div>
+
+        <div class="reflection-box">
+          <h3>Predicciones de Cada Modelo</h3>
+          <p>La brillantez del diseño es que <strong>cada modelo hace predicciones cuantitativas y distintas</strong> sobre qué bandas aparecerán:</p>
+          <ul>
+            <li><strong>Modelo conservativo:</strong> Gen 1 → dos bandas (una pesada del original + una liviana totalmente nueva). Gen 2 → tres bandas (pesada + dos livianas).</li>
+            <li><strong>Modelo semiconservativo:</strong> Gen 1 → UNA sola banda intermedia (todas las moléculas tienen 50% ¹⁵N + 50% ¹⁴N). Gen 2 → dos bandas (intermedia + liviana).</li>
+            <li><strong>Modelo dispersivo:</strong> Gen 1 → una banda intermedia. Gen 2 → una banda que se desplaza gradualmente hacia lo liviano (sin separación clara en dos bandas).</li>
+          </ul>
+          <p><strong>Nota crítica:</strong> El modelo conservativo se puede refutar <em>definitivamente</em> en la Gen 1: si aparece solo una banda intermedia (y no dos bandas separadas), el modelo conservativo queda descartado.</p>
+        </div>
+      </section>
+
+      <section class="class-section" id="resultados">
+        <h2>Los Resultados: Un Patrón Inequívoco</h2>
+
+        <p>En 1958, Meselson y Stahl publicaron sus resultados en la revista <em>Proceedings of the National Academy of Sciences</em>. Los datos fueron <strong>decisivos e inequívocos</strong>:</p>
+
+        <h3>Generación 0 (antes de transferir a ¹⁴N):</h3>
+        <p>Una sola banda en la posición "pesada" (todo el ADN es ¹⁵N). ✓ Esto confirma que el protocolo de marcaje funcionó correctamente.</p>
+
+        <h3>Generación 1 (después de una división en ¹⁴N):</h3>
+        <p><strong>Una sola banda en posición intermedia.</strong> No hay dos bandas separadas (lo que descartaría el modelo conservativo), ni una dispersión continua. Una banda nítida e intermedia. Esto <strong>refuta inmediatamente el modelo conservativo.</strong></p>
+
+        <h3>Generación 2 (después de dos divisiones en ¹⁴N):</h3>
+        <p><strong>Dos bandas distintas</strong>: una en la posición intermedia y otra en la posición liviana, con aproximadamente igual intensidad. Esto <strong>refuta el modelo dispersivo</strong> (que predecía una sola banda desplazada) y <strong>confirma el modelo semiconservativo</strong> (que predecía exactamente esta distribución: 50% de moléculas intermedias + 50% de moléculas livianas).</p>
+
+        <div class="concept-highlight">
+          <h3>¿Por qué Gen 2 tiene esas dos bandas?</h3>
+          <p>Si el modelo semiconservativo es correcto, en la Gen 1 todas las moléculas tienen una cadena ¹⁵N y una cadena ¹⁴N (intermedias). En la Gen 2, esas moléculas intermedias se replican:</p>
+          <ul>
+            <li>La cadena ¹⁵N sirve de molde → nueva molécula con cadena ¹⁵N (vieja) + cadena ¹⁴N (nueva) = <strong>intermedia</strong>.</li>
+            <li>La cadena ¹⁴N sirve de molde → nueva molécula con cadena ¹⁴N (vieja) + cadena ¹⁴N (nueva) = <strong>liviana</strong>.</li>
+          </ul>
+          <p>Resultado esperado: exactamente <strong>50% intermedias + 50% livianas</strong>. Y eso es exactamente lo que Meselson y Stahl observaron. 🎯</p>
+        </div>
+
+        <p>El resultado fue tan claro que la comunidad científica lo aceptó casi de inmediato. El experimento de Meselson-Stahl se convirtió en uno de los experimentos más citados y celebrados de la historia de la biología molecular. El biólogo John Cairns lo describió como <em>"el experimento más hermoso de la biología"</em>.</p>
+      </section>
+
+      <section class="class-section" id="filosofia">
+        <h2>Lecciones Epistemológicas: La Elegancia del Experimento Crucis</h2>
+
+        <h3>1. El <em>Experimentum Crucis</em> Moderno</h3>
+        <p>El término <em>experimentum crucis</em> (experimento decisivo o de "cruz") fue acuñado por el filósofo Francis Bacon en el siglo XVII. Se refiere a un experimento que, en el cruce (intersección) de dos caminos posibles, indica claramente cuál es el correcto.</p>
+        <p>El experimento de Meselson-Stahl es un ejemplo moderno y paradigmático: era capaz de <strong>discriminar entre tres hipótesis</strong> con un único conjunto de observaciones. No solo verificaba una hipótesis; falsificaba dos y confirmaba una.</p>
+
+        <h3>2. Predicciones Cuantitativas vs. Cualitativas</h3>
+        <p>Una característica especialmente valiosa de este experimento es que las predicciones no son meramente cualitativas ("habrá una banda" vs. "habrá dos bandas"), sino también <strong>cuantitativas</strong>: en la Gen 2, el modelo semiconservativo predice <em>exactamente 50% de cada tipo</em>. Esta precisión cuantitativa hace la confirmación mucho más convincente.</p>
+
+        <div class="concept-highlight">
+          <h3>El Uso de Isótopos: Una Innovación Metodológica</h3>
+          <p>La idea de usar isótopos estables (no radiactivos) de nitrógeno fue una <strong>innovación metodológica clave</strong> que permitió "marcar" el ADN sin afectar su biología. Esto ilustra cómo el progreso científico depende no solo de mejores preguntas teóricas, sino también de <strong>mejores herramientas técnicas</strong>.</p>
+          <ul>
+            <li><strong>¹⁵N es "biológicamente transparente":</strong> Las bacterias lo incorporan sin ningún problema, porque solo difiere en un neutrón del nitrógeno normal.</li>
+            <li><strong>¹⁵N es detectable físicamente:</strong> La diferencia de peso es suficiente para separarlo por ultracentrifugación.</li>
+            <li><strong>El método no interfiere con lo que mide:</strong> Una virtud metodológica fundamental.</li>
+          </ul>
+        </div>
+
+        <h3>3. Falsación Simultánea y Múltiple</h3>
+        <p>El filósofo Karl Popper propuso que el avance científico ocurre a través de la <strong>falsación de hipótesis</strong>: no podemos probar que una teoría es verdadera, pero sí podemos probar que es falsa. El experimento de Meselson-Stahl es un ejemplo de <strong>falsación múltiple</strong>: en un solo experimento, se falsificaron dos de los tres modelos posibles, dejando solo uno en pie.</p>
+
+        <h3>4. La "Elegancia" como Criterio Científico</h3>
+        <p>Los científicos frecuentemente hablan de experimentos "elegantes" o "hermosos". Pero, ¿qué hace que un experimento sea elegante desde un punto de vista epistemológico? El experimento de Meselson-Stahl nos da una respuesta:</p>
+        <ul>
+          <li><strong>Economía conceptual:</strong> Un diseño simple que responde una pregunta compleja.</li>
+          <li><strong>Limpieza experimental:</strong> Pocas variables confundentes, resultados nítidos.</li>
+          <li><strong>Decisividad:</strong> El resultado no deja ambigüedad sobre qué hipótesis es correcta.</li>
+          <li><strong>Generalidad:</strong> El principio demostrado (replicación semiconservativa) aplica a todos los organismos vivos.</li>
+        </ul>
+      </section>
+
+      <section class="class-section" id="actividades">
+        <h2>Actividades</h2>
+
+        <div class="activity-box">
+          <h3>🔬 Actividad 1: Predicciones Experimentales</h3>
+          <div class="question-card">
+            <p><strong>Consigna:</strong> Basándote en los tres modelos de replicación, completa la siguiente tabla de predicciones:</p>
+            <table border="1" style="width: 100%; text-align: center;">
+              <thead>
+                <tr>
+                  <th>Modelo</th>
+                  <th>Gen 1: bandas esperadas</th>
+                  <th>Gen 2: bandas esperadas</th>
+                  <th>¿Compatible con resultados?</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Conservativo</td>
+                  <td>...</td>
+                  <td>...</td>
+                  <td>...</td>
+                </tr>
+                <tr>
+                  <td>Semiconservativo</td>
+                  <td>...</td>
+                  <td>...</td>
+                  <td>...</td>
+                </tr>
+                <tr>
+                  <td>Dispersivo</td>
+                  <td>...</td>
+                  <td>...</td>
+                  <td>...</td>
+                </tr>
+              </tbody>
+            </table>
+            <p><em>¿En qué generación se descarta definitivamente el modelo conservativo? ¿Y el dispersivo? Explica en tus propias palabras.</em></p>
+          </div>
+        </div>
+
+        <div class="activity-box">
+          <h3>💡 Actividad 2: Análisis Lógico</h3>
+          <div class="question-card">
+            <p><strong>Consigna:</strong> Responde las siguientes preguntas de análisis lógico:</p>
+            <ol>
+              <li>Si en la Generación 1 hubieran aparecido <em>dos bandas</em> (una pesada y una liviana), ¿qué modelo quedaría confirmado? ¿Por qué?</li>
+              <li>Si en la Generación 2 hubiera aparecido <em>una sola banda intermedia</em> (sin banda liviana), ¿qué modelo quedaría confirmado?</li>
+              <li>¿Por qué era importante tener primero bacterias marcadas completamente con ¹⁵N antes de transferirlas a ¹⁴N? ¿Qué habría pasado si hubieran empezado con bacterias que ya tuvieran una mezcla de ¹⁵N y ¹⁴N?</li>
+            </ol>
+          </div>
+        </div>
+
+        <div class="activity-box">
+          <h3>🧪 Actividad 3: Diseño Experimental Alternativo</h3>
+          <div class="question-card">
+            <p><strong>Consigna:</strong> Imagina que en 1958 no existía la técnica de ultracentrifugación con gradiente de CsCl. Propone una estrategia experimental alternativa para distinguir entre los tres modelos de replicación del ADN. Puedes usar:</p>
+            <ul>
+              <li>Marcadores radiactivos (como hicieron Hershey y Chase)</li>
+              <li>Microscopía electrónica</li>
+              <li>Cualquier otra técnica que puedas imaginar</li>
+            </ul>
+            <p><em>¿Cuáles serían las limitaciones de tu diseño alternativo comparado con el de Meselson y Stahl?</em></p>
+          </div>
+        </div>
+      </section>
+
+      <section class="class-section">
+        <h2>Conceptos Clave de Esta Clase</h2>
+        <div class="concept-highlight">
+          <ul>
+            <li><strong>Replicación del ADN:</strong> Proceso por el cual una molécula de ADN se duplica, produciendo dos copias idénticas.</li>
+            <li><strong>Modelo semiconservativo:</strong> Modelo de replicación donde cada molécula hija conserva una cadena del ADN original y sintetiza una nueva cadena complementaria.</li>
+            <li><strong>Isótopos:</strong> Variantes de un elemento con diferente número de neutrones. El ¹⁵N es más pesado que el ¹⁴N pero químicamente idéntico.</li>
+            <li><strong>Ultracentrifugación:</strong> Técnica que separa moléculas por peso mediante centrifugación a altísimas velocidades.</li>
+            <li><strong>Experimentum crucis:</strong> Experimento "decisivo" que discrimina entre hipótesis rivales con resultados inequívocos.</li>
+            <li><strong>Falsación múltiple:</strong> Cuando un experimento descarta simultáneamente más de una hipótesis alternativa.</li>
+            <li><strong>Predicciones cuantitativas:</strong> Predicciones que especifican no solo la dirección (más o menos) sino los valores exactos esperados.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="class-section">
+        <h2>Próxima Clase</h2>
+        <div class="concept-highlight">
+          <p><strong>Clase 15: Tecnología y Ética — Clonación y CRISPR</strong></p>
+          <p>Hemos estudiado cómo los científicos <em>descubrieron</em> el ADN y cómo <em>entienden</em> sus mecanismos. Ahora llegamos a una pregunta diferente: ¿qué podemos <em>hacer</em> con ese conocimiento?</p>
+          <p>En la próxima clase exploraremos las biotecnologías que emergieron del conocimiento del ADN:</p>
+          <ul>
+            <li>La oveja Dolly y la clonación (1996)</li>
+            <li>CRISPR-Cas9: las "tijeras moleculares" del siglo XXI</li>
+            <li>Debates éticos: ¿hasta dónde debemos llegar con la manipulación genética?</li>
+          </ul>
+          <p>Esta clase marca la transición de la ciencia básica a la <strong>tecnociencia</strong>: la ciencia aplicada con implicaciones éticas concretas.</p>
+        </div>
+      </section>
+
+      <nav class="class-navigation">
+        <a href="clase-13.html" class="nav-button">← Clase Anterior</a>
+        <a href="index.html" class="nav-button nav-button-index">📚 Índice de la Unidad</a>
+        <a href="clase-15.html" class="nav-button">Siguiente Clase →</a>
+      </nav>
+    </article>
+  </main>
+
+  <footer class="main-footer">
+    <div class="container">
+      <p>&copy; 2024 Filosofía 6to. Material educativo libre.</p>
+    </div>
+  </footer>
+
+  <script src="../../assets/js/dark-mode.js"></script>
+</body>
+
+</html>
