@@ -1,0 +1,113 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 320">
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <polygon points="0 0, 10 3, 0 6" fill="#10b981"/>
+    </marker>
+    <linearGradient id="beamGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#8b5cf6;stop-opacity:0.3"/>
+      <stop offset="100%" style="stop-color:#8b5cf6;stop-opacity:1"/>
+    </linearGradient>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1f2937;stop-opacity:0.05"/>
+      <stop offset="100%" style="stop-color:#10b981;stop-opacity:0.05"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="820" height="320" rx="10" fill="url(#bgGrad)" stroke="#10b981" stroke-width="1.5" opacity="0.5"/>
+
+  <!-- Title -->
+  <text x="410" y="28" text-anchor="middle" font-size="17" font-weight="bold" fill="#10b981">
+    Cristalografía de Rayos X — Cómo "ver" moléculas invisibles
+  </text>
+
+  <!-- STEP 1: X-ray source (x=80) -->
+  <g id="source">
+    <rect x="30" y="110" width="90" height="110" rx="8" fill="#374151" stroke="#8b5cf6" stroke-width="2"/>
+    <circle cx="75" cy="155" r="22" fill="#8b5cf6" opacity="0.9"/>
+    <text x="75" y="160" text-anchor="middle" font-size="11" font-weight="bold" fill="white">X</text>
+    <text x="75" y="243" text-anchor="middle" font-size="11" fill="#10b981" font-weight="bold">① Fuente</text>
+    <text x="75" y="257" text-anchor="middle" font-size="10" fill="#6b7280">de Rayos X</text>
+    <!-- Step number badge -->
+    <circle cx="30" cy="110" r="10" fill="#8b5cf6"/>
+    <text x="30" y="114" text-anchor="middle" font-size="10" fill="white" font-weight="bold">1</text>
+  </g>
+
+  <!-- Beam -->
+  <g id="beam">
+    <line x1="122" y1="152" x2="218" y2="152" stroke="url(#beamGrad)" stroke-width="5" opacity="0.9"/>
+    <line x1="122" y1="158" x2="218" y2="158" stroke="url(#beamGrad)" stroke-width="5" opacity="0.9"/>
+    <line x1="122" y1="164" x2="218" y2="164" stroke="url(#beamGrad)" stroke-width="5" opacity="0.9"/>
+    <text x="170" y="140" text-anchor="middle" font-size="10" fill="#8b5cf6">haz de rayos X</text>
+  </g>
+  <line x1="118" y1="158" x2="218" y2="158" stroke="#10b981" stroke-width="1.5" marker-end="url(#arrowhead)" opacity="0.6"/>
+
+  <!-- STEP 2: Crystal (x=260) -->
+  <g id="crystal">
+    <polygon points="260,130 300,108 340,130 340,195 300,217 260,195"
+             fill="#60a5fa" opacity="0.55" stroke="#10b981" stroke-width="2"/>
+    <!-- Lattice dots -->
+    <circle cx="280" cy="152" r="3.5" fill="#1e3a8a"/>
+    <circle cx="300" cy="140" r="3.5" fill="#1e3a8a"/>
+    <circle cx="320" cy="152" r="3.5" fill="#1e3a8a"/>
+    <circle cx="280" cy="170" r="3.5" fill="#1e3a8a"/>
+    <circle cx="300" cy="158" r="3.5" fill="#1e40af"/>
+    <circle cx="320" cy="170" r="3.5" fill="#1e3a8a"/>
+    <text x="300" y="242" text-anchor="middle" font-size="11" fill="#10b981" font-weight="bold">② Cristal</text>
+    <text x="300" y="256" text-anchor="middle" font-size="10" fill="#6b7280">de ADN</text>
+    <circle cx="260" cy="130" r="10" fill="#10b981"/>
+    <text x="260" y="134" text-anchor="middle" font-size="10" fill="white" font-weight="bold">2</text>
+  </g>
+
+  <!-- Diffracted rays fan -->
+  <g id="diffraction">
+    <line x1="300" y1="158" x2="430" y2="90" stroke="#8b5cf6" stroke-width="2" opacity="0.7" marker-end="url(#arrowhead)"/>
+    <line x1="300" y1="158" x2="445" y2="120" stroke="#8b5cf6" stroke-width="2" opacity="0.7" marker-end="url(#arrowhead)"/>
+    <line x1="300" y1="158" x2="450" y2="158" stroke="#8b5cf6" stroke-width="2" opacity="0.7" marker-end="url(#arrowhead)"/>
+    <line x1="300" y1="158" x2="445" y2="196" stroke="#8b5cf6" stroke-width="2" opacity="0.7" marker-end="url(#arrowhead)"/>
+    <line x1="300" y1="158" x2="430" y2="226" stroke="#8b5cf6" stroke-width="2" opacity="0.7" marker-end="url(#arrowhead)"/>
+    <text x="390" y="140" text-anchor="middle" font-size="10" fill="#8b5cf6" font-style="italic">difracción</text>
+  </g>
+
+  <!-- STEP 3: Detection plate (x=480) -->
+  <g id="detector">
+    <rect x="468" y="78" width="110" height="160" rx="6" fill="#111827" stroke="#10b981" stroke-width="2"/>
+    <!-- Pattern spots (X pattern typical of helix) -->
+    <circle cx="513" cy="108" r="7" fill="#8b5cf6" opacity="0.85"/>
+    <circle cx="557" cy="108" r="7" fill="#8b5cf6" opacity="0.85"/>
+    <circle cx="535" cy="130" r="10" fill="#8b5cf6" opacity="1"/>
+    <circle cx="513" cy="155" r="7" fill="#8b5cf6" opacity="0.85"/>
+    <circle cx="557" cy="155" r="7" fill="#8b5cf6" opacity="0.85"/>
+    <circle cx="535" cy="178" r="10" fill="#8b5cf6" opacity="1"/>
+    <circle cx="513" cy="200" r="7" fill="#8b5cf6" opacity="0.7"/>
+    <circle cx="557" cy="200" r="7" fill="#8b5cf6" opacity="0.7"/>
+    <text x="523" y="260" text-anchor="middle" font-size="11" fill="#10b981" font-weight="bold">③ Patrón</text>
+    <text x="523" y="273" text-anchor="middle" font-size="10" fill="#6b7280">de difracción</text>
+    <circle cx="468" cy="78" r="10" fill="#ef4444"/>
+    <text x="468" y="82" text-anchor="middle" font-size="10" fill="white" font-weight="bold">3</text>
+  </g>
+
+  <!-- Arrow between detector and interpretation -->
+  <line x1="582" y1="158" x2="620" y2="158" stroke="#10b981" stroke-width="2.5" marker-end="url(#arrowhead)"/>
+
+  <!-- STEP 4: Interpretation box (x=630) -->
+  <g id="interpretation">
+    <rect x="628" y="78" width="165" height="160" rx="8" fill="#10b981" opacity="0.12" stroke="#10b981" stroke-width="2"/>
+    <text x="711" y="100" text-anchor="middle" font-size="12" font-weight="bold" fill="#10b981">④ Interpretación</text>
+    <text x="711" y="120" text-anchor="middle" font-size="10" fill="#6b7280">El cristalógrafo</text>
+    <text x="711" y="135" text-anchor="middle" font-size="10" fill="#6b7280">lee el patrón:</text>
+    <!-- Key data points -->
+    <text x="641" y="155" font-size="10" fill="#1f2937">• Forma helicoidal</text>
+    <text x="641" y="170" font-size="10" fill="#1f2937">• Diámetro: 2 nm</text>
+    <text x="641" y="185" font-size="10" fill="#1f2937">• Paso: 3.4 nm</text>
+    <text x="641" y="200" font-size="10" fill="#1f2937">• Dos cadenas</text>
+    <text x="711" y="225" text-anchor="middle" font-size="11" font-weight="bold" fill="#10b981">= DOBLE HÉLICE</text>
+    <circle cx="628" cy="78" r="10" fill="#f59e0b"/>
+    <text x="628" y="82" text-anchor="middle" font-size="10" fill="white" font-weight="bold">4</text>
+  </g>
+
+  <!-- Bottom note -->
+  <text x="410" y="305" text-anchor="middle" font-size="11" fill="#6b7280" font-style="italic">
+    La Foto 51 de Franklin (1952) es el patrón de difracción que reveló la doble hélice del ADN
+  </text>
+</svg>

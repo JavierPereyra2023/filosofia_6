@@ -1,0 +1,181 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 800">
+  <defs>
+    <marker id="arrow-hc" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <polygon points="0 0, 10 3, 0 6" fill="#10b981"/>
+    </marker>
+  </defs>
+
+  <!-- Title -->
+  <text x="550" y="35" text-anchor="middle" font-size="26" font-weight="bold" fill="#10b981">
+    Experimento de Hershey-Chase (1952)
+  </text>
+  <text x="550" y="60" text-anchor="middle" font-size="16" fill="#6b7280">
+    Marcaje Radiactivo del ADN y Proteínas en Bacteriófagos
+  </text>
+
+  <!-- Experiment A: P32 (DNA) -->
+  <g id="exp-a">
+    <rect x="50" y="90" width="500" height="660" rx="10" fill="#8b5cf6" opacity="0.1" stroke="#8b5cf6" stroke-width="2"/>
+    <text x="300" y="120" text-anchor="middle" font-size="18" font-weight="bold" fill="#8b5cf6">
+      Experimento A: Marcaje del ADN con ³²P (fósforo radiactivo)
+    </text>
+
+    <!-- Step 1: Grow phage in P32 -->
+    <g id="step1a">
+      <text x="80" y="160" font-size="14" font-weight="bold" fill="#8b5cf6">1. Cultivar fagos en medio con ³²P</text>
+      <circle cx="150" cy="200" r="8" fill="#ef4444" opacity="0.7"/>
+      <rect x="146" y="208" width="8" height="25" fill="#3b82f6"/>
+      <circle cx="150" cy="233" r="5" fill="#3b82f6"/>
+      <text x="200" y="210" font-size="11" fill="#1f2937">Fago con ADN marcado (³²P)</text>
+      <text x="200" y="225" font-size="10" fill="#6b7280">Proteína: normal | ADN: radiactivo</text>
+    </g>
+
+    <!-- Step 2: Infect bacteria -->
+    <path d="M 150 245 L 150 280" stroke="#10b981" stroke-width="2" marker-end="url(#arrow-hc)"/>
+
+    <g id="step2a">
+      <text x="80" y="300" font-size="14" font-weight="bold" fill="#8b5cf6">2. Infectar bacterias</text>
+      <ellipse cx="150" cy="340" rx="35" ry="25" fill="#d1d5db" stroke="#1f2937" stroke-width="2"/>
+      <circle cx="150" cy="315" r="8" fill="#ef4444" opacity="0.7"/>
+      <rect x="146" y="323" width="8" height="17" fill="#3b82f6"/>
+      <text x="200" y="345" font-size="11" fill="#1f2937">Fago inyecta su ADN radiactivo</text>
+    </g>
+
+    <!-- Step 3: Blend -->
+    <path d="M 150 370 L 150 405" stroke="#10b981" stroke-width="2" marker-end="url(#arrow-hc)"/>
+
+    <g id="step3a">
+      <text x="80" y="425" font-size="14" font-weight="bold" fill="#8b5cf6">3. Licuar y separar</text>
+      <rect x="120" y="445" width="60" height="70" rx="5" fill="#e0f2fe" stroke="#0ea5e9" stroke-width="2"/>
+      <text x="150" y="465" text-anchor="middle" font-size="10" fill="#0ea5e9">Licuadora</text>
+      <circle cx="135" cy="485" r="4" fill="#1f2937"/>
+      <circle cx="165" cy="485" r="4" fill="#1f2937"/>
+      <circle cx="150" cy="500" r="4" fill="#1f2937"/>
+      <text x="200" y="485" font-size="10" fill="#6b7280">Separa cubiertas</text>
+      <text x="200" y="500" font-size="10" fill="#6b7280">de bacterias</text>
+    </g>
+
+    <!-- Step 4: Centrifuge -->
+    <path d="M 150 520 L 150 555" stroke="#10b981" stroke-width="2" marker-end="url(#arrow-hc)"/>
+
+    <g id="step4a">
+      <text x="80" y="575" font-size="14" font-weight="bold" fill="#8b5cf6">4. Centrifugar</text>
+
+      <!-- Tube before -->
+      <rect x="130" y="595" width="40" height="100" rx="3" fill="#ffffff" stroke="#1f2937" stroke-width="2"/>
+      <ellipse cx="150" cy="595" rx="20" ry="5" fill="#e5e7eb" stroke="#1f2937" stroke-width="1"/>
+      <text x="150" y="650" text-anchor="middle" font-size="9" fill="#6b7280">Antes</text>
+
+      <!-- Arrow -->
+      <path d="M 175 640 L 205 640" stroke="#10b981" stroke-width="2" marker-end="url(#arrow-hc)"/>
+
+      <!-- Tube after -->
+      <rect x="210" y="595" width="40" height="100" rx="3" fill="#ffffff" stroke="#1f2937" stroke-width="2"/>
+      <ellipse cx="230" cy="595" rx="20" ry="5" fill="#e5e7eb" stroke="#1f2937" stroke-width="1"/>
+      <!-- Supernatant (protein shells) -->
+      <rect x="212" y="600" width="36" height="30" fill="#d1d5db"/>
+      <text x="215" y="618" font-size="8" fill="#1f2937">Cubiertas</text>
+      <text x="215" y="626" font-size="7" fill="#6b7280">de proteína</text>
+      <!-- Pellet (bacteria with radioactive DNA) -->
+      <rect x="212" y="665" width="36" height="28" fill="#ef4444" opacity="0.3"/>
+      <text x="214" y="678" font-size="8" fill="#ef4444" font-weight="bold">Bacterias</text>
+      <text x="214" y="686" font-size="7" fill="#ef4444">+ADN ³²P</text>
+      <text x="230" y="650" text-anchor="middle" font-size="9" fill="#6b7280">Después</text>
+    </g>
+
+    <!-- Result A -->
+    <g id="result-a">
+      <rect x="70" y="710" width="460" height="30" rx="5" fill="#ef4444" opacity="0.2" stroke="#ef4444" stroke-width="2"/>
+      <text x="300" y="730" text-anchor="middle" font-size="13" font-weight="bold" fill="#ef4444">
+        Resultado: La radiactividad ³²P está en el PELLET (dentro de bacterias)
+      </text>
+    </g>
+  </g>
+
+  <!-- Experiment B: S35 (Protein) -->
+  <g id="exp-b">
+    <rect x="570" y="90" width="500" height="660" rx="10" fill="#f59e0b" opacity="0.1" stroke="#f59e0b" stroke-width="2"/>
+    <text x="820" y="120" text-anchor="middle" font-size="18" font-weight="bold" fill="#f59e0b">
+      Experimento B: Marcaje de Proteínas con ³⁵S (azufre radiactivo)
+    </text>
+
+    <!-- Step 1: Grow phage in S35 -->
+    <g id="step1b">
+      <text x="600" y="160" font-size="14" font-weight="bold" fill="#f59e0b">1. Cultivar fagos en medio con ³⁵S</text>
+      <circle cx="670" cy="200" r="8" fill="#f59e0b" opacity="0.7"/>
+      <rect x="666" y="208" width="8" height="25" fill="#3b82f6"/>
+      <circle cx="670" cy="233" r="5" fill="#3b82f6"/>
+      <text x="720" y="210" font-size="11" fill="#1f2937">Fago con proteínas marcadas (³⁵S)</text>
+      <text x="720" y="225" font-size="10" fill="#6b7280">Proteína: radiactiva | ADN: normal</text>
+    </g>
+
+    <!-- Step 2: Infect bacteria -->
+    <path d="M 670 245 L 670 280" stroke="#10b981" stroke-width="2" marker-end="url(#arrow-hc)"/>
+
+    <g id="step2b">
+      <text x="600" y="300" font-size="14" font-weight="bold" fill="#f59e0b">2. Infectar bacterias</text>
+      <ellipse cx="670" cy="340" rx="35" ry="25" fill="#d1d5db" stroke="#1f2937" stroke-width="2"/>
+      <circle cx="670" cy="315" r="8" fill="#f59e0b" opacity="0.7"/>
+      <rect x="666" y="323" width="8" height="17" fill="#3b82f6"/>
+      <text x="720" y="345" font-size="11" fill="#1f2937">Fago inyecta material genético</text>
+    </g>
+
+    <!-- Step 3: Blend -->
+    <path d="M 670 370 L 670 405" stroke="#10b981" stroke-width="2" marker-end="url(#arrow-hc)"/>
+
+    <g id="step3b">
+      <text x="600" y="425" font-size="14" font-weight="bold" fill="#f59e0b">3. Licuar y separar</text>
+      <rect x="640" y="445" width="60" height="70" rx="5" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+      <text x="670" y="465" text-anchor="middle" font-size="10" fill="#f59e0b">Licuadora</text>
+      <circle cx="655" cy="485" r="4" fill="#1f2937"/>
+      <circle cx="685" cy="485" r="4" fill="#1f2937"/>
+      <circle cx="670" cy="500" r="4" fill="#1f2937"/>
+      <text x="720" y="485" font-size="10" fill="#6b7280">Separa cubiertas</text>
+      <text x="720" y="500" font-size="10" fill="#6b7280">de bacterias</text>
+    </g>
+
+    <!-- Step 4: Centrifuge -->
+    <path d="M 670 520 L 670 555" stroke="#10b981" stroke-width="2" marker-end="url(#arrow-hc)"/>
+
+    <g id="step4b">
+      <text x="600" y="575" font-size="14" font-weight="bold" fill="#f59e0b">4. Centrifugar</text>
+
+      <!-- Tube before -->
+      <rect x="650" y="595" width="40" height="100" rx="3" fill="#ffffff" stroke="#1f2937" stroke-width="2"/>
+      <ellipse cx="670" cy="595" rx="20" ry="5" fill="#e5e7eb" stroke="#1f2937" stroke-width="1"/>
+      <text x="670" y="650" text-anchor="middle" font-size="9" fill="#6b7280">Antes</text>
+
+      <!-- Arrow -->
+      <path d="M 695 640 L 725 640" stroke="#10b981" stroke-width="2" marker-end="url(#arrow-hc)"/>
+
+      <!-- Tube after -->
+      <rect x="730" y="595" width="40" height="100" rx="3" fill="#ffffff" stroke="#1f2937" stroke-width="2"/>
+      <ellipse cx="750" cy="595" rx="20" ry="5" fill="#e5e7eb" stroke="#1f2937" stroke-width="1"/>
+      <!-- Supernatant (radioactive protein shells) -->
+      <rect x="732" y="600" width="36" height="30" fill="#f59e0b" opacity="0.3"/>
+      <text x="735" y="615" font-size="8" fill="#f59e0b" font-weight="bold">Cubiertas</text>
+      <text x="735" y="623" font-size="7" fill="#f59e0b">+Proteína ³⁵S</text>
+      <!-- Pellet (bacteria without radioactivity) -->
+      <rect x="732" y="665" width="36" height="28" fill="#d1d5db"/>
+      <text x="734" y="678" font-size="8" fill="#1f2937">Bacterias</text>
+      <text x="734" y="686" font-size="7" fill="#6b7280">(sin ³⁵S)</text>
+      <text x="750" y="650" text-anchor="middle" font-size="9" fill="#6b7280">Después</text>
+    </g>
+
+    <!-- Result B -->
+    <g id="result-b">
+      <rect x="590" y="710" width="460" height="30" rx="5" fill="#f59e0b" opacity="0.2" stroke="#f59e0b" stroke-width="2"/>
+      <text x="820" y="730" text-anchor="middle" font-size="13" font-weight="bold" fill="#f59e0b">
+        Resultado: La radiactividad ³⁵S está en el SOBRENADANTE (cubiertas de proteína)
+      </text>
+    </g>
+  </g>
+
+  <!-- Final conclusion -->
+  <g id="conclusion">
+    <rect x="100" y="765" width="900" height="25" rx="5" fill="#10b981" opacity="0.3" stroke="#10b981" stroke-width="2"/>
+    <text x="550" y="783" text-anchor="middle" font-size="15" font-weight="bold" fill="#10b981">
+      CONCLUSIÓN: Solo el ADN entra en la bacteria → El ADN es el material genético
+    </text>
+  </g>
+</svg>

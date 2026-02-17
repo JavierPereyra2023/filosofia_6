@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clase 13: El ADN como Molécula de la Herencia | Filosofía 6to</title>
+  <link rel="stylesheet" href="../../assets/css/variables.css">
+  <link rel="stylesheet" href="../../assets/css/reset.css">
+  <link rel="stylesheet" href="../../assets/css/base.css">
+  <link rel="stylesheet" href="../../assets/css/typography.css">
+  <link rel="stylesheet" href="../../assets/css/layout.css">
+  <link rel="stylesheet" href="../../assets/css/navigation.css">
+  <link rel="stylesheet" href="../../assets/css/components.css">
+  <link rel="stylesheet" href="../../assets/css/unit-page.css">
+  <link rel="stylesheet" href="../../assets/css/book-layout.css">
+
+  <style>
+    .class-container::before {
+      content: '    P³² → ADN\A    S³⁵ → Proteínas\A       ⚛\A    Marcaje\A   Radiactivo\A      ↓\A  ¡El ADN es el\A material genético!';
+      position: fixed;
+      top: 12%;
+      right: 5%;
+      font-family: 'Caveat', 'Comic Sans MS', cursive;
+      font-size: 24px;
+      font-weight: 700;
+      white-space: pre;
+      color: rgba(255, 255, 255, 0.35);
+      transform: rotate(-6deg);
+    }
+
+    .class-container::after {
+      content: '  Griffith (1928)\A       ↓\A  Avery (1944)\A       ↓\A  Hershey (1952)\A       ↓\A  Convergencia de\A    Evidencia';
+      position: fixed;
+      bottom: 20%;
+      left: 5%;
+      font-family: 'Caveat', 'Comic Sans MS', cursive;
+      font-size: 24px;
+      font-weight: 700;
+      white-space: pre;
+      color: rgba(255, 255, 255, 0.32);
+      transform: rotate(5deg);
+    }
+
+    @media (max-width: 1024px) {
+
+      .class-container::before,
+      .class-container::after {
+        position: relative;
+        width: 100%;
+        text-align: center;
+        top: auto;
+        bottom: auto;
+        left: auto;
+        right: auto;
+        transform: rotate(0deg);
+        margin: var(--space-xl) 0;
+        font-size: 20px;
+        display: block;
+      }
+
+      .class-container::before {
+        content: 'Griffith | Avery | Hershey-Chase';
+      }
+
+      .class-container::after {
+        content: 'ADN > Proteínas | Material Genético';
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <nav class="main-nav">
+    <div class="nav-container">
+      <div class="nav-left">
+        <a href="index.html" class="nav-back-button" title="Volver al índice de la unidad">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24"
+            stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M15 19l-7-7 7-7" />
+          </svg>
+          <span>Unidad 2</span>
+        </a>
+        <a href="../../home.html" class="nav-brand">Filosofía 6to</a>
+      </div>
+      <div class="nav-controls">
+        <button id="dark-mode-toggle" class="dark-mode-toggle" aria-label="Cambiar tema">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24"
+            stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <div class="class-progress">
+    <div class="container">
+      <div class="progress-info">
+        <span class="progress-text">Clase 13 de 20</span>
+        <span class="progress-text">30% de la unidad</span>
+      </div>
+      <div class="progress-bar">
+        <div class="progress-fill" style="width: 30%"></div>
+      </div>
+    </div>
+  </div>
+
+  <main class="class-container">
+    <aside class="sidebar">
+      <div class="sidebar-section">
+        <h3>En esta clase</h3>
+        <ul>
+          <li><a href="#intro">El Enigma: ¿ADN o Proteínas?</a></li>
+          <li><a href="#griffith">Griffith: Transformación Bacteriana</a></li>
+          <li><a href="#avery">Avery: El Principio Transformante</a></li>
+          <li><a href="#hershey">Hershey-Chase: Marcaje Radiactivo</a></li>
+          <li><a href="#convergencia">Convergencia de Evidencia</a></li>
+          <li><a href="#implicaciones">Implicaciones Epistemológicas</a></li>
+          <li><a href="#actividades">Actividades</a></li>
+        </ul>
+      </div>
+
+      <div class="sidebar-section">
+        <h3>Conceptos Clave</h3>
+        <ul class="concept-list">
+          <li>Material genético</li>
+          <li>Transformación bacteriana</li>
+          <li>Principio transformante</li>
+          <li>Bacteriófago</li>
+          <li>Marcaje radiactivo</li>
+          <li>Experimento crucial</li>
+          <li>Convergencia de evidencia</li>
+          <li>Hipótesis rivales</li>
+        </ul>
+      </div>
+
+      <div class="sidebar-section">
+        <h3>Científicos</h3>
+        <div class="scientist-card">
+          <h4>Frederick Griffith</h4>
+          <p><strong>1877-1941</strong> | Inglaterra</p>
+          <p>Médico bacteriólogo que descubrió la transformación bacteriana en neumococos (1928).</p>
+        </div>
+        <div class="scientist-card">
+          <h4>Oswald Avery</h4>
+          <p><strong>1877-1955</strong> | Canadá/EE.UU.</p>
+          <p>Médico e investigador que identificó el ADN como el "principio transformante" (1944).</p>
+        </div>
+        <div class="scientist-card">
+          <h4>Alfred Hershey</h4>
+          <p><strong>1908-1997</strong> | Estados Unidos</p>
+          <p>Biólogo molecular, Premio Nobel 1969 por su trabajo con bacteriófagos.</p>
+        </div>
+        <div class="scientist-card">
+          <h4>Martha Chase</h4>
+          <p><strong>1927-2003</strong> | Estados Unidos</p>
+          <p>Bióloga molecular, colaboradora de Hershey en el experimento del fago (1952).</p>
+        </div>
+      </div>
+    </aside>
+
+    <article class="class-content">
+      <header class="class-header">
+        <div class="class-badge">Clase 13</div>
+        <h1 class="class-title">El ADN como Molécula de la Herencia</h1>
+        <p class="class-subtitle">Tres Experimentos que Resolvieron un Misterio Fundamental</p>
+      </header>
+
+      <section class="class-section" id="intro">
+        <h2>El Enigma: ¿ADN o Proteínas?</h2>
+
+        <p>A principios del siglo XX, los científicos sabían que <strong>algo</strong> dentro de las células transmitía información genética de padres a hijos. Pero <strong>¿qué molécula específica era responsable?</strong></p>
+
+        <p>Había dos candidatos principales:</p>
+
+        <div class="concept-highlight">
+          <h3>Las Hipótesis Rivales</h3>
+
+          <h4>Hipótesis 1: Las Proteínas son el Material Genético</h4>
+          <p><strong>Argumentos a favor:</strong></p>
+          <ul>
+            <li>Las proteínas son moléculas muy complejas y diversas (20 aminoácidos diferentes)</li>
+            <li>Esta diversidad parecía adecuada para codificar toda la información genética</li>
+            <li>Las proteínas realizan la mayoría de las funciones celulares</li>
+            <li>En los cromosomas hay tanto proteínas como ADN</li>
+          </ul>
+
+          <h4>Hipótesis 2: El ADN es el Material Genético</h4>
+          <p><strong>Argumentos a favor:</strong></p>
+          <ul>
+            <li>El ADN está presente en todos los cromosomas</li>
+            <li>La cantidad de ADN es constante en células de la misma especie</li>
+            <li>El ADN está localizado en el núcleo, donde ocurre la reproducción celular</li>
+          </ul>
+          <p><strong>Argumento en contra:</strong></p>
+          <ul>
+            <li>El ADN parecía "demasiado simple": solo 4 bases nitrogenadas (A, T, G, C)</li>
+            <li>¿Cómo podría una molécula tan simple codificar tanta información?</li>
+          </ul>
+        </div>
+
+        <p>La mayoría de los científicos en la década de 1920-1940 <strong>favorecía la hipótesis de las proteínas</strong> porque parecían más complejas y versátiles. Pero tres experimentos cruciales demostraron lo contrario.</p>
+
+        <div class="image-container">
+          <img src="../../assets/images/class-13/dna_vs_proteins.svg" alt="Tabla comparativa de propiedades del ADN vs proteínas como candidatos a material genético">
+          <p class="image-caption">Comparación de ADN y proteínas como candidatos a material genético (contexto pre-1944)</p>
+        </div>
+      </section>
+
+      <section class="class-section" id="griffith">
+        <h2>Experimento 1: Frederick Griffith y la Transformación Bacteriana (1928)</h2>
+
+        <h3>El Contexto</h3>
+        <p>Frederick Griffith era un médico bacteriólogo británico que estudiaba <em>Streptococcus pneumoniae</em>, la bacteria que causa neumonía. Su objetivo era desarrollar una vacuna contra esta enfermedad mortal.</p>
+
+        <p>Griffith trabajaba con dos cepas de neumococos:</p>
+        <ul>
+          <li><strong>Cepa S (Smooth = Lisa):</strong> Tiene una cápsula de polisacáridos que la hace brillante y lisa. <strong>Es mortal</strong> porque la cápsula la protege del sistema inmune.</li>
+          <li><strong>Cepa R (Rough = Rugosa):</strong> No tiene cápsula, se ve rugosa. <strong>Es inofensiva</strong> porque el sistema inmune la destruye fácilmente.</li>
+        </ul>
+
+        <h3>El Experimento</h3>
+        <p>Griffith realizó cuatro inyecciones en ratones para entender la virulencia de estas bacterias:</p>
+
+        <div class="image-container">
+          <img src="../../assets/images/class-13/griffith_experiment.svg" alt="Diagrama de los cuatro pasos del experimento de Griffith con ratones">
+          <p class="image-caption">Los cuatro experimentos de Griffith (1928)</p>
+        </div>
+
+        <ol>
+          <li>
+            <strong>Inyección 1: Cepa S viva</strong>
+            <p>→ El ratón muere de neumonía (esperado, la cepa S es mortal)</p>
+          </li>
+          <li>
+            <strong>Inyección 2: Cepa R viva</strong>
+            <p>→ El ratón sobrevive (esperado, la cepa R es inofensiva)</p>
+          </li>
+          <li>
+            <strong>Inyección 3: Cepa S muerta por calor</strong>
+            <p>→ El ratón sobrevive (esperado, las bacterias muertas no pueden infectar)</p>
+          </li>
+          <li>
+            <strong>Inyección 4: Cepa S muerta + Cepa R viva</strong>
+            <p>→ <strong>¡El ratón MUERE!</strong> (inesperado)</p>
+            <p>Al examinar la sangre del ratón muerto, Griffith encontró <strong>bacterias S vivas</strong>.</p>
+          </li>
+        </ol>
+
+        <h3>La Conclusión de Griffith</h3>
+        <p>Algo de las bacterias S muertas había <strong>"transformado"</strong> a las bacterias R vivas en bacterias S vivas. Este "algo" era heredable, porque las bacterias S recuperadas del ratón muerto podían transmitir la capacidad de producir cápsula a sus descendientes.</p>
+
+        <p>Griffith llamó a este fenómeno <strong>"principio transformante"</strong>, pero <strong>no supo identificar qué molécula era.</strong> Sugirió que podría ser proteína, ADN, o alguna otra sustancia.</p>
+
+        <div class="concept-highlight">
+          <h3>Reflexión Epistemológica: Observación vs Explicación</h3>
+          <p>El experimento de Griffith es un buen ejemplo de la diferencia entre:</p>
+          <ul>
+            <li><strong>Fenómeno observado:</strong> La transformación bacteriana ocurre.</li>
+            <li><strong>Mecanismo causal:</strong> ¿Qué molécula causa la transformación?</li>
+          </ul>
+          <p>Griffith demostró el fenómeno, pero no identificó la causa. Se necesitaban más experimentos para responder la pregunta: <strong>¿Qué es el principio transformante?</strong></p>
+        </div>
+
+        <div class="image-container">
+          <img src="../../assets/images/class-13/frederick_griffith.jpg" alt="Retrato de Frederick Griffith en su laboratorio">
+          <p class="image-caption">Frederick Griffith (1877-1941), descubridor de la transformación bacteriana</p>
+        </div>
+      </section>
+
+      <section class="class-section" id="avery">
+        <h2>Experimento 2: Avery, MacLeod y McCarty - Identificando el Principio Transformante (1944)</h2>
+
+        <h3>El Contexto</h3>
+        <p>Durante 16 años después del descubrimiento de Griffith, el "principio transformante" permaneció sin identificar. En 1944, un equipo del Instituto Rockefeller liderado por <strong>Oswald Avery</strong>, junto con Colin MacLeod y Maclyn McCarty, decidieron resolver el misterio.</p>
+
+        <p>Su estrategia fue brillante: <strong>usar enzimas específicas para eliminar diferentes tipos de moléculas y ver cuál de ellas eliminaba la capacidad de transformación.</strong></p>
+
+        <h3>El Diseño Experimental</h3>
+
+        <div class="concept-highlight">
+          <h3>La Lógica del Experimento</h3>
+          <p><strong>Razonamiento:</strong></p>
+          <p>Si el principio transformante es proteína → las proteasas (enzimas que destruyen proteínas) deberían eliminar la transformación.</p>
+          <p>Si el principio transformante es ADN → las ADNasas (enzimas que destruyen ADN) deberían eliminar la transformación.</p>
+          <p>Si el principio transformante es ARN → las ARNasas (enzimas que destruyen ARN) deberían eliminar la transformación.</p>
+        </div>
+
+        <h3>Procedimiento</h3>
+        <ol>
+          <li><strong>Preparación del extracto:</strong> Purificaron extracto de bacterias S (que contenía el principio transformante).</li>
+          <li><strong>División en cuatro grupos experimentales:</strong>
+            <ul>
+              <li><strong>Grupo 1 (Control):</strong> Extracto S sin tratar + Bacterias R vivas → <strong>Transformación exitosa</strong></li>
+              <li><strong>Grupo 2:</strong> Extracto S tratado con <em>proteasas</em> + Bacterias R vivas → <strong>Transformación exitosa</strong> (las proteínas NO son el principio transformante)</li>
+              <li><strong>Grupo 3:</strong> Extracto S tratado con <em>ARNasas</em> + Bacterias R vivas → <strong>Transformación exitosa</strong> (el ARN NO es el principio transformante)</li>
+              <li><strong>Grupo 4:</strong> Extracto S tratado con <em>ADNasas</em> + Bacterias R vivas → <strong>¡NO hay transformación!</strong> (el ADN SÍ es el principio transformante)</li>
+            </ul>
+          </li>
+        </ol>
+
+        <div class="image-container">
+          <img src="../../assets/images/class-13/avery_experiment.svg" alt="Esquema del experimento de Avery mostrando el efecto de diferentes enzimas">
+          <p class="image-caption">Experimento de Avery-MacLeod-McCarty: la ADNasa elimina la transformación, las proteasas y ARNasas no</p>
+        </div>
+
+        <h3>La Conclusión</h3>
+        <p>El principio transformante es <strong>ADN</strong>, no proteína ni ARN. Esta fue la primera demostración directa de que <strong>el ADN porta información genética.</strong></p>
+
+        <div class="reflection-box">
+          <h3>La Recepción del Descubrimiento</h3>
+          <p>A pesar de la elegancia del experimento de Avery, <strong>la comunidad científica se mostró escéptica.</strong> Muchos seguían creyendo que las proteínas debían ser el material genético porque:</p>
+          <ul>
+            <li>Las proteínas son más complejas que el ADN</li>
+            <li>Quizás había contaminación de proteínas residuales en el extracto de ADN</li>
+            <li>Tal vez el ADN solo "activaba" genes de proteínas</li>
+          </ul>
+          <p><strong>Avery nunca recibió el Premio Nobel</strong> por este descubrimiento fundamental, en parte porque la comunidad científica tardó años en aceptar plenamente sus resultados. Murió en 1955, antes de que el ADN fuera universalmente reconocido como material genético.</p>
+          <p>Esta historia ilustra un punto epistemológico importante: <strong>la resistencia al cambio de paradigma.</strong> Incluso con evidencia sólida, las creencias científicas establecidas pueden ser difíciles de desplazar.</p>
+        </div>
+      </section>
+
+      <section class="class-section" id="hershey">
+        <h2>Experimento 3: Hershey y Chase - El Experimento del Bacteriófago (1952)</h2>
+
+        <h3>El Contexto</h3>
+        <p>Ocho años después del experimento de Avery, muchos científicos aún dudaban que el ADN fuera el material genético. <strong>Alfred Hershey y Martha Chase</strong> diseñaron un experimento ingenioso para resolver la cuestión de una vez por todas.</p>
+
+        <p>Trabajaron con <strong>bacteriófagos</strong> (literalmente "comedores de bacterias"), que son virus que infectan bacterias. Los fagos son ideales para este experimento porque:</p>
+        <ul>
+          <li>Tienen una estructura simple: una cabeza de proteína que contiene ADN</li>
+          <li>Se adhieren a la bacteria y le inyectan su material genético</li>
+          <li>El material genético del fago toma control de la bacteria y produce más fagos</li>
+        </ul>
+
+        <p><strong>La pregunta clave:</strong> Cuando un fago infecta una bacteria, ¿qué entra en la célula: la proteína, el ADN, o ambos?</p>
+
+        <h3>El Diseño Experimental: Marcaje Radiactivo</h3>
+
+        <p>Hershey y Chase usaron <strong>isótopos radiactivos</strong> como "etiquetas moleculares" para rastrear el ADN y las proteínas por separado:</p>
+
+        <div class="concept-highlight">
+          <h3>La Estrategia de Marcaje</h3>
+          <ul>
+            <li><strong>Fósforo-32 (³²P):</strong> Elemento presente en el ADN (en el esqueleto azúcar-fosfato) pero NO en las proteínas. Se usó para marcar el ADN.</li>
+            <li><strong>Azufre-35 (³⁵S):</strong> Elemento presente en las proteínas (en aminoácidos como cisteína y metionina) pero NO en el ADN. Se usó para marcar las proteínas.</li>
+          </ul>
+          <p>De esta manera, podían distinguir qué molécula entraba en la bacteria durante la infección.</p>
+        </div>
+
+        <h3>Procedimiento</h3>
+
+        <p><strong>Experimento A: Marcaje del ADN con ³²P</strong></p>
+        <ol>
+          <li>Cultivaron fagos en bacterias con ³²P → Los fagos produjeron ADN radiactivo (pero proteínas normales)</li>
+          <li>Infectaron bacterias normales con estos fagos marcados</li>
+          <li>Esperaron unos minutos para que el fago inyectara su material</li>
+          <li>Usaron una licuadora (¡literal!) para separar las cubiertas de proteína vacías de las bacterias</li>
+          <li>Centrifugaron la mezcla: las bacterias (pesadas) van al fondo, las cubiertas proteicas (livianas) quedan arriba</li>
+          <li><strong>Resultado:</strong> La radiactividad ³²P se encontró <em>dentro de las bacterias</em>, NO en las cubiertas de proteína.</li>
+        </ol>
+
+        <p><strong>Experimento B: Marcaje de las proteínas con ³⁵S</strong></p>
+        <ol>
+          <li>Cultivaron fagos en bacterias con ³⁵S → Los fagos produjeron proteínas radiactivas (pero ADN normal)</li>
+          <li>Repitieron el mismo procedimiento</li>
+          <li><strong>Resultado:</strong> La radiactividad ³⁵S se encontró en las <em>cubiertas de proteína vacías</em>, NO dentro de las bacterias.</li>
+        </ol>
+
+        <div class="image-container">
+          <img src="../../assets/images/class-13/hershey_chase.svg" alt="Diagrama completo del experimento de Hershey-Chase con marcaje radiactivo">
+          <p class="image-caption">Experimento de Hershey-Chase (1952): el ADN marcado con ³²P entra en la bacteria; las proteínas marcadas con ³⁵S quedan fuera</p>
+        </div>
+
+        <h3>La Conclusión</h3>
+        <p>Solo el <strong>ADN</strong> entra en la bacteria durante la infección del fago. Dado que el ADN del fago es suficiente para dirigir la producción de nuevos fagos completos (con ADN y proteínas), <strong>el ADN debe ser el material genético.</strong></p>
+
+        <p>Este experimento fue tan elegante y concluyente que <strong>finalmente convenció a la comunidad científica</strong> de que el ADN, no las proteínas, porta la información genética.</p>
+
+        <div class="image-container">
+          <img src="../../assets/images/class-13/hershey_chase_photo.jpg" alt="Fotografía de Alfred Hershey y Martha Chase">
+          <p class="image-caption">Alfred Hershey y Martha Chase en Cold Spring Harbor Laboratory (circa 1952)</p>
+        </div>
+
+        <div class="reflection-box">
+          <h3>Reconocimiento Desigual</h3>
+          <p>En 1969, Alfred Hershey recibió el Premio Nobel de Fisiología o Medicina (compartido con Max Delbrück y Salvador Luria) por sus descubrimientos sobre virus. <strong>Martha Chase no fue incluida en el premio.</strong></p>
+          <p>Chase había sido estudiante de doctorado de Hershey y realizó gran parte del trabajo experimental. Sin embargo, como en muchos casos históricos (recordemos a Rosalind Franklin), <strong>las contribuciones de mujeres científicas fueron minimizadas o ignoradas.</strong></p>
+          <p>Esta es otra ilustración de cómo factores sociales (género, jerarquías académicas) influyen en quién recibe reconocimiento científico, más allá de la contribución objetiva al conocimiento.</p>
+        </div>
+      </section>
+
+      <section class="class-section" id="convergencia">
+        <h2>Convergencia de Evidencia: La Fuerza de Múltiples Experimentos</h2>
+
+        <p>Los tres experimentos que acabamos de estudiar usaron <strong>métodos completamente diferentes</strong>, pero llegaron a la <strong>misma conclusión:</strong></p>
+
+        <div class="concept-highlight">
+          <h3>Resumen Comparativo</h3>
+          <table border="1" style="width: 100%; border-collapse: collapse; text-align: left;">
+            <thead>
+              <tr style="background-color: var(--color-accent); color: white;">
+                <th style="padding: 10px;">Experimento</th>
+                <th style="padding: 10px;">Organismo</th>
+                <th style="padding: 10px;">Técnica</th>
+                <th style="padding: 10px;">Conclusión</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td style="padding: 10px;"><strong>Griffith (1928)</strong></td>
+                <td style="padding: 10px;">Neumococos + ratones</td>
+                <td style="padding: 10px;">Transformación bacteriana</td>
+                <td style="padding: 10px;">Existe un "principio transformante" heredable</td>
+              </tr>
+              <tr style="background-color: var(--color-bg-secondary);">
+                <td style="padding: 10px;"><strong>Avery (1944)</strong></td>
+                <td style="padding: 10px;">Neumococos</td>
+                <td style="padding: 10px;">Digestión enzimática selectiva</td>
+                <td style="padding: 10px;">El principio transformante es ADN</td>
+              </tr>
+              <tr>
+                <td style="padding: 10px;"><strong>Hershey-Chase (1952)</strong></td>
+                <td style="padding: 10px;">Bacteriófagos + bacterias</td>
+                <td style="padding: 10px;">Marcaje radiactivo</td>
+                <td style="padding: 10px;">Solo el ADN entra en la bacteria</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p>¿Por qué es importante que haya <strong>tres experimentos independientes</strong> en lugar de solo uno?</p>
+
+        <div class="concept-highlight">
+          <h3>El Valor de la Convergencia de Evidencia</h3>
+          <ul>
+            <li><strong>Reduce la probabilidad de error sistemático:</strong> Cada experimento podría tener errores o sesgos específicos. Si tres experimentos diferentes llegan a la misma conclusión, es muy improbable que todos tengan el mismo error.</li>
+            <li><strong>Aumenta la generalidad de la conclusión:</strong> Los experimentos usaron diferentes organismos (neumococos, fagos) y diferentes técnicas (transformación, enzimas, marcaje). Esto sugiere que la conclusión (ADN = material genético) es válida en general, no solo en un caso particular.</li>
+            <li><strong>Refuerza la confianza de la comunidad científica:</strong> Un solo experimento puede ser controvertido o mal interpretado. Múltiples líneas de evidencia independientes hacen mucho más difícil rechazar la conclusión.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="class-section" id="implicaciones">
+        <h2>Implicaciones Epistemológicas</h2>
+
+        <h3>1. Experimentos Cruciales y Discriminación entre Hipótesis</h3>
+        <p>Los experimentos de Avery y Hershey-Chase son ejemplos de <strong>experimentos cruciales</strong> (del latín <em>experimentum crucis</em> = experimento de la cruz): diseños que permiten decidir entre dos o más hipótesis rivales.</p>
+
+        <div class="concept-highlight">
+          <h3>Estructura Lógica de un Experimento Crucial</h3>
+          <ol>
+            <li><strong>Identificar hipótesis rivales:</strong> H1 = Proteínas son material genético vs H2 = ADN es material genético</li>
+            <li><strong>Derivar predicciones opuestas:</strong>
+              <ul>
+                <li>Si H1 es verdadera → las proteasas eliminarán la transformación</li>
+                <li>Si H2 es verdadera → las ADNasas eliminarán la transformación</li>
+              </ul>
+            </li>
+            <li><strong>Realizar el experimento:</strong> Probar ambas predicciones</li>
+            <li><strong>Resultado:</strong> Solo una predicción se cumple → rechazar la hipótesis cuya predicción falló</li>
+          </ol>
+          <p>En el caso de Avery: Las proteasas NO eliminaron la transformación → Se refuta H1 (proteínas). Las ADNasas SÍ eliminaron la transformación → Se corrobora H2 (ADN).</p>
+        </div>
+
+        <h3>2. El Papel de la Tecnología en el Progreso Científico</h3>
+        <p>Estos tres experimentos ilustran cómo <strong>nuevas técnicas experimentales permiten responder preguntas que antes eran irresolubles:</strong></p>
+        <ul>
+          <li><strong>Griffith (1928):</strong> Técnicas de cultivo bacteriano in vivo (usando ratones como sistema modelo)</li>
+          <li><strong>Avery (1944):</strong> Enzimas purificadas específicas (proteasas, ADNasas, ARNasas)</li>
+          <li><strong>Hershey-Chase (1952):</strong> Isótopos radiactivos como marcadores moleculares + centrifugación</li>
+        </ul>
+        <p>Sin estas tecnologías, <strong>no habría sido posible distinguir empíricamente entre ADN y proteínas.</strong> La ciencia avanza no solo gracias a nuevas ideas, sino también gracias a nuevas herramientas.</p>
+
+        <h3>3. Resistencia al Cambio de Paradigma</h3>
+        <p>A pesar de la evidencia de Avery en 1944, muchos científicos siguieron creyendo en las proteínas como material genético hasta 1952 (experimento de Hershey-Chase). ¿Por qué?</p>
+        <ul>
+          <li><strong>Sesgo de confirmación:</strong> Los científicos tendían a buscar explicaciones alternativas que preservaran la hipótesis de las proteínas</li>
+          <li><strong>Autoridad científica:</strong> Muchos biólogos prestigiosos apoyaban la hipótesis de las proteínas</li>
+          <li><strong>Simplicidad aparente del ADN:</strong> Parecía "demasiado simple" para codificar toda la complejidad genética</li>
+        </ul>
+        <p>Esto ilustra un punto kuhniano: <strong>los paradigmas científicos no se abandonan fácilmente, incluso ante evidencia contradictoria.</strong> Se requiere acumulación de anomalías y experimentos múltiples para provocar un cambio de paradigma.</p>
+      </section>
+
+      <section class="class-section" id="actividades">
+        <h2>Actividades</h2>
+
+        <div class="activity-box">
+          <h3>🧪 Actividad 1: Diseño Experimental</h3>
+          <div class="question-card">
+            <p><strong>Consigna:</strong> Imagina que eres un científico en 1940 y no sabes si el ADN o las proteínas son el material genético. Diseña tu propio experimento para distinguir entre estas dos hipótesis.</p>
+            <p><strong>Tu experimento debe incluir:</strong></p>
+            <ul>
+              <li>Un sistema modelo (organismo o células a estudiar)</li>
+              <li>Una técnica específica para manipular o marcar ADN y proteínas por separado</li>
+              <li>Predicciones claras: ¿Qué resultado esperarías si el ADN es el material genético? ¿Y si las proteínas lo son?</li>
+              <li>Un criterio de decisión: ¿Qué resultado te convencería de una hipótesis u otra?</li>
+            </ul>
+            <p><em>Escribe al menos dos párrafos describiendo tu experimento propuesto.</em></p>
+          </div>
+        </div>
+
+        <div class="activity-box">
+          <h3>📊 Actividad 2: Análisis del Experimento de Hershey-Chase</h3>
+          <div class="question-card">
+            <p><strong>Consigna:</strong> Completa la siguiente tabla de predicciones para el experimento de Hershey-Chase:</p>
+            <table border="1" style="width: 100%; text-align: left; border-collapse: collapse;">
+              <thead>
+                <tr style="background-color: var(--color-accent); color: white;">
+                  <th style="padding: 8px;">Hipótesis</th>
+                  <th style="padding: 8px;">¿Dónde estaría el ³²P (ADN marcado)?</th>
+                  <th style="padding: 8px;">¿Dónde estaría el ³⁵S (proteínas marcadas)?</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="padding: 8px;"><strong>Si el ADN es el material genético</strong></td>
+                  <td style="padding: 8px;">Dentro de las bacterias</td>
+                  <td style="padding: 8px;">En las cubiertas de proteína (fuera)</td>
+                </tr>
+                <tr style="background-color: var(--color-bg-secondary);">
+                  <td style="padding: 8px;"><strong>Si las proteínas son el material genético</strong></td>
+                  <td style="padding: 8px;">... (completa tú)</td>
+                  <td style="padding: 8px;">... (completa tú)</td>
+                </tr>
+                <tr>
+                  <td style="padding: 8px;"><strong>Resultado observado por Hershey y Chase</strong></td>
+                  <td style="padding: 8px;">... (completa tú)</td>
+                  <td style="padding: 8px;">... (completa tú)</td>
+                </tr>
+              </tbody>
+            </table>
+            <p><strong>Pregunta de seguimiento:</strong> ¿Por qué el resultado observado refuta la hipótesis de las proteínas y apoya la hipótesis del ADN?</p>
+          </div>
+        </div>
+
+        <div class="activity-box">
+          <h3>🤔 Actividad 3: Reflexión sobre Convergencia de Evidencia</h3>
+          <div class="question-card">
+            <p><strong>Consigna:</strong> Responde las siguientes preguntas:</p>
+            <ol>
+              <li><strong>¿Por qué tres experimentos independientes son más convincentes que un solo experimento?</strong> Explica con tus propias palabras el concepto de "convergencia de evidencia".</li>
+              <li><strong>Imagina que solo existiera el experimento de Avery (1944), pero NO los experimentos de Griffith ni Hershey-Chase.</strong> ¿Sería suficiente para convencer a la comunidad científica de que el ADN es el material genético? ¿Por qué sí o por qué no?</li>
+              <li><strong>¿Qué nos enseña la resistencia inicial al descubrimiento de Avery sobre cómo funciona la ciencia?</strong> ¿Es siempre suficiente tener evidencia sólida para cambiar las creencias científicas?</li>
+            </ol>
+            <p><em>Responde cada pregunta en al menos un párrafo.</em></p>
+          </div>
+        </div>
+      </section>
+
+      <section class="class-section">
+        <h2>Conceptos Clave de Esta Clase</h2>
+        <div class="concept-highlight">
+          <ul>
+            <li><strong>Material genético:</strong> La molécula que porta la información hereditaria que se transmite de generación en generación. Hoy sabemos que es el ADN (o ARN en algunos virus).</li>
+            <li><strong>Transformación bacteriana:</strong> Fenómeno descubierto por Griffith donde bacterias vivas incorporan ADN de bacterias muertas y adquieren nuevas características heredables.</li>
+            <li><strong>Principio transformante:</strong> Nombre que Griffith dio a la sustancia desconocida que causaba la transformación. Avery demostró que era ADN.</li>
+            <li><strong>Bacteriófago:</strong> Virus que infecta bacterias. Hershey y Chase lo usaron como sistema modelo porque tiene estructura simple (proteína + ADN).</li>
+            <li><strong>Marcaje radiactivo:</strong> Técnica que usa isótopos radiactivos (como ³²P o ³⁵S) para "etiquetar" moléculas específicas y rastrearlas en experimentos.</li>
+            <li><strong>Experimento crucial:</strong> Diseño experimental que permite decidir entre dos o más hipótesis rivales al generar predicciones opuestas para cada una.</li>
+            <li><strong>Convergencia de evidencia:</strong> Cuando múltiples experimentos independientes, usando diferentes métodos, llegan a la misma conclusión. Esto aumenta la confianza en el resultado.</li>
+            <li><strong>Hipótesis rivales:</strong> Dos o más explicaciones alternativas para el mismo fenómeno, que hacen predicciones diferentes y pueden ser discriminadas empíricamente.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="class-section">
+        <h2>Próxima Clase</h2>
+        <div class="concept-highlight">
+          <p><strong>Clase 14: Replicación del ADN - El Experimento de Meselson-Stahl</strong></p>
+          <p>Ahora sabemos que el ADN es el material genético. Pero surge una nueva pregunta fundamental: <strong>¿Cómo se copia el ADN cuando una célula se divide?</strong></p>
+          <p>En 1953, Watson y Crick propusieron que la estructura de doble hélice del ADN sugiere un mecanismo de replicación "semiconservativo". Pero <strong>¿cómo demostrarlo experimentalmente?</strong></p>
+          <p>En 1958, Matthew Meselson y Franklin Stahl diseñaron uno de los experimentos más elegantes de la biología molecular, usando isótopos de nitrógeno para distinguir entre tres modelos posibles de replicación:</p>
+          <ul>
+            <li><strong>Conservativo:</strong> El ADN original se conserva intacto</li>
+            <li><strong>Semiconservativo:</strong> Cada cadena del ADN original se conserva y sirve de molde</li>
+            <li><strong>Dispersivo:</strong> Fragmentos de ADN original y nuevo se mezclan</li>
+          </ul>
+          <p>Descubriremos cómo un experimento simple y elegante resolvió esta cuestión de una vez por todas. ¡Nos vemos en la próxima clase!</p>
+        </div>
+      </section>
+
+      <nav class="class-navigation">
+        <a href="clase-12.html" class="nav-button">← Clase Anterior</a>
+        <a href="index.html" class="nav-button nav-button-index">📚 Índice de la Unidad</a>
+        <a href="clase-14.html" class="nav-button">Siguiente Clase →</a>
+      </nav>
+    </article>
+  </main>
+
+  <footer class="main-footer">
+    <div class="container">
+      <p>&copy; 2024 Filosofía 6to. Material educativo libre.</p>
+    </div>
+  </footer>
+
+  <script src="../../assets/js/dark-mode.js"></script>
+</body>
+
+</html>

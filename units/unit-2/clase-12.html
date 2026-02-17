@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clase 12: Rosalind Franklin y la Foto 51 | Filosofía 6to</title>
+  <link rel="stylesheet" href="../../assets/css/variables.css">
+  <link rel="stylesheet" href="../../assets/css/reset.css">
+  <link rel="stylesheet" href="../../assets/css/base.css">
+  <link rel="stylesheet" href="../../assets/css/typography.css">
+  <link rel="stylesheet" href="../../assets/css/layout.css">
+  <link rel="stylesheet" href="../../assets/css/navigation.css">
+  <link rel="stylesheet" href="../../assets/css/components.css">
+  <link rel="stylesheet" href="../../assets/css/unit-page.css">
+  <link rel="stylesheet" href="../../assets/css/book-layout.css">
+
+  <style>
+    .class-container::before {
+      content: '    Foto 51\A      ♦\A    /  \\\A   /____\\\A  Patrón X\A   (1952)';
+      position: fixed;
+      top: 15%;
+      right: 5%;
+      font-family: 'Caveat', 'Comic Sans MS', cursive;
+      font-size: 26px;
+      font-weight: 700;
+      white-space: pre;
+      color: rgba(255, 255, 255, 0.35);
+      transform: rotate(-6deg);
+    }
+
+    .class-container::after {
+      content: '  Rayos X →\A     💎 →\A  Patrón de\A  Difracción\A     ↓\A  Estructura\A  Molecular';
+      position: fixed;
+      bottom: 20%;
+      left: 5%;
+      font-family: 'Caveat', 'Comic Sans MS', cursive;
+      font-size: 24px;
+      font-weight: 700;
+      white-space: pre;
+      color: rgba(255, 255, 255, 0.32);
+      transform: rotate(5deg);
+    }
+
+    @media (max-width: 1024px) {
+
+      .class-container::before,
+      .class-container::after {
+        position: relative;
+        width: 100%;
+        text-align: center;
+        top: auto;
+        bottom: auto;
+        left: auto;
+        right: auto;
+        transform: rotate(0deg);
+        margin: var(--space-xl) 0;
+        font-size: 20px;
+        display: block;
+      }
+
+      .class-container::before {
+        content: 'Franklin | Cristalografía | Doble Hélice';
+      }
+
+      .class-container::after {
+        content: 'FOTO 51 | Rayos X | Estructura del ADN';
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <nav class="main-nav">
+    <div class="nav-container">
+      <div class="nav-left">
+        <a href="index.html" class="nav-back-button" title="Volver al índice de la unidad">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24"
+            stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M15 19l-7-7 7-7" />
+          </svg>
+          <span>Unidad 2</span>
+        </a>
+        <a href="../../home.html" class="nav-brand">Filosofía 6to</a>
+      </div>
+      <div class="nav-controls">
+        <button id="dark-mode-toggle" class="dark-mode-toggle" aria-label="Cambiar tema">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24"
+            stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <div class="class-progress">
+    <div class="container">
+      <div class="progress-info">
+        <span class="progress-text">Clase 12 de 20</span>
+        <span class="progress-text">20% de la unidad</span>
+      </div>
+      <div class="progress-bar">
+        <div class="progress-fill" style="width: 20%"></div>
+      </div>
+    </div>
+  </div>
+
+  <main class="class-container">
+    <aside class="sidebar">
+      <div class="sidebar-section">
+        <h3>En esta clase</h3>
+        <ul>
+          <li><a href="#intro">Contexto: La carrera por el ADN</a></li>
+          <li><a href="#franklin">Rosalind Franklin</a></li>
+          <li><a href="#cristalografia">Cristalografía de Rayos X</a></li>
+          <li><a href="#foto51">La Foto 51</a></li>
+          <li><a href="#modelo">El Modelo de Watson y Crick</a></li>
+          <li><a href="#controversia">Controversia Ética</a></li>
+          <li><a href="#implicaciones">Implicaciones Filosóficas</a></li>
+          <li><a href="#actividades">Actividades</a></li>
+        </ul>
+      </div>
+
+      <div class="sidebar-section">
+        <h3>Conceptos Clave</h3>
+        <ul class="concept-list">
+          <li>Cristalografía de rayos X</li>
+          <li>Difracción</li>
+          <li>Doble hélice</li>
+          <li>Estructura molecular</li>
+          <li>Reconocimiento científico</li>
+          <li>Ética de investigación</li>
+          <li>Género y ciencia</li>
+        </ul>
+      </div>
+
+      <div class="sidebar-section">
+        <h3>Científicos</h3>
+        <div class="scientist-card">
+          <h4>Rosalind Franklin</h4>
+          <p><strong>1920-1958</strong> | Inglaterra</p>
+          <p>Química y cristalógrafa experta en difracción de rayos X. Sus datos fueron fundamentales para descubrir la estructura del ADN.</p>
+        </div>
+        <div class="scientist-card">
+          <h4>James Watson</h4>
+          <p><strong>1928-</strong> | Estados Unidos</p>
+          <p>Biólogo molecular, construyó el modelo de doble hélice junto con Crick.</p>
+        </div>
+        <div class="scientist-card">
+          <h4>Francis Crick</h4>
+          <p><strong>1916-2004</strong> | Inglaterra</p>
+          <p>Físico molecular que propuso la estructura helicoidal del ADN.</p>
+        </div>
+        <div class="scientist-card">
+          <h4>Maurice Wilkins</h4>
+          <p><strong>1916-2004</strong> | Nueva Zelanda/Inglaterra</p>
+          <p>Biofísico que compartió sus datos de rayos X con Watson y Crick.</p>
+        </div>
+      </div>
+    </aside>
+
+    <article class="class-content">
+      <header class="class-header">
+        <div class="class-badge">Clase 12</div>
+        <h1 class="class-title">Rosalind Franklin y la Foto 51</h1>
+        <p class="class-subtitle">La Imagen que Reveló el Secreto de la Vida</p>
+      </header>
+
+      <section class="class-section" id="intro">
+        <h2>La Carrera por Descubrir la Estructura del ADN</h2>
+
+        <p>A principios de la década de 1950, el mundo científico vivía una carrera febril. Varios laboratorios en Inglaterra y Estados Unidos competían por resolver uno de los misterios más importantes de la biología: <strong>¿Cuál es la estructura del ADN?</strong></p>
+
+        <p>Para ese momento, ya se sabía que el ADN era la molécula portadora de la información genética (como vimos en los experimentos de Griffith, Avery y Hershey-Chase). Pero quedaba una pregunta fundamental: <strong>¿Cómo está organizada esta molécula?</strong> Entender su estructura permitiría comprender cómo almacena y transmite información.</p>
+
+        <div class="concept-highlight">
+          <h3>El Contexto Histórico: 1950-1953</h3>
+          <p>En esta época, varios grupos de investigación trabajaban simultáneamente:</p>
+          <ul>
+            <li><strong>King's College de Londres:</strong> Rosalind Franklin y Maurice Wilkins estudiaban el ADN usando cristalografía de rayos X.</li>
+            <li><strong>Universidad de Cambridge:</strong> James Watson (biólogo estadounidense de 23 años) y Francis Crick (físico británico de 35 años) intentaban construir modelos teóricos basándose en datos de otros.</li>
+            <li><strong>Instituto Tecnológico de California (Caltech):</strong> Linus Pauling, uno de los químicos más brillantes del siglo, también buscaba la estructura del ADN.</li>
+          </ul>
+          <p>Era una competencia científica de alto nivel, donde el premio era el reconocimiento histórico y probablemente el Nobel.</p>
+        </div>
+
+        <div class="image-container">
+          <img src="../../assets/images/class-12/dna_discovery_timeline.svg" alt="Línea temporal del descubrimiento de la estructura del ADN (1950-1953)">
+          <p class="image-caption">Cronología del descubrimiento de la estructura del ADN: 1950-1953</p>
+        </div>
+      </section>
+
+      <section class="class-section" id="franklin">
+        <h2>Rosalind Franklin: La Científica Invisible</h2>
+
+        <p>Rosalind Elsie Franklin nació en Londres en 1920 en una familia judía acomodada. Desde joven mostró un talento excepcional para las ciencias, especialmente la química y la física. En 1938 ingresó a la Universidad de Cambridge para estudiar química, en una época en que muy pocas mujeres accedían a educación universitaria en ciencias.</p>
+
+        <div class="image-container">
+          <img src="../../assets/images/class-12/rosalind_franklin.jpg" alt="Rosalind Franklin en su laboratorio trabajando con el difractómetro de rayos X">
+          <p class="image-caption">Rosalind Franklin en su laboratorio del King's College de Londres, circa 1952</p>
+        </div>
+
+        <p>Durante la Segunda Guerra Mundial, Franklin trabajó investigando la estructura del carbón y el grafito, lo que le dio experiencia en técnicas de difracción de rayos X. Esta técnica permitía "ver" estructuras moleculares demasiado pequeñas para cualquier microscopio óptico.</p>
+
+        <p>En 1951, a los 31 años, Franklin fue contratada por el King's College de Londres para estudiar la estructura del ADN usando cristalografía de rayos X. <strong>Era, en ese momento, una de las mejores expertas del mundo en esta técnica.</strong></p>
+
+        <div class="reflection-box">
+          <h3>El Contexto de Género en la Ciencia del Siglo XX</h3>
+          <p>La situación de Franklin en el King's College era difícil. En la década de 1950:</p>
+          <ul>
+            <li>Las mujeres científicas enfrentaban discriminación institucional: no podían usar el comedor de profesores ni tomar café en las salas comunes reservadas para hombres.</li>
+            <li>Muchos colegas varones no las tomaban en serio profesionalmente, viéndolas como "asistentes" más que como científicas independientes.</li>
+            <li>Franklin tenía un estilo de trabajo riguroso y exigente, lo que generaba tensiones con Maurice Wilkins, quien esperaba que ella fuera su "asistente" cuando en realidad tenía su propio proyecto de investigación.</li>
+          </ul>
+          <p><strong>Esta situación ilustra cómo factores sociales y culturales afectan la práctica científica.</strong> La ciencia no ocurre en un vacío, sino en contextos sociales que pueden facilitar o obstaculizar el trabajo de ciertos grupos.</p>
+        </div>
+      </section>
+
+      <section class="class-section" id="cristalografia">
+        <h2>¿Cómo Funciona la Cristalografía de Rayos X?</h2>
+
+        <p>La técnica que Franklin dominaba, <strong>la cristalografía de rayos X</strong>, es un método ingenioso para "ver lo invisible". Funciona así:</p>
+
+        <ol>
+          <li><strong>Se crea un cristal puro de la sustancia que se quiere estudiar</strong> (en este caso, fibras de ADN altamente purificadas y ordenadas).</li>
+          <li><strong>Se dispara un haz de rayos X a través del cristal.</strong> Los rayos X son ondas electromagnéticas de longitud de onda muy pequeña, similar al tamaño de los átomos.</li>
+          <li><strong>Los átomos en el cristal hacen que los rayos X se "difracten"</strong> (se desvíen) en diferentes direcciones, creando un patrón de manchas en una placa fotográfica.</li>
+          <li><strong>El patrón de difracción contiene información codificada sobre la posición de los átomos</strong> en la molécula original. Es como una "huella dactilar" de la estructura molecular.</li>
+          <li><strong>Un cristalógrafo experto puede interpretar este patrón</strong> y deducir la forma tridimensional de la molécula.</li>
+        </ol>
+
+        <div class="image-container">
+          <img src="../../assets/images/class-12/xray_crystallography.svg" alt="Diagrama explicativo de cómo funciona la cristalografía de rayos X">
+          <p class="image-caption">Esquema del proceso de cristalografía de rayos X: fuente de rayos X → cristal → patrón de difracción → interpretación</p>
+        </div>
+
+        <div class="concept-highlight">
+          <h3>La Instrumentación como Extensión de las Capacidades Humanas</h3>
+          <p>La cristalografía de rayos X es un ejemplo perfecto de cómo la <strong>tecnología amplía nuestras capacidades cognitivas.</strong></p>
+          <ul>
+            <li><strong>Ojos humanos:</strong> Pueden ver objetos de milímetros a kilómetros de tamaño.</li>
+            <li><strong>Microscopios ópticos:</strong> Permiten ver hasta células (micrómetros = millonésimas de metro).</li>
+            <li><strong>Cristalografía de rayos X:</strong> Permite "ver" moléculas y átomos (nanómetros = milmillonésimas de metro).</li>
+          </ul>
+          <p>Sin esta tecnología, <strong>la estructura del ADN habría permanecido invisible</strong> y desconocida. La ciencia moderna depende fundamentalmente de instrumentos que nos permiten acceder a fenómenos naturales fuera del alcance de nuestros sentidos.</p>
+        </div>
+      </section>
+
+      <section class="class-section" id="foto51">
+        <h2>La Foto 51: Una Imagen Que Vale Más Que Mil Palabras</h2>
+
+        <p>En mayo de 1952, después de meses de trabajo meticuloso optimizando la pureza y humedad de las fibras de ADN, Rosalind Franklin y su estudiante de doctorado Raymond Gosling obtuvieron una imagen extraordinaria: <strong>la Foto 51.</strong></p>
+
+        <div class="image-container">
+          <img src="../../assets/images/class-12/photo_51.jpg" alt="La histórica Fotografía 51 de difracción de rayos X del ADN">
+          <p class="image-caption">La Foto 51: patrón de difracción de rayos X del ADN en forma B (hidratada). Las manchas forman una característica "X" que indica estructura helicoidal.</p>
+        </div>
+
+        <p>Para un observador inexperto, la Foto 51 podría parecer solo un patrón abstracto de manchas oscuras sobre fondo claro. Pero <strong>para un cristalógrafo entrenado como Franklin, esta imagen contenía información precisa sobre la estructura del ADN:</strong></p>
+
+        <ul>
+          <li><strong>La forma de "X" en el centro</strong> es característica de una estructura helicoidal (como un resorte o escalera de caracol).</li>
+          <li><strong>El espaciado entre las manchas</strong> permitía calcular el diámetro de la hélice: aproximadamente 2 nanómetros (0.000000002 metros).</li>
+          <li><strong>La repetición del patrón</strong> indicaba que la hélice da una vuelta completa cada 3.4 nanómetros a lo largo de su eje.</li>
+          <li><strong>La intensidad de ciertas manchas</strong> sugería que había <em>dos</em> cadenas helicoidales enrolladas, no una sola.</li>
+        </ul>
+
+        <div class="concept-highlight">
+          <h3>Interpretación de Datos: De Patrones a Estructuras</h3>
+          <p>La Foto 51 ilustra perfectamente un punto epistemológico crucial: <strong>los datos científicos no "hablan por sí solos".</strong></p>
+          <p>La misma fotografía podría ser vista por tres personas diferentes de formas muy distintas:</p>
+          <ul>
+            <li><strong>Una persona sin formación científica:</strong> Vería solo manchas abstractas sin significado claro.</li>
+            <li><strong>Un científico sin formación en cristalografía:</strong> Reconocería que es un patrón de difracción, pero no sabría interpretarlo en detalle.</li>
+            <li><strong>Rosalind Franklin:</strong> Veía en ese patrón una doble hélice con dimensiones precisas, periodicidad regular, y estructura antiparalela.</li>
+          </ul>
+          <p>Esto demuestra que <strong>la observación científica está "cargada de teoría"</strong> (theory-laden): lo que vemos depende de lo que sabemos. Franklin podía "ver" la doble hélice en la Foto 51 porque tenía el conocimiento teórico y la experiencia técnica para interpretar el patrón de difracción.</p>
+        </div>
+      </section>
+
+      <section class="class-section" id="modelo">
+        <h2>Watson, Crick y el Modelo de Doble Hélice</h2>
+
+        <p>Mientras Franklin trabajaba metódicamente en el King's College, acumulando datos experimentales rigurosos, Watson y Crick en Cambridge adoptaban una estrategia diferente: <strong>construir modelos teóricos</strong> usando alambre, cartón y esferas de metal, e intentar que estos modelos fueran consistentes con todos los datos químicos y físicos disponibles.</p>
+
+        <p>El problema era que Watson y Crick <strong>no tenían suficientes datos propios</strong>. Dependían de información de otros laboratorios. Y aquí es donde ocurre la controversia.</p>
+
+        <h3>El Acceso No Autorizado a los Datos de Franklin</h3>
+
+        <p>En enero de 1953, <strong>Maurice Wilkins mostró la Foto 51 a James Watson sin el permiso ni el conocimiento de Rosalind Franklin.</strong> Watson, al ver la imagen, reconoció inmediatamente la estructura helicoidal.</p>
+
+        <p>Además, Max Perutz (colega de Crick) le entregó un informe técnico confidencial que Franklin había escrito, donde describía sus conclusiones sobre las dimensiones y características del ADN.</p>
+
+        <p>Con esta información "prestada" (o, más exactamente, <em>apropiada sin autorización</em>), Watson y Crick ajustaron rápidamente su modelo. <strong>En febrero de 1953, solo unas semanas después de ver la Foto 51, habían construido el modelo correcto de doble hélice del ADN.</strong></p>
+
+        <div class="image-container">
+          <img src="../../assets/images/class-12/watson_crick_model.jpg" alt="James Watson y Francis Crick con su modelo físico de la doble hélice del ADN">
+          <p class="image-caption">Watson y Crick junto a su modelo de la doble hélice del ADN (1953)</p>
+        </div>
+
+        <p>En abril de 1953, Watson y Crick publicaron un artículo de una página en la revista <em>Nature</em> describiendo la estructura de doble hélice. El artículo comenzaba con una de las frases más famosas de la historia de la ciencia:</p>
+
+        <blockquote class="philosophical-quote">
+          <p>"Queremos sugerir una estructura para el ácido desoxirribonucleico (ADN). Esta estructura tiene características novedosas que son de considerable interés biológico."</p>
+          <cite>— Watson y Crick, Nature, 25 de abril de 1953</cite>
+        </blockquote>
+
+        <p>En el mismo número de <em>Nature</em>, Franklin y Gosling también publicaron un artículo describiendo sus datos de rayos X, pero <strong>el modelo de Watson-Crick recibió todo el crédito mediático y científico.</strong></p>
+      </section>
+
+      <section class="class-section" id="controversia">
+        <h2>Controversia Ética: Autoría, Reconocimiento y Género</h2>
+
+        <p>La historia del descubrimiento de la estructura del ADN plantea serias cuestiones éticas sobre <strong>la autoría científica y el reconocimiento justo.</strong></p>
+
+        <h3>1. Uso de Datos Sin Permiso</h3>
+        <p>Wilkins mostró la Foto 51 a Watson sin consultarle a Franklin. Desde una perspectiva ética:</p>
+        <ul>
+          <li><strong>Los datos experimentales pertenecen a quien los produce.</strong> Franklin invirtió meses perfeccionando la técnica para obtener esa imagen.</li>
+          <li><strong>Compartir datos de un colega sin su permiso viola normas básicas de ética científica.</strong> Es comparable a usar las ideas de alguien sin citarlas (plagio).</li>
+          <li><strong>En 1953, estas normas no estaban tan formalizadas como hoy.</strong> Pero eso no justifica la acción; simplemente explica el contexto.</li>
+        </ul>
+
+        <h3>2. Falta de Reconocimiento</h3>
+        <p>En 1962, Watson, Crick y Wilkins recibieron el <strong>Premio Nobel de Fisiología o Medicina</strong> por el descubrimiento de la estructura del ADN. Rosalind Franklin <strong>no fue incluida.</strong></p>
+
+        <p>Hay dos factores que explican (pero no justifican) esta exclusión:</p>
+        <ul>
+          <li><strong>Franklin había fallecido en 1958 de cáncer de ovario (posiblemente relacionado con su exposición prolongada a rayos X).</strong> El Nobel no se otorga póstumamente.</li>
+          <li><strong>El Nobel solo puede ser compartido por un máximo de tres personas.</strong> Había cuatro candidatos legítimos.</li>
+        </ul>
+
+        <p>Sin embargo, <strong>Watson, Crick y Wilkins tampoco reconocieron públicamente la contribución fundamental de Franklin en sus discursos de aceptación del Nobel.</strong> Wilkins mencionó brevemente "la difunta Miss Franklin", pero sin enfatizar que sus datos habían sido decisivos.</p>
+
+        <h3>3. El Contexto de Género</h3>
+        <p>La invisibilización de Franklin no fue un caso aislado. <strong>Muchas mujeres científicas del siglo XX enfrentaron situaciones similares:</strong></p>
+        <ul>
+          <li><strong>Lise Meitner</strong> (física nuclear): Clave en el descubrimiento de la fisión nuclear, pero el Nobel lo recibió solo su colega Otto Hahn (1944).</li>
+          <li><strong>Jocelyn Bell Burnell</strong> (astrofísica): Descubrió los púlsares en 1967, pero el Nobel lo recibió su supervisor Antony Hewish (1974).</li>
+          <li><strong>Rosalind Franklin</strong>: Proporcionó los datos cruciales para la estructura del ADN, pero el crédito fue principalmente para Watson y Crick.</li>
+        </ul>
+
+        <div class="concept-highlight">
+          <h3>Ciencia y Valores: ¿Es la Ciencia "Neutral"?</h3>
+          <p>Este caso muestra que <strong>la práctica científica no es neutral respecto a valores sociales y culturales.</strong></p>
+          <p>Factores no-científicos que influyeron en esta historia:</p>
+          <ul>
+            <li><strong>Género:</strong> Franklin era mujer en un campo dominado por hombres, lo que afectó cómo sus colegas la trataban y reconocían.</li>
+            <li><strong>Estilo de trabajo:</strong> Franklin era metódica y cautelosa; Watson y Crick eran arriesgados y especulativos. La comunidad científica valoró más el estilo masculino de "genio audaz" que el trabajo riguroso.</li>
+            <li><strong>Redes sociales:</strong> Watson, Crick y Wilkins eran parte del "club" académico británico; Franklin era vista como "outsider".</li>
+            <li><strong>Narrativa mediática:</strong> Los medios presentaron a Watson y Crick como los "descubridores", lo que se volvió la versión oficial.</li>
+          </ul>
+          <p><strong>La lección epistemológica:</strong> La ciencia es una actividad humana que ocurre en contextos sociales. Entender cómo se produce conocimiento científico requiere considerar no solo la lógica de la evidencia, sino también las dinámicas sociales, de género, económicas y culturales que afectan quién hace ciencia, cómo se hace, y quién recibe crédito.</p>
+        </div>
+      </section>
+
+      <section class="class-section" id="implicaciones">
+        <h2>Implicaciones Filosóficas y Epistemológicas</h2>
+
+        <h3>1. Instrumentación y Observación</h3>
+        <p>La cristalografía de rayos X ilustra cómo <strong>la tecnología media entre el fenómeno natural y el científico.</strong> No observamos directamente la estructura del ADN; observamos patrones de difracción que <em>interpretamos</em> como indicativos de cierta estructura. Esto plantea preguntas filosóficas:</p>
+        <ul>
+          <li>¿Qué tan "reales" son las entidades que solo podemos "ver" mediante instrumentos complejos?</li>
+          <li>¿Cómo sabemos que nuestras interpretaciones de los datos instrumentales son correctas?</li>
+          <li>¿Qué papel juega la teoría previa en la interpretación de observaciones mediadas por tecnología?</li>
+        </ul>
+
+        <h3>2. Contexto de Descubrimiento vs Contexto de Justificación</h3>
+        <p>Los filósofos de la ciencia distinguen entre:</p>
+        <ul>
+          <li><strong>Contexto de descubrimiento:</strong> Cómo se generan las ideas científicas (puede incluir intuición, error, competencia, suerte).</li>
+          <li><strong>Contexto de justificación:</strong> Cómo se validan las ideas científicas (debe ser mediante evidencia empírica rigurosa).</li>
+        </ul>
+        <p>El caso del ADN muestra que <strong>el contexto de descubrimiento puede ser "sucio" éticamente (uso no autorizado de datos), pero eso no invalida el descubrimiento en sí.</strong> El modelo de doble hélice es correcto, independientemente de cómo Watson y Crick accedieron a los datos.</p>
+        <p>Sin embargo, <strong>esto no justifica la conducta poco ética.</strong> La comunidad científica moderna tiene normas estrictas sobre el uso de datos y el reconocimiento de contribuciones precisamente para evitar casos como este.</p>
+
+        <h3>3. Ética en la Investigación</h3>
+        <p>El caso Franklin-Watson-Crick es un ejemplo histórico de por qué necesitamos <strong>normas éticas en la práctica científica:</strong></p>
+        <ul>
+          <li><strong>Consentimiento informado:</strong> Usar datos de alguien requiere su permiso.</li>
+          <li><strong>Atribución justa:</strong> Dar crédito a todos los que contribuyeron significativamente.</li>
+          <li><strong>Transparencia:</strong> Reconocer de dónde provienen los datos y las ideas.</li>
+          <li><strong>No discriminación:</strong> Evaluar el trabajo científico independientemente del género, raza, u origen de quien lo produce.</li>
+        </ul>
+      </section>
+
+      <section class="class-section" id="actividades">
+        <h2>Actividades</h2>
+
+        <div class="activity-box">
+          <h3>🔬 Actividad 1: Análisis de la Foto 51</h3>
+          <div class="question-card">
+            <p><strong>Consigna:</strong> Observa detenidamente la Foto 51. Imagina que eres un científico en 1952 y acabas de recibir esta imagen. Sin saber de antemano que el ADN es una doble hélice, ¿qué características de la imagen te llamarían la atención? ¿Qué inferencias podrías hacer sobre la estructura de la molécula?</p>
+            <p><em>Responde en al menos un párrafo describiendo las características visuales que notas y qué hipótesis formularías.</em></p>
+          </div>
+        </div>
+
+        <div class="activity-box">
+          <h3>⚖️ Actividad 2: Dilema Ético</h3>
+          <div class="question-card">
+            <p><strong>Consigna:</strong> ¿Fue legítimo que Watson y Crick usaran los datos de Rosalind Franklin sin su permiso explícito para construir su modelo de doble hélice? Desarrolla argumentos <em>a favor</em> y <em>en contra</em> de esta acción.</p>
+            <p><strong>Argumentos a favor:</strong></p>
+            <ul>
+              <li>En ciencia, lo que importa es llegar a la verdad, no quién recibe crédito.</li>
+              <li>Los datos eventualmente se hacen públicos, así que solo se adelantaron un poco.</li>
+              <li>Wilkins tenía acceso legítimo a los datos (trabajaba en el mismo departamento).</li>
+            </ul>
+            <p><strong>Argumentos en contra:</strong></p>
+            <ul>
+              <li>Los datos pertenecen a quien los produce; usarlos sin permiso es robo intelectual.</li>
+              <li>Franklin tenía derecho a publicar sus propias conclusiones primero.</li>
+              <li>El reconocimiento científico afecta carreras y financiamiento futuro.</li>
+            </ul>
+            <p><em>Escribe tu posición fundamentada sobre este dilema, considerando tanto principios éticos como el contexto histórico de 1953.</em></p>
+          </div>
+        </div>
+
+        <div class="activity-box">
+          <h3>📊 Actividad 3: Comparación de Contribuciones</h3>
+          <div class="question-card">
+            <p><strong>Consigna:</strong> Completa la siguiente tabla comparando las contribuciones de los cuatro científicos principales:</p>
+            <table border="1" style="width: 100%; text-align: left;">
+              <thead>
+                <tr>
+                  <th>Científico</th>
+                  <th>Contribución Específica</th>
+                  <th>Tipo de Trabajo (teórico/experimental)</th>
+                  <th>Reconocimiento Recibido</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Rosalind Franklin</td>
+                  <td>Foto 51 y datos de cristalografía</td>
+                  <td>Experimental</td>
+                  <td>Mínimo (póstumamente reconocida)</td>
+                </tr>
+                <tr>
+                  <td>Maurice Wilkins</td>
+                  <td>...</td>
+                  <td>...</td>
+                  <td>...</td>
+                </tr>
+                <tr>
+                  <td>James Watson</td>
+                  <td>...</td>
+                  <td>...</td>
+                  <td>...</td>
+                </tr>
+                <tr>
+                  <td>Francis Crick</td>
+                  <td>...</td>
+                  <td>...</td>
+                  <td>...</td>
+                </tr>
+              </tbody>
+            </table>
+            <p><em>Después de completar la tabla, responde: ¿Consideras que el reconocimiento estuvo distribuido justamente? ¿Por qué sí o por qué no?</em></p>
+          </div>
+        </div>
+      </section>
+
+      <section class="class-section">
+        <h2>Conceptos Clave de Esta Clase</h2>
+        <div class="concept-highlight">
+          <ul>
+            <li><strong>Cristalografía de rayos X:</strong> Técnica que utiliza la difracción de rayos X en cristales para determinar la estructura tridimensional de moléculas.</li>
+            <li><strong>Difracción:</strong> Fenómeno por el cual las ondas (como los rayos X) se desvían al pasar cerca de objetos del tamaño similar a su longitud de onda.</li>
+            <li><strong>Doble hélice:</strong> Estructura del ADN formada por dos cadenas polinucleótidas enrolladas en forma de espiral.</li>
+            <li><strong>Estructura molecular:</strong> Disposición tridimensional de los átomos en una molécula.</li>
+            <li><strong>Reconocimiento científico:</strong> Atribución de crédito a los autores de descubrimientos o invenciones científicas.</li>
+            <li><strong>Ética de investigación:</strong> Conjunto de principios morales que regulan la conducta en la práctica científica (honestidad, transparencia, atribución justa).</li>
+            <li><strong>Género y ciencia:</strong> Análisis de cómo las construcciones sociales de género afectan quién hace ciencia, cómo se hace, y quién recibe reconocimiento.</li>
+            <li><strong>Carga teórica de la observación:</strong> Idea de que lo que observamos depende de nuestro conocimiento teórico previo (como vimos con la interpretación de la Foto 51).</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="class-section">
+        <h2>Próxima Clase</h2>
+        <div class="concept-highlight">
+          <p><strong>Clase 13: El ADN como Molécula de la Herencia</strong></p>
+          <p>Ahora que conocemos la estructura del ADN, una pregunta queda pendiente: <strong>¿Cómo sabemos que el ADN, y no las proteínas, es el portador de la información genética?</strong></p>
+          <p>En la próxima clase analizaremos tres experimentos cruciales que demostraron esta hipótesis:</p>
+          <ul>
+            <li>El experimento de transformación de Griffith (1928)</li>
+            <li>El experimento de Avery-MacLeod-McCarty (1944)</li>
+            <li>El experimento de marcaje radiactivo de Hershey-Chase (1952)</li>
+          </ul>
+          <p>Estos experimentos son ejemplos perfectos de cómo se diseñan contrastaciones empíricas rigurosas para decidir entre hipótesis rivales. ¡Nos vemos en la próxima clase!</p>
+        </div>
+      </section>
+
+      <nav class="class-navigation">
+        <a href="clase-11.html" class="nav-button">← Clase Anterior</a>
+        <a href="index.html" class="nav-button nav-button-index">📚 Índice de la Unidad</a>
+        <a href="clase-13.html" class="nav-button">Siguiente Clase →</a>
+      </nav>
+    </article>
+  </main>
+
+  <footer class="main-footer">
+    <div class="container">
+      <p>&copy; 2024 Filosofía 6to. Material educativo libre.</p>
+    </div>
+  </footer>
+
+  <script src="../../assets/js/dark-mode.js"></script>
+</body>
+
+</html>

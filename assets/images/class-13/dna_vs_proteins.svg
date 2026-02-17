@@ -1,0 +1,104 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600">
+  <!-- Title -->
+  <text x="450" y="35" text-anchor="middle" font-size="26" font-weight="bold" fill="#10b981">
+    ADN vs Proteínas como Candidatos a Material Genético
+  </text>
+  <text x="450" y="60" text-anchor="middle" font-size="14" fill="#6b7280" font-style="italic">
+    (Contexto histórico: antes de 1944)
+  </text>
+
+  <!-- Table header -->
+  <rect x="50" y="90" width="800" height="50" fill="#10b981" rx="5"/>
+  <text x="150" y="123" text-anchor="middle" font-size="16" font-weight="bold" fill="white">Criterio</text>
+  <text x="400" y="123" text-anchor="middle" font-size="16" font-weight="bold" fill="white">ADN</text>
+  <text x="700" y="123" text-anchor="middle" font-size="16" font-weight="bold" fill="white">Proteínas</text>
+
+  <!-- Row 1: Composición -->
+  <g id="row1">
+    <rect x="50" y="140" width="800" height="70" fill="#e0f2fe" stroke="#10b981" stroke-width="1"/>
+    <text x="150" y="165" text-anchor="middle" font-size="14" font-weight="bold" fill="#1f2937">Composición</text>
+    <text x="150" y="185" text-anchor="middle" font-size="11" fill="#6b7280">(Unidades básicas)</text>
+
+    <text x="400" y="165" text-anchor="middle" font-size="13" fill="#1f2937">4 nucleótidos diferentes</text>
+    <text x="400" y="183" text-anchor="middle" font-size="11" fill="#6b7280">(A, T, G, C)</text>
+    <text x="400" y="200" text-anchor="middle" font-size="10" fill="#8b5cf6" font-weight="bold">Parece "simple"</text>
+
+    <text x="700" y="165" text-anchor="middle" font-size="13" fill="#1f2937">20 aminoácidos diferentes</text>
+    <text x="700" y="183" text-anchor="middle" font-size="11" fill="#6b7280">(valina, leucina, etc.)</text>
+    <text x="700" y="200" text-anchor="middle" font-size="10" fill="#f59e0b" font-weight="bold">Muy diverso ✓</text>
+  </g>
+
+  <!-- Row 2: Complejidad -->
+  <g id="row2">
+    <rect x="50" y="210" width="800" height="70" fill="white" stroke="#10b981" stroke-width="1"/>
+    <text x="150" y="235" text-anchor="middle" font-size="14" font-weight="bold" fill="#1f2937">Complejidad</text>
+    <text x="150" y="255" text-anchor="middle" font-size="11" fill="#6b7280">estructural</text>
+
+    <text x="400" y="235" text-anchor="middle" font-size="13" fill="#1f2937">Estructura "monótona"</text>
+    <text x="400" y="253" text-anchor="middle" font-size="11" fill="#6b7280">Solo 4 bases posibles</text>
+    <text x="400" y="270" text-anchor="middle" font-size="10" fill="#8b5cf6" font-weight="bold">Parece "aburrido"</text>
+
+    <text x="700" y="235" text-anchor="middle" font-size="13" fill="#1f2937">Estructura muy variada</text>
+    <text x="700" y="253" text-anchor="middle" font-size="11" fill="#6b7280">Infinitas combinaciones</text>
+    <text x="700" y="270" text-anchor="middle" font-size="10" fill="#f59e0b" font-weight="bold">Muy versátil ✓</text>
+  </g>
+
+  <!-- Row 3: Localización -->
+  <g id="row3">
+    <rect x="50" y="280" width="800" height="70" fill="#e0f2fe" stroke="#10b981" stroke-width="1"/>
+    <text x="150" y="305" text-anchor="middle" font-size="14" font-weight="bold" fill="#1f2937">Localización</text>
+    <text x="150" y="325" text-anchor="middle" font-size="11" fill="#6b7280">en la célula</text>
+
+    <text x="400" y="305" text-anchor="middle" font-size="13" fill="#1f2937">Siempre en el núcleo</text>
+    <text x="400" y="323" text-anchor="middle" font-size="11" fill="#6b7280">En cromosomas</text>
+    <text x="400" y="340" text-anchor="middle" font-size="10" fill="#f59e0b" font-weight="bold">Ubicación clave ✓</text>
+
+    <text x="700" y="305" text-anchor="middle" font-size="13" fill="#1f2937">En todas partes</text>
+    <text x="700" y="323" text-anchor="middle" font-size="11" fill="#6b7280">Citoplasma, núcleo, membranas</text>
+    <text x="700" y="340" text-anchor="middle" font-size="10" fill="#8b5cf6">Ubicua</text>
+  </g>
+
+  <!-- Row 4: Cantidad constante -->
+  <g id="row4">
+    <rect x="50" y="350" width="800" height="70" fill="white" stroke="#10b981" stroke-width="1"/>
+    <text x="150" y="375" text-anchor="middle" font-size="14" font-weight="bold" fill="#1f2937">Cantidad</text>
+    <text x="150" y="395" text-anchor="middle" font-size="11" fill="#6b7280">en células</text>
+
+    <text x="400" y="375" text-anchor="middle" font-size="13" fill="#1f2937">Constante en cada especie</text>
+    <text x="400" y="393" text-anchor="middle" font-size="11" fill="#6b7280">Misma cantidad en todas las células</text>
+    <text x="400" y="410" text-anchor="middle" font-size="10" fill="#f59e0b" font-weight="bold">Predecible ✓</text>
+
+    <text x="700" y="375" text-anchor="middle" font-size="13" fill="#1f2937">Variable según tipo celular</text>
+    <text x="700" y="393" text-anchor="middle" font-size="11" fill="#6b7280">Depende de la función</text>
+    <text x="700" y="410" text-anchor="middle" font-size="10" fill="#8b5cf6">Variable</text>
+  </g>
+
+  <!-- Row 5: Función conocida -->
+  <g id="row5">
+    <rect x="50" y="420" width="800" height="70" fill="#e0f2fe" stroke="#10b981" stroke-width="1"/>
+    <text x="150" y="445" text-anchor="middle" font-size="14" font-weight="bold" fill="#1f2937">Función</text>
+    <text x="150" y="465" text-anchor="middle" font-size="11" fill="#6b7280">conocida (1940s)</text>
+
+    <text x="400" y="445" text-anchor="middle" font-size="13" fill="#1f2937">Función desconocida</text>
+    <text x="400" y="463" text-anchor="middle" font-size="11" fill="#6b7280">"¿Para qué sirve el ADN?"</text>
+    <text x="400" y="480" text-anchor="middle" font-size="10" fill="#8b5cf6">Misterioso</text>
+
+    <text x="700" y="445" text-anchor="middle" font-size="13" fill="#1f2937">Múltiples funciones conocidas</text>
+    <text x="700" y="463" text-anchor="middle" font-size="11" fill="#6b7280">Enzimas, estructura, transporte</text>
+    <text x="700" y="480" text-anchor="middle" font-size="10" fill="#f59e0b" font-weight="bold">Versátiles ✓</text>
+  </g>
+
+  <!-- Summary box -->
+  <g id="summary">
+    <rect x="50" y="510" width="800" height="75" rx="8" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+    <text x="450" y="535" text-anchor="middle" font-size="15" font-weight="bold" fill="#f59e0b">
+      Consenso científico en 1920-1940: Las PROTEÍNAS eran las favoritas
+    </text>
+    <text x="450" y="555" text-anchor="middle" font-size="12" fill="#1f2937">
+      Argumento principal: Las proteínas son más complejas y versátiles que el ADN
+    </text>
+    <text x="450" y="573" text-anchor="middle" font-size="11" fill="#6b7280" font-style="italic">
+      ¡Pero los experimentos de Griffith, Avery y Hershey-Chase demostraron lo contrario!
+    </text>
+  </g>
+</svg>

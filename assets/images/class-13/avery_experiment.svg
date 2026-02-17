@@ -1,0 +1,146 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 700">
+  <defs>
+    <marker id="arrow-avery" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <polygon points="0 0, 10 3, 0 6" fill="#10b981"/>
+    </marker>
+  </defs>
+
+  <!-- Title -->
+  <text x="500" y="35" text-anchor="middle" font-size="26" font-weight="bold" fill="#10b981">
+    Experimento de Avery, MacLeod y McCarty (1944)
+  </text>
+  <text x="500" y="60" text-anchor="middle" font-size="16" fill="#6b7280">
+    Identificando el Principio Transformante mediante Digestión Enzimática
+  </text>
+
+  <!-- Starting material -->
+  <g id="start">
+    <rect x="380" y="90" width="240" height="80" rx="8" fill="#8b5cf6" opacity="0.2" stroke="#8b5cf6" stroke-width="2"/>
+    <text x="500" y="115" text-anchor="middle" font-size="14" font-weight="bold" fill="#8b5cf6">Material de partida:</text>
+    <text x="500" y="135" text-anchor="middle" font-size="13" fill="#1f2937">Extracto de bacterias S</text>
+    <text x="500" y="155" text-anchor="middle" font-size="11" fill="#6b7280">(contiene el principio transformante)</text>
+  </g>
+
+  <!-- Split into 4 groups -->
+  <line x1="500" y1="170" x2="500" y2="210" stroke="#10b981" stroke-width="2" marker-end="url(#arrow-avery)"/>
+  <text x="520" y="195" font-size="12" fill="#6b7280">Dividir en 4 grupos</text>
+
+  <!-- Group 1: Control -->
+  <g id="group1">
+    <rect x="50" y="230" width="200" height="380" rx="8" fill="#10b981" opacity="0.1" stroke="#10b981" stroke-width="2"/>
+    <text x="150" y="255" text-anchor="middle" font-size="15" font-weight="bold" fill="#10b981">Grupo 1: Control</text>
+
+    <!-- Treatment -->
+    <rect x="75" y="275" width="150" height="60" rx="5" fill="#e0f2fe" stroke="#0ea5e9" stroke-width="2"/>
+    <text x="150" y="295" text-anchor="middle" font-size="12" fill="#0ea5e9" font-weight="bold">Tratamiento:</text>
+    <text x="150" y="315" text-anchor="middle" font-size="11" fill="#1f2937">Extracto S</text>
+    <text x="150" y="330" text-anchor="middle" font-size="10" fill="#6b7280">SIN enzimas</text>
+
+    <!-- Add R bacteria -->
+    <text x="150" y="360" text-anchor="middle" font-size="11" fill="#1f2937">+</text>
+    <text x="150" y="375" text-anchor="middle" font-size="11" fill="#1f2937">Bacterias R vivas</text>
+
+    <path d="M 150 385 L 150 420" stroke="#10b981" stroke-width="2" marker-end="url(#arrow-avery)"/>
+
+    <!-- Result -->
+    <rect x="75" y="430" width="150" height="100" rx="5" fill="#10b981" opacity="0.2" stroke="#10b981" stroke-width="2"/>
+    <text x="150" y="455" text-anchor="middle" font-size="13" fill="#10b981" font-weight="bold">Resultado:</text>
+    <text x="150" y="475" text-anchor="middle" font-size="12" fill="#1f2937">✓ TRANSFORMACIÓN</text>
+    <text x="150" y="493" text-anchor="middle" font-size="10" fill="#6b7280">Aparecen bacterias S</text>
+    <text x="150" y="515" text-anchor="middle" font-size="11" fill="#1f2937" font-weight="bold">Conclusión:</text>
+    <text x="150" y="530" text-anchor="middle" font-size="10" fill="#6b7280">El principio transformante</text>
+    <text x="150" y="545" text-anchor="middle" font-size="10" fill="#6b7280">está presente</text>
+  </g>
+
+  <!-- Group 2: Protease -->
+  <g id="group2">
+    <rect x="270" y="230" width="200" height="380" rx="8" fill="#10b981" opacity="0.1" stroke="#f59e0b" stroke-width="2"/>
+    <text x="370" y="255" text-anchor="middle" font-size="15" font-weight="bold" fill="#f59e0b">Grupo 2: Proteasas</text>
+
+    <!-- Treatment -->
+    <rect x="295" y="275" width="150" height="60" rx="5" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+    <text x="370" y="295" text-anchor="middle" font-size="12" fill="#f59e0b" font-weight="bold">Tratamiento:</text>
+    <text x="370" y="315" text-anchor="middle" font-size="11" fill="#1f2937">Extracto S +</text>
+    <text x="370" y="330" text-anchor="middle" font-size="10" fill="#f59e0b" font-weight="bold">PROTEASAS</text>
+
+    <!-- Add R bacteria -->
+    <text x="370" y="360" text-anchor="middle" font-size="11" fill="#1f2937">+</text>
+    <text x="370" y="375" text-anchor="middle" font-size="11" fill="#1f2937">Bacterias R vivas</text>
+
+    <path d="M 370 385 L 370 420" stroke="#10b981" stroke-width="2" marker-end="url(#arrow-avery)"/>
+
+    <!-- Result -->
+    <rect x="295" y="430" width="150" height="100" rx="5" fill="#10b981" opacity="0.2" stroke="#10b981" stroke-width="2"/>
+    <text x="370" y="455" text-anchor="middle" font-size="13" fill="#10b981" font-weight="bold">Resultado:</text>
+    <text x="370" y="475" text-anchor="middle" font-size="12" fill="#1f2937">✓ TRANSFORMACIÓN</text>
+    <text x="370" y="493" text-anchor="middle" font-size="10" fill="#6b7280">Aparecen bacterias S</text>
+    <text x="370" y="515" text-anchor="middle" font-size="11" fill="#1f2937" font-weight="bold">Conclusión:</text>
+    <text x="370" y="530" text-anchor="middle" font-size="10" fill="#6b7280">Las proteínas NO son</text>
+    <text x="370" y="545" text-anchor="middle" font-size="10" fill="#6b7280">el principio transformante</text>
+  </g>
+
+  <!-- Group 3: RNase -->
+  <g id="group3">
+    <rect x="490" y="230" width="200" height="380" rx="8" fill="#10b981" opacity="0.1" stroke="#f59e0b" stroke-width="2"/>
+    <text x="590" y="255" text-anchor="middle" font-size="15" font-weight="bold" fill="#f59e0b">Grupo 3: ARNasas</text>
+
+    <!-- Treatment -->
+    <rect x="515" y="275" width="150" height="60" rx="5" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+    <text x="590" y="295" text-anchor="middle" font-size="12" fill="#f59e0b" font-weight="bold">Tratamiento:</text>
+    <text x="590" y="315" text-anchor="middle" font-size="11" fill="#1f2937">Extracto S +</text>
+    <text x="590" y="330" text-anchor="middle" font-size="10" fill="#f59e0b" font-weight="bold">ARNasas</text>
+
+    <!-- Add R bacteria -->
+    <text x="590" y="360" text-anchor="middle" font-size="11" fill="#1f2937">+</text>
+    <text x="590" y="375" text-anchor="middle" font-size="11" fill="#1f2937">Bacterias R vivas</text>
+
+    <path d="M 590 385 L 590 420" stroke="#10b981" stroke-width="2" marker-end="url(#arrow-avery)"/>
+
+    <!-- Result -->
+    <rect x="515" y="430" width="150" height="100" rx="5" fill="#10b981" opacity="0.2" stroke="#10b981" stroke-width="2"/>
+    <text x="590" y="455" text-anchor="middle" font-size="13" fill="#10b981" font-weight="bold">Resultado:</text>
+    <text x="590" y="475" text-anchor="middle" font-size="12" fill="#1f2937">✓ TRANSFORMACIÓN</text>
+    <text x="590" y="493" text-anchor="middle" font-size="10" fill="#6b7280">Aparecen bacterias S</text>
+    <text x="590" y="515" text-anchor="middle" font-size="11" fill="#1f2937" font-weight="bold">Conclusión:</text>
+    <text x="590" y="530" text-anchor="middle" font-size="10" fill="#6b7280">El ARN NO es</text>
+    <text x="590" y="545" text-anchor="middle" font-size="10" fill="#6b7280">el principio transformante</text>
+  </g>
+
+  <!-- Group 4: DNase (THE KEY) -->
+  <g id="group4">
+    <rect x="710" y="230" width="200" height="380" rx="8" fill="#ef4444" opacity="0.1" stroke="#ef4444" stroke-width="3"/>
+    <text x="810" y="255" text-anchor="middle" font-size="15" font-weight="bold" fill="#ef4444">Grupo 4: ADNasas ⭐</text>
+
+    <!-- Treatment -->
+    <rect x="735" y="275" width="150" height="60" rx="5" fill="#fee2e2" stroke="#ef4444" stroke-width="2"/>
+    <text x="810" y="295" text-anchor="middle" font-size="12" fill="#ef4444" font-weight="bold">Tratamiento:</text>
+    <text x="810" y="315" text-anchor="middle" font-size="11" fill="#1f2937">Extracto S +</text>
+    <text x="810" y="330" text-anchor="middle" font-size="10" fill="#ef4444" font-weight="bold">ADNasas</text>
+
+    <!-- Add R bacteria -->
+    <text x="810" y="360" text-anchor="middle" font-size="11" fill="#1f2937">+</text>
+    <text x="810" y="375" text-anchor="middle" font-size="11" fill="#1f2937">Bacterias R vivas</text>
+
+    <path d="M 810 385 L 810 420" stroke="#ef4444" stroke-width="2" marker-end="url(#arrow-avery)"/>
+
+    <!-- Result -->
+    <rect x="735" y="430" width="150" height="100" rx="5" fill="#ef4444" opacity="0.2" stroke="#ef4444" stroke-width="2"/>
+    <text x="810" y="455" text-anchor="middle" font-size="13" fill="#ef4444" font-weight="bold">Resultado:</text>
+    <text x="810" y="475" text-anchor="middle" font-size="12" fill="#1f2937">✗ NO hay transformación</text>
+    <text x="810" y="493" text-anchor="middle" font-size="10" fill="#6b7280">Solo bacterias R</text>
+    <text x="810" y="515" text-anchor="middle" font-size="11" fill="#ef4444" font-weight="bold">Conclusión:</text>
+    <text x="810" y="530" text-anchor="middle" font-size="10" fill="#1f2937">¡El ADN ES</text>
+    <text x="810" y="545" text-anchor="middle" font-size="10" fill="#1f2937">el principio transformante!</text>
+  </g>
+
+  <!-- Final conclusion box -->
+  <g id="final-conclusion">
+    <rect x="50" y="630" width="900" height="60" rx="8" fill="#8b5cf6" opacity="0.2" stroke="#8b5cf6" stroke-width="2"/>
+    <text x="500" y="655" text-anchor="middle" font-size="16" font-weight="bold" fill="#8b5cf6">
+      CONCLUSIÓN GENERAL: El ADN es el material genético
+    </text>
+    <text x="500" y="677" text-anchor="middle" font-size="12" fill="#1f2937">
+      Solo las ADNasas eliminaron la transformación → El principio transformante debe ser ADN
+    </text>
+  </g>
+</svg>
