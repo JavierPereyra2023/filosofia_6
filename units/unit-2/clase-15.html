@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clase 15: Tecnología y Ética - CRISPR | Filosofía 6to</title>
+  <link rel="stylesheet" href="../../assets/css/variables.css">
+  <link rel="stylesheet" href="../../assets/css/reset.css">
+  <link rel="stylesheet" href="../../assets/css/base.css">
+  <link rel="stylesheet" href="../../assets/css/typography.css">
+  <link rel="stylesheet" href="../../assets/css/layout.css">
+  <link rel="stylesheet" href="../../assets/css/navigation.css">
+  <link rel="stylesheet" href="../../assets/css/components.css">
+  <link rel="stylesheet" href="../../assets/css/unit-page.css">
+  <link rel="stylesheet" href="../../assets/css/book-layout.css">
+
+  <style>
+    .class-container::before {
+      content: '   ✂ CRISPR\A    Cas9 →\A   ||||||\A   cortar\A   |\A   insertar\A  nuevo gen';
+      position: fixed;
+      top: 15%;
+      right: 5%;
+      font-family: 'Caveat', 'Comic Sans MS', cursive;
+      font-size: 24px;
+      font-weight: 700;
+      white-space: pre;
+      color: rgba(255, 255, 255, 0.35);
+      transform: rotate(-6deg);
+    }
+
+    .class-container::after {
+      content: '  ¿Hasta dónde\A   llegar?\A\A  Terapia ✓\A  Mejora ?\A  Eugenesia ✗';
+      position: fixed;
+      bottom: 20%;
+      left: 5%;
+      font-family: 'Caveat', 'Comic Sans MS', cursive;
+      font-size: 23px;
+      font-weight: 700;
+      white-space: pre;
+      color: rgba(255, 255, 255, 0.32);
+      transform: rotate(5deg);
+    }
+
+    @media (max-width: 1024px) {
+      .class-container::before,
+      .class-container::after {
+        position: relative;
+        width: 100%;
+        text-align: center;
+        top: auto;
+        bottom: auto;
+        left: auto;
+        right: auto;
+        transform: rotate(0deg);
+        margin: var(--space-xl) 0;
+        font-size: 18px;
+        display: block;
+      }
+      .class-container::before { content: 'CRISPR-Cas9 | Tijeras Moleculares | Edición Genética'; }
+      .class-container::after { content: 'Terapia vs Mejora | Responsabilidad Científica | Bioética'; }
+    }
+  </style>
+</head>
+
+<body>
+  <nav class="main-nav">
+    <div class="nav-container">
+      <div class="nav-left">
+        <a href="index.html" class="nav-back-button" title="Volver al índice de la unidad">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24"
+            stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M15 19l-7-7 7-7" />
+          </svg>
+          <span>Unidad 2</span>
+        </a>
+        <a href="../../home.html" class="nav-brand">Filosofía 6to</a>
+      </div>
+      <div class="nav-controls">
+        <button id="dark-mode-toggle" class="dark-mode-toggle" aria-label="Cambiar tema">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24"
+            stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <div class="class-progress">
+    <div class="container">
+      <div class="progress-info">
+        <span class="progress-text">Clase 15 de 20</span>
+        <span class="progress-text">30% de la unidad</span>
+      </div>
+      <div class="progress-bar">
+        <div class="progress-fill" style="width: 30%"></div>
+      </div>
+    </div>
+  </div>
+
+  <main class="class-container">
+    <aside class="sidebar">
+      <div class="sidebar-section">
+        <h3>En esta clase</h3>
+        <ul>
+          <li><a href="#intro">De la ciencia básica a la aplicada</a></li>
+          <li><a href="#dolly">La Oveja Dolly y la Clonación</a></li>
+          <li><a href="#crispr">CRISPR-Cas9: Las Tijeras Moleculares</a></li>
+          <li><a href="#he-jiankui">El Caso He Jiankui</a></li>
+          <li><a href="#etica">Dilemas Éticos</a></li>
+          <li><a href="#responsabilidad">Responsabilidad Científica</a></li>
+          <li><a href="#actividades">Actividades</a></li>
+        </ul>
+      </div>
+
+      <div class="sidebar-section">
+        <h3>Conceptos Clave</h3>
+        <ul class="concept-list">
+          <li>Tecnociencia</li>
+          <li>Edición genética</li>
+          <li>Terapia génica somática</li>
+          <li>Línea germinal</li>
+          <li>Principio de precaución</li>
+          <li>Bioética</li>
+          <li>Responsabilidad científica</li>
+        </ul>
+      </div>
+
+      <div class="sidebar-section">
+        <h3>Científicos</h3>
+        <div class="scientist-card">
+          <h4>Emmanuelle Charpentier</h4>
+          <p><strong>1968–</strong> | Francia</p>
+          <p>Microbióloga y bioquímica francesa. Co-descubrió CRISPR-Cas9 como herramienta de edición genética. Premio Nobel de Química 2020 (compartido con Doudna).</p>
+        </div>
+        <div class="scientist-card">
+          <h4>Jennifer Doudna</h4>
+          <p><strong>1964–</strong> | Estados Unidos</p>
+          <p>Bioquímica de la Universidad de California Berkeley. Junto con Charpentier, desarrolló CRISPR-Cas9 y publicó el trabajo pionero en Science en 2012. Nobel de Química 2020.</p>
+        </div>
+        <div class="scientist-card">
+          <h4>Ian Wilmut</h4>
+          <p><strong>1944–2023</strong> | Reino Unido</p>
+          <p>Embriólogo del Instituto Roslin de Edimburgo. Dirigió el equipo que clonó a la oveja Dolly en 1996, el primer mamífero clonado a partir de una célula adulta.</p>
+        </div>
+      </div>
+    </aside>
+
+    <article class="class-content">
+      <header class="class-header">
+        <div class="class-badge">Clase 15</div>
+        <h1 class="class-title">Tecnología y Ética: Clonación y CRISPR</h1>
+        <p class="class-subtitle">Cuando la Ciencia Básica se Convierte en Poder Transformador</p>
+      </header>
+
+      <section class="class-section" id="intro">
+        <h2>De Entender el ADN a Reescribirlo</h2>
+
+        <p>Cuando Watson y Crick describieron la estructura del ADN en 1953, estaban haciendo <em>ciencia básica</em>: investigación orientada a comprender cómo funciona la naturaleza, sin una aplicación inmediata en mente. Cuando Meselson y Stahl confirmaron la replicación semiconservativa en 1958, también estaban haciendo ciencia básica: entender los mecanismos fundamentales de la vida.</p>
+
+        <p>Pero el conocimiento del ADN tenía un potencial transformador que los científicos de esa época apenas empezaban a imaginar. <strong>Si sabemos cómo está escrita la información genética, ¿podríamos cambiarla?</strong> ¿Podríamos corregir errores que causan enfermedades? ¿Podríamos diseñar organismos con características deseadas? ¿O incluso cambiar la biología humana?</p>
+
+        <div class="concept-highlight">
+          <h3>Ciencia Básica vs. Ciencia Aplicada vs. Tecnociencia</h3>
+          <p>Los filósofos de la ciencia distinguen entre:</p>
+          <ul>
+            <li><strong>Ciencia básica (o pura):</strong> Orientada a comprender la naturaleza, sin objetivos prácticos inmediatos. Ejemplo: entender la estructura del ADN.</li>
+            <li><strong>Ciencia aplicada:</strong> Usa el conocimiento básico para resolver problemas específicos. Ejemplo: desarrollar una terapia génica para tratar una enfermedad.</li>
+            <li><strong>Tecnociencia:</strong> Concepto moderno que reconoce que en la actualidad ciencia y tecnología son inseparables. La investigación científica depende de tecnología (instrumentos, software), y la tecnología depende de ciencia (principios, modelos).</li>
+          </ul>
+          <p>Las biotecnologías que estudiaremos en esta clase ilustran perfectamente la <strong>tecnociencia</strong>: son ciencia y tecnología entrelazadas, con enormes implicaciones prácticas y éticas.</p>
+        </div>
+      </section>
+
+      <section class="class-section" id="dolly">
+        <h2>La Oveja Dolly: ¿Qué Es y Qué No Es la Clonación?</h2>
+
+        <p>El 5 de julio de 1996, en el Instituto Roslin de Edimburgo (Escocia), nació un cordero llamado <strong>Dolly</strong>. Era una oveja completamente normal desde el punto de vista biológico, excepto por un detalle extraordinario: <strong>Dolly tenía exactamente el mismo ADN que otra oveja adulta</strong>. No era la hija de esa oveja; era, en cierto sentido, su "copia genética".</p>
+
+        <p>El equipo liderado por el Dr. <strong>Ian Wilmut</strong> había logrado lo que se creía imposible: clonar un mamífero a partir de una célula adulta usando la técnica de <strong>Transferencia Nuclear de Célula Somática (SCNT)</strong>.</p>
+
+        <h3>¿Cómo Funciona la Clonación SCNT?</h3>
+        <ol>
+          <li>Se toma un óvulo de una oveja donante y se le <strong>extrae el núcleo</strong> (que contiene el ADN). El óvulo queda "vacío" de material genético.</li>
+          <li>Se toma una <strong>célula somática</strong> (cualquier célula del cuerpo, no sexual) de la oveja que se quiere clonar — en el caso de Dolly, una célula de glándula mamaria.</li>
+          <li>Se <strong>fusionan</strong> el óvulo vacío y la célula somática mediante electricidad. El óvulo ahora tiene el núcleo con el ADN de la oveja adulta.</li>
+          <li>El óvulo fusionado se desarrolla en un embrión, que se implanta en una oveja "madre sustituta" y se deja desarrollar normalmente.</li>
+        </ol>
+
+        <p>El resultado fue Dolly: genéticamente idéntica a la oveja de la cual se tomó la célula mamaria.</p>
+
+        <div class="concept-highlight">
+          <h3>Lo que la Clonación No Es</h3>
+          <p>Hubo mucha confusión popular sobre lo que la clonación implica. Es importante aclarar:</p>
+          <ul>
+            <li><strong>Clonar no es "duplicar" a un individuo:</strong> Dolly tenía el mismo ADN que otra oveja, pero era un animal diferente. Sus experiencias, su ambiente, su desarrollo individual fueron únicos.</li>
+            <li><strong>El ADN no es el destino:</strong> Gemelos idénticos tienen el mismo ADN pero son personas distintas. El ADN es una "receta", no una "fotocopia" del individuo.</li>
+            <li><strong>La clonación humana reproductiva sigue siendo técnicamente inviable y está universalmente prohibida.</strong></li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="class-section" id="crispr">
+        <h2>CRISPR-Cas9: Las "Tijeras Moleculares" del Siglo XXI</h2>
+
+        <p>Si la clonación de Dolly fue revolucionaria en 1996, lo que pasó en 2012 cambió el mundo de la biología para siempre. En ese año, las científicas <strong>Emmanuelle Charpentier</strong> (francesa) y <strong>Jennifer Doudna</strong> (estadounidense) publicaron en la revista <em>Science</em> una descripción del sistema <strong>CRISPR-Cas9</strong> como herramienta de edición genética de alta precisión.</p>
+
+        <p>CRISPR (Clustered Regularly Interspaced Short Palindromic Repeats, o "Repeticiones Palindrómicas Cortas Agrupadas Regularmente Espaciadas") es un sistema que las bacterias usan naturalmente como defensa inmune contra virus. Charpentier y Doudna adaptaron este mecanismo bacteriano para convertirlo en una herramienta que permite <strong>encontrar, cortar y modificar secuencias específicas de ADN</strong> en cualquier organismo.</p>
+
+        <h3>La Analogía de "Buscar y Reemplazar"</h3>
+        <p>Si el ADN es como un libro de instrucciones escrito con las letras A, T, G, C, entonces CRISPR-Cas9 es como la función "Buscar y Reemplazar" de un procesador de texto: puedes encontrar una secuencia específica (por ejemplo, la "página" donde está el gen que causa una enfermedad) y cambiarla, eliminarla o corregirla.</p>
+
+        <div class="image-container">
+          <img src="../../assets/images/class-15/crispr_mechanism.svg" alt="Diagrama del mecanismo de acción de CRISPR-Cas9">
+          <p class="image-caption">El mecanismo de CRISPR-Cas9: un ARN guía lleva a la proteína Cas9 hasta la secuencia de ADN objetivo, donde realiza el corte. Luego el ADN puede ser reparado de dos maneras con resultados diferentes.</p>
+        </div>
+
+        <div class="concept-highlight">
+          <h3>¿Por qué CRISPR es revolucionario?</h3>
+          <p>Antes de CRISPR, existían otras técnicas de edición genética (ZFN, TALEN), pero eran costosas, lentas y difíciles de implementar. CRISPR-Cas9 cambió todo porque:</p>
+          <ul>
+            <li><strong>Es preciso:</strong> Puede encontrar una secuencia específica entre los 3 mil millones de pares de bases del genoma humano.</li>
+            <li><strong>Es relativamente simple:</strong> En términos técnicos, es mucho más fácil de diseñar e implementar que las técnicas anteriores.</li>
+            <li><strong>Es barato:</strong> El costo de editar genes cayó de millones de dólares a cientos de dólares por experimento.</li>
+            <li><strong>Es versátil:</strong> Funciona en bacterias, plantas, animales y células humanas.</li>
+          </ul>
+          <p>En pocas palabras: CRISPR democratizó la edición genética. Lo que antes solo podían hacer unos pocos laboratorios de élite, ahora está al alcance de miles de laboratorios universitarios en todo el mundo.</p>
+        </div>
+      </section>
+
+      <section class="class-section" id="he-jiankui">
+        <h2>El Caso He Jiankui: Cuando la Ciencia Cruza una Línea</h2>
+
+        <p>En noviembre de 2018, el mundo científico fue sacudido por un anuncio explosivo. El investigador chino <strong>He Jiankui</strong> anunció que había utilizado CRISPR para editar el genoma de embriones humanos que luego fueron implantados y nacieron como bebés. Las niñas, llamadas Lulu y Nana (pseudónimos), supuestamente tenían el gen <em>CCR5</em> desactivado, lo que teóricamente podría hacerlas resistentes al VIH.</p>
+
+        <p>La reacción de la comunidad científica internacional fue de condena casi universal:</p>
+
+        <h3>¿Por qué el caso He Jiankui fue tan problemático?</h3>
+        <ol>
+          <li><strong>Modificó la línea germinal:</strong> Los cambios en los embriones no solo afectarían a Lulu y Nana, sino que serán heredados por sus futuros hijos y generaciones posteriores. Esto cruza una línea ética fundamental: introducir cambios en la humanidad misma sin el consentimiento de las personas que aún no existen.</li>
+          <li><strong>No había necesidad médica urgente:</strong> Las niñas no tenían VIH ni riesgo inminente de contraerlo. La justificación médica era débil.</li>
+          <li><strong>La técnica no estaba suficientemente probada:</strong> Existía riesgo real de efectos "fuera del objetivo" (off-target effects): cortes accidentales en otras partes del genoma que podrían causar enfermedades, incluyendo cáncer.</li>
+          <li><strong>Se hizo en secreto:</strong> He Jiankui actuó al margen de cualquier supervisión institucional, ética o regulatoria.</li>
+          <li><strong>El consentimiento informado fue cuestionable:</strong> Las familias involucradas posiblemente no comprendieron plenamente los riesgos.</li>
+        </ol>
+
+        <p>He Jiankui fue condenado por un tribunal chino en 2019 a tres años de prisión por "práctica médica ilegal". El caso generó un llamado urgente a establecer regulaciones internacionales sobre la edición del genoma humano.</p>
+
+        <div class="reflection-box">
+          <h3>La Responsabilidad del Científico</h3>
+          <p>El caso He Jiankui plantea preguntas fundamentales sobre la <strong>responsabilidad del científico individual</strong> frente a la sociedad:</p>
+          <ul>
+            <li>¿Tiene un científico el derecho de hacer lo que técnicamente puede hacer, o hay límites que no deben cruzarse?</li>
+            <li>¿Quién debería tomar decisiones sobre tecnologías que afectan a toda la humanidad? ¿Los científicos? ¿Los gobiernos? ¿La sociedad en general?</li>
+            <li>¿Qué responsabilidad tienen los investigadores que desarrollaron CRISPR (Charpentier, Doudna) por el uso que otros hacen de su descubrimiento?</li>
+          </ul>
+          <p>Después del anuncio de He Jiankui, Jennifer Doudna describió sus sentimientos como una mezcla de horror y responsabilidad. Ha dedicado parte de su trabajo posterior a reflexionar sobre la gobernanza de CRISPR y la responsabilidad de los científicos.</p>
+        </div>
+      </section>
+
+      <section class="class-section" id="etica">
+        <h2>El Mapa de los Dilemas Éticos</h2>
+
+        <div class="image-container">
+          <img src="../../assets/images/class-15/ethical_spectrum.svg" alt="Espectro ético de las aplicaciones de edición genética">
+          <p class="image-caption">El espectro ético de la edición genética va desde aplicaciones ampliamente aceptadas (terapia somática) hasta aquellas con debate intenso (edición de línea germinal en humanos).</p>
+        </div>
+
+        <h3>La Distinción Fundamental: Terapia vs. Mejora</h3>
+        <p>Un punto de partida para el debate ético es la distinción entre:</p>
+        <ul>
+          <li><strong>Terapia génica:</strong> Modificar genes para tratar o prevenir enfermedades. Por ejemplo, corregir el gen defectuoso que causa la fibrosis quística, o desactivar el gen que permite que el VIH infecte células.</li>
+          <li><strong>Mejora genética (enhancement):</strong> Modificar genes para agregar características que van más allá de la salud "normal". Por ejemplo, aumentar la inteligencia, la fuerza física, o cambiar características estéticas.</li>
+        </ul>
+        <p>La terapia tiene un amplio apoyo ético; la mejora genera debate intenso. Pero la <strong>línea entre ambas no siempre es clara</strong>: ¿es "terapia" o "mejora" hacer a alguien más resistente a enfermedades comunes?</p>
+
+        <h3>La Distinción entre Somática y Germinal</h3>
+        <ul>
+          <li><strong>Edición somática:</strong> Modifica células del cuerpo de un individuo ya nacido. Los cambios no se heredan. Afecta solo a esa persona. Existe consenso de que puede estar éticamente justificada para tratar enfermedades graves.</li>
+          <li><strong>Edición germinal:</strong> Modifica embriones, óvulos o espermatozoides. Los cambios se heredan a todas las generaciones futuras. Existe un amplio consenso de que esto es actualmente demasiado riesgoso e ético problemático.</li>
+        </ul>
+
+        <h3>El Principio de Precaución</h3>
+        <p>En bioética y política científica, el <strong>principio de precaución</strong> establece que cuando una acción implica riesgos de daño grave o irreversible, la ausencia de certeza científica no debe usarse como razón para posponer medidas de protección. En otras palabras: <em>si no sabes si algo es seguro y los daños potenciales son irreversibles, espera antes de actuar.</em></p>
+        <p>Este principio es especialmente relevante para la edición germinal: los efectos de introducir cambios heredables en el genoma humano son potencialmente irreversibles y afectan a personas que no han dado su consentimiento.</p>
+      </section>
+
+      <section class="class-section" id="responsabilidad">
+        <h2>Implicaciones Filosóficas: Responsabilidad, Poder y Límites</h2>
+
+        <h3>1. La Neutralidad de la Tecnología: ¿Un Mito?</h3>
+        <p>Algunas personas argumentan que la tecnología en sí misma es "neutral": lo que importa es cómo se usa. Pero el caso de la edición genética desafía esta idea. <strong>La disponibilidad de una tecnología crea posibilidades que antes no existían</strong>, y con esas posibilidades vienen tentaciones, riesgos y responsabilidades nuevas.</p>
+        <p>CRISPR no es neutral: su existencia transforma lo que es posible hacer con la vida biológica. Esto obliga a reflexionar sobre si el desarrollo de ciertas tecnologías debería estar regulado incluso antes de que se apliquen.</p>
+
+        <h3>2. El Problema de la Justicia: ¿Quién Accede?</h3>
+        <p>Si la terapia génica puede curar enfermedades genéticas graves, surge una pregunta crucial: <strong>¿quién tendrá acceso a estas terapias?</strong> Los tratamientos basados en CRISPR son actualmente muy costosos. Si solo los ricos pueden acceder a terapias que salvan vidas, ¿es eso justo? El acceso desigual podría profundizar las desigualdades existentes.</p>
+
+        <h3>3. Los Límites de la Ciencia</h3>
+        <p>El caso CRISPR ilustra un punto epistemológico importante: <strong>la ciencia puede decir lo que es posible, pero no puede decir lo que es deseable o permisible.</strong> Saber que podemos editar el genoma humano no nos dice si debemos hacerlo ni bajo qué condiciones. Esas preguntas son filosóficas, éticas y políticas, no científicas.</p>
+        <p>La ciencia proporciona herramientas y conocimiento. La ética y la filosofía nos ayudan a decidir <em>qué hacer</em> con esas herramientas.</p>
+
+        <div class="concept-highlight">
+          <h3>La Ciencia como Actividad Social</h3>
+          <p>La historia de CRISPR muestra que la ciencia no opera en un vacío. Está influenciada y a la vez influye en:</p>
+          <ul>
+            <li><strong>Financiamiento:</strong> ¿Quién paga la investigación? Las grandes empresas farmacéuticas invierten en CRISPR esperando enormes retornos económicos de terapias génicas.</li>
+            <li><strong>Regulación:</strong> Los gobiernos establecen qué investigaciones son legales y bajo qué condiciones.</li>
+            <li><strong>Opinión pública:</strong> La aceptación social de las biotecnologías varía enormemente entre culturas y países.</li>
+            <li><strong>Competencia geopolítica:</strong> El avance en biotecnología es visto por algunos países como ventaja estratégica, lo que puede presionar para "correr" más de lo que es prudente.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="class-section" id="actividades">
+        <h2>Actividades</h2>
+
+        <div class="activity-box">
+          <h3>⚖️ Actividad 1: Debate - Edición de Embriones Humanos</h3>
+          <div class="question-card">
+            <p><strong>Consigna:</strong> Divídanse en dos grupos y debatan la siguiente posición:</p>
+            <p><em>"¿Debería permitirse la edición genética de embriones humanos para prevenir enfermedades genéticas graves cuando no hay otra alternativa médica?"</em></p>
+            <p><strong>Grupo A (a favor):</strong> Argumenten que cuando existe una enfermedad genética devastadora (como la enfermedad de Huntington o la fibrosis quística), modificar el embrión para evitarla es un acto de compasión y cuidado.</p>
+            <p><strong>Grupo B (en contra):</strong> Argumenten que la edición germinal introduce cambios heredables sin consentimiento de las personas futuras afectadas, y que los riesgos técnicos e imprevistos son demasiado altos.</p>
+            <p><em>Al final del debate, cada persona escribe una posición fundamentada personal.</em></p>
+          </div>
+        </div>
+
+        <div class="activity-box">
+          <h3>🔍 Actividad 2: Análisis del Caso He Jiankui</h3>
+          <div class="question-card">
+            <p><strong>Consigna:</strong> Analiza el caso de He Jiankui desde estas dimensiones éticas:</p>
+            <ol>
+              <li><strong>Autonomía:</strong> ¿Las familias involucradas tomaron una decisión genuinamente informada y libre?</li>
+              <li><strong>Beneficencia:</strong> ¿Había un beneficio real y proporcional al riesgo para las niñas nacidas?</li>
+              <li><strong>Justicia:</strong> ¿Quién se beneficia de este experimento? ¿Quién asume los riesgos?</li>
+              <li><strong>No maleficencia:</strong> ¿Se tomaron las precauciones necesarias para evitar daños?</li>
+            </ol>
+            <p><em>Escribe un análisis de 200-300 palabras concluyendo si el caso fue ética y científicamente responsable.</em></p>
+          </div>
+        </div>
+
+        <div class="activity-box">
+          <h3>📋 Actividad 3: Diseña una Regulación</h3>
+          <div class="question-card">
+            <p><strong>Consigna:</strong> Imagina que eres miembro de un comité de bioética que debe proponer una regulación internacional para el uso de CRISPR en humanos. Crea una lista de criterios que definan:</p>
+            <ul>
+              <li><strong>Usos permitidos:</strong> ¿Qué aplicaciones de CRISPR deben ser legales y bajo qué condiciones?</li>
+              <li><strong>Usos prohibidos:</strong> ¿Qué aplicaciones deben estar prohibidas y por qué?</li>
+              <li><strong>Zona de moratoria:</strong> ¿Qué aplicaciones deberían suspenderse hasta tener más investigación sobre seguridad y ética?</li>
+              <li><strong>Supervisión:</strong> ¿Quién debería supervisar que se cumplan estas reglas?</li>
+            </ul>
+            <p><em>Justifica cada criterio con argumentos éticos explícitos.</em></p>
+          </div>
+        </div>
+      </section>
+
+      <section class="class-section">
+        <h2>Conceptos Clave de Esta Clase</h2>
+        <div class="concept-highlight">
+          <ul>
+            <li><strong>Tecnociencia:</strong> La inseparabilidad moderna entre ciencia y tecnología; el conocimiento científico y las herramientas tecnológicas se producen conjuntamente.</li>
+            <li><strong>Edición genética:</strong> Modificación deliberada de la secuencia de ADN de un organismo usando herramientas como CRISPR-Cas9.</li>
+            <li><strong>Terapia génica somática:</strong> Modificación de genes en células corporales (no reproductivas) de un individuo, sin efecto hereditario.</li>
+            <li><strong>Línea germinal:</strong> Células reproductivas (óvulos, espermatozoides, embriones) cuyos cambios genéticos se heredan a las generaciones futuras.</li>
+            <li><strong>Principio de precaución:</strong> Ante riesgos graves e irreversibles, actuar con cautela incluso sin certeza científica completa.</li>
+            <li><strong>Bioética:</strong> Disciplina que estudia las dimensiones éticas de las ciencias de la vida y sus aplicaciones tecnológicas.</li>
+            <li><strong>Responsabilidad científica:</strong> Obligación de los científicos de considerar las implicaciones éticas, sociales y políticas de su trabajo.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="class-section">
+        <h2>Próxima Clase</h2>
+        <div class="concept-highlight">
+          <p><strong>Clase 16: Modelos Científicos y el Origen de la Vida</strong></p>
+          <p>En esta clase hemos visto cómo el conocimiento del ADN genera poder tecnológico con grandes implicaciones éticas. En la próxima clase, daremos un paso atrás para reflexionar sobre una pregunta más fundamental:</p>
+          <p><strong>¿Qué son los modelos científicos?</strong> ¿Cómo se construyen, validan y tienen límites? Y aplicaremos esta reflexión a uno de los mayores misterios de la ciencia: el origen de la vida en la Tierra.</p>
+          <p>Exploraremos el experimento de Miller y Urey, la hipótesis del "mundo de ARN" y el concepto de panspermia, como ejemplos de cómo los científicos construyen modelos sobre fenómenos que no pudieron observar directamente.</p>
+        </div>
+      </section>
+
+      <nav class="class-navigation">
+        <a href="clase-14.html" class="nav-button">← Clase Anterior</a>
+        <a href="index.html" class="nav-button nav-button-index">📚 Índice de la Unidad</a>
+        <a href="clase-16.html" class="nav-button">Siguiente Clase →</a>
+      </nav>
+    </article>
+  </main>
+
+  <footer class="main-footer">
+    <div class="container">
+      <p>&copy; 2024 Filosofía 6to. Material educativo libre.</p>
+    </div>
+  </footer>
+
+  <script src="../../assets/js/dark-mode.js"></script>
+</body>
+
+</html>
