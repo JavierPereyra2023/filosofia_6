@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 420">
+  <defs>
+    <linearGradient id="sciGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#10b981;stop-opacity:0.25"/>
+      <stop offset="100%" style="stop-color:#10b981;stop-opacity:0.05"/>
+    </linearGradient>
+    <linearGradient id="philGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#8b5cf6;stop-opacity:0.25"/>
+      <stop offset="100%" style="stop-color:#8b5cf6;stop-opacity:0.05"/>
+    </linearGradient>
+    <linearGradient id="artGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f59e0b;stop-opacity:0.25"/>
+      <stop offset="100%" style="stop-color:#f59e0b;stop-opacity:0.05"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Title -->
+  <text x="430" y="28" text-anchor="middle" font-size="17" font-weight="bold" fill="#10b981">
+    Dominios del Conocimiento: ¿Qué pregunta responde cada uno?
+  </text>
+
+  <!-- SCIENCE circle -->
+  <ellipse cx="220" cy="220" rx="165" ry="150" fill="url(#sciGrad)" stroke="#10b981" stroke-width="2.5" opacity="0.9"/>
+  <text x="145" y="100" font-size="15" font-weight="bold" fill="#10b981">CIENCIA</text>
+  <text x="108" y="120" font-size="11" fill="#6b7280">Preguntas: ¿Cómo? ¿Por qué</text>
+  <text x="108" y="134" font-size="11" fill="#6b7280">ocurre? ¿Qué causas tiene?</text>
+  <!-- Science examples -->
+  <text x="80" y="175" font-size="11" fill="#1f2937">• ¿Cómo replica el ADN?</text>
+  <text x="80" y="193" font-size="11" fill="#1f2937">• ¿Qué causa las enfermedades?</text>
+  <text x="80" y="211" font-size="11" fill="#1f2937">• ¿Qué edad tiene el universo?</text>
+  <text x="80" y="229" font-size="11" fill="#1f2937">• ¿Cómo evolucionan las especies?</text>
+  <text x="80" y="253" font-size="11" font-weight="bold" fill="#10b981">Método: observación + hipótesis</text>
+  <text x="80" y="268" font-size="11" font-weight="bold" fill="#10b981">+ experimento + contrastación</text>
+
+  <!-- PHILOSOPHY circle -->
+  <ellipse cx="640" cy="220" rx="165" ry="150" fill="url(#philGrad)" stroke="#8b5cf6" stroke-width="2.5" opacity="0.9"/>
+  <text x="570" y="100" font-size="15" font-weight="bold" fill="#8b5cf6">FILOSOFÍA</text>
+  <text x="518" y="120" font-size="11" fill="#6b7280">Preguntas: ¿Qué es bueno/justo?</text>
+  <text x="518" y="134" font-size="11" fill="#6b7280">¿Qué existe? ¿Cómo conocemos?</text>
+  <!-- Philosophy examples -->
+  <text x="500" y="175" font-size="11" fill="#1f2937">• ¿Qué es la conciencia?</text>
+  <text x="500" y="193" font-size="11" fill="#1f2937">• ¿Es la edición génica ética?</text>
+  <text x="500" y="211" font-size="11" fill="#1f2937">• ¿Tenemos libre albedrío?</text>
+  <text x="500" y="229" font-size="11" fill="#1f2937">• ¿Qué fue antes del Big Bang?</text>
+  <text x="500" y="253" font-size="11" font-weight="bold" fill="#8b5cf6">Método: argumentación racional,</text>
+  <text x="500" y="268" font-size="11" font-weight="bold" fill="#8b5cf6">análisis conceptual, dialéctica</text>
+
+  <!-- OVERLAP zone (border questions) -->
+  <ellipse cx="430" cy="220" rx="68" ry="110" fill="#374151" opacity="0.35" stroke="#f59e0b" stroke-width="2" stroke-dasharray="6,3"/>
+  <text x="430" y="155" text-anchor="middle" font-size="12" font-weight="bold" fill="#f59e0b">ZONA</text>
+  <text x="430" y="170" text-anchor="middle" font-size="12" font-weight="bold" fill="#f59e0b">LÍMITE</text>
+  <text x="430" y="192" text-anchor="middle" font-size="10" fill="#d1d5db">Origen vida</text>
+  <text x="430" y="207" text-anchor="middle" font-size="10" fill="#d1d5db">Conciencia</text>
+  <text x="430" y="222" text-anchor="middle" font-size="10" fill="#d1d5db">Big Bang</text>
+  <text x="430" y="237" text-anchor="middle" font-size="10" fill="#d1d5db">Ética en IA</text>
+  <text x="430" y="252" text-anchor="middle" font-size="10" fill="#d1d5db">Libre albedrío</text>
+
+  <!-- Bottom key -->
+  <rect x="100" y="358" width="660" height="48" rx="8" fill="#1f2937" opacity="0.5" stroke="#374151" stroke-width="1"/>
+  <text x="430" y="376" text-anchor="middle" font-size="12" font-weight="bold" fill="#f59e0b">⚠ Preguntas de la Zona Límite:</text>
+  <text x="430" y="394" text-anchor="middle" font-size="11" fill="#9ca3af">Tienen dimensión científica (¿cómo?) Y dimensión filosófica (¿qué significa?). Ninguna disciplina las agota sola.</text>
+</svg>

@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clase 20: Integración y Evaluación Final | Filosofía 6to</title>
+  <link rel="stylesheet" href="../../assets/css/variables.css">
+  <link rel="stylesheet" href="../../assets/css/reset.css">
+  <link rel="stylesheet" href="../../assets/css/base.css">
+  <link rel="stylesheet" href="../../assets/css/typography.css">
+  <link rel="stylesheet" href="../../assets/css/layout.css">
+  <link rel="stylesheet" href="../../assets/css/navigation.css">
+  <link rel="stylesheet" href="../../assets/css/components.css">
+  <link rel="stylesheet" href="../../assets/css/unit-page.css">
+  <link rel="stylesheet" href="../../assets/css/book-layout.css">
+  <style>
+    .class-container::before {
+      content: '  ¡Lo logramos!\A\A  Clase 20\A  de 20 ✓\A\A  Unidad\A  completa';
+      position: fixed; top: 12%; right: 4%;
+      font-family: 'Caveat', 'Comic Sans MS', cursive;
+      font-size: 24px; font-weight: 700; white-space: pre;
+      color: rgba(255,255,255,0.33); transform: rotate(-6deg);
+    }
+    .class-container::after {
+      content: '  Unidad 1\A  +\A  Unidad 2\A  =\A  Filosofía\A  de la\A  Ciencia';
+      position: fixed; bottom: 18%; left: 4%;
+      font-family: 'Caveat', 'Comic Sans MS', cursive;
+      font-size: 23px; font-weight: 700; white-space: pre;
+      color: rgba(255,255,255,0.30); transform: rotate(5deg);
+    }
+
+    /* Evaluation styling */
+    .eval-section {
+      border: 2px solid var(--accent-primary);
+      border-radius: 12px;
+      padding: 24px;
+      margin: 24px 0;
+      background: rgba(16, 185, 129, 0.05);
+    }
+    .eval-section h3 {
+      color: var(--accent-primary);
+      margin-bottom: 16px;
+      font-size: 1.2rem;
+    }
+    .eval-points {
+      display: inline-block;
+      background: var(--accent-primary);
+      color: white;
+      padding: 3px 10px;
+      border-radius: 12px;
+      font-size: 0.85rem;
+      font-weight: bold;
+      margin-left: 8px;
+    }
+    .project-option {
+      border-left: 4px solid var(--accent-secondary);
+      padding-left: 16px;
+      margin: 16px 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="class-container">
+
+    <!-- Progress bar -->
+    <div class="class-progress">
+      <div class="progress-bar" style="width: 100%"></div>
+      <span class="progress-label">Clase 20 de 20 — ¡Unidad 2 completa! 🎉</span>
+    </div>
+
+    <!-- Header -->
+    <header class="class-header">
+      <div class="unit-badge">Unidad 2 · Clase 20 · Final</div>
+      <h1 class="class-title">Integración y Evaluación Final</h1>
+      <p class="class-subtitle">Síntesis de dos unidades, dos siglos, dos revoluciones científicas</p>
+      <div class="class-meta">
+        <span>📍 Epistemología — Síntesis</span>
+        <span>⏱ 90 minutos</span>
+        <span>🎯 Integrar conceptos transversales y aplicarlos a casos reales</span>
+      </div>
+    </header>
+
+    <!-- Book Layout -->
+    <div class="book-layout">
+
+      <!-- SIDEBAR -->
+      <aside class="book-sidebar">
+        <div class="sidebar-section">
+          <h3>En esta clase</h3>
+          <ul class="sidebar-nav">
+            <li><a href="#recapitulacion">Recapitulación</a></li>
+            <li><a href="#comparacion">U1 vs U2</a></li>
+            <li><a href="#transversales">Conceptos transversales</a></li>
+            <li><a href="#evaluacion">Evaluación</a></li>
+            <li><a href="#proyecto">Proyecto final</a></li>
+          </ul>
+        </div>
+
+        <div class="sidebar-section">
+          <h3>Conceptos Transversales</h3>
+          <ul class="key-concepts">
+            <li><strong>Cambio de paradigma</strong> — Kuhn</li>
+            <li><strong>Carga teórica</strong> — observaciones guiadas por teoría</li>
+            <li><strong>Falsación</strong> — Popper</li>
+            <li><strong>Experimento crucial</strong> — decide entre hipótesis</li>
+            <li><strong>Convergencia</strong> — múltiples evidencias</li>
+            <li><strong>Valores epistémicos</strong> — coherencia, simplicidad</li>
+            <li><strong>Valores sociales</strong> — género, financiamiento</li>
+            <li><strong>Demarcación</strong> — ciencia vs pseudociencia</li>
+          </ul>
+        </div>
+
+        <div class="sidebar-section">
+          <h3>Grandes Científicos</h3>
+          <div class="scientist-card">
+            <h4>Galileo Galilei (U1)</h4>
+            <p>Telescopio → observaciones → refutación geocentrismo. Primer caso de tensión ciencia/autoridad.</p>
+          </div>
+          <div class="scientist-card">
+            <h4>Louis Pasteur (U2)</h4>
+            <p>Experimento de cuello de cisne → refutación generación espontánea. Control experimental riguroso.</p>
+          </div>
+          <div class="scientist-card">
+            <h4>Rosalind Franklin (U2)</h4>
+            <p>Foto 51 → estructura del ADN. Caso emblemático de invisibilización de científicas mujeres.</p>
+          </div>
+        </div>
+      </aside>
+
+      <!-- MAIN CONTENT -->
+      <main class="book-content">
+
+        <!-- RECAP -->
+        <section id="recapitulacion" class="content-section">
+          <h2>Recapitulación: el viaje completo</h2>
+
+          <p>
+            A lo largo de estas veinte clases hemos recorrido un camino extraordinario: desde los debates del siglo XVI sobre si la Tierra se mueve o está fija en el centro del universo, hasta las controversias del siglo XX sobre si debemos editar el genoma humano. En cada paso, hemos aprendido algo no solo sobre los hechos científicos, sino sobre <strong>cómo funciona la ciencia misma</strong>.
+          </p>
+
+          <div class="concept-highlight">
+            <h3>Unidad 1 en 5 líneas</h3>
+            <p>La astronomía medieval creía en el sistema ptolemaico (geocéntrico). Copérnico propuso el heliocentrismo; Galileo lo confirmó con el telescopio y fue condenado por ello. Kepler descubrió las leyes matemáticas de las órbitas. Newton unificó todo en la gravitación universal. Un paradigma científico completo cambió en menos de 150 años.</p>
+          </div>
+
+          <div class="concept-highlight">
+            <h3>Unidad 2 en 5 líneas</h3>
+            <p>Pasteur refutó la generación espontánea con un experimento elegante. Franklin, Watson y Crick descubrieron la estructura del ADN en 1953. Griffith, Avery, Hershey y Chase demostraron que el ADN es el material genético. Meselson y Stahl confirmaron la replicación semiconservativa. Luego llegaron Dolly, CRISPR y los debates bioéticos del siglo XXI.</p>
+          </div>
+
+          <p>
+            Pero más allá de los hechos, aprendimos algo fundamental: la ciencia no es una colección de verdades definitivas. Es un proceso dinámico, social y cargado de valores, que avanza por la interacción entre teorías, experimentos y tecnologías, dentro de contextos históricos y sociales que la moldean.
+          </p>
+        </section>
+
+        <!-- COMPARISON -->
+        <section id="comparacion" class="content-section">
+          <h2>Unidad 1 vs Unidad 2: dos casos, un método</h2>
+
+          <p>
+            Al comparar ambas unidades, emerge un patrón fascinante: a pesar de hablar de fenómenos completamente diferentes (movimiento planetario vs estructura molecular), las <em>dinámicas epistemológicas</em> son notablemente similares.
+          </p>
+
+          <div class="image-container">
+            <img src="../../assets/images/class-20/unit1_vs_unit2.svg" alt="Comparación Unidad 1 vs Unidad 2" class="class-image">
+            <p class="image-caption">Dos revoluviones científicas separadas por 300 años. Mismos principios epistemológicos, diferente escala, diferentes herramientas.</p>
+          </div>
+
+          <p>
+            Lo que más sorprende de esta comparación no son las diferencias (escala, tecnología, paradigma) sino los paralelismos estructurales:
+          </p>
+          <ul>
+            <li><strong>En ambos casos</strong> el cambio conceptual fue precedido por acumulación de anomalías que el viejo paradigma no podía explicar.</li>
+            <li><strong>En ambos casos</strong> la tecnología habilitó observaciones antes imposibles (telescopio / cristalografía de rayos X).</li>
+            <li><strong>En ambos casos</strong> hubo resistencia institucional al cambio (Iglesia vs comunidad científica androcentrica).</li>
+            <li><strong>En ambos casos</strong> la convergencia de evidencias independientes fue decisiva (Kepler + Galileo / Franklin + Hershey-Chase + Meselson-Stahl).</li>
+          </ul>
+        </section>
+
+        <!-- TRANSVERSAL CONCEPTS -->
+        <section id="transversales" class="content-section">
+          <h2>Conceptos transversales: los que atraviesan todo</h2>
+
+          <p>
+            Algunos conceptos epistemológicos aparecen repetidamente a lo largo de ambas unidades. Reconocerlos es clave para comprender la filosofía de la ciencia como disciplina:
+          </p>
+
+          <div class="image-container">
+            <img src="../../assets/images/class-20/unit2_concept_map.svg" alt="Mapa conceptual de Unidad 2" class="class-image">
+            <p class="image-caption">Mapa de los principales temas de Unidad 2. Todos orbitan en torno al conocimiento científico entendido como práctica histórica, social y metodológica.</p>
+          </div>
+
+          <div class="concept-highlight">
+            <h3>Conceptos que aparecen en ambas unidades</h3>
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>Concepto</th>
+                  <th>Ejemplo U1</th>
+                  <th>Ejemplo U2</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>Cambio de paradigma</strong></td>
+                  <td>Geocentrismo → Heliocentrismo</td>
+                  <td>Proteínas → ADN como material genético</td>
+                </tr>
+                <tr>
+                  <td><strong>Carga teórica</strong></td>
+                  <td>Galileo ve lo que Aristóteles no veía</td>
+                  <td>Watson "ve" hélice en patrón de Franklin</td>
+                </tr>
+                <tr>
+                  <td><strong>Experimento crucial</strong></td>
+                  <td>Paralaje estelar (siglo XIX)</td>
+                  <td>Meselson-Stahl decide replicación</td>
+                </tr>
+                <tr>
+                  <td><strong>Tecnología → nuevos datos</strong></td>
+                  <td>Telescopio → fases de Venus</td>
+                  <td>Rayos X → Foto 51</td>
+                </tr>
+                <tr>
+                  <td><strong>Contexto social</strong></td>
+                  <td>Galileo y la Inquisición</td>
+                  <td>Franklin y el sexismo institucional</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="reflection-box">
+            <h4>🌟 La gran lección: la ciencia como institución humana</h4>
+            <p>La ciencia no es una actividad realizada por genios solitarios que "descubren" verdades objetivas. Es una <strong>práctica social e histórica</strong> donde participan comunidades de investigación, con sus valores, sus prejuicios, sus intereses, sus herramientas tecnológicas y sus marcos conceptuales.</p>
+            <p>Esto no significa que la ciencia sea "solo opinión". Significa que su enorme poder para conocer el mundo natural se explica precisamente por sus mecanismos sociales de autocorrección: revisión de pares, replicación, debate público de resultados, falsación.</p>
+          </div>
+        </section>
+
+        <!-- EVALUATION -->
+        <section id="evaluacion" class="content-section">
+          <h2>Evaluación integradora</h2>
+
+          <p>La evaluación final tiene tres partes que evalúan diferentes competencias epistemológicas:</p>
+
+          <div class="eval-section">
+            <h3>Parte 1: Selección múltiple <span class="eval-points">30%</span></h3>
+            <p>20 preguntas de opción múltiple sobre conceptos clave de ambas unidades.</p>
+            <p><em>Muestra representativa:</em></p>
+            <ol>
+              <li>Según Popper, una teoría científica debe ser:
+                <br>a) Verdadera &nbsp;&nbsp; b) Falsable &nbsp;&nbsp; c) Aprobada por la Iglesia &nbsp;&nbsp; d) Simple</li>
+              <li>¿Qué experimento confirmó que el ADN, y no las proteínas, es el material genético?
+                <br>a) Miller-Urey &nbsp;&nbsp; b) Pasteur &nbsp;&nbsp; c) Hershey-Chase &nbsp;&nbsp; d) Meselson-Stahl</li>
+              <li>La "Foto 51" fue obtenida mediante:
+                <br>a) Microscopio electrónico &nbsp;&nbsp; b) Cristalografía de rayos X &nbsp;&nbsp; c) Telescopio &nbsp;&nbsp; d) Centrifugación</li>
+              <li>¿Qué significa que la replicación del ADN es "semiconservativa"?
+                <br>a) Solo la mitad del ADN se replica &nbsp;&nbsp; b) Cada copia conserva una cadena original &nbsp;&nbsp; c) Ambas cadenas son nuevas &nbsp;&nbsp; d) El ADN se destruye a medias</li>
+            </ol>
+          </div>
+
+          <div class="eval-section">
+            <h3>Parte 2: Análisis de caso experimental <span class="eval-points">40%</span></h3>
+            <p>Se presenta un experimento histórico desconocido. Los estudiantes deben identificar:</p>
+            <ul>
+              <li>La hipótesis que se estaba probando</li>
+              <li>Las variables independiente y dependiente</li>
+              <li>Los controles experimentales utilizados</li>
+              <li>Qué conclusiones son justificadas y cuáles exceden la evidencia</li>
+              <li>El aporte epistemológico del experimento</li>
+            </ul>
+            <p><strong>Caso propuesto:</strong> El experimento de Fleming (1928) con la penicilina — descubrimiento accidental, reconocimiento del patrón, formulación post-hoc de hipótesis.</p>
+          </div>
+
+          <div class="eval-section">
+            <h3>Parte 3: Ensayo argumentativo <span class="eval-points">30%</span></h3>
+            <p>Elegir <em>una</em> de las siguientes consignas (400–600 palabras):</p>
+
+            <div class="project-option">
+              <h4>Opción A: Ciencia y valores</h4>
+              <p>"La ciencia siempre ha estado influenciada por los valores sociales de su época. Esto la hace menos confiable como fuente de conocimiento." — ¿Estás de acuerdo? Argumentá con ejemplos de las unidades.</p>
+            </div>
+
+            <div class="project-option">
+              <h4>Opción B: Límites del conocimiento</h4>
+              <p>Seleccioná una pregunta que te parezca en la "zona límite" entre ciencia y filosofía. Explicá en qué sentido tiene dimensión científica y en qué sentido filosófica. ¿Puede responderse completamente con métodos empíricos?</p>
+            </div>
+
+            <div class="project-option">
+              <h4>Opción C: Tecnología y conocimiento</h4>
+              <p>"Sin el telescopio no habría Galileo, y sin los rayos X no habría Watson y Crick." ¿En qué medida la tecnología determina qué podemos conocer? ¿La tecnología crea o solo revela realidades?</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- PROJECT -->
+        <section id="proyecto" class="content-section">
+          <h2>Proyecto final integrador (opcional)</h2>
+
+          <p>
+            Para quienes deseen profundizar, se propone un proyecto final que aplica el marco epistemológico completo a un descubrimiento científico elegido por el/la estudiante.
+          </p>
+
+          <div class="activity-box">
+            <h3>🔬 Proyecto: Analizar un descubrimiento científico del siglo XX o XXI</h3>
+            <p><strong>Paso 1:</strong> Elegir un descubrimiento (ejemplos: penicilina, vacuna ARNm, Higgs boson, CRISPR, exoplanetas, microbioma...)</p>
+            <p><strong>Paso 2:</strong> Analizar con el siguiente esquema de 6 dimensiones:</p>
+            <ol>
+              <li><strong>Contexto histórico:</strong> ¿Cuándo, dónde, por quién? ¿Qué se sabía antes?</li>
+              <li><strong>Dimensión teórica:</strong> ¿Qué hipótesis se contrastó? ¿Qué modelo fue construido?</li>
+              <li><strong>Dimensión experimental:</strong> ¿Qué experimento/observación fue clave? ¿Cómo se controló?</li>
+              <li><strong>Dimensión tecnológica:</strong> ¿Qué instrumento o técnica lo hizo posible?</li>
+              <li><strong>Implicaciones epistemológicas:</strong> ¿Cambió algún paradigma? ¿Refutó algo? ¿Convergencia de evidencias?</li>
+              <li><strong>Implicaciones éticas/sociales:</strong> ¿Qué dilemas genera? ¿Hubo debates en la sociedad?</li>
+            </ol>
+            <p><strong>Formato:</strong> Presentación oral (10 min) o informe escrito (800–1200 palabras) + al menos 1 diagrama propio.</p>
+          </div>
+
+          <div class="reflection-box">
+            <h4>🎓 Mensaje final</h4>
+            <p>A lo largo de estas veinte clases no aprendieron solo <em>qué</em> descubrió la ciencia, sino <em>cómo</em> lo descubrió y <em>por qué</em> eso importa. Llevan consigo herramientas para pensar críticamente sobre cualquier afirmación que se presente como "científica": preguntar por la evidencia, los métodos, las posibles refutaciones, los contextos sociales y los valores en juego.</p>
+            <p>Eso es hacer filosofía de la ciencia. Y también es, en el fondo, <strong>hacer ciencia</strong>.</p>
+          </div>
+        </section>
+
+        <!-- Navigation -->
+        <nav class="class-navigation">
+          <a href="clase-19.html" class="nav-button">← Clase Anterior</a>
+          <a href="index.html" class="nav-button nav-button-index">📚 Índice de la Unidad</a>
+          <a href="../../home.html" class="nav-button">🏠 Inicio →</a>
+        </nav>
+
+      </main>
+    </div>
+  </div>
+</body>
+</html>

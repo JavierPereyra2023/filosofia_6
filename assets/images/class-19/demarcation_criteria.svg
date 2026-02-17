@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 380">
+  <!-- Title -->
+  <text x="430" y="28" text-anchor="middle" font-size="17" font-weight="bold" fill="#10b981">
+    Criterios de Demarcación: Ciencia vs Pseudociencia
+  </text>
+  <text x="430" y="46" text-anchor="middle" font-size="12" fill="#6b7280">¿Qué distingue al conocimiento científico de otras formas de conocimiento?</text>
+
+  <!-- Header row -->
+  <rect x="30" y="60" width="220" height="36" rx="4" fill="#374151" stroke="#6b7280" stroke-width="1"/>
+  <text x="140" y="83" text-anchor="middle" font-size="13" font-weight="bold" fill="#9ca3af">CRITERIO</text>
+
+  <rect x="258" y="60" width="270" height="36" rx="4" fill="#10b981" opacity="0.25" stroke="#10b981" stroke-width="1.5"/>
+  <text x="393" y="83" text-anchor="middle" font-size="13" font-weight="bold" fill="#10b981">CIENCIA ✓</text>
+
+  <rect x="536" y="60" width="294" height="36" rx="4" fill="#ef4444" opacity="0.25" stroke="#ef4444" stroke-width="1.5"/>
+  <text x="683" y="83" text-anchor="middle" font-size="13" font-weight="bold" fill="#ef4444">PSEUDOCIENCIA ✗</text>
+
+  <!-- Row 1: Falsabilidad -->
+  <rect x="30" y="102" width="220" height="46" rx="3" fill="#1f2937" opacity="0.7" stroke="#374151" stroke-width="1"/>
+  <text x="140" y="122" text-anchor="middle" font-size="12" font-weight="bold" fill="#f59e0b">Falsabilidad</text>
+  <text x="140" y="138" text-anchor="middle" font-size="11" fill="#9ca3af">(Popper)</text>
+  <rect x="258" y="102" width="270" height="46" rx="3" fill="#10b981" opacity="0.08" stroke="#10b981" stroke-width="0.5"/>
+  <text x="393" y="122" text-anchor="middle" font-size="11" fill="#d1fae5">Puede ser refutada por evidencia</text>
+  <text x="393" y="138" text-anchor="middle" font-size="11" fill="#d1fae5">Ej: "Todos los cuervos son negros"</text>
+  <rect x="536" y="102" width="294" height="46" rx="3" fill="#ef4444" opacity="0.08" stroke="#ef4444" stroke-width="0.5"/>
+  <text x="683" y="122" text-anchor="middle" font-size="11" fill="#fecaca">Inmune a cualquier refutación</text>
+  <text x="683" y="138" text-anchor="middle" font-size="11" fill="#fecaca">Ej: "El universo tiene alma"</text>
+
+  <!-- Row 2: Contrastabilidad -->
+  <rect x="30" y="153" width="220" height="46" rx="3" fill="#1f2937" opacity="0.7" stroke="#374151" stroke-width="1"/>
+  <text x="140" y="173" text-anchor="middle" font-size="12" font-weight="bold" fill="#f59e0b">Contrastabilidad</text>
+  <text x="140" y="189" text-anchor="middle" font-size="11" fill="#9ca3af">empírica</text>
+  <rect x="258" y="153" width="270" height="46" rx="3" fill="#10b981" opacity="0.08" stroke="#10b981" stroke-width="0.5"/>
+  <text x="393" y="173" text-anchor="middle" font-size="11" fill="#d1fae5">Predicciones verificables</text>
+  <text x="393" y="189" text-anchor="middle" font-size="11" fill="#d1fae5">Ej: "Este compuesto cura X en 80%"</text>
+  <rect x="536" y="153" width="294" height="46" rx="3" fill="#ef4444" opacity="0.08" stroke="#ef4444" stroke-width="0.5"/>
+  <text x="683" y="173" text-anchor="middle" font-size="11" fill="#fecaca">No hay prueba posible</text>
+  <text x="683" y="189" text-anchor="middle" font-size="11" fill="#fecaca">Ej: "La homeopatía actúa por vibración"</text>
+
+  <!-- Row 3: Replicabilidad -->
+  <rect x="30" y="204" width="220" height="46" rx="3" fill="#1f2937" opacity="0.7" stroke="#374151" stroke-width="1"/>
+  <text x="140" y="224" text-anchor="middle" font-size="12" font-weight="bold" fill="#f59e0b">Replicabilidad</text>
+  <text x="140" y="240" text-anchor="middle" font-size="11" fill="#9ca3af">y revisión de pares</text>
+  <rect x="258" y="204" width="270" height="46" rx="3" fill="#10b981" opacity="0.08" stroke="#10b981" stroke-width="0.5"/>
+  <text x="393" y="224" text-anchor="middle" font-size="11" fill="#d1fae5">Resultados repetibles independ.</text>
+  <text x="393" y="240" text-anchor="middle" font-size="11" fill="#d1fae5">Ej: Meselson-Stahl replicado</text>
+  <rect x="536" y="204" width="294" height="46" rx="3" fill="#ef4444" opacity="0.08" stroke="#ef4444" stroke-width="0.5"/>
+  <text x="683" y="224" text-anchor="middle" font-size="11" fill="#fecaca">Solo funciona para el "maestro"</text>
+  <text x="683" y="240" text-anchor="middle" font-size="11" fill="#fecaca">Ej: Poderes paranormales en laborat.</text>
+
+  <!-- Row 4: Progresividad -->
+  <rect x="30" y="255" width="220" height="46" rx="3" fill="#1f2937" opacity="0.7" stroke="#374151" stroke-width="1"/>
+  <text x="140" y="275" text-anchor="middle" font-size="12" font-weight="bold" fill="#f59e0b">Progresividad</text>
+  <text x="140" y="291" text-anchor="middle" font-size="11" fill="#9ca3af">y auto-corrección</text>
+  <rect x="258" y="255" width="270" height="46" rx="3" fill="#10b981" opacity="0.08" stroke="#10b981" stroke-width="0.5"/>
+  <text x="393" y="275" text-anchor="middle" font-size="11" fill="#d1fae5">Se corrige con nueva evidencia</text>
+  <text x="393" y="291" text-anchor="middle" font-size="11" fill="#d1fae5">Ej: Newton corregido por Einstein</text>
+  <rect x="536" y="255" width="294" height="46" rx="3" fill="#ef4444" opacity="0.08" stroke="#ef4444" stroke-width="0.5"/>
+  <text x="683" y="275" text-anchor="middle" font-size="11" fill="#fecaca">Doctrina fija, inmune al cambio</text>
+  <text x="683" y="291" text-anchor="middle" font-size="11" fill="#fecaca">Ej: Astrología = igual hace 2000 años</text>
+
+  <!-- Bottom note -->
+  <text x="430" y="354" text-anchor="middle" font-size="11" fill="#6b7280" font-style="italic">
+    Nota: Ningún criterio es suficiente solo. La demarcación es gradual, no absoluta (Kuhn, Lakatos, Feyerabend).
+  </text>
+</svg>
