@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clase 18: Ciencia, Sociedad y Valores | Filosofía 6to</title>
+  <link rel="stylesheet" href="../../assets/css/variables.css">
+  <link rel="stylesheet" href="../../assets/css/reset.css">
+  <link rel="stylesheet" href="../../assets/css/base.css">
+  <link rel="stylesheet" href="../../assets/css/typography.css">
+  <link rel="stylesheet" href="../../assets/css/layout.css">
+  <link rel="stylesheet" href="../../assets/css/navigation.css">
+  <link rel="stylesheet" href="../../assets/css/components.css">
+  <link rel="stylesheet" href="../../assets/css/unit-page.css">
+  <link rel="stylesheet" href="../../assets/css/book-layout.css">
+  <style>
+    .class-container::before {
+      content: '  ¿La ciencia\A   es neutral?\A\A  Contexto social\A  Financiamiento\A  Género\A  Poder';
+      position: fixed; top: 15%; right: 5%;
+      font-family: 'Caveat', 'Comic Sans MS', cursive;
+      font-size: 23px; font-weight: 700; white-space: pre;
+      color: rgba(255,255,255,0.35); transform: rotate(-6deg);
+    }
+    .class-container::after {
+      content: '  Franklin (1920-58)\A  Meitner (1878-1968)\A  Bell (1943-)\A  Leavitt (1868-1921)\A  ...invisibles';
+      position: fixed; bottom: 20%; left: 5%;
+      font-family: 'Caveat', 'Comic Sans MS', cursive;
+      font-size: 20px; font-weight: 700; white-space: pre;
+      color: rgba(255,255,255,0.32); transform: rotate(5deg);
+    }
+    @media (max-width: 1024px) {
+      .class-container::before, .class-container::after {
+        position: relative; width: 100%; text-align: center;
+        top: auto; bottom: auto; left: auto; right: auto;
+        transform: rotate(0deg); margin: var(--space-xl) 0;
+        font-size: 18px; display: block;
+      }
+      .class-container::before { content: 'Ciencia · Sociedad · Valores'; }
+      .class-container::after { content: 'Género en Ciencia | Intereses | Neutralidad'; }
+    }
+  </style>
+</head>
+<body>
+  <nav class="main-nav">
+    <div class="nav-container">
+      <div class="nav-left">
+        <a href="index.html" class="nav-back-button">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M15 19l-7-7 7-7"/>
+          </svg>
+          <span>Unidad 2</span>
+        </a>
+        <a href="../../home.html" class="nav-brand">Filosofía 6to</a>
+      </div>
+      <div class="nav-controls">
+        <button id="dark-mode-toggle" class="dark-mode-toggle" aria-label="Cambiar tema">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <div class="class-progress">
+    <div class="container">
+      <div class="progress-info">
+        <span class="progress-text">Clase 18 de 20</span>
+        <span class="progress-text">45% de la unidad</span>
+      </div>
+      <div class="progress-bar">
+        <div class="progress-fill" style="width: 45%"></div>
+      </div>
+    </div>
+  </div>
+
+  <main class="class-container">
+    <aside class="sidebar">
+      <div class="sidebar-section">
+        <h3>En esta clase</h3>
+        <ul>
+          <li><a href="#neutralidad">¿Es la Ciencia Neutral?</a></li>
+          <li><a href="#contexto">Contexto Social de la Ciencia</a></li>
+          <li><a href="#genero">Género y Ciencia</a></li>
+          <li><a href="#intereses">Intereses Económicos y Políticos</a></li>
+          <li><a href="#valores">Valores en la Ciencia</a></li>
+          <li><a href="#actividades">Actividades</a></li>
+        </ul>
+      </div>
+      <div class="sidebar-section">
+        <h3>Conceptos Clave</h3>
+        <ul class="concept-list">
+          <li>Neutralidad valorativa</li>
+          <li>Contexto social</li>
+          <li>Género en ciencia</li>
+          <li>Sesgo de confirmación</li>
+          <li>Valores epistémicos</li>
+          <li>Valores sociales</li>
+          <li>Agenda de investigación</li>
+        </ul>
+      </div>
+    </aside>
+
+    <article class="class-content">
+      <header class="class-header">
+        <div class="class-badge">Clase 18</div>
+        <h1 class="class-title">Ciencia, Sociedad y Valores</h1>
+        <p class="class-subtitle">¿Es la Ciencia Neutral? El Contexto Social del Conocimiento</p>
+      </header>
+
+      <section class="class-section" id="neutralidad">
+        <h2>El Mito de la Ciencia "Pura" y Neutral</h2>
+
+        <p>Existe una imagen popular de la ciencia como una actividad completamente objetiva y neutral: el científico en su laboratorio descubriría verdades universales sin que sus creencias, emociones, género, clase social o intereses económicos afectaran sus resultados. Esta imagen es parcialmente correcta y parcialmente un mito.</p>
+
+        <p>Es correcta en un sentido importante: <strong>los métodos científicos están diseñados para minimizar sesgos personales.</strong> Los experimentos controlados, la revisión por pares, la replicabilidad y la confrontación con datos empíricos son mecanismos que ayudan a que las conclusiones científicas dependan de la evidencia y no de las preferencias del investigador.</p>
+
+        <p>Pero es un mito en otro sentido: <strong>la práctica científica ocurre en contextos sociales, económicos, culturales y políticos que la influyen de maneras profundas.</strong> Veamos cómo.</p>
+
+        <div class="concept-highlight">
+          <h3>Valores Epistémicos vs. Valores Sociales</h3>
+          <p>Los filósofos distinguen entre:</p>
+          <ul>
+            <li><strong>Valores epistémicos:</strong> Criterios internos a la ciencia que guían la evaluación de teorías. Ejemplos: consistencia lógica, poder explicativo, simplicidad (parsimonia), poder predictivo, contrastabilidad.</li>
+            <li><strong>Valores sociales:</strong> Valores externos provenientes de la cultura, la política, la economía. Ejemplos: igualdad de género, beneficio económico, interés nacional, tradición religiosa.</li>
+          </ul>
+          <p>La ciencia no puede estar completamente libre de valores sociales porque <strong>los científicos son seres humanos que viven en sociedades.</strong> La pregunta es: ¿cuándo y cómo los valores sociales interfieren legítima o ilegítimamente con la práctica científica?</p>
+        </div>
+      </section>
+
+      <section class="class-section" id="contexto">
+        <h2>El Contexto Social de la Ciencia</h2>
+
+        <h3>El Financiamiento como Moldeador de la Agenda</h3>
+        <p>La ciencia cuesta dinero. Los laboratorios necesitan equipamiento, personal, materiales. Ese dinero viene de algún lado, y quien financia la investigación influye en qué se investiga:</p>
+        <ul>
+          <li><strong>Financiamiento estatal:</strong> Los gobiernos priorizan áreas estratégicas (defensa, salud pública, agricultura). Durante la Guerra Fría, los EE. UU. invirtieron masivamente en física y tecnología espacial.</li>
+          <li><strong>Financiamiento privado (empresas farmacéuticas, biotecnológicas):</strong> Tiende a priorizar investigaciones con retorno económico. Las enfermedades raras o las enfermedades de países pobres reciben menos inversión que las enfermedades de países ricos.</li>
+          <li><strong>Financiamiento universitario:</strong> Busca equilibrar curiosidad básica con relevancia social.</li>
+        </ul>
+
+        <h3>La Comunidad Científica como Institución Social</h3>
+        <p>La ciencia no la hace una persona sola: es una actividad <em>colectiva</em> con sus propias instituciones, normas y dinámicas de poder:</p>
+        <ul>
+          <li>Las revistas científicas tienen criterios de publicación que pueden favorecer ciertos tipos de resultados (el "sesgo de publicación positiva": los resultados positivos se publican más que los negativos).</li>
+          <li>Las universidades y laboratorios tienen jerarquías que afectan quién recibe crédito.</li>
+          <li>Las redes de colaboración y reputación facilitan el avance de algunos y dificultan el de otros.</li>
+        </ul>
+      </section>
+
+      <section class="class-section" id="genero">
+        <h2>Género y Ciencia: El Caso de las Científicas Invisibles</h2>
+
+        <p>A lo largo de este curso hemos encontrado un patrón preocupante: varias contribuciones científicas fundamentales fueron realizadas por mujeres que no recibieron el reconocimiento que merecían. No se trata de casos aislados; es un patrón sistemático que refleja las estructuras de poder del siglo XX.</p>
+
+        <div class="reflection-box">
+          <h3>Cuatro Casos de Invisibilización</h3>
+          <h4>Rosalind Franklin (1920-1958)</h4>
+          <p>Sus datos de cristalografía del ADN fueron utilizados sin su permiso por Watson y Crick. Murió antes de que se otorgara el Nobel (1962). Wilkins mencionó brevemente "la difunta Miss Franklin" en su discurso Nobel sin reconocer el carácter central de su contribución.</p>
+
+          <h4>Lise Meitner (1878-1968)</h4>
+          <p>Física nuclear austro-sueca que fue clave en el descubrimiento teórico de la fisión nuclear. Fue excluida del Premio Nobel de Química de 1944, que fue otorgado solo a su colaborador Otto Hahn. Muchos historiadores de la ciencia consideran esto un error de justicia histórica.</p>
+
+          <h4>Jocelyn Bell Burnell (1943-)</h4>
+          <p>Astrofísica que, como estudiante de doctorado, descubrió los púlsares en 1967. El Nobel de Física de 1974 fue otorgado a su supervisor, Antony Hewish, y al astrónomo Martin Ryle, pero no a Bell Burnell. Su exclusión generó una controversia académica que continúa hasta hoy.</p>
+
+          <h4>Henrietta Leavitt (1868-1921)</h4>
+          <p>Astrónoma estadounidense que descubrió la relación período-luminosidad de las estrellas cefeidas, crucial para medir las distancias cósmicas. Trabajó como "calculadora humana" (así llamaban a las mujeres astrónomas en el Harvard Observatory), ganando menos que los hombres. Fue nominada para el Nobel después de su muerte, sin saber que era inelegible por esa razón.</p>
+        </div>
+
+        <div class="concept-highlight">
+          <h3>¿Por qué importa esta historia?</h3>
+          <p>Estos no son simplemente casos de injusticia individual. Revelan algo importante sobre la producción de conocimiento científico:</p>
+          <ul>
+            <li><strong>La historia de la ciencia no es neutra:</strong> Ha sido escrita principalmente por y para una perspectiva masculina y occidental.</li>
+            <li><strong>La invisibilización tiene consecuencias prácticas:</strong> Si las mujeres ven que sus contribuciones serán ignoradas, menos mujeres eligen carreras científicas. Esto empobrece a la ciencia.</li>
+            <li><strong>La diversidad mejora la ciencia:</strong> Investigaciones recientes sugieren que los equipos diversos (en género, origen, disciplina) producen ciencia más innovadora y con menos sesgos.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="class-section" id="intereses">
+        <h2>Intereses Económicos, Políticos y la Ciencia</h2>
+
+        <h3>Conflictos de Interés en la Investigación</h3>
+        <p>Un <strong>conflicto de interés</strong> ocurre cuando el investigador tiene intereses personales (económicos, de carrera, ideológicos) que pueden influir en sus conclusiones científicas, incluso inconscientemente. Ejemplos históricos:</p>
+        <ul>
+          <li><strong>Industria del tabaco (décadas 1950-80):</strong> Financió investigaciones para crear duda sobre la relación tabaco-cáncer, retrasando políticas de salud pública por décadas.</li>
+          <li><strong>Industria del azúcar (décadas 1960-70):</strong> Financió investigaciones que desviaban la atención de los azúcares hacia las grasas como causa de enfermedades cardíacas.</li>
+          <li><strong>Cambio climático:</strong> Empresas petroleras financiaron investigación que creaba incertidumbre artificial sobre el consenso científico.</li>
+        </ul>
+
+        <h3>Patentes y el Conocimiento como Propiedad</h3>
+        <p>Las patentes sobre biotecnología (incluidas las técnicas basadas en CRISPR) plantean preguntas fundamentales: ¿puede el conocimiento científico ser "propiedad" de alguien? ¿Qué pasa cuando patentes privadas limitan el acceso a tratamientos médicos? Esta es una tensión real entre la lógica del mercado y la lógica del bien público en la ciencia.</p>
+      </section>
+
+      <section class="class-section" id="valores">
+        <h2>Valores en la Ciencia: Una Síntesis</h2>
+
+        <p>La imagen equilibrada de la relación entre ciencia y valores es la siguiente: la ciencia no es ni completamente neutral (como afirma el positivismo ingenuo) ni completamente determinada por factores sociales (como afirman algunas versiones del relativismo).</p>
+
+        <p>La evidencia empírica y los métodos científicos <strong>sí importan y sí restringen lo que puede afirmarse con credibilidad.</strong> Pero al mismo tiempo, los contextos sociales, económicos y culturales <strong>sí influyen en qué preguntas se hacen, quién hace ciencia, y cómo se distribuyen créditos y recursos.</strong></p>
+
+        <div class="concept-highlight">
+          <h3>La Ciencia como Actividad Humana y Social</h3>
+          <p>La conclusión epistemológica es que entender la ciencia requiere entenderla como:</p>
+          <ul>
+            <li>Una <strong>práctica epistémica</strong> con métodos que buscan la verdad empírica.</li>
+            <li>Una <strong>institución social</strong> con sus propias estructuras de poder, incentivos y normas.</li>
+            <li>Una <strong>actividad cultural</strong> que ocurre en contextos históricos específicos.</li>
+            <li>Una <strong>empresa colectiva</strong> donde la diversidad y la revisión crítica son fortalezas, no debilidades.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="class-section" id="actividades">
+        <h2>Actividades</h2>
+
+        <div class="activity-box">
+          <h3>🔍 Actividad 1: Análisis de Caso Franklin</h3>
+          <div class="question-card">
+            <p><strong>Consigna:</strong> Identifica y analiza las barreras que Rosalind Franklin enfrentó en el King's College:</p>
+            <ol>
+              <li><strong>Barreras institucionales:</strong> ¿Qué reglas o prácticas del King's College dificultaron su trabajo?</li>
+              <li><strong>Barreras sociales:</strong> ¿Cómo la trataron sus colegas? ¿Cómo influyó el género en esas relaciones?</li>
+              <li><strong>Barreras de reconocimiento:</strong> ¿Qué factores explican que no recibiera el Nobel?</li>
+              <li>¿Podrían ocurrir situaciones similares en la ciencia actual? ¿Por qué sí o por qué no?</li>
+            </ol>
+          </div>
+        </div>
+
+        <div class="activity-box">
+          <h3>💰 Actividad 2: Debate - Financiamiento de la Ciencia</h3>
+          <div class="question-card">
+            <p><strong>Consigna:</strong> Debate la siguiente posición:</p>
+            <p><em>"El financiamiento privado de la investigación científica es inevitable y beneficioso: trae recursos y orienta la ciencia hacia problemas prácticos reales."</em></p>
+            <p>¿Estás de acuerdo o en desacuerdo? ¿Cuáles son los beneficios y los riesgos del financiamiento privado de la ciencia? ¿Qué salvaguardas podrían minimizar los conflictos de interés?</p>
+          </div>
+        </div>
+
+        <div class="activity-box">
+          <h3>🌐 Actividad 3: Investigación Actual</h3>
+          <div class="question-card">
+            <p><strong>Consigna:</strong> Busca un ejemplo actual (siglo XXI) de un conflicto entre intereses económicos o políticos y la evidencia científica. Analiza:</p>
+            <ol>
+              <li>¿Cuál es el consenso científico?</li>
+              <li>¿Quiénes cuestionan ese consenso y por qué?</li>
+              <li>¿Qué intereses están en juego?</li>
+              <li>¿Cómo debería la sociedad manejar este conflicto?</li>
+            </ol>
+          </div>
+        </div>
+      </section>
+
+      <section class="class-section">
+        <h2>Conceptos Clave de Esta Clase</h2>
+        <div class="concept-highlight">
+          <ul>
+            <li><strong>Neutralidad valorativa:</strong> La idea de que la ciencia puede y debe estar libre de valores sociales o políticos. Esta neutralidad es un ideal parcialmente alcanzable, no una descripción de la ciencia real.</li>
+            <li><strong>Valores epistémicos:</strong> Criterios internos a la ciencia para evaluar teorías: consistencia, poder predictivo, simplicidad, etc.</li>
+            <li><strong>Valores sociales:</strong> Valores externos que provienen de la cultura, la política y la economía y que pueden influir en la práctica científica.</li>
+            <li><strong>Sesgo de publicación:</strong> Tendencia a publicar resultados positivos y no publicar resultados negativos, distorsionando la imagen del conocimiento disponible.</li>
+            <li><strong>Agenda de investigación:</strong> El conjunto de preguntas que una comunidad científica considera prioritarias, influido por factores tanto epistémicos como sociales y económicos.</li>
+          </ul>
+        </div>
+      </section>
+
+      <nav class="class-navigation">
+        <a href="clase-17.html" class="nav-button">← Clase Anterior</a>
+        <a href="index.html" class="nav-button nav-button-index">📚 Índice de la Unidad</a>
+        <a href="clase-19.html" class="nav-button">Siguiente Clase →</a>
+      </nav>
+    </article>
+  </main>
+
+  <footer class="main-footer">
+    <div class="container">
+      <p>&copy; 2024 Filosofía 6to. Material educativo libre.</p>
+    </div>
+  </footer>
+  <script src="../../assets/js/dark-mode.js"></script>
+</body>
+</html>

@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clase 17: Teoría, Experimentación y Tecnología | Filosofía 6to</title>
+  <link rel="stylesheet" href="../../assets/css/variables.css">
+  <link rel="stylesheet" href="../../assets/css/reset.css">
+  <link rel="stylesheet" href="../../assets/css/base.css">
+  <link rel="stylesheet" href="../../assets/css/typography.css">
+  <link rel="stylesheet" href="../../assets/css/layout.css">
+  <link rel="stylesheet" href="../../assets/css/navigation.css">
+  <link rel="stylesheet" href="../../assets/css/components.css">
+  <link rel="stylesheet" href="../../assets/css/unit-page.css">
+  <link rel="stylesheet" href="../../assets/css/book-layout.css">
+  <style>
+    .class-container::before {
+      content: '  Teoría ↔\A  Experimento\A      ↔\A  Tecnología\A\A  (triángulo\A   científico)';
+      position: fixed; top: 15%; right: 5%;
+      font-family: 'Caveat', 'Comic Sans MS', cursive;
+      font-size: 24px; font-weight: 700; white-space: pre;
+      color: rgba(255,255,255,0.35); transform: rotate(-6deg);
+    }
+    .class-container::after {
+      content: '  Telescopio →\A  observaciones\A       →\A  refutación\A  geocentrismo';
+      position: fixed; bottom: 20%; left: 5%;
+      font-family: 'Caveat', 'Comic Sans MS', cursive;
+      font-size: 23px; font-weight: 700; white-space: pre;
+      color: rgba(255,255,255,0.32); transform: rotate(5deg);
+    }
+    @media (max-width: 1024px) {
+      .class-container::before, .class-container::after {
+        position: relative; width: 100%; text-align: center;
+        top: auto; bottom: auto; left: auto; right: auto;
+        transform: rotate(0deg); margin: var(--space-xl) 0;
+        font-size: 18px; display: block;
+      }
+      .class-container::before { content: 'Teoría | Experimentación | Tecnología'; }
+      .class-container::after { content: 'Las tres dimensiones del trabajo científico'; }
+    }
+  </style>
+</head>
+<body>
+  <nav class="main-nav">
+    <div class="nav-container">
+      <div class="nav-left">
+        <a href="index.html" class="nav-back-button">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M15 19l-7-7 7-7"/>
+          </svg>
+          <span>Unidad 2</span>
+        </a>
+        <a href="../../home.html" class="nav-brand">Filosofía 6to</a>
+      </div>
+      <div class="nav-controls">
+        <button id="dark-mode-toggle" class="dark-mode-toggle" aria-label="Cambiar tema">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <div class="class-progress">
+    <div class="container">
+      <div class="progress-info">
+        <span class="progress-text">Clase 17 de 20</span>
+        <span class="progress-text">40% de la unidad</span>
+      </div>
+      <div class="progress-bar">
+        <div class="progress-fill" style="width: 40%"></div>
+      </div>
+    </div>
+  </div>
+
+  <main class="class-container">
+    <aside class="sidebar">
+      <div class="sidebar-section">
+        <h3>En esta clase</h3>
+        <ul>
+          <li><a href="#intro">Meta-reflexión: mirar hacia atrás</a></li>
+          <li><a href="#tres-dim">Las Tres Dimensiones</a></li>
+          <li><a href="#interrelaciones">Cómo se Relacionan</a></li>
+          <li><a href="#casos">Casos Históricos</a></li>
+          <li><a href="#actividades">Actividades</a></li>
+        </ul>
+      </div>
+      <div class="sidebar-section">
+        <h3>Conceptos Clave</h3>
+        <ul class="concept-list">
+          <li>Dimensión teórica</li>
+          <li>Dimensión experimental</li>
+          <li>Dimensión tecnológica</li>
+          <li>Ciclo científico</li>
+          <li>Anomalía</li>
+          <li>Instrumentación</li>
+        </ul>
+      </div>
+    </aside>
+
+    <article class="class-content">
+      <header class="class-header">
+        <div class="class-badge">Clase 17</div>
+        <h1 class="class-title">Teoría, Experimentación y Tecnología</h1>
+        <p class="class-subtitle">Las Tres Dimensiones Inseparables del Trabajo Científico</p>
+      </header>
+
+      <section class="class-section" id="intro">
+        <h2>Un Paso Atrás: La Meta-Reflexión</h2>
+        <p>Hemos estudiado la revolución heliocéntrica de Copérnico y Galileo, la refutación de la generación espontánea por Pasteur, el descubrimiento del ADN, los experimentos de Griffith, Avery, Hershey-Chase y Meselson-Stahl, y las aplicaciones biotecnológicas del CRISPR. Ahora es el momento de dar un paso atrás y preguntar: <strong>¿qué podemos aprender filosóficamente de todos estos casos?</strong></p>
+        <p>En las próximas clases realizaremos una <em>meta-reflexión</em>: en lugar de estudiar más hechos científicos, analizaremos el <em>modo de hacer ciencia</em>. ¿Cómo funciona la ciencia? ¿Cómo genera conocimiento confiable? ¿Cuáles son sus límites y fortalezas?</p>
+      </section>
+
+      <section class="class-section" id="tres-dim">
+        <h2>Las Tres Dimensiones del Trabajo Científico</h2>
+        <p>Al analizar los casos históricos que estudiamos, podemos identificar tres dimensiones inseparables del trabajo científico:</p>
+
+        <div class="image-container">
+          <img src="../../assets/images/class-17/three_dimensions.svg" alt="Triángulo de las tres dimensiones del trabajo científico">
+          <p class="image-caption">Las tres dimensiones del trabajo científico se retroalimentan continuamente: la teoría guía los experimentos, los experimentos validan o refutan teorías, y la tecnología posibilita tanto los experimentos como el desarrollo de nuevas teorías.</p>
+        </div>
+
+        <div class="concept-highlight">
+          <h3>Dimensión 1: Teórica</h3>
+          <p>La <strong>dimensión teórica</strong> incluye todo el trabajo conceptual de la ciencia:</p>
+          <ul>
+            <li><strong>Hipótesis:</strong> Conjeturas tentativas sobre cómo funciona el mundo. "Quizás la Tierra gira alrededor del Sol."</li>
+            <li><strong>Modelos:</strong> Representaciones simplificadas de sistemas. El modelo de doble hélice del ADN.</li>
+            <li><strong>Teorías:</strong> Sistemas coherentes de conceptos e hipótesis que explican un conjunto amplio de fenómenos. La teoría de la evolución.</li>
+            <li><strong>Leyes:</strong> Relaciones cuantitativas regularmente observadas. Las leyes de Kepler sobre las órbitas planetarias.</li>
+          </ul>
+        </div>
+
+        <div class="concept-highlight">
+          <h3>Dimensión 2: Experimental</h3>
+          <p>La <strong>dimensión experimental</strong> incluye todo el trabajo empírico:</p>
+          <ul>
+            <li><strong>Observación sistemática:</strong> Galileo midiendo los períodos de los satélites de Júpiter.</li>
+            <li><strong>Diseño de experimentos controlados:</strong> Pasteur con el cuello de cisne; Meselson-Stahl con los isótopos.</li>
+            <li><strong>Replicabilidad:</strong> Los experimentos deben poder repetirse y dar los mismos resultados.</li>
+            <li><strong>Análisis de datos:</strong> Interpretar los resultados a la luz de las hipótesis previas.</li>
+          </ul>
+        </div>
+
+        <div class="concept-highlight">
+          <h3>Dimensión 3: Tecnológica</h3>
+          <p>La <strong>dimensión tecnológica</strong> incluye los instrumentos y técnicas que hacen posible el trabajo científico:</p>
+          <ul>
+            <li><strong>Instrumentos de observación:</strong> El telescopio de Galileo, el microscopio de Leeuwenhoek.</li>
+            <li><strong>Técnicas de laboratorio:</strong> La cristalografía de rayos X (Franklin), la ultracentrifugación (Meselson-Stahl).</li>
+            <li><strong>Herramientas computacionales:</strong> Software de modelado molecular, bioinformática.</li>
+            <li><strong>Aplicaciones:</strong> CRISPR como tecnología derivada del conocimiento científico básico.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="class-section" id="interrelaciones">
+        <h2>Cómo se Retroalimentan las Tres Dimensiones</h2>
+
+        <p>Lo crucial es que estas tres dimensiones no son independientes: se retroalimentan continuamente en lo que podemos llamar el <strong>ciclo científico</strong>:</p>
+
+        <h3>La Teoría Guía la Experimentación</h3>
+        <p>Los experimentos no se diseñan al azar: nacen de preguntas teóricas. Cuando Watson y Crick propusieron la doble hélice, eso generó inmediatamente la pregunta teórica "¿cómo se replica?" que Meselson y Stahl convirtieron en experimento. Sin la teoría de doble hélice, no habría habido experimento de replicación.</p>
+
+        <h3>Los Experimentos Validan o Refutan Teorías</h3>
+        <p>Cuando los experimentos producen resultados inesperados (anomalías), pueden cuestionar teorías establecidas. Los experimentos de Griffith no encajaban con la idea de que solo los gérmenes vivos causan enfermedades: sugirieron que algo podía "transformar" a las bacterias. Eso era una anomalía que forzó a repensar la teoría.</p>
+
+        <h3>La Tecnología Posibilita Nuevas Observaciones</h3>
+        <p>El telescopio de Galileo le permitió ver los satélites de Júpiter, que eran incompatibles con el modelo geocéntrico. La cristalografía de rayos X le permitió a Franklin "ver" la estructura del ADN. Sin esa tecnología, la pregunta sobre la estructura del ADN habría sido imposible de responder empíricamente.</p>
+
+        <h3>Las Observaciones Generan Nuevas Tecnologías</h3>
+        <p>Comprender el mecanismo CRISPR bacteriano (ciencia básica) llevó al desarrollo de CRISPR-Cas9 como herramienta biotecnológica (tecnología). El conocimiento genera tecnología que genera más conocimiento.</p>
+      </section>
+
+      <section class="class-section" id="casos">
+        <h2>Los Cuatro Casos Históricos Vistos a Través del Triángulo</h2>
+
+        <div class="reflection-box">
+          <h3>Caso 1: Galileo y el Telescopio</h3>
+          <ul>
+            <li><strong>Teoría:</strong> Modelo heliocéntrico de Copérnico (hipótesis de partida).</li>
+            <li><strong>Tecnología:</strong> Telescopio (instrumento que Galileo mejoró y redirigió al cielo).</li>
+            <li><strong>Experimento:</strong> Observación de los satélites de Júpiter, fases de Venus, manchas solares.</li>
+            <li><strong>Resultado:</strong> Los datos eran incompatibles con el modelo geocéntrico → refutación.</li>
+          </ul>
+        </div>
+
+        <div class="reflection-box">
+          <h3>Caso 2: Pasteur y la Generación Espontánea</h3>
+          <ul>
+            <li><strong>Teoría:</strong> Hipótesis de generación espontánea (a refutar) vs. biogénesis (a confirmar).</li>
+            <li><strong>Tecnología:</strong> Frasco de cuello de cisne (innovación instrumental).</li>
+            <li><strong>Experimento:</strong> Caldo esterilizado + cuello que filtra partículas = sin crecimiento microbiano.</li>
+            <li><strong>Resultado:</strong> Refutación de generación espontánea; confirmación de que la vida viene de la vida.</li>
+          </ul>
+        </div>
+
+        <div class="reflection-box">
+          <h3>Caso 3: Franklin y la Cristalografía del ADN</h3>
+          <ul>
+            <li><strong>Teoría:</strong> Hipótesis sobre la estructura del ADN (¿hélice? ¿cuántas cadenas?).</li>
+            <li><strong>Tecnología:</strong> Cristalografía de rayos X (técnica que Franklin dominaba excepcionalmente).</li>
+            <li><strong>Experimento:</strong> Obtención de la Foto 51 con ADN altamente purificado.</li>
+            <li><strong>Resultado:</strong> Datos que revelaban estructura helicoidal, diámetro y periodicidad.</li>
+          </ul>
+        </div>
+
+        <div class="reflection-box">
+          <h3>Caso 4: Meselson-Stahl y la Replicación del ADN</h3>
+          <ul>
+            <li><strong>Teoría:</strong> Tres modelos rivales (conservativo, semiconservativo, dispersivo).</li>
+            <li><strong>Tecnología:</strong> Isótopos de nitrógeno + ultracentrifugación con gradiente de CsCl.</li>
+            <li><strong>Experimento:</strong> Marcaje con ¹⁵N, transferencia a ¹⁴N, análisis de bandas en Gen 1 y Gen 2.</li>
+            <li><strong>Resultado:</strong> Solo el modelo semiconservativo predecía el patrón observado.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="class-section" id="actividades">
+        <h2>Actividades</h2>
+
+        <div class="activity-box">
+          <h3>🔺 Actividad 1: Clasificación en el Triángulo</h3>
+          <div class="question-card">
+            <p><strong>Consigna:</strong> Para cada uno de los siguientes elementos, indica a qué dimensión pertenece principalmente (teórica/experimental/tecnológica) y cómo se conecta con las otras dos:</p>
+            <ol>
+              <li>El modelo de doble hélice de Watson y Crick</li>
+              <li>La centrifugadora de CsCl usada por Meselson-Stahl</li>
+              <li>El diseño de cuatro grupos con enzimas de Avery-MacLeod-McCarty</li>
+              <li>La hipótesis del "mundo de ARN"</li>
+              <li>CRISPR-Cas9</li>
+              <li>Los isótopos ¹⁵N y ¹⁴N como marcadores</li>
+            </ol>
+          </div>
+        </div>
+
+        <div class="activity-box">
+          <h3>💭 Actividad 2: ¿Puede haber ciencia sin...?</h3>
+          <div class="question-card">
+            <p><strong>Consigna:</strong> Responde y argumenta las siguientes preguntas:</p>
+            <ol>
+              <li>¿Puede haber ciencia sin teoría? (¿Es posible la observación "pura", sin hipótesis previas?)</li>
+              <li>¿Puede haber ciencia sin experimentos? (Pista: astronomía, paleontología, cosmología)</li>
+              <li>¿Puede haber ciencia sin tecnología? (¿Hasta qué punto la tecnología simplemente "ayuda" o es constitutiva de la ciencia moderna?)</li>
+            </ol>
+            <p><em>Para cada pregunta, da un ejemplo de un caso en que la ciencia funcionó limitadamente en esa dimensión y las consecuencias que tuvo.</em></p>
+          </div>
+        </div>
+      </section>
+
+      <section class="class-section">
+        <h2>Conceptos Clave de Esta Clase</h2>
+        <div class="concept-highlight">
+          <ul>
+            <li><strong>Dimensión teórica:</strong> El trabajo conceptual de la ciencia: hipótesis, modelos, teorías, leyes.</li>
+            <li><strong>Dimensión experimental:</strong> El trabajo empírico: observación, diseño controlado, replicabilidad, análisis de datos.</li>
+            <li><strong>Dimensión tecnológica:</strong> Los instrumentos y técnicas que posibilitan la investigación científica.</li>
+            <li><strong>Ciclo científico:</strong> La retroalimentación continua entre teoría, experimentación y tecnología.</li>
+            <li><strong>Anomalía:</strong> Resultado experimental que contradice las expectativas de la teoría vigente; puede provocar crisis y revisión teórica.</li>
+          </ul>
+        </div>
+      </section>
+
+      <nav class="class-navigation">
+        <a href="clase-16.html" class="nav-button">← Clase Anterior</a>
+        <a href="index.html" class="nav-button nav-button-index">📚 Índice de la Unidad</a>
+        <a href="clase-18.html" class="nav-button">Siguiente Clase →</a>
+      </nav>
+    </article>
+  </main>
+
+  <footer class="main-footer">
+    <div class="container">
+      <p>&copy; 2024 Filosofía 6to. Material educativo libre.</p>
+    </div>
+  </footer>
+  <script src="../../assets/js/dark-mode.js"></script>
+</body>
+</html>

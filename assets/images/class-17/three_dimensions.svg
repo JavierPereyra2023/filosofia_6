@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 400">
+  <!-- Title -->
+  <text x="350" y="28" text-anchor="middle" font-size="17" font-weight="bold" fill="#10b981">
+    Las Tres Dimensiones del Trabajo Científico
+  </text>
+
+  <!-- Triangle -->
+  <polygon points="350,70 120,330 580,330" fill="none" stroke="#10b981" stroke-width="2.5" stroke-dasharray="8,4"/>
+
+  <!-- Inner connections -->
+  <line x1="350" y1="70" x2="120" y2="330" stroke="#10b981" stroke-width="1" opacity="0.3"/>
+  <line x1="350" y1="70" x2="580" y2="330" stroke="#10b981" stroke-width="1" opacity="0.3"/>
+  <line x1="120" y1="330" x2="580" y2="330" stroke="#10b981" stroke-width="1" opacity="0.3"/>
+
+  <!-- Node 1: Theory (top) -->
+  <circle cx="350" cy="70" r="55" fill="#8b5cf6" opacity="0.15" stroke="#8b5cf6" stroke-width="2.5"/>
+  <text x="350" y="62" text-anchor="middle" font-size="13" font-weight="bold" fill="#8b5cf6">TEORÍA</text>
+  <text x="350" y="78" text-anchor="middle" font-size="10" fill="#6b7280">Hipótesis · Modelos</text>
+  <text x="350" y="91" text-anchor="middle" font-size="10" fill="#6b7280">Explicaciones · Leyes</text>
+
+  <!-- Node 2: Experiment (bottom left) -->
+  <circle cx="120" cy="330" r="55" fill="#ef4444" opacity="0.15" stroke="#ef4444" stroke-width="2.5"/>
+  <text x="120" y="322" text-anchor="middle" font-size="13" font-weight="bold" fill="#ef4444">EXPERIMENTO</text>
+  <text x="120" y="337" text-anchor="middle" font-size="10" fill="#6b7280">Observación · Control</text>
+  <text x="120" y="350" text-anchor="middle" font-size="10" fill="#6b7280">Datos · Replicabilidad</text>
+
+  <!-- Node 3: Technology (bottom right) -->
+  <circle cx="580" cy="330" r="55" fill="#f59e0b" opacity="0.15" stroke="#f59e0b" stroke-width="2.5"/>
+  <text x="580" y="322" text-anchor="middle" font-size="13" font-weight="bold" fill="#f59e0b">TECNOLOGÍA</text>
+  <text x="580" y="337" text-anchor="middle" font-size="10" fill="#6b7280">Instrumentos · Técnicas</text>
+  <text x="580" y="350" text-anchor="middle" font-size="10" fill="#6b7280">Aplicaciones · CRISPR</text>
+
+  <!-- Interaction labels on edges -->
+  <!-- Theory → Experiment -->
+  <text x="205" y="185" text-anchor="middle" font-size="10" fill="#6b7280" transform="rotate(-55, 205, 185)">guía experimentos</text>
+  <!-- Experiment → Theory -->
+  <text x="255" y="215" text-anchor="middle" font-size="10" fill="#6b7280" transform="rotate(-55, 255, 215)">valida/refuta teorías</text>
+
+  <!-- Theory → Technology -->
+  <text x="495" y="185" text-anchor="middle" font-size="10" fill="#6b7280" transform="rotate(55, 495, 185)">fundamenta aplicaciones</text>
+  <!-- Technology → Theory -->
+  <text x="445" y="215" text-anchor="middle" font-size="10" fill="#6b7280" transform="rotate(55, 445, 215)">nuevos datos</text>
+
+  <!-- Experiment ↔ Technology -->
+  <text x="350" y="348" text-anchor="middle" font-size="10" fill="#6b7280">posibilita mediciones</text>
+  <text x="350" y="362" text-anchor="middle" font-size="10" fill="#6b7280">genera instrumentos</text>
+
+  <!-- Center: Science -->
+  <circle cx="350" cy="240" r="30" fill="#10b981" opacity="0.2" stroke="#10b981" stroke-width="2"/>
+  <text x="350" y="236" text-anchor="middle" font-size="11" font-weight="bold" fill="#10b981">CIENCIA</text>
+  <text x="350" y="250" text-anchor="middle" font-size="9" fill="#6b7280">integración</text>
+
+  <!-- Historical examples -->
+  <text x="350" y="390" text-anchor="middle" font-size="11" fill="#6b7280" font-style="italic">
+    Galileo: teoría heliocéntrica ↔ telescopio ↔ observaciones de Júpiter
+  </text>
+</svg>
